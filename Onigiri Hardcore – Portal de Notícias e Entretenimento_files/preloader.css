@@ -1,0 +1,115 @@
+
+.page-loader {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fefefe;
+    z-index: 100000; }
+
+.loader {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    font-size: 10px;
+    text-indent: -12345px;
+    border-top: 1px solid rgba(255, 61, 46, 0.1);
+    border-right: 1px solid rgba(255, 61, 46, 0.1);
+    border-bottom: 1px solid rgba(255, 61, 46, 0.1);
+    border-left: 1px solid rgba(255, 61, 46, 0.8);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-animation: spinner 700ms infinite linear;
+    -moz-animation: spinner 700ms infinite linear;
+    -ms-animation: spinner 700ms infinite linear;
+    -o-animation: spinner 700ms infinite linear;
+    animation: spinner 700ms infinite linear;
+    z-index: 100001; }
+
+.page-loader .loader-text {
+    top: 55%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 20px; }
+
+@-webkit-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg); }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg); } }
+@-moz-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg); }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg); } }
+@-o-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg); }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg); } }
+@keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg); }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg); } }
+/*
+     FILE ARCHIVED ON 11:27:55 Dec 28, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:31:21 Apr 22, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 78.609
+  exclusion.robots: 0.087
+  exclusion.robots.policy: 0.08
+  RedisCDXSource: 0.521
+  esindex: 0.006
+  LoadShardBlock: 57.861 (3)
+  PetaboxLoader3.datanode: 64.216 (4)
+  CDXLines.iter: 17.616 (3)
+  load_resource: 51.776
+  PetaboxLoader3.resolve: 28.124
+*/
