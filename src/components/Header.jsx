@@ -13,6 +13,9 @@ const Header = () => {
 
         <div className="navigation">
             <ul>
+                <li className="burger">
+                    <a href=""><i class="uil uil-bars"></i></a>
+                </li>
                 <li>
                     <a href="/">Notícias</a>
                 </li>
