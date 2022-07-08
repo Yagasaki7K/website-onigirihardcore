@@ -30,14 +30,16 @@ const HeaderDetails = styled.div `
     
     .navigation {
         background: ${colors.blue};
+        display: flex;
         height: 3rem;
         width: 100%;
 
         @media (max-width: 600px) {
             height: 21rem;
             border-radius: 15px;
+            background: transparent;
         }
-
+        
         ul {
             display: flex;
             list-style: none;
@@ -45,8 +47,13 @@ const HeaderDetails = styled.div `
             margin: 0;
             color: #fff;
             margin-left: 23rem;
+            background: ${colors.blue};
 
-            .burger {
+            #item-menu {
+                display: flex;
+            }
+
+            .burguer {
                 display: none;
             }
 
@@ -55,24 +62,44 @@ const HeaderDetails = styled.div `
             }
 
             @media (max-width: 768px) {
+                #item-menu {
+                    display: none;
+                }
+
+                .burguer {
+                    display: block;
+                }
+
                 margin-left: 0;
+                height: 3rem;
             }
 
             @media (max-width: 600px) {
+                margin-left: 0;
                 flex-direction: column;
-                justify-content: center;
                 align-items: center;
+                text-align: center;
+                
+                width: 100%;
+                border-radius: 15px;
 
-                .burger {
+                .burguer {
                     display: initial;
                 }
             }
 
             li {
+                display: flex;
                 padding: 0.7rem 1rem;
+                
 
                 @media (max-width: 768px) {
                     margin-left: 0.625rem;
+                    padding: 0.7rem 0;
+                }
+
+                @media (max-width: 600px) {
+                    margin-left: 2rem;
                     padding: 0.7rem 0;
                 }
                 
@@ -93,9 +120,14 @@ const HeaderDetails = styled.div `
                 :hover {
                     transition: 1s;
                     background: ${colors.bluedark};
+                    
 
                     @media (max-width: 600px) {
-                        background: ${colors.blue}
+                        background: ${colors.blue};
+                        
+                        :hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
