@@ -114,14 +114,11 @@ const HeaderDetails = styled.div `
                 a {
                     color: #fff;
                     text-decoration: none;
-                    padding-right: 2.5rem;
                 }
 
                 :hover {
-                    transition: 1s;
-                    background: ${colors.bluedark};
+                    border-bottom: 4px solid ${colors.white};
                     
-
                     @media (max-width: 600px) {
                         background: ${colors.blue};
                         
