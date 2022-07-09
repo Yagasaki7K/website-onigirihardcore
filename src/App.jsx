@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import Slide from './components/Slide'
+import Categories from './components/Categories'
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
         <>
             <Header />
             <Slide />
+            <Categories />
         </>
     )
 }

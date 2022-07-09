@@ -1,9 +1,13 @@
-const Colors = {
-    "blue" : '#1abeff',
-    "bluedark" : '#00a0ff',
+const colors = {
+    "black": "#1a1a1a",
+    "blue" : '#00acff',
+    "bluedark" : '#0078b2',
     "gray" : '#f5f5f5',
+    "graylight" : '#e5e5e5',
+    "graydark": '#767676',
     "white" : '#ffffff',
+    "orange": '#f33413',
     "yellow": '#e7a720',
 }
 
-export default Colors
+export default colors

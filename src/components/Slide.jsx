@@ -49,7 +49,7 @@ const Slide = () => {
 
                     <div className="slider-description">
                         <div className="slide-tag">
-                        <span className="latest">ÚLTIMA NOTÍCIA</span>
+                        <span className="latest">HOT NEWS 🔥</span>
                         <span className="tag">JOGOS</span>
                         <span className="date">20/12/2018</span>
                         <span> - </span>

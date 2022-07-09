@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import colors from './Colors'
+import colors from './colors'
 
 const SlideDetails = styled.div `
     .keen-slider {
@@ -37,7 +37,7 @@ const SlideDetails = styled.div `
 
                     .latest {
                         padding: 2px 10px;
-                        background: ${colors.yellow};
+                        background: ${colors.orange};
                         font-size: 0.9rem;
                         font-weight: bold;
                     }
