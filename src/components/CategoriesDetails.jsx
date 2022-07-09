@@ -6,6 +6,10 @@ const CategoriesDetails = styled.div `
     justify-content: center;
     padding: 30px 20rem;
 
+    @media (max-width: 1366px) {
+        margin-top: -32rem;
+    }
+
     .firstCategories, .secondCategories, .thirdCategories {
         margin-right: 20px;
         .header {
