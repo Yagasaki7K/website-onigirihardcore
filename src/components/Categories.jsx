@@ -9,7 +9,7 @@ const Categories = () => {
                     <p>Animes {`&`} HQs</p>
                 </div>
 
-                <img src="https://pbs.twimg.com/media/FXJ6VrIXwAEPAq6?format=jpg&name=medium" alt="" />
+                <img src="https://web.archive.org/web/20181228112722im_/http://onigirihardcore.com.br/wp-content/uploads/2018/12/Midoriya.Izuku_.full_.2263669-1920x600.png" alt="" />
 
                 <a href="#">
                     <h1>Dragon Ball Super Broly - Saiyajins estão efurecidos no ...</h1>

@@ -5,10 +5,7 @@ import { useKeenSlider } from 'keen-slider/react'
 
 const Slide = () => {
 
-    const [refCallback, slider, sliderNode] = useKeenSlider(
-        {
-            loop: true
-        },
+    const [refCallback] = useKeenSlider({ loop: true },
         [
             (slider) => {
                 let timeout
@@ -60,6 +57,30 @@ const Slide = () => {
                             <a href="#">
                             Jump Force - Midoriya é o primeiro personagem de
                             My Hero Academia confirmado no jogo
+                            </a>
+                        </h1>
+                        <p>
+                            <a href="#">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum minus tenetur pariatur. Cupiditate temporibus, molestias natus earum libero cum eligendi quo non dicta pariatur similique iure ipsa eum delectus adipisci.
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div className="keen-slider__slide">
+                    <img src="https://web.archive.org/web/20181228113915im_/http://onigirihardcore.com.br/wp-content/uploads/2018/12/y6IHUKleghkKuNid5DYbsRmcAyZ-3-560x416.jpg" />
+
+                    <div className="slider-description">
+                        <div className="slide-tag">
+                        <span className="latest">HOT NEWS 🔥</span>
+                        <span className="tag">JOGOS</span>
+                        <span className="date">20/12/2018</span>
+                        <span> - </span>
+                        <span className="author">
+                            <a href="">Anderson Marlon</a></span>
+                        </div>
+                        <h1>
+                            <a href="#">
+                            Spiderman de PS4 incluirá traje de Tobey Maguire em atualização
                             </a>
                         </h1>
                         <p>

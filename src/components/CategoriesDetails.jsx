@@ -29,6 +29,8 @@ const CategoriesDetails = styled.div `
         img {
             margin-top: 10px;
             width: 22rem;
+            height: 22rem;
+            object-fit: cover;
             transition: 0.5s all ease-in-out;
 
             :hover {

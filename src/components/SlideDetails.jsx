@@ -12,7 +12,8 @@ const SlideDetails = styled.div `
 
         img {
             width: 100%;
-            background-size: cover;
+            height: 100%;
+            object-fit: cover;
             filter: brightness(50%);
         }
 
