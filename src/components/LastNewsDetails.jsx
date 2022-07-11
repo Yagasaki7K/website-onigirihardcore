@@ -46,6 +46,10 @@ const LastNewsDetails = styled.div`
                     text-decoration: none;
                     color: ${colors.black};
                     font-family: 'Poppins', sans-serif;
+
+                    :hover {
+                        color: ${colors.blue}
+                    }
                 }
 
                 h1 {
