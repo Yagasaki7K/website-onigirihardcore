@@ -11,10 +11,18 @@ const TecnologiesDetails = styled.div `
 
     .tecnologies {
         margin-left: -8rem;
+
+        @media (max-width: 1366px) {
+            margin-left: 1rem;
+        }
         
         .header {
             border-bottom: 2px solid ${colors.blue};
             width: 63rem;
+
+            @media (max-width: 1366px) {
+                width: 71rem;
+            }
 
             p {
                 width: 6rem;
@@ -41,6 +49,10 @@ const TecnologiesDetails = styled.div `
                     height: 12rem;
                     padding: 0;
                     object-fit: cover;
+
+                    @media (max-width: 1366px) {
+                        width: 17rem;
+                    }
                 }
 
                 :hover {

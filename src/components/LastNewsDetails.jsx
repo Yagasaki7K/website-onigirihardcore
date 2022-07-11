@@ -9,6 +9,7 @@ const LastNewsDetails = styled.div`
     @media (max-width: 1366px) {
         margin-left: 3.5rem;
     }
+    
     padding: 30px 5rem;
 
     .lastnews {
