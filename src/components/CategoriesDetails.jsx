@@ -7,7 +7,7 @@ const CategoriesDetails = styled.div `
     padding: 30px 20rem;
 
     @media (max-width: 1366px) {
-        margin-top: -32rem;
+        margin-top: 1rem;
     }
 
     .firstCategories, .secondCategories, .thirdCategories {
@@ -17,7 +17,7 @@ const CategoriesDetails = styled.div `
             width: 22rem;
 
             p {
-                width: 7rem;
+                width: 8rem;
                 background: ${colors.blue};
                 color: ${colors.white};
                 padding: 5px 10px;

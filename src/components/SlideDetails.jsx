@@ -7,7 +7,7 @@ const SlideDetails = styled.div `
         height: 40rem;
 
         @media (max-width: 1366px) {
-            height: 60rem;
+            height: 30rem;
         }
 
         img {
@@ -30,7 +30,7 @@ const SlideDetails = styled.div `
                 width: 58rem;
 
                 @media (max-width: 1366px) {
-                    top: 25%;
+                    top: 50%;
                 }
 
                 .slide-tag {
