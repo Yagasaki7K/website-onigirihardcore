@@ -16,7 +16,7 @@ const Slide = () => {
     useEffect(() => {
         client
           .fetch(
-            groq`*[_type == "post" && publishedAt < now()] | order(publishedAt desc) {
+            groq`*[_type == "post" && publishedAt < now()] | order(publishedAt desc)  {
             title,
             body,
             description,
@@ -31,50 +31,12 @@ const Slide = () => {
             }
           }`
           )
-          .then((data) => {setFirstNews(data[0])})
-      }, [!firstNews])
-
-    useEffect(() => {
-        client
-          .fetch(
-            groq`*[_type == "post" && publishedAt < now()] | order(publishedAt desc) {
-            title,
-            body,
-            description,
-            slug,
-            publishedAt,
-            mainImage {
-              asset -> {
-                _id,
-                url
-              },
-              alt
-            }
-          }`
-          )
-          .then((data) => {setSecondNews(data[1])})
-      }, [!secondNews])
-
-    useEffect(() => {
-        client
-          .fetch(
-            groq`*[_type == "post" && publishedAt < now()] | order(publishedAt desc) {
-            title,
-            body,
-            description,
-            slug,
-            publishedAt,
-            mainImage {
-              asset -> {
-                _id,
-                url
-              },
-              alt
-            }
-          }`
-          )
-          .then((data) => {setThirdNews(data[2])})
-      }, [!thirdNews])
+          .then((data) => {
+            setFirstNews(data[0]), 
+            setSecondNews(data[1]), 
+            setThirdNews(data[2])
+            })
+      }, [!firstNews.length])
 
     const [refCallback] = useKeenSlider({ loop: true },
         [
