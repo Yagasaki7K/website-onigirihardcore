@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import colors from './colors'
 
-const HeaderDetails = styled.div `
+const HeaderDetails = styled.div`
 
     .header {
         display: flex;
@@ -45,7 +45,7 @@ const HeaderDetails = styled.div `
             list-style: none;
             padding: 0;
             margin: 0;
-            color: #fff;
+            color: ${colors.white};
             margin-left: 23rem;
             background: ${colors.blue};
 
@@ -112,7 +112,7 @@ const HeaderDetails = styled.div `
                 font-family: 'Poppins', sans-serif;
 
                 a {
-                    color: #fff;
+                    color: ${colors.white};
                     text-decoration: none;
                 }
 
