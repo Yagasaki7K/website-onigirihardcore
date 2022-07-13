@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import colors from './colors'
+import colors from './Colors'
 
 const FooterDetails = styled.div`
 

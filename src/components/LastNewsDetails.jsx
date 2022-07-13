@@ -1,5 +1,5 @@
-import colors from "./colors";
 import styled from 'styled-components'
+import colors from "./Colors";
 
 const LastNewsDetails = styled.div`
     display: flex;
