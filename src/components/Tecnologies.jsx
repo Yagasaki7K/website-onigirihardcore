@@ -14,7 +14,7 @@ const Tecnologies = () => {
 
                     <div className="title">
                         <h1>Dragon Ball Super Broly - Saiyajins estão efurecidos no ...</h1>
-                        <i class="uil uil-clock-nine">&nbsp;20/12/2018</i>
+                        <i className="uil uil-clock-nine">&nbsp;20/12/2018</i>
                     </div>
                 </a>
 
@@ -23,7 +23,7 @@ const Tecnologies = () => {
 
                     <div className="title">
                         <h1>Dragon Ball Super Broly - Saiyajins estão efurecidos no ...</h1>
-                        <i class="uil uil-clock-nine">&nbsp;20/12/2018</i>
+                        <i className="uil uil-clock-nine">&nbsp;20/12/2018</i>
                     </div>
                 </a>
 
@@ -32,7 +32,7 @@ const Tecnologies = () => {
 
                     <div className="title">
                         <h1>Dragon Ball Super Broly - Saiyajins estão efurecidos no ...</h1>
-                        <i class="uil uil-clock-nine">&nbsp;20/12/2018</i>
+                        <i className="uil uil-clock-nine">&nbsp;20/12/2018</i>
                     </div>
                 </a>
 
@@ -41,7 +41,7 @@ const Tecnologies = () => {
 
                     <div className="title">
                         <h1>Dragon Ball Super Broly - Saiyajins estão efurecidos no ...</h1>
-                        <i class="uil uil-clock-nine">&nbsp;20/12/2018</i>
+                        <i className="uil uil-clock-nine">&nbsp;20/12/2018</i>
                     </div>
                 </a>
             </div>
@@ -52,7 +52,7 @@ const Tecnologies = () => {
 
                     <div className="title">
                         <h1>Dragon Ball Super Broly - Saiyajins estão efurecidos no ...</h1>
-                        <i class="uil uil-clock-nine">&nbsp;20/12/2018</i>
+                        <i className="uil uil-clock-nine">&nbsp;20/12/2018</i>
                     </div>
                 </a>
 
@@ -61,7 +61,7 @@ const Tecnologies = () => {
 
                     <div className="title">
                         <h1>Dragon Ball Super Broly - Saiyajins estão efurecidos no ...</h1>
-                        <i class="uil uil-clock-nine">&nbsp;20/12/2018</i>
+                        <i className="uil uil-clock-nine">&nbsp;20/12/2018</i>
                     </div>
                 </a>
 
@@ -70,7 +70,7 @@ const Tecnologies = () => {
 
                     <div className="title">
                         <h1>Dragon Ball Super Broly - Saiyajins estão efurecidos no ...</h1>
-                        <i class="uil uil-clock-nine">&nbsp;20/12/2018</i>
+                        <i className="uil uil-clock-nine">&nbsp;20/12/2018</i>
                     </div>
                 </a>
 
@@ -79,7 +79,7 @@ const Tecnologies = () => {
 
                     <div className="title">
                         <h1>Dragon Ball Super Broly - Saiyajins estão efurecidos no ...</h1>
-                        <i class="uil uil-clock-nine">&nbsp;20/12/2018</i>
+                        <i className="uil uil-clock-nine">&nbsp;20/12/2018</i>
                     </div>
                 </a>
             </div>

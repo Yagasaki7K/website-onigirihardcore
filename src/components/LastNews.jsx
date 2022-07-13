@@ -1,91 +1,35 @@
 import LastNewsDetails from './LastNewsDetails'
+import getImages from './services/getImages'
+import formatDate from './services/formatDate'
 
-const LastNews = () => {
-  return (
-    <LastNewsDetails>
-        <div className="lastnews">
-            <div className="header">
-                <p>&nbsp;&nbsp;Últimas notícias</p>
-            </div>
-
-            <div className="content">
-                <a href="#">
-                    <img src="https://web.archive.org/web/20181228112722im_/http://onigirihardcore.com.br/wp-content/uploads/2018/12/Midoriya.Izuku_.full_.2263669-1920x600.png" alt=""/>
-                </a>
-
-                <div className="left-content">
-                    <a href="#">
-                        <h1>
-                            Jump Force – Midoriya é o primeiro personagem de My Hero Academia confirmado no jogo
-                        </h1>
-                    </a>
-
-                    <i class="uil uil-clock-nine">&nbsp;20/12/2018</i>
-
-                    <p>Izuku Midoriya, mais conhecido como Deku em My Hero Academia, foi confirmado como um personagem jogável em Jump Force. A informação foi revelada na edição…</p>
-
+const LastNews = (props) => {
+    return (
+        <LastNewsDetails>
+            <div className="lastnews">
+                <div className="header">
+                    <p>&nbsp;&nbsp;Últimas Notícias</p>
                 </div>
+                {
+                    props.value && props.value.map((items, index) => (
+                        <div className="content" key={index}>
+                            <a href={items?.slug.current}>
+                                <img src={getImages(items?.mainImage.asset._ref)} alt="" />
+                            </a>
+                            <div className="left-content">
+                                <a href={items?.slug.current}>
+                                    <h1>{items?.title}</h1>
+                                </a>
+                                <i className="uil uil-clock-nine">&nbsp;{formatDate(items.publishedAt)}</i>
+                                <p>
+                                    {items?.description}
+                                </p>
+                            </div>
+                        </div>
+                    ))
+                }
             </div>
-
-            <div className="content">
-                <a href="#">
-                    <img src="https://web.archive.org/web/20181228112722im_/http://onigirihardcore.com.br/wp-content/uploads/2018/12/Midoriya.Izuku_.full_.2263669-1920x600.png" alt=""/>
-                </a>
-
-                <div className="left-content">
-                    <a href="#">
-                        <h1>
-                            Jump Force – Midoriya é o primeiro personagem de My Hero Academia confirmado no jogo
-                        </h1>
-                    </a>
-                    
-                    <i class="uil uil-clock-nine">&nbsp;20/12/2018</i>
-
-                    <p>Izuku Midoriya, mais conhecido como Deku em My Hero Academia, foi confirmado como um personagem jogável em Jump Force. A informação foi revelada na edição…</p>
-
-                </div>
-            </div>
-
-            <div className="content">
-                <a href="#">
-                    <img src="https://web.archive.org/web/20181228112722im_/http://onigirihardcore.com.br/wp-content/uploads/2018/12/Midoriya.Izuku_.full_.2263669-1920x600.png" alt=""/>
-                </a>
-
-                <div className="left-content">
-                    <a href="#">
-                        <h1>
-                            Jump Force – Midoriya é o primeiro personagem de My Hero Academia confirmado no jogo
-                        </h1>
-                    </a>
-                    
-                    <i class="uil uil-clock-nine">&nbsp;20/12/2018</i>
-
-                    <p>Izuku Midoriya, mais conhecido como Deku em My Hero Academia, foi confirmado como um personagem jogável em Jump Force. A informação foi revelada na edição…</p>
-
-                </div>
-            </div>
-
-            <div className="content">
-                <a href="#">
-                    <img src="https://web.archive.org/web/20181228112722im_/http://onigirihardcore.com.br/wp-content/uploads/2018/12/Midoriya.Izuku_.full_.2263669-1920x600.png" alt=""/>
-                </a>
-
-                <div className="left-content">
-                    <a href="#">
-                        <h1>
-                            Jump Force – Midoriya é o primeiro personagem de My Hero Academia confirmado no jogo
-                        </h1>
-                    </a>
-                    
-                    <i class="uil uil-clock-nine">&nbsp;20/12/2018</i>
-
-                    <p>Izuku Midoriya, mais conhecido como Deku em My Hero Academia, foi confirmado como um personagem jogável em Jump Force. A informação foi revelada na edição…</p>
-
-                </div>
-            </div>
-        </div>
-    </LastNewsDetails>
-  )
+        </LastNewsDetails>
+    )
 }
 
 export default LastNews

@@ -1,1 +1,13 @@
-token=skWDUrYni2QhSvrcbqPj2Uq5WHXH8GlmrltFuPj9JVIsFwsnvU4antBACBdGut21PfiyQVJN26Lt1nKTZKXAF4HgPQitNFQXR0Ppa7zZr66N9UyvRUfCWjjHInLH92UeZJeqnJCIo3gKZ77YQNs3UKwefrlWwUdk5ikOrcd3ns7iuV0TY2iv
+import sanityClient from '@sanity/client'
+
+export default sanityClient({
+    "projectId": "1y5aj0uu",
+    "dataset": "production",
+    apiVersion: '2021-06-07',
+    dataset: 'production',
+    token: 'skLruGclEr24Ma4DgBvxjSoaEztDmtpXnxgfxzsIGKaZWqzjaZ1vNGpvy0OBIPnYCsWDzSRe1gl75VFLQDOJROsJncqYiH2JvvIhVSHreWyZc7yepcdP7c98w3mqIPYAm9AtdkK5CwreNYsYCquFbrv6wXgdfeI638wIqjKntlKFwqhTgH7f', 
+    useCdn: true,
+    ignoreBrowserTokenWarning: true,
+})
+
+// https://1y5aj0uu.api.sanity.io/v2021-06-07/data/export/production/

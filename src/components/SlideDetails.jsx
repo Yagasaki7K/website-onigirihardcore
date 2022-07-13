@@ -10,6 +10,10 @@ const SlideDetails = styled.div `
             height: 30rem;
         }
 
+        a {
+            text-decoration: none;
+        }
+
         img {
             width: 100%;
             height: 100%;
@@ -69,6 +73,7 @@ const SlideDetails = styled.div `
                     color: ${colors.white};
                     font-size: 3rem;
                     font-weight: 700;
+                    line-height: 50px;
                     text-shadow: 1px 1px 2px rgb(0 0 0 / 30%);
 
                     a {
@@ -83,6 +88,7 @@ const SlideDetails = styled.div `
                     color: ${colors.white};
                     border-left: 5px solid ${colors.blue};
                     padding-left: 10px;
+                    width: 50rem;
 
                     a {
                         text-decoration: none;

@@ -37,6 +37,11 @@ const LastNewsDetails = styled.div`
                 height: 14rem;
                 object-fit: cover;
                 margin-bottom: 1rem;
+
+                :hover {
+                    opacity: 0.8;
+                    transition: 1s;
+                }
             }
 
             .left-content {

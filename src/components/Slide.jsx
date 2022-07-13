@@ -1,9 +1,80 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import groq from 'groq'
 import SlideDetails from './SlideDetails'
 import 'keen-slider/keen-slider.min.css'
+import client from '../database'
 import { useKeenSlider } from 'keen-slider/react'
+import getImages from './services/getImages'
+import formatDate from './services/formatDate'
 
 const Slide = () => {
+
+    const [firstNews, setFirstNews] = useState([])
+    const [secondNews, setSecondNews] = useState([])
+    const [thirdNews, setThirdNews] = useState([])
+
+    useEffect(() => {
+        client
+          .fetch(
+            groq`*[_type == "post" && publishedAt < now()] | order(publishedAt desc) {
+            title,
+            body,
+            description,
+            slug,
+            publishedAt,
+            mainImage {
+              asset -> {
+                _id,
+                url
+              },
+              alt
+            }
+          }`
+          )
+          .then((data) => {setFirstNews(data[0])})
+      }, [!firstNews])
+
+    useEffect(() => {
+        client
+          .fetch(
+            groq`*[_type == "post" && publishedAt < now()] | order(publishedAt desc) {
+            title,
+            body,
+            description,
+            slug,
+            publishedAt,
+            mainImage {
+              asset -> {
+                _id,
+                url
+              },
+              alt
+            }
+          }`
+          )
+          .then((data) => {setSecondNews(data[1])})
+      }, [!secondNews])
+
+    useEffect(() => {
+        client
+          .fetch(
+            groq`*[_type == "post" && publishedAt < now()] | order(publishedAt desc) {
+            title,
+            body,
+            description,
+            slug,
+            publishedAt,
+            mainImage {
+              asset -> {
+                _id,
+                url
+              },
+              alt
+            }
+          }`
+          )
+          .then((data) => {setThirdNews(data[2])})
+      }, [!thirdNews])
 
     const [refCallback] = useKeenSlider({ loop: true },
         [
@@ -41,55 +112,71 @@ const Slide = () => {
     return (
         <SlideDetails>
             <div ref={refCallback} className="keen-slider">
+                {firstNews.mainImage && firstNews.mainImage.asset && (
                 <div className="keen-slider__slide">
-                    <img src="https://web.archive.org/web/20181228112722im_/http://onigirihardcore.com.br/wp-content/uploads/2018/12/Midoriya.Izuku_.full_.2263669-1920x600.png" />
-
+                    <a href={firstNews?.slug.current}>
+                        <img src={firstNews?.mainImage.asset.url} alt={firstNews?.title}/>
+                    </a>
                     <div className="slider-description">
                         <div className="slide-tag">
-                        <span className="latest">HOT NEWS 🔥</span>
-                        <span className="tag">JOGOS</span>
-                        <span className="date">20/12/2018</span>
-                        <span> - </span>
-                        <span className="author">
-                            <a href="">Anderson Marlon</a></span>
+                            <span className="latest">HOT NEWS 🔥</span>
+                            {/* <span className="tag">{firstNews?.category.title}</span> */}
+                            <span className="date">{formatDate(firstNews?.publishedAt)}</span>
+                            <span> - </span>
+                            <span className="author">
+                                <a href="https://yagasaki.vercel.app/" target="_blank">Anderson Marlon</a>
+                            </span>
                         </div>
-                        <h1>
-                            <a href="#">
-                            Jump Force - Midoriya é o primeiro personagem de
-                            My Hero Academia confirmado no jogo
-                            </a>
-                        </h1>
-                        <p>
-                            <a href="#">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum minus tenetur pariatur. Cupiditate temporibus, molestias natus earum libero cum eligendi quo non dicta pariatur similique iure ipsa eum delectus adipisci.
-                            </a>
-                        </p>
-                    </div>
-                </div>
-                <div className="keen-slider__slide">
-                    <img src="https://web.archive.org/web/20181228113915im_/http://onigirihardcore.com.br/wp-content/uploads/2018/12/y6IHUKleghkKuNid5DYbsRmcAyZ-3-560x416.jpg" />
 
+                        <a href={firstNews?.slug.current}><h1>{firstNews?.title}</h1></a>
+                        <p>{firstNews?.description}</p>
+                        </div>
+                </div>
+                )}
+
+                {secondNews.mainImage && secondNews.mainImage.asset && (
+                <div className="keen-slider__slide">
+                    <a href={secondNews?.slug.current}>
+                        <img src={secondNews?.mainImage.asset.url} alt={secondNews?.title}/>
+                    </a>
                     <div className="slider-description">
                         <div className="slide-tag">
-                        <span className="latest">HOT NEWS 🔥</span>
-                        <span className="tag">JOGOS</span>
-                        <span className="date">20/12/2018</span>
-                        <span> - </span>
-                        <span className="author">
-                            <a href="">Anderson Marlon</a></span>
+                            <span className="latest">HOT NEWS 🔥</span>
+                            {/* <span className="tag">{secondNews?.category.title}</span> */}
+                            <span className="date">{formatDate(secondNews?.publishedAt)}</span>
+                            <span> - </span>
+                            <span className="author">
+                                <a href="https://yagasaki.vercel.app/" target="_blank">Anderson Marlon</a>
+                            </span>
                         </div>
-                        <h1>
-                            <a href="#">
-                            Spiderman de PS4 incluirá traje de Tobey Maguire em atualização
-                            </a>
-                        </h1>
-                        <p>
-                            <a href="#">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum minus tenetur pariatur. Cupiditate temporibus, molestias natus earum libero cum eligendi quo non dicta pariatur similique iure ipsa eum delectus adipisci.
-                            </a>
-                        </p>
-                    </div>
+
+                        <a href={secondNews?.slug.current}><h1>{secondNews?.title}</h1></a>
+                        <p>{secondNews?.description}</p>
+                        </div>
                 </div>
+                )}
+                
+                {thirdNews.mainImage && thirdNews.mainImage.asset && (
+                <div className="keen-slider__slide">
+                    <a href={thirdNews?.slug.current}>
+                        <img src={thirdNews?.mainImage.asset.url} alt={thirdNews?.title}/>
+                    </a>
+                    <div className="slider-description">
+                        <div className="slide-tag">
+                            <span className="latest">HOT NEWS 🔥</span>
+                            {/* <span className="tag">{thirdNews?.category.title}</span> */}
+                            <span className="date">{formatDate(thirdNews?.publishedAt)}</span>
+                            <span> - </span>
+                            <span className="author">
+                                <a href="https://yagasaki.vercel.app/" target="_blank">Anderson Marlon</a>
+                            </span>
+                        </div>
+
+                        <a href={thirdNews?.slug.current}><h1>{thirdNews?.title}</h1></a>
+                        <p>{thirdNews?.description}</p>
+                        </div>
+                </div>
+                )}
             </div>
         </SlideDetails>
     )

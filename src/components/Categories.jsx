@@ -1,37 +1,46 @@
 import React from 'react'
 import CategoriesDetails from './CategoriesDetails'
+import formatDate from './services/formatDate'
+import getImages from './services/getImages'
 
-const Categories = () => {
+const Categories = (props) => {
     return (
         <CategoriesDetails>
-            <div className="firstCategories">
+            <div className="firstCategories" key={props._id}>
                 <div className="header">
                     <p>Animes {`&`} HQs</p>
                 </div>
 
-                <img src="https://web.archive.org/web/20181228112722im_/http://onigirihardcore.com.br/wp-content/uploads/2018/12/Midoriya.Izuku_.full_.2263669-1920x600.png" alt="" />
-
-                <a href="#">
-                    <h1>Dragon Ball Super Broly - Saiyajins estão efurecidos no ...</h1>
-                </a>
-
-                <span>
-                    <i class="uil uil-clock-nine">&nbsp;20/12/2018</i>
-                    <p>
-                    Um novo trailer dublado de Dragon Ball Super Broly foi divulgado, e ele traz Goku, Vegeta e Broly enfurecidos em uma grande batalha …
-                    </p>
-                </span>
+                {
+                    props.value && props.value.map((items, index) => (
+                        <a href={items?.slug.current} key={index}>
+                            <img src={getImages(items?.mainImage.asset._ref)} alt="" />
+                            <h1>{items?.title}</h1>
+                        </a>
+                    ))
+                }
+                {
+                    props.value && props.value.map((items, index) => (
+                        <span key={index}>
+                            <i className="uil uil-clock-nine">&nbsp;{formatDate(items._createdAt)}</i>
+                            <p>
+                            {items?.body.children}
+                            </p>
+                        </span>
+                    ))
+                }
+                
 
                 <div className="posts">
                     <div className="post">
-                        <img src="https://pbs.twimg.com/media/FXJ6VrIXwAEPAq6?format=jpg&name=medium" alt="" />
+                        <img src="https://web.archive.org/web/20181228112722im_/http://onigirihardcore.com.br/wp-content/uploads/2018/12/Midoriya.Izuku_.full_.2263669-1920x600.png" alt="" />
                         <div className="post-side">
                         <a href="">
                             <h3>
                                 My Hero Academia – Pôster confirma 4ª temporada para 2019
                             </h3>
                         </a>
-                        <i class="uil uil-clock-nine">&nbsp;20/12/2018</i>
+                        <i className="uil uil-clock-nine">&nbsp;20/12/2018</i>
                         <hr/>
                         </div>   
                     </div> 
@@ -45,14 +54,14 @@ const Categories = () => {
                     <p>&nbsp;&nbsp;Nas Telonas</p>
                 </div>
 
-                <img src="https://pbs.twimg.com/media/FXJ6VrIXwAEPAq6?format=jpg&name=medium" alt="" />
+                <img src="https://web.archive.org/web/20181228112722im_/http://onigirihardcore.com.br/wp-content/uploads/2018/12/Midoriya.Izuku_.full_.2263669-1920x600.png" alt="" />
 
                 <a href="#">
                     <h1>Dragon Ball Super Broly - Saiyajins estão efurecidos no ...</h1>
                 </a>
 
                 <span>
-                    <i class="uil uil-clock-nine">&nbsp;20/12/2018</i>
+                    <i className="uil uil-clock-nine">&nbsp;20/12/2018</i>
                     <p>
                     Um novo trailer dublado de Dragon Ball Super Broly foi divulgado, e ele traz Goku, Vegeta e Broly enfurecidos em uma grande batalha …
                     </p>
@@ -60,14 +69,14 @@ const Categories = () => {
 
                 <div className="posts">
                     <div className="post">
-                        <img src="https://pbs.twimg.com/media/FXJ6VrIXwAEPAq6?format=jpg&name=medium" alt="" />
+                        <img src="https://web.archive.org/web/20181228112722im_/http://onigirihardcore.com.br/wp-content/uploads/2018/12/Midoriya.Izuku_.full_.2263669-1920x600.png" alt="" />
                         <div className="post-side">
                         <a href="">
                             <h3>
                                 My Hero Academia – Pôster confirma 4ª temporada para 2019
                             </h3>
                         </a>
-                        <i class="uil uil-clock-nine">&nbsp;20/12/2018</i>
+                        <i className="uil uil-clock-nine">&nbsp;20/12/2018</i>
                         <hr/>
                         </div>   
                     </div> 
@@ -78,17 +87,17 @@ const Categories = () => {
 
             <div className="thirdCategories">
             <div className="header">
-                    <p>&nbsp;&nbsp;Gamenation</p>
+                    <p>&nbsp;&nbsp;Las Jogatinas</p>
                 </div>
 
-                <img src="https://pbs.twimg.com/media/FXJ6VrIXwAEPAq6?format=jpg&name=medium" alt="" />
+                <img src="https://web.archive.org/web/20181228112722im_/http://onigirihardcore.com.br/wp-content/uploads/2018/12/Midoriya.Izuku_.full_.2263669-1920x600.png" alt="" />
 
                 <a href="#">
                     <h1>Dragon Ball Super Broly - Saiyajins estão efurecidos no ...</h1>
                 </a>
 
                 <span>
-                    <i class="uil uil-clock-nine">&nbsp;20/12/2018</i>
+                    <i className="uil uil-clock-nine">&nbsp;20/12/2018</i>
                     <p>
                     Um novo trailer dublado de Dragon Ball Super Broly foi divulgado, e ele traz Goku, Vegeta e Broly enfurecidos em uma grande batalha …
                     </p>
@@ -96,14 +105,14 @@ const Categories = () => {
 
                 <div className="posts">
                     <div className="post">
-                        <img src="https://pbs.twimg.com/media/FXJ6VrIXwAEPAq6?format=jpg&name=medium" alt="" />
+                        <img src="https://web.archive.org/web/20181228112722im_/http://onigirihardcore.com.br/wp-content/uploads/2018/12/Midoriya.Izuku_.full_.2263669-1920x600.png" alt="" />
                         <div className="post-side">
                         <a href="">
                             <h3>
                                 My Hero Academia – Pôster confirma 4ª temporada para 2019
                             </h3>
                         </a>
-                        <i class="uil uil-clock-nine">&nbsp;20/12/2018</i>
+                        <i className="uil uil-clock-nine">&nbsp;20/12/2018</i>
                         <hr/>
                         </div>   
                     </div> 
