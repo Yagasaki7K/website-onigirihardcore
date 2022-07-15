@@ -1,6 +1,32 @@
 import TecnologiesDetails from './TecnologiesDetails'
 
 const Tecnologies = () => {
+
+    const [singlePost, setSinglePost] = useState([])
+
+    const keyword = 'tecnologia'
+
+    useEffect(() => {
+        sanityClient
+          .fetch(
+            `*[_type == "posts" && ${keyword} in categories[]->slug.current] {
+                ...,
+                categories[] -> {
+                        title,
+                        slug,
+                        image{
+                            asset->{
+                                _id,
+                                url
+                            }
+                        }
+                },
+              }`
+          )
+          .then((data) => setSinglePost(data))
+          .catch(console.error);
+      }, [!singlePost]);
+
   return (
     <TecnologiesDetails>
         <div className="tecnologies">
