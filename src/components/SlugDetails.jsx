@@ -5,6 +5,7 @@ const SlugDetails = styled.div `
 
     section {
         margin-bottom: 5rem;
+        background: ${colors.whitelight};
         img {
             width: 100%;
             height: 30rem;
@@ -29,13 +30,13 @@ const SlugDetails = styled.div `
         }
 
         .block__content {
-            display: block;
-            width: 80rem;
-            margin-left: 23rem;
+            width: 70rem;
+            text-align: justify;
+            margin-left: 26rem;
             font-size: 1.1rem;
 
             @media (max-width: 1366px) {
-                margin-left: 6rem;
+                margin-left: 8rem;
             }
         }
     }

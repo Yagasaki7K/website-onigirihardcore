@@ -13,7 +13,7 @@ const Footer = () => {
         
         <div className="footer">
             <p>
-                © 2013 - {new Date().getFullYear()} <a href="/">Onigiri Hardcore</a> - &nbsp;
+                <a href="/admin">©</a> 2013 - {new Date().getFullYear()} <a href="/">Onigiri Hardcore</a> - &nbsp;
                 <a href="https://kalifyinc.vercel.app/" target="_blank">Kalify Inc.</a> | &nbsp;
             </p>
             <p>
