@@ -28,7 +28,9 @@ const Header = () => {
             <a href="/">
                 <img src={logotipo} className="logotipo" alt="logo"/>
             </a>
-            <img src={anuncio} className="advice" alt="Anuncio"/>
+            <a href="/">
+                <img src={anuncio} className="advice" alt="Anuncio"/>
+            </a>
         </div>
 
         <div className="navigation">
@@ -41,7 +43,7 @@ const Header = () => {
                         <a href="/">Notícias</a>
                     </li>
                     <li>
-                        <a href="/">Animes {`&`} HQs</a>
+                        <a href="/">Animes {`&`} HQ's</a>
                     </li>
                     <li>
                         <a href="/">Jogos</a>
@@ -50,10 +52,10 @@ const Header = () => {
                         <a href="/">Tecnologia</a>
                     </li>
                     <li>
-                        <a href="/">Análises</a>
+                        <a href="https://onigiri-hardcore.blogspot.com/" target="_blank">OH: Arquivos</a>
                     </li>
                     <li>
-                        <a href="/">Kalify Inc</a>
+                        <a href="https://kalify.vercel.app" target="_blank">Kalify Inc</a>
                     </li>
                 </span>
             </ul>
