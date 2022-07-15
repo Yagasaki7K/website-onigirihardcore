@@ -29,6 +29,16 @@ const SlugDetails = styled.div `
             text-shadow: 1px 1px 2px rgb(0 0 0 / 30%);
         }
 
+        .date {
+            margin-top: -2rem;
+            margin-bottom: 2rem;
+            margin-left: 23rem;
+
+            @media (max-width: 1366px) {
+                margin-left: 6rem;
+            }
+        }
+
         .block__content {
             width: 70rem;
             text-align: justify;

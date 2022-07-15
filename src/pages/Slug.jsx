@@ -20,6 +20,7 @@ export default function SinglePost() {
         `*[slug.current == $slug]{
           title,
           slug,
+          publishedAt,
           mainImage{
             asset->{
               _id,
@@ -48,6 +49,8 @@ export default function SinglePost() {
             )}
 
                 <h1> {singlePost.title} </h1>
+                <p className="date">Publicado em: {formatDate(singlePost.publishedAt)} por <a href="https://yagasaki.vercel.app/" target="_blank">{singlePost.name}</a>
+                </p>
 
             {singlePost.slug && singlePost.slug.current && (
                 <div className="block__content">
