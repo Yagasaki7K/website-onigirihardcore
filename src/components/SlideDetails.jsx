@@ -22,6 +22,7 @@ const SlideDetails = styled.div `
         }
 
         .keen-slider__slide {
+            width: 100%;
             .slider-description {
                 position: absolute;
                 top: 45%;
