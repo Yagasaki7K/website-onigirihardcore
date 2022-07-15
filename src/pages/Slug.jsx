@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import SlugDetails from "../components/SlugDetails"
-import client from "../database"
+import sanityClient from "../database"
 import BlockContent from "@sanity/block-content-to-react"
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 export default function SinglePost() {
   const [singlePost, setSinglePost] = useState([])
@@ -10,50 +12,52 @@ export default function SinglePost() {
   const { slug } = useParams()
 
   useEffect(() => {
-    client
+    sanityClient
       .fetch(
-        `*[_type == "post" && slug.current == $slug][0]{title, "name": author->name} {
-        title,
-        body,
-        mainImage {
-          asset -> {
-            _id,
-            url
-          },
-          alt
-        }
-      }`
+        `*[slug.current == $slug]{
+          title,
+          slug,
+          mainImage{
+            asset->{
+              _id,
+              url
+             }
+           },
+         body,
+        "name": author->name,
+        "authorImage": author->image
+       }`,
+        { slug }
       )
       .then((data) => setSinglePost(data[0]))
-    setIsLoading(false)
-  }, [slug])
+      .catch(console.error);
+      setIsLoading(false)
+  }, [slug]);
 
   return (
+    <>
+    <Header/>
     <SlugDetails>
-      {isLoading ? (
-        <h1 className="">
-          Loading...
-        </h1>
-      ) : (
+      {isLoading ? (<h1 className="">Loading...</h1>) : (
         <section>
-          <h1> {singlePost.title} </h1>
-          {singlePost.mainImage && singlePost.mainImage.asset && (
-            <img
-              src={singlePost.mainImage.asset.url}
-              alt={singlePost.title}
-              title={singlePost.title}
-            />
-          )}
+        { singlePost.mainImage && singlePost.mainImage.asset && (
+            <img src={singlePost.mainImage.asset.url} alt={singlePost.title} title={singlePost.title}/>
+        )}
+            <h1> {singlePost.title} </h1>
 
-          <div className="block__content">
-            <BlockContent
-              blocks={singlePost.body}
-              projectId="1y5aj0uu"
-              dataset="production"
-            />
-          </div>
+          {singlePost.slug && singlePost.slug.current && (
+            <div className="block__content">
+                <BlockContent
+                blocks={singlePost.body}
+                projectId="1y5aj0uu"
+                dataset="production"
+                />
+            </div>
+            )}
         </section>
       )}
+      <Footer/>
     </SlugDetails>
+    </>
   )
 }
