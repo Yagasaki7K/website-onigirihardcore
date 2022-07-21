@@ -10,8 +10,6 @@ import formatDate from './services/formatDate'
 const Slide = () => {
 
     const [firstNews, setFirstNews] = useState([])
-    const [secondNews, setSecondNews] = useState([])
-    const [thirdNews, setThirdNews] = useState([])
 
     useEffect(() => {
         client
@@ -32,9 +30,7 @@ const Slide = () => {
           }`
           )
           .then((data) => {
-            setFirstNews(data[0]), 
-            setSecondNews(data[1]), 
-            setThirdNews(data[2])
+            setFirstNews(data[0])
             })
       }, [!firstNews.length])
 
@@ -92,50 +88,6 @@ const Slide = () => {
 
                         <a href={firstNews?.slug.current}><h1>{firstNews?.title}</h1></a>
                         <p>{firstNews?.description}</p>
-                        </div>
-                </div>
-                )}
-
-                {secondNews.mainImage && secondNews.mainImage.asset && (
-                <div className="keen-slider__slide">
-                    <a href={secondNews?.slug.current}>
-                        <img src={secondNews?.mainImage.asset.url} alt={secondNews?.title}/>
-                    </a>
-                    <div className="slider-description">
-                        <div className="slide-tag">
-                            <span className="latest">HOT NEWS 🔥</span>
-                            {/* <span className="tag">{secondNews?.category.title}</span> */}
-                            <span className="date">{formatDate(secondNews?.publishedAt)}</span>
-                            <span> - </span>
-                            <span className="author">
-                                <a href="https://yagasaki.vercel.app/" target="_blank">Anderson Marlon</a>
-                            </span>
-                        </div>
-
-                        <a href={secondNews?.slug.current}><h1>{secondNews?.title}</h1></a>
-                        <p>{secondNews?.description}</p>
-                        </div>
-                </div>
-                )}
-                
-                {thirdNews.mainImage && thirdNews.mainImage.asset && (
-                <div className="keen-slider__slide">
-                    <a href={thirdNews?.slug.current}>
-                        <img src={thirdNews?.mainImage.asset.url} alt={thirdNews?.title}/>
-                    </a>
-                    <div className="slider-description">
-                        <div className="slide-tag">
-                            <span className="latest">HOT NEWS 🔥</span>
-                            {/* <span className="tag">{thirdNews?.category.title}</span> */}
-                            <span className="date">{formatDate(thirdNews?.publishedAt)}</span>
-                            <span> - </span>
-                            <span className="author">
-                                <a href="https://yagasaki.vercel.app/" target="_blank">Anderson Marlon</a>
-                            </span>
-                        </div>
-
-                        <a href={thirdNews?.slug.current}><h1>{thirdNews?.title}</h1></a>
-                        <p>{thirdNews?.description}</p>
                         </div>
                 </div>
                 )}
