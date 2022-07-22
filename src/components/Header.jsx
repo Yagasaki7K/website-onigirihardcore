@@ -1,9 +1,6 @@
 import React from 'react'
 import HeaderDetails from './HeaderDetails'
 
-import logotipo from '../assets/logotipo.png'
-import anuncio from '../assets/anuncio.png'
-
 function ShowHiddenMenu() {
     let item = document.getElementById("item-menu");
     let ul = document.getElementById("ul-menu");
@@ -26,10 +23,10 @@ const Header = () => {
     <HeaderDetails>
         <div className="header">
             <a href="/">
-                <img src={logotipo} className="logotipo" alt="logo"/>
+                <img src="/logotipo.png" className="logotipo" alt="logo"/>
             </a>
             <a href="/">
-                <img src={anuncio} className="advice" alt="Anuncio"/>
+                <img src="/anuncio.png" className="advice" alt="Anuncio"/>
             </a>
         </div>
 

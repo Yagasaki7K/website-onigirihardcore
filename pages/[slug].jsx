@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
-import SlugDetails from "../components/SlugDetails"
-import sanityClient from "../database"
+import { useRouter } from 'next/router'
+import SlugDetails from "/src/components/SlugDetails"
+import sanityClient from "/src/database"
 import BlockContent from "@sanity/block-content-to-react"
-import formatDate from "../components/services/formatDate"
-import getImages from "../components/services/getImages"
+import formatDate from "/src/services/formatDate"
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from '/src/components/Header'
+import Footer from '/src/components/Footer'
 
 export default function SinglePost() {
   const [singlePost, setSinglePost] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  const { slug } = useParams()
+  const router = useRouter()
+  const { slug } = router.query
 
   useEffect(() => {
     sanityClient

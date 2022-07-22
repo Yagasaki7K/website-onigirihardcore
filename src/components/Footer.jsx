@@ -1,5 +1,4 @@
 import FooterDetails from './FooterDetails'
-import Logotipo from '/src/assets/logotipo.png'
 
 const Footer = () => {
   return (
@@ -7,7 +6,7 @@ const Footer = () => {
 
         <div className="imgfooter">
             <a href="/">
-                <img src={Logotipo} alt="footer" />
+                <img src="/logotipo.png" alt="footer" />
             </a>
         </div>
         

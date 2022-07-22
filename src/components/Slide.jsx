@@ -4,8 +4,7 @@ import SlideDetails from './SlideDetails'
 import 'keen-slider/keen-slider.min.css'
 import client from '../database'
 import { useKeenSlider } from 'keen-slider/react'
-import getImages from './services/getImages'
-import formatDate from './services/formatDate'
+import formatDate from '/src/services/formatDate'
 
 const Slide = () => {
 

@@ -1,6 +1,6 @@
-import LastNewsDetails from './LastNewsDetails'
-import getImages from './services/getImages'
-import formatDate from './services/formatDate'
+import LastNewsDetails from '/src/components/LastNewsDetails'
+import getImages from '/src/services/getImages'
+import formatDate from '/src/services/formatDate'
 
 const LastNews = (props) => {
     return (
