@@ -47,7 +47,12 @@ export default function SinglePost() {
         {isLoading ? (<h1 className="">Loading...</h1>) : (
             <section>
             { singlePost.mainImage && singlePost.mainImage.asset && (
+                <>
                 <img src={singlePost.mainImage.asset.url} alt={singlePost.title} title={singlePost.title}/>
+                <head>
+                    <meta name="og:image" content={singlePost.mainImage.asset.url}/>
+                </head>
+                </>
             )}
 
                 <h1> {singlePost.title} </h1>
@@ -56,15 +61,12 @@ export default function SinglePost() {
 
             {singlePost.slug && singlePost.slug.current && (
                 <div className="block__content">
-                    {/* <head>
-                        <meta name="twitter:card" content="summary_large_image"/>
-                        <meta name="twitter:site" content="https://onigirihardcore.vercel.app" />
-                        <meta name="twitter:creator" content="@yagasaki7k" />
-                        <meta property="og:url" content="https://onigirihardcore.vercel.app" />
-                        <meta property="og:title" content={singlePost?.title} />
-                        <meta property="og:description" content={singlePost?.description} />
-                        <meta property="og:image" content={getImages(singlePost?.mainImage.asset._ref)} />
-                    </head> */}
+                    <head>
+                    <meta property="og:site_name" content="Onigiri Hardcore" />
+                    <meta property="og:url" content={"http://www.onigirihardcore.vercel.app" + singlePost.slug.current}/>
+                    <meta name="og:title" content={singlePost.title}/>
+                    <meta name="og:description" content={singlePost.description}/>
+                    </head>
 
                     <BlockContent
                     blocks={singlePost.body}
