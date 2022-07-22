@@ -64,16 +64,10 @@ export default function SinglePost() {
             {singlePost.slug && singlePost.slug.current && (
                 <div className="block__content">
                     <head>
-                    <meta name="twitter:site" content="@KalifyInc" />
-                    <meta name="twitter:creator" content="@KalifyInc" />
-                    <meta name="twitter:card" content="summary_large_image" />
-                    <meta name="twitter:description" content={singlePost.description} />
-
-                    <meta property="og:site_name" content="Onigiri Hardcore" />
-                    <meta name="og:title" content={singlePost.title}/>
-                    <meta name="og:description" content={singlePost.description}/>
-                    <meta property="og:url" content={singlePost.slug.current} />
-                    <meta property="og:type" content="website" />
+                        <meta name="twitter:description" content={singlePost.description} />
+                        <meta name="og:title" content={singlePost.title}/>
+                        <meta name="og:description" content={singlePost.description}/>
+                        <meta property="og:url" content={singlePost.slug.current} />
                     </head>
 
                     <BlockContent
