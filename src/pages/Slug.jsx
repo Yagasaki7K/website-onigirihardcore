@@ -50,9 +50,9 @@ export default function SinglePost() {
                 <>
                 <img src={singlePost.mainImage.asset.url} alt={singlePost.title} title={singlePost.title}/>
                 <head>
-                    <link rel="image_src" href={singlePost.mainImage.asset.url} />
-                    <meta property="og:image" content={singlePost.mainImage.asset.url} />
-                    <meta name="twitter:image:src" content={singlePost.mainImage.asset.url} />
+                    <link rel="image_src" href={`${singlePost.mainImage.asset.url}`} />
+                    <meta property="og:image" content={`${singlePost.mainImage.asset.url}`} />
+                    <meta name="twitter:image:src" content={`${singlePost.mainImage.asset.url}`} />
                 </head>
                 </>
             )}
@@ -64,10 +64,10 @@ export default function SinglePost() {
             {singlePost.slug && singlePost.slug.current && (
                 <div className="block__content">
                     <head>
-                        <meta name="twitter:description" content={singlePost.description} />
-                        <meta name="og:title" content={singlePost.title}/>
-                        <meta name="og:description" content={singlePost.description}/>
-                        <meta property="og:url" content={singlePost.slug.current} />
+                        <meta name="twitter:description" content={`${singlePost.description}`} />
+                        <meta name="og:title" content={`${singlePost.title}`}/>
+                        <meta name="og:description" content={`${singlePost.description}`}/>
+                        <meta property="og:url" content={`${singlePost.slug.current}`} />
                     </head>
 
                     <BlockContent
