@@ -48,6 +48,11 @@ const SlugDetails = styled.div `
             @media (max-width: 1366px) {
                 margin-left: 8rem;
             }
+
+            iframe {
+                width: 70rem;
+                height: 38rem;
+            }
         }
     }
 `
