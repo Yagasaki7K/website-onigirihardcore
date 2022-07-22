@@ -65,7 +65,7 @@ export default function SinglePost() {
                     <head>
                     <meta name="twitter:site" content="@KalifyInc" />
                     <meta name="twitter:creator" content="@KalifyInc" />
-                    <meta name="twitter:card" content="summary_large_image" />
+                    <meta name="twitter:card" content="website" />
                     <meta name="og:title" content={singlePost.title}/>
                     <meta property="og:site_name" content="Onigiri Hardcore" />
                     <meta property="og:url" content={"http://www.onigirihardcore.vercel.app" + singlePost.slug.current}/>
