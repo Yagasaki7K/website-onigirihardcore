@@ -25,16 +25,13 @@ const LastNews = (props) => {
                                 </p>
                             </div>
 
-                            <meta name="description" content={items?.description} />
-                            <meta name="twitter:card" content="summary"/>
-                            <meta name="twitter:site" content="@publisher_handle"/>
-                            <meta name="twitter:title" content={items?.title}/>
-                            <meta name="twitter:description" content={items?.description}/>
-                            <meta name="twitter:creator" content="@Yagasaki7K"/>
-                            <meta name="twitter:image" content={getImages(items?.mainImage.asset._ref)}/>
-
+                            <meta name="twitter:card" content="summary" />
+                            <meta name="twitter:site" content="https://onigirihardcore.vercel.app" />
+                            <meta name="twitter:creator" content="@yagasaki7k" />
+                            <meta property="og:url" content="https://onigirihardcore.vercel.app" />
                             <meta property="og:title" content={items?.title} />
-                            <meta property="og:type" content="article" />
+                            <meta property="og:description" content={items?.description} />
+                            <meta property="og:image" content={getImages(items?.mainImage.asset._ref)} />
                         </div>
                     ))
                 }
