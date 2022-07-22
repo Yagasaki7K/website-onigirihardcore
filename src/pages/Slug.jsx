@@ -50,7 +50,8 @@ export default function SinglePost() {
                 <>
                 <img src={singlePost.mainImage.asset.url} alt={singlePost.title} title={singlePost.title}/>
                 <head>
-                    <meta name="og:image" content={singlePost.mainImage.asset.url}/>
+                    <link rel="image_src" href={singlePost.mainImage.asset.url} />
+                    <meta property="og:image" content={singlePost.mainImage.asset.url} />
                 </head>
                 </>
             )}
@@ -62,9 +63,13 @@ export default function SinglePost() {
             {singlePost.slug && singlePost.slug.current && (
                 <div className="block__content">
                     <head>
+                    <meta name="twitter:site" content="@KalifyInc" />
+                    <meta name="twitter:creator" content="@KalifyInc" />
+                    <meta name="twitter:card" content="summary_large_image" />
+                    <meta name="og:title" content={singlePost.title}/>
                     <meta property="og:site_name" content="Onigiri Hardcore" />
                     <meta property="og:url" content={"http://www.onigirihardcore.vercel.app" + singlePost.slug.current}/>
-                    <meta name="og:title" content={singlePost.title}/>
+                    <meta property="og:url" content={singlePost.slug.current} />
                     <meta name="og:description" content={singlePost.description}/>
                     </head>
 
