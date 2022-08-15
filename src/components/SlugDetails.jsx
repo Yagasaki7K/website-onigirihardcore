@@ -43,14 +43,21 @@ const SlugDetails = styled.div `
             text-align: justify;
             margin-left: 26rem;
             font-size: 1.1rem;
+            line-height: 1.5rem;
 
             @media (max-width: 1366px) {
                 margin-left: 8rem;
             }
 
-            iframe {
-                width: 70rem;
-                height: 38rem;
+        }
+
+        iframe {
+            width: 70rem;
+            margin-left: 26rem;
+            height: 38rem;
+
+            @media (max-width: 1366px) {
+                margin-left: 8rem;
             }
         }
     }

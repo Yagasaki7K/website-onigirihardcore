@@ -4,7 +4,7 @@ import colors from './Colors'
 const TecnologiesDetails = styled.div `
     display: flex;
     justify-content: center;
-    margin: -2rem 0 5rem -30px;
+    margin: -2rem 0 5rem 7rem;
 
     padding: 30px 0;
 
@@ -33,7 +33,7 @@ const TecnologiesDetails = styled.div `
             }
         }
 
-        .content, .secondContent {
+        .content, .secondContent, .thirdContent {
             display: flex;
             margin-left: -1rem;
                 

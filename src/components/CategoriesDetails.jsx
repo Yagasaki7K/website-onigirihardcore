@@ -17,7 +17,7 @@ const CategoriesDetails = styled.div `
             width: 22rem;
 
             p {
-                width: 8.5rem;
+                width: 9.5rem;
                 background: ${colors.blue};
                 color: ${colors.text};
                 padding: 5px 10px;
@@ -71,34 +71,33 @@ const CategoriesDetails = styled.div `
                 }
 
                 .post-side {
-                    a {
-                        h3 {
-                            margin-left: 10px;
-                            margin-top: 10px;
-                            margin-bottom: 5px;
-                            width: 18rem;
-                            font-weight: 600;
-                            font-size: 16px;
-                            text-transform: initial;
-                            line-height: 20px;
-                        }
+                    h3 {
+                        margin-left: 5rem;
+                        margin-top: -4.2rem;
+                        margin-bottom: 5px;
+                        width: 18rem;
+                        font-weight: 600;
+                        font-size: 16px;
+                        text-transform: initial;
+                        line-height: 20px;
+                    }
 
-                        color: ${colors.text};
-                        text-decoration: none;
-                        :hover {
-                            color: ${colors.blue};
-                        }
+                    color: ${colors.text};
+                    text-decoration: none;
+
+                    :hover {
+                        color: ${colors.blue};
                     }
 
                     i {
-                        margin-left: 10px;
+                        margin-left: 5rem;
                         font-style: normal;
                         color: ${colors.graydark};
                     }
 
                     hr {
                         width: 22rem;
-                        margin-left: -60px;
+                        margin-left: 0px;
                         border: 1px solid ${colors.graylight};
                     }
                 }
