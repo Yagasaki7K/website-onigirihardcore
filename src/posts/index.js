@@ -197,6 +197,21 @@ const posts = [
         body3: 'Até a publicação desta matéria, o CS Money encontra-se fora do ar e com o seguinte aviso: “O CS Money está temporariamente fora do ar após ser alvo de um ataque hacker esta noite. Iremos consertar o problema e faremos o nosso melhor para restaurar o funcionamento normal do site. Nosso suporte está pronto para responder suas dúvidas por email”.',
         body4: 'Nas redes sociais, a plataforma disse que está focada em devolver as skins roubadas e restaurar o funcionamento normal do site. “Obrigado a todos pelo suporte, realmente agradecemos isso. No momento, nossos esforços estão focados em devolver as skins roubadas e restaurar o nosso site. Se você tiver alguma informação sobre o que aconteceu, por favor não hesite em nos contatar por DM”, escreveu o perfil.',
     },
+    {
+        id: 13,
+        image: '/post/dragonballfornite.jpg',
+        title: 'Dragon Ball chega ao Fornite com skins e Kamehameha',
+        smalltitle: 'Dragon Ball chega ao Fornite com skins e Kamehameha',
+        categories: 'Games',
+        slug: 'dragon-ball-chega-ao-fornite-com-skins-e-kamehameha',
+        createdAt: '16/08/2022',
+        ytid: 'XiOn8wQmiAk',
+        description: 'O CS Money é um dos sites de troca de skins de Counter-Strike mais conhecidos no mundo, e segundo o perfil especializado Arrow CSGO...',
+        body: 'O Fornite havia anunciado desde semana passada em seu Twitter que a parceria com o universo de Dragon Ball iria acontecer, ontem saiu a data e hoje (16) foi oficialmente lançado, trazendo skins da Bulma, Vegeta, Goku e Bill, incluindo a queda com a nuvem voadora e o famoso Kamehameha.',
+        body2: 'O Kamehameha é um poder que se possui dentro do jogo através de um item e é usado para atacar inimigos. Ele é um poderoso ataque que pode ser usado em qualquer momento, mas é mais eficiente quando usado em combate de longa distância.',
+        body3: 'Fortnite está gratuito e disponível em todas as plataformas.',
+        body4: '',
+    },
 ]
 
 export default posts
