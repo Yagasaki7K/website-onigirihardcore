@@ -48,7 +48,18 @@ const SlugDetails = styled.div `
             @media (max-width: 1366px) {
                 margin-left: 8rem;
             }
+        }
 
+        .citation {
+            font-weight: 100;
+            font-style: italic;
+            color: ${colors.blue};
+
+            p {
+                font-size: 1.5rem;
+                border-left: 2px solid ${colors.blue};
+                padding-left: 1rem;
+            }
         }
 
         iframe {

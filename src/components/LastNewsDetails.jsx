@@ -75,10 +75,6 @@ const TecnologiesDetails = styled.div `
                 }
             }
         }
-
-        .secondContent {
-            margin-top: 2rem;
-        }
     }
 `
 

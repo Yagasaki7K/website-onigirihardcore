@@ -4,15 +4,15 @@ import posts from '../../src/posts/index'
 
 let animeContent = posts.filter(posts => posts.categories === 'Animes')
 let firstAnime = animeContent.slice(0, 1)
-let lastAnime = animeContent.slice(1, 5)
+let lastAnime = animeContent.slice(1, 4)
 
 let gamesContent = posts.filter(posts => posts.categories === 'Games')
 let firstGames = gamesContent.slice(0, 1)
-let lastGames = gamesContent.slice(1, 5)
+let lastGames = gamesContent.slice(1, 4)
 
 let moviesContent = posts.filter(posts => posts.categories === 'Movies')
 let firstMovies = moviesContent.slice(0, 1)
-let lastMovies = moviesContent.slice(1, 5)
+let lastMovies = moviesContent.slice(1, 4)
 
 import CategoriesDetails from './CategoriesDetails'
 

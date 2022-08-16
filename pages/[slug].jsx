@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { Head } from 'next/document'
+import Head from 'next/document'
 
 import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
@@ -23,6 +23,15 @@ const Post = () => {
                                     <h1>{post?.title}</h1>
                                     <p className="block__content">{post?.body}</p>
                                     <p className="block__content">{post?.body2}</p>
+                                    
+                                    {
+                                        post.linkCitation != '' ? (
+                                        <a href={post?.linkCitation} className="citation" target="_blank">
+                                            <p className="block__content">“{post?.citation}” - no Twitter</p>
+                                        </a>
+                                    ) : null
+                                    }
+
                                     <p className="block__content">{post?.body3}</p>
                                     <p className="block__content">{post?.body4}</p>
                                     <p className="block__content">{post?.body5}</p>
@@ -43,5 +52,4 @@ const Post = () => {
         </>
     )
 }
-
 export default Post
