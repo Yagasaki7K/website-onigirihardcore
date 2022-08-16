@@ -206,7 +206,7 @@ const posts = [
         slug: 'dragon-ball-chega-ao-fornite-com-skins-e-kamehameha',
         createdAt: '16/08/2022',
         ytid: 'XiOn8wQmiAk',
-        description: 'O CS Money é um dos sites de troca de skins de Counter-Strike mais conhecidos no mundo, e segundo o perfil especializado Arrow CSGO...',
+        description: 'O Fornite havia anunciado desde semana passada em seu Twitter que a parceria com o universo de Dragon Ball iria acontecer, ontem saiu a data ...',
         body: 'O Fornite havia anunciado desde semana passada em seu Twitter que a parceria com o universo de Dragon Ball iria acontecer, ontem saiu a data e hoje (16) foi oficialmente lançado, trazendo skins da Bulma, Vegeta, Goku e Bill, incluindo a queda com a nuvem voadora e o famoso Kamehameha.',
         body2: 'O Kamehameha é um poder que se possui dentro do jogo através de um item e é usado para atacar inimigos. Ele é um poderoso ataque que pode ser usado em qualquer momento, mas é mais eficiente quando usado em combate de longa distância.',
         body3: 'Fortnite está gratuito e disponível em todas as plataformas.',
