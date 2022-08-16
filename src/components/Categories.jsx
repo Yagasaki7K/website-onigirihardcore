@@ -29,7 +29,7 @@ const Categories = () => {
                         post.categories === 'Animes' ? (
                             <a href={post.slug} key={post.id}>
                                 <img src={post.image} alt={post.title} />
-                                <h1>{post.title}</h1>
+                                <h1>{post.smalltitle}</h1>
 
                                 <span>
                                     <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i>
@@ -77,7 +77,7 @@ const Categories = () => {
                         post.categories === 'Games' ? (
                             <a href={post.slug} key={post.id}>
                                 <img src={post.image} alt={post.title} />
-                                <h1>{post.title}</h1>
+                                <h1>{post.smalltitle}</h1>
 
                                 <span>
                                     <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i>
@@ -125,7 +125,7 @@ const Categories = () => {
                         post.categories === 'Movies' ? (
                             <a href={post.slug} key={post.id}>
                                 <img src={post.image} alt={post.title} />
-                                <h1>{post.title}</h1>
+                                <h1>{post.smalltitle}</h1>
 
                                 <span>
                                     <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i>

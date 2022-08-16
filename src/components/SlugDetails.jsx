@@ -14,14 +14,14 @@ const SlugDetails = styled.div `
         }
 
         h1 {
-            margin-left: 22rem;
+            margin-left: 39.5rem;
 
             @media (max-width: 1366px) {
-                margin-left: 3rem;
-                width: 80rem;
+                margin-left: 22rem;
+                width: 50rem;
             }
 
-            width: 80rem;
+            width: 50rem;
             color: ${colors.blue};
             font-size: 3rem;
             font-weight: 700;

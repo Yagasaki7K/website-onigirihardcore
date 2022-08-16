@@ -186,7 +186,7 @@ const posts = [
         id: 12,
         image: '/post/csmoney.jpeg',
         title: 'Hackers utilizam CS Money para roubar mais de R$ 8 mil em skin',
-        smalltitle: 'Hackers utilizam CS Money para roubar mais de R$ 8 mil em skin',
+        smalltitle: 'Hackers utilizam CS Money para roubar mais de R$ 8 mil ...',
         categories: 'Games',
         slug: 'hackers-utilizam-cs-money-para-roubar-mais-de-oito-mil-em-skin',
         createdAt: '16/08/2022',
