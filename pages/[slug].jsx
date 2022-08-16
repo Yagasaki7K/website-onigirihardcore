@@ -51,13 +51,13 @@ const Post = () => {
 
                                     <meta name="description" content={post.description} />
                                     <meta property="og:type" content="website" />
-                                    <meta property="og:url" content="https://onigirihardcore.vercel.app/" />
+                                    <meta property="og:url" content={'https://onigirihardcore.vercel.app/' + post.slug} />
                                     <meta property="og:title" content={post.title} />
                                     <meta property="og:description" content={post.description} />
                                     <meta property="og:image" content={post.image} />
 
                                     <meta property="twitter:card" content="summary_large_image" />
-                                    <meta property="twitter:url" content="https://onigirihardcore.vercel.app/" />
+                                    <meta property="twitter:url" content={'https://onigirihardcore.vercel.app/' + post.slug}/>
                                     <meta property="twitter:title" content={post.title} />
                                     <meta property="twitter:description" content={post.description} />
                                     <meta property="twitter:image" content={post.image} />
