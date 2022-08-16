@@ -27,6 +27,8 @@ export default class MyDocument extends Document {
                     <meta property="twitter:url" content="https://onigirihardcore.vercel.app/"/>
                     <meta property="twitter:title" content="Onigiri Hardcore - Site nerd com conteúdos nerds"/>
                     <meta property="twitter:description" content="Notícias sobre filmes, séries, HQs, games, animes, ciência, tecnologia e humor, porque conhecimento, nunca é demais!"/>
+                    <meta name="twitter:site" content="https://onigirihardcore.vercel.app/" />
+                    <meta name="twitter:creator" content="@KalifyInc" />
                     <meta property="twitter:image" content="https://c4.wallpaperflare.com/wallpaper/998/145/207/onigiri-hardcore-onigiri-hardcore-wallpaper-preview.jpg"/>
                 </Head>
                 <body>

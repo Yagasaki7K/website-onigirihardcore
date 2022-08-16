@@ -182,6 +182,21 @@ const posts = [
         body3: 'Detalhes sobre a nova temporada ainda não foram divulgados, mas já foi confirmado que o personagem Ryan terá mais cenas e duas novas supers serão apresentadas. E além do Eric Kripke, o Jack Quaid também havia publicado em seu Twitter que estava viajando para a gravação da Quarta temporada',
         body4: 'Além disso, o Prime Video planeja uma nova série derivada, focada na formação de jovens supers. Todas as temporadas de The Boys estão no catálogo do Amazon Prime Video. Ainda não há previsão de lançamento dos novos episódios.',
     },
+    {
+        id: 12,
+        image: '/post/csmoney.jpeg',
+        title: 'Hackers utilizam CS Money para roubar mais de R$ 8 mil em skin',
+        smalltitle: 'Hackers utilizam CS Money para roubar mais de R$ 8 mil em skin',
+        categories: 'Games',
+        slug: 'hackers-utilizam-cs-money-para-roubar-mais-de-oito-mil-em-skin',
+        createdAt: '16/08/2022',
+        ytid: '',
+        description: 'O CS Money é um dos sites de troca de skins de Counter-Strike mais conhecidos no mundo, e segundo o perfil especializado Arrow CSGO...',
+        body: 'O CS Money é um dos sites de troca de skins de Counter-Strike mais conhecidos no mundo, e segundo o perfil especializado Arrow CSGO, hackers se utilizaram de uma falha no site para roubarem mais de US$ 1,6 milhão, cerca de R$ 8,1 milhões na cotação atual, em skins de outros usuários. A empresa confirmou os roubos, mas não divulgou o valor extraviado.',
+        body2: 'Até o momento, 66 contas vinculadas ao hackers foram encontradas (veja a lista aqui) e cada uma possui um valor médio de US$ 54 mil (~R$ 274 mil ) em seus inventários. De acordo com Arrow, trata-se do maior roubo em sites de skins já visto na história do CS:GO.',
+        body3: 'Até a publicação desta matéria, o CS Money encontra-se fora do ar e com o seguinte aviso: “O CS Money está temporariamente fora do ar após ser alvo de um ataque hacker esta noite. Iremos consertar o problema e faremos o nosso melhor para restaurar o funcionamento normal do site. Nosso suporte está pronto para responder suas dúvidas por email”.',
+        body4: 'Nas redes sociais, a plataforma disse que está focada em devolver as skins roubadas e restaurar o funcionamento normal do site. “Obrigado a todos pelo suporte, realmente agradecemos isso. No momento, nossos esforços estão focados em devolver as skins roubadas e restaurar o nosso site. Se você tiver alguma informação sobre o que aconteceu, por favor não hesite em nos contatar por DM”, escreveu o perfil.',
+    },
 ]
 
 export default posts
