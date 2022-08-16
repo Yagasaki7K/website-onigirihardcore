@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://onigirihardcore.vercel.app/logotipo-white.png" width="500"/>
+   <img src="https://onigirihardcore.vercel.app/logotipo-white.png" width="600"/>
 </p>
 
 <p align="center">
