@@ -12,7 +12,7 @@ const TecnologiesDetails = styled.div `
         margin-left: -8rem;
 
         @media (max-width: 1366px) {
-            margin-left: 1rem;
+            margin-left: -9rem;
         }
         
         .header {
@@ -55,7 +55,8 @@ const TecnologiesDetails = styled.div `
                 }
 
                 :hover {
-                    color: ${colors.blue};
+                    transform: scale(1.05);
+                    transition: 1s;
                 }
 
                 .title {

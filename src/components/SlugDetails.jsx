@@ -3,29 +3,37 @@ import colors from './Colors'
 
 const SlugDetails = styled.div `
 
+    img {
+        width: 100%;
+        height: 30rem;
+        object-fit: cover;
+    }
+
     section {
-        margin-bottom: 5rem;
-        background: ${colors.whitelight};
-        
-        img {
-            width: 100%;
-            height: 30rem;
-            object-fit: cover;
+        margin-left: 28rem;
+
+        @media (max-width: 1366px) {
+            margin-left: 1rem;
+            width: 90%;
         }
 
-        h1 {
-            margin-left: 39.5rem;
+        width: 50%;
 
+        margin-bottom: 5rem;
+        background: ${colors.whitelight};
+    
+        h1 {
+        
             @media (max-width: 1366px) {
-                margin-left: 22rem;
-                width: 50rem;
+                margin-left: 8rem;
             }
 
-            width: 50rem;
+            margin-top: -1rem;
+
             color: ${colors.blue};
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: 700;
-            line-height: 50px;
+            line-height: 35px;
             text-shadow: 1px 1px 2px rgb(0 0 0 / 30%);
         }
 
@@ -41,7 +49,6 @@ const SlugDetails = styled.div `
         .block__content {
             width: 70rem;
             text-align: justify;
-            margin-left: 26rem;
             font-size: 1.1rem;
             line-height: 1.5rem;
 
@@ -64,11 +71,11 @@ const SlugDetails = styled.div `
 
         iframe {
             width: 70rem;
-            margin-left: 26rem;
+            margin-left: 0rem;
             height: 38rem;
 
             @media (max-width: 1366px) {
-                margin-left: 8rem;
+                margin-left: 7.5rem;
             }
         }
     }

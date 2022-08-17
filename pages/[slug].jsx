@@ -19,8 +19,9 @@ const Post = () => {
                     posts && posts.map(post => (
                         post.slug === slug ? (
                             <>
+                                <img src={post?.image}></img>
                                 <section key={post?.id}>
-                                    <img src={post?.image}></img>
+                                    <p className="block__content">{post.createdAtExtended} | {post.author}</p>
                                     <h1>{post?.title}</h1>
                                     <p className="block__content">{post?.body}</p>
                                     <p className="block__content">{post?.body2}</p>
