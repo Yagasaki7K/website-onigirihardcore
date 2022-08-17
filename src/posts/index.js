@@ -306,6 +306,25 @@ const posts = [
         body3: 'O  presidente e COO da Nexstar, Tom Carter, comentou que os estúdios da Paramount e Warner Bros. irão continuar produzindo conteúdo para a emissora, mas que este acordo será apenas em 2022 e 2023, após isso ele decidirá se irá manter a parceria ou não. Aparentemente, o foco da faixa etária irá mudar futuramente, a rede de TV é conhecida por exibir séries que agradam ao público jovem, da adolescências até a faixa dos 30 anos, contudo, as pesquisas mostram que pessoas de 58 anos é que mais consomem a emissora e, por isso, ela não fatura com seus programas.',
         body4: 'O objetivo de Tom é reduzir custos, além de também trazer conteúdo de sua rede de notícias chamada NewsNation para a CW. Essa compra e a divulgação da faixa etária que acompanha verdadeiramente o canal, colaboraram para o final de diversas séries nos últimos tempos, seja por cancelamentos ou sendo finalizadas de forma digna. Mais informações em breve.',
     },
+    {
+        id: 16,
+        author: 'Anderson "Yagasaki" Marlon',
+        image: '/post/squirrel.png',
+        title: 'Jogo Squirrel with a Gun coloca jogador como, bem… um esquilo com uma arma',
+        smalltitle: 'Jogo Squirrel with a Gun coloca jogador como, bem ...',
+        categories: 'Games',
+        slug: 'jogo-squirrel-with-a-gun-coloca-jogador-como-bem-um-esquilo-com-uma-arma',
+        createdAt: '17/08/2022',
+        createdAtExtended: '17 de Agosto de 2022',
+        ytid: 'KRz15LfZjBI',
+        citation: '',
+        linkCitation: '',
+        description: 'Rick and Morty já cumpria o dever cívico de alertar que esquilo é um bicho perigoso. Não se engane pela fofura, porque com ...',
+        body: 'Rick and Morty já cumpria o dever cívico de alertar que esquilo é um bicho perigoso. Não se engane pela fofura, porque com toda certeza eles planejam dominar a Terra. Mas e se você conseguisse controlar um roedor, e ainda andasse por aí com uma… pistola?',
+        body2: 'Esta é a premissa básica de Squirrel with a Gun. O jogo indie funciona como um simulador de, adivinha, um esquilo com uma arma. E o negócio é tão maluco quanto parece.',
+        body3: 'Vamos admitir que, de início, a gente até pensou que fosse sacanagem. Mas num mundo onde Goat Simulator e Stray, que transformam você, respectivamente, em cabras e em um gato, existem, é CLARO que o novo jogo não só existe, como já pode até ser salvo na Steam.',
+        body4: 'Squirrel with a Gun é desenvolvido pelo artista visual Dan DeEntremont. Dos gameplays que ele soltou pela internet, dá pra ver que o jogador terá toda liberdade para aloprar como quiser, quase como um GTA: Versão Esquilo.',
+    },
 ]
 
 export default posts
