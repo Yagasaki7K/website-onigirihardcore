@@ -19,7 +19,7 @@ import CategoriesDetails from './CategoriesDetails'
 const Categories = () => {
     return (
         <CategoriesDetails>
-            <div className="firstCategories">
+            <div className="firstCategories" id="animes">
                 <div className="header">
                     <p>&nbsp;&nbsp;Animes {`&`} HQs</p>
                 </div>

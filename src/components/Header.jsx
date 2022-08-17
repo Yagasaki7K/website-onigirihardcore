@@ -20,16 +20,16 @@ export default function Header() {
                 </li>
                 <span id="item-menu">
                     <li>
-                        <a href="#">Notícias</a>
+                        <a href="/noticias">Notícias</a>
                     </li>
                     <li>
-                        <a href="#">Animes {`&`} HQ{`'`}s</a>
+                        <a href="/#animes">Animes {`&`} HQ{`'`}s</a>
                     </li>
                     <li>
-                        <a href="#">Jogos</a>
+                        <a href="/#animes">Jogos</a>
                     </li>
                     <li>
-                        <a href="#">Tecnologia</a>
+                        <a href="/#news">Tecnologia</a>
                     </li>
                     <li>
                         <a href="https://onigiri-hardcore.blogspot.com/" target="_blank" rel="noreferrer">

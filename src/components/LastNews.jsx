@@ -8,7 +8,7 @@ const thirdPosts = post.slice(8, 12)
 const LastNews = () => {
   return (
     <LastNewsDetails>
-        <div className="tecnologies">
+        <div className="tecnologies" id="news">
             <div className="header">
                 <p>Últimas notícias</p>
             </div>
