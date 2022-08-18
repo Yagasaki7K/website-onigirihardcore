@@ -325,6 +325,25 @@ const posts = [
         body3: 'Vamos admitir que, de início, a gente até pensou que fosse sacanagem. Mas num mundo onde Goat Simulator e Stray, que transformam você, respectivamente, em cabras e em um gato, existem, é CLARO que o novo jogo não só existe, como já pode até ser salvo na Steam.',
         body4: 'Squirrel with a Gun é desenvolvido pelo artista visual Dan DeEntremont. Dos gameplays que ele soltou pela internet, dá pra ver que o jogador terá toda liberdade para aloprar como quiser, quase como um GTA: Versão Esquilo.',
     },
+    {
+        id: 17,
+        author: 'Anderson "Yagasaki" Marlon',
+        image: '/post/eldenring.jpg',
+        title: 'Elden Ring já vendeu mais de 16,6 milhões de cópias desde seu lançamento',
+        smalltitle: 'Elden Ring já vendeu mais de 16 milhões de cópias',
+        categories: 'Games',
+        slug: 'elden-ring-ja-vende-mais-de-16-milhoes-de-copias-desde-seu-lancamento',
+        createdAt: '18/08/2022',
+        createdAtExtended: '18 de Agosto de 2022',
+        ytid: '',
+        citation: '',
+        linkCitation: '',
+        description: 'Um dos títulos mais populares do ano, Elden Ring já vendeu mais de 16,6 milhões de cópias desde seu lançamento no mês de fevereiro ...',
+        body: 'Um dos títulos mais populares do ano, Elden Ring já vendeu mais de 16,6 milhões de cópias desde seu lançamento no mês de fevereiro, via GB.',
+        body2: 'De acordo com o site, este marco foi conquistado no mês de junho quando o último relatório fiscal da Bandai Namco foi publicado, o que sugere que os números desde então já podem ter sido ultrapassados sem dificuldades, dado a popularidade do jogo na comunidade.',
+        body3: 'Elden Ring já está disponível para Xbox Series X/S, Xbox One, PS4 & PS5, Steam Deck e PC (via Steam).',
+        body4: '',
+    },
 ]
 
 export default posts
