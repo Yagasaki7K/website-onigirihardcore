@@ -344,6 +344,25 @@ const posts = [
         body3: 'Elden Ring já está disponível para Xbox Series X/S, Xbox One, PS4 & PS5, Steam Deck e PC (via Steam).',
         body4: '',
     },
+    {
+        id: 18,
+        author: 'Anderson "Yagasaki" Marlon',
+        image: '/post/onepunchman.jpg',
+        title: 'One Punch Man: 3ª temporada é anunciada pela Shueisha',
+        smalltitle: 'One Punch Man: 3ª temporada é anunciada',
+        categories: 'Animes',
+        slug: 'one-punch-man-3-temporada-e-anunciada',
+        createdAt: '18/08/2022',
+        createdAtExtended: '18 de Agosto de 2022',
+        ytid: '',
+        citation: '',
+        linkCitation: '',
+        description: 'Foi anunciado na manhã desta quinta-feira (18) que a adaptação em anime de One Punch Man ganhará uma 3ª temporada ...',
+        body: 'Foi anunciado na manhã desta quinta-feira (18) que a adaptação em anime de One Punch Man ganhará uma 3ª temporada, essa que terá uma troca de estúdio em relação ao 2° ano produzido pela J.C. Staff.',
+        body2: 'A muito elogiada 1ª temporada da série foi produzida pelo estúdio Madhouse, enquanto os episódios da temporada seguinte tiveram uma mudança na staff. O anime está disponível na Crunchyroll, com legendas, e Netflix, com opção de dublagem e legendas em português.',
+        body3: 'A 3ª temporada de One Punch Man ainda não possui previsão.',
+        body4: '',
+    },
 ]
 
 export default posts
