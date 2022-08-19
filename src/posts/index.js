@@ -401,6 +401,25 @@ const posts = [
         body3: 'Dá pra ver também Gwendoline Christie (Sandman, Game of Thrones) como uma das responsáveis pela academia, além da Mãozinha. Tim Burton assina a produção da série, também dirigindo quatro dos oito episódios.',
         body4: 'Wandinha tem Jenna Ortega (Pânico) no papel principal. Catherine Zeta-Jones e Luis Guzmán vivem Mortícia e Gomez. Christina Ricci também fará uma participação especial e a série ainda não tem data de lançamento revelada.',
     },
+    {
+        id: 21,
+        author: 'Anderson "Yagasaki" Marlon',
+        image: '/post/eminem.jpg',
+        title: 'Fortnite anunciou uma parceria com o Eminem no Twitter',
+        smalltitle: 'Fortnite anunciou uma parceria com o Eminem no Twitter',
+        categories: 'Games',
+        slug: 'fornite-anunciou-uma-parceria-com-o-eminem-no-twitter',
+        createdAt: '19/08/2022',
+        createdAtExtended: '19 de Agosto de 2022',
+        ytid: '8CdcCD5V-d8',
+        citation: 'Nada é impossível, ainda mais agora que os dois possuem um acordo, diz HypeX',
+        linkCitation: 'https://twitter.com/HYPEX/status/1559888910871822336',
+        description: 'O jogo anunciou que sua “Icon Rádio Station” agora conta com 12 faixas do Eminem (segue a lista das faixas a baixo), e isso ... ',
+        body: 'O jogo anunciou que sua “Icon Rádio Station” agora conta com 12 faixas do Eminem (segue a lista das faixas a baixo), e isso também indica que muito mais está por vir nessa parceria!  ',
+        body2: 'Como um evento em parceria com o Eminem, “skins” do Eminem no jogo e possivelmente até um “show” como já foi realizado com outros artistas.',
+        body3: 'Músicas que estão presente na “Icon rádio station”: Godzilla (ft. Juice WRLD), Headlights (ft. Nate Russ), Phenomenal, Higher, Not Afraid, Venom, Lighters (ft. Bruno Mars), Fall, Monster (ft. Rihanna), Walk on Water (ft. Beyoncé), Berzerk, Survival',
+        body4: 'No Twitter, o usuário HypeX, conhecido por divulgar notícias e novidades escondidas nos arquivos de Fortnite, postou a lista das músicas do Eminem que estavam sendo tocadas e ela é bem longa, o que significa que é improvável que isso seja apenas uma coincidência. Alguns dias depois, HypeX confirmou que o Fortnite anunciou oficialmente sua colaboração com o Eminem na rádio do jogo, mas sem notícias sobre itens cosméticos baseados no rapper ou outro tipo de colaboração.',
+    },
 ]
 
 export default posts
