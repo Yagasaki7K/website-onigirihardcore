@@ -420,6 +420,25 @@ const posts = [
         body3: 'Músicas que estão presente na “Icon rádio station”: Godzilla (ft. Juice WRLD), Headlights (ft. Nate Russ), Phenomenal, Higher, Not Afraid, Venom, Lighters (ft. Bruno Mars), Fall, Monster (ft. Rihanna), Walk on Water (ft. Beyoncé), Berzerk, Survival',
         body4: 'No Twitter, o usuário HypeX, conhecido por divulgar notícias e novidades escondidas nos arquivos de Fortnite, postou a lista das músicas do Eminem que estavam sendo tocadas e ela é bem longa, o que significa que é improvável que isso seja apenas uma coincidência. Alguns dias depois, HypeX confirmou que o Fortnite anunciou oficialmente sua colaboração com o Eminem na rádio do jogo, mas sem notícias sobre itens cosméticos baseados no rapper ou outro tipo de colaboração.',
     },
+    {
+        id: 22,
+        author: 'Anderson "Yagasaki" Marlon',
+        image: '/post/bettlejuice.jpg',
+        title: 'MultiVersus: Beetlejuice e Bruxa Malvada de Oz podem ser os próximos personagens',
+        smalltitle: 'MultiVersus: Beetlejuice e Bruxa Malvada de Oz ...',
+        categories: 'Games',
+        slug: 'multiversus-beetlejuice-e-bruxa-malvada-de-oz-podem-ser-os-próximos-personagens',
+        createdAt: '19/08/2022',
+        createdAtExtended: '19 de Agosto de 2022',
+        ytid: '',
+        citation: 'They added voice files for the Wicked Witch of Oz, Black Adam, Gizmo and Stripe and Rick and Morty - No Twitter',
+        linkCitation: 'https://twitter.com/multiversusie/status/1559232255201103872',
+        description: 'O MultiVersus recebeu esta semana sua primeira temporada oficial, e além dos personagens já anunciados – Morty, Adão ... ',
+        body: 'O MultiVersus recebeu esta semana sua primeira temporada oficial, e além dos personagens já anunciados – Morty, Adão Negro e Stripe -, um leaker aponta que Beetlejuice (do filme de mesmo nome) e a Bruxa Malvada (do Mágico de Oz) também serão adicionados ao jogo ainda nesta season.',
+        body2: 'Segundo os arquivos publicados por Susie em seu Twitter, ambos os personagens ganharam arquivos de vozes. O da Bruxa Malvada são falas de matchpoint, quando o jogador está a um ponto de ganhar a partida. Já as falas de Beetlejuice incluem frases ditas em ataques, com um total de 19 arquivos relacionados.',
+        body3: 'A mesma pessoa já havia divulgado, antes do anúncio oficial, a chegada de Adão Negro e Stripe, também se baseando nos arquivos do jogo.',
+        body4: '',
+    },
 ]
 
 export default posts
