@@ -458,6 +458,25 @@ const posts = [
         body3: 'E como não seria um aniversário sem um bolo… especificamente, um cupcake coberto com uma moeda de aniversário! Na próxima semana (até segunda-feira, 22 de agosto), os jogadores de CS:GO com status Prime podem pegar sua moeda de aniversário ganhando XP suficiente para sua primeira queda no jogo da semana.',
         body4: 'Dez anos. É um número grande, mas o CS:GO está mais forte do que nunca. Apenas nos últimos 12 meses, viram mais jogadores do que nunca (com uma média de mais de 20 milhões de jogadores únicos mensais), audiência recorde para Majors (2,7 milhões de espectadores simultâneos) e apoio maciço da comunidade com mais de US$ 70 milhões arrecadados para organizações profissionais, equipes e jogadores. O futuro não poderia parecer mais brilhante. Feliz aniversário ao CSGO!',
     },
+    {
+        id: 24,
+        author: 'Anderson "Yagasaki" Marlon',
+        image: '/post/spiderman-2.png',
+        title: 'Homem-Aranha: Sem Volta Para Casa – divulgado a duração das cenas inéditas',
+        smalltitle: 'Homem-Aranha: Sem Volta Para Casa – divulgado a duração ...',
+        categories: 'Movies',
+        slug: 'homem-aranha-sem-volta-para-casa-disuado-a-duração-das-cenas-ineditas',
+        createdAt: '20/08/2022',
+        createdAtExtended: '20 de Agosto de 2022',
+        ytid: '',
+        citation: 'THIS JUST IN: Fandango can exclusively reveal that the re-release of #SpiderManNoWayHome will feature 11 minutes of new footage when it arrives in theaters on September 2. Tickets go on sale this Tuesday. What an AMAZING way to end your summer! - No Twitter',
+        linkCitation: 'https://twitter.com/Fandango/status/1560676761276334081',
+        description: 'A Sony Pictures já havia anunciado que Homem-Aranha: Sem Volta Para Casa retornaria aos cinemas ainda neste ano e iria conter ...',
+        body: 'A Sony Pictures já havia anunciado que Homem-Aranha: Sem Volta Para Casa retornaria aos cinemas ainda neste ano e iria conter cenas inéditas e, nesta sexta-feira (19), o perfil oficial do Fandangos, popular site de compra de ingressos nos EUA, divulgou a duração destas novas cenas: 11 minutos.',
+        body2: 'O longa foi intitulado como Spider-Man: No Way Home – The More Fun Stuff Version, não se sabe se estas novas cenas poderão modificar modificar o filme de alguma forma. A produção foi lançada, originalmente, em dezembro de 2021 e arrecadou US$ 1,9 bilhões em bilheteria.',
+        body3: 'A versão estendida de Homem-Aranha: Sem Volta Para Casa será lançada nos cinemas brasileiros dia 7 de setembro. O longa original se encontra disponível no HBO Max com as opções de dublagem e áudio original com legendas em português.',
+        body4: '',
+    },
 ]
 
 export default posts
