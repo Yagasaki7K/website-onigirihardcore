@@ -439,6 +439,25 @@ const posts = [
         body3: 'A mesma pessoa já havia divulgado, antes do anúncio oficial, a chegada de Adão Negro e Stripe, também se baseando nos arquivos do jogo.',
         body4: '',
     },
+    {
+        id: 23,
+        author: 'Anderson "Yagasaki" Marlon',
+        image: '/post/csgocupcake.png',
+        title: 'CSGO comemora aniversário com mapa, stickers e "bolo"',
+        smalltitle: 'CSGO comemora aniversário com mapa, stickers e "bolo"',
+        categories: 'Games',
+        slug: 'csgo-comemora-aniversário-com-mapa-stickers-e-bolo',
+        createdAt: '19/08/2022',
+        createdAtExtended: '19 de Agosto de 2022',
+        ytid: '',
+        citation: '',
+        linkCitation: '',
+        description: 'A comunidade se reuniu para a competição de adesivos do 10º aniversário, e os resultados falam por si – a Cápsula de Adesivos ...',
+        body: 'A comunidade se reuniu para a competição de adesivos do 10º aniversário, e os resultados falam por si – a Cápsula de Adesivos de Aniversário de 10 Anos contém mais de 60 designs enviados pela comunidade, incluindo uma nova qualidade "lenticular" animada.',
+        body2: 'A Toscana está disponível em todos os modos de jogo, então entre nesse mapa clássico e teste seu ritmo! E isso não é tudo: trouxeram de volta Anubis e Breach para o matchmaking competitivo e adicionaram Primetime e Blagai ao Wingman!',
+        body3: 'E como não seria um aniversário sem um bolo… especificamente, um cupcake coberto com uma moeda de aniversário! Na próxima semana (até segunda-feira, 22 de agosto), os jogadores de CS:GO com status Prime podem pegar sua moeda de aniversário ganhando XP suficiente para sua primeira queda no jogo da semana.',
+        body4: 'Dez anos. É um número grande, mas o CS:GO está mais forte do que nunca. Apenas nos últimos 12 meses, viram mais jogadores do que nunca (com uma média de mais de 20 milhões de jogadores únicos mensais), audiência recorde para Majors (2,7 milhões de espectadores simultâneos) e apoio maciço da comunidade com mais de US$ 70 milhões arrecadados para organizações profissionais, equipes e jogadores. O futuro não poderia parecer mais brilhante. Feliz aniversário ao CSGO!',
+    },
 ]
 
 export default posts
