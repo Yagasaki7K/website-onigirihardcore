@@ -477,6 +477,25 @@ const posts = [
         body3: 'A versão estendida de Homem-Aranha: Sem Volta Para Casa será lançada nos cinemas brasileiros dia 7 de setembro. O longa original se encontra disponível no HBO Max com as opções de dublagem e áudio original com legendas em português.',
         body4: '',
     },
+    {
+        id: 25,
+        author: 'Anderson "Yagasaki" Marlon',
+        image: '/post/fluyo.jpg',
+        title: 'Garanta seu early access no Fluyo, app para aprender novos idiomas',
+        smalltitle: 'Garanta seu early access no Fluyo, app de idiomas',
+        categories: 'Technology',
+        slug: 'garanta-seu-early-access-no-fluyo-app-para-aprender-novos-idiomas',
+        createdAt: '20/08/2022',
+        createdAtExtended: '20 de Agosto de 2022',
+        ytid: 'EgO37j5aSFw',
+        citation: 'Clique aqui para garantir o early acess no Fluyo',
+        linkCitation: 'https://fluyoapp.com/?kid=2E5KF2',
+        description: 'Ontem (19), o Ikena, um Youtuber Irlandês-Nigeriano-Americano, havia anunciado em seu canal o lançamento de Fluyo, um app de aprendizado de idiomas...',
+        body: 'Ontem (19), o Ikena, um Youtuber Irlandês-Nigeriano-Americano, havia anunciado em seu canal o lançamento de Fluyo, um app de aprendizado de idiomas. O app tem como objetivo aprender novos idiomas através de jogos, mini-games, interações com outros membros, costumização de personagens e conquistas, e mutio mais... Em seu momento, o app está em fase beta e é necessário se cadastrar com um e-mail válido para garantir o primeiro acesso',
+        body2: 'Ikena é Youtuber que ficou conhecido mundialmente por ser bilingue (atualmente sabe seis idiomas) e que faz vídeos ensinando, dando dicas e principalmente surpreendendo os jogadores em VChat ao falar a lingua nativa deles com tamanha destreza e facilidade',
+        body3: 'Em seu vídeo de lançamento, ele conta que estava a tempos desenvolvendo seu aplicativo com o intuíto de não só aprender novos idiomas, mas também socializar e reinventar as metodologias que já existem nos aplicativos de ensino hoje em dia. Buscando as "falhas" e aperfeiçoando elas para tornar um ambiente agradável e estimulante de se aprender',
+        body4: 'Confira no vídeo abaixo (em inglês), toda a proposta, o decorrer da história e as conquistas que o aplicativo vem buscando a atingir para os usuários - principalmente quem garantir o early access:',
+    },
 ]
 
 export default posts
