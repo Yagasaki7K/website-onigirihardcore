@@ -534,6 +534,25 @@ const posts = [
         body3: 'Por fim, o site oficial de Pokémon revelou mais detalhes do Battle Stadium, área em que os jogadores vão poder jogar partidas PvP, que serão divididas em três tipos: casual, competitivo e competição online. Também foi confirmado que será preciso ter uma assinatura ativa da Nintendo Switch Online para acessar o modo.',
         body4: 'Pokémon Scarlet e Violet serão lançados exclusivamente para Nintendo Switch no dia 18 de novembro.',
     },
+    {
+        id: 28,
+        author: 'Anderson "Yagasaki" Marlon',
+        image: '/post/thelast-series.jpg',
+        title: 'HBO revela primeiras prévias da série de The Last of Us',
+        smalltitle: 'HBO revela primeiras prévias da série de The Last of Us',
+        categories: 'Movies',
+        slug: 'hbo-revela-primeiras-previas-da-serie-de-the-last-of-us',
+        createdAt: '22/08/2022',
+        createdAtExtended: '22 de Agosto de 2022',
+        ytid: 'kWsY3DlLdIA',
+        citation: '',
+        linkCitation: '',
+        description: 'A HBO divulgou nesta domingo (21) um vídeo das principais atrações futuras da emissora, que contou com as primeiras prévias da série de ...',
+        body: 'A HBO divulgou nesta domingo (21) um vídeo das principais atrações futuras da emissora, que contou com as primeiras prévias da série de The Last of Us.',
+        body2: 'As cenas são curtas, mas já mostram momentos com personagens do jogo, como Joel, Ellie, Sarah e até Bill. É possível ainda reconhecer a cena da discussão entre Joel e Ellie, o início da pandemia com Sarah e os cenários na neve.',
+        body3: 'Inspirada no jogo de mesmo nome, The Last of Us é situada em um mundo pós-pandêmico, e mostra como o sobrevivente Joel (Pedro Pascal) encontra a jovem Ellie (Bella Ramsey) e os dois iniciam uma jornada juntos.',
+        body4: 'A produção é comandada por Craig Mazin (Chernobyl) em parceria com Neil Druckmann, o criador do game. A estreia é prevista para 2023.',
+    },
 ]
 
 export default posts
