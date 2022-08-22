@@ -515,6 +515,25 @@ const posts = [
         body3: 'No novo filme, Thor (Chris Hemsworth) precisa enfrentar a chegada de Gorr (Christian Bale), conhecido como Carniceiro dos Deuses. Enquanto isso, Jane Foster (Natalie Portman) se torna a Poderosa Thor.',
         body4: '',
     },
+    {
+        id: 27,
+        author: 'Anderson "Yagasaki" Marlon',
+        image: '/post/spiderpunk.jpg',
+        title: 'Homem-Aranha: Através do Aranhaverso pode ter o Spider-Punk',
+        smalltitle: 'Homem-Aranha: Através do Aranhaverso ...',
+        categories: 'Movies',
+        slug: 'homem-aranha-atraves-do-aranhaverso-pode-ter-o-spider-punk',
+        createdAt: '22/08/2022',
+        createdAtExtended: '22 de Agosto de 2022',
+        ytid: '',
+        citation: 'New images for Spider-Man across the spider verse #acrossthespiderverse #Sony - No Twitter',
+        linkCitation: 'https://twitter.com/CampusMcu/status/1561198154774487040',
+        description: 'A história de Homem-Aranha: Através do Aranhaverso ainda não foi confirmada, mas, aos poucos, alguns detalhes sobre a sequência...',
+        body: 'A história de Homem-Aranha: Através do Aranhaverso ainda não foi confirmada, mas, aos poucos, alguns detalhes sobre a sequência estão sendo revelados.',
+        body2: 'De acordo com novas imagens promocionais divulgadas nas redes sociais, a animação terá a presença do Spider-Punk',
+        body3: 'Apresentado nos quadrinhos em 2015, o Spider-Punk foi criado por Dan Slott e Olivier Coipel e tem sua origem na Terra-138. Por lá, seu alter ego é Hobart Brown, e seus poderes surgiram após ter contato com uma aranha radioativa, resultado do lixo tóxico despejado pelo presidente daquela realidade, Norman Osborn. Por enquanto não há detalhes se essa história será seguida no filme.',
+        body4: 'Vários outros personagens já foram confirmados na sequência de Aranhaverso, como Homem-Aranha 2099, o Mancha e o Aranha Escarlate. Homem-Aranha: Através do Aranhaverso tem estreia prevista para 2 de junho de 2023. Um terceiro filme, intitulado Beyond the Spider-verse, está planejado para 29 de março de 2024.',
+    },
 ]
 
 export default posts
