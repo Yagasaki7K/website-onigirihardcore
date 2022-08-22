@@ -496,6 +496,25 @@ const posts = [
         body3: 'Em seu vídeo de lançamento, ele conta que estava a tempos desenvolvendo seu aplicativo com o intuíto de não só aprender novos idiomas, mas também socializar e reinventar as metodologias que já existem nos aplicativos de ensino hoje em dia. Buscando as "falhas" e aperfeiçoando elas para tornar um ambiente agradável e estimulante de se aprender',
         body4: 'Confira no vídeo abaixo (em inglês), toda a proposta, o decorrer da história e as conquistas que o aplicativo vem buscando a atingir para os usuários - principalmente quem garantir o early access:',
     },
+    {
+        id: 26,
+        author: 'Anderson "Yagasaki" Marlon',
+        image: '/post/love-thunder.png',
+        title: 'Thor: Amor e Trovão ganha data de lançamento no Disney Plus',
+        smalltitle: 'Thor: Amor e Trovão ganha data de lançamento no ...',
+        categories: 'Movies',
+        slug: 'thor-amor-e-trovao-ganha-data-de-lancamento-no-disney-plus',
+        createdAt: '22/08/2022',
+        createdAtExtended: '22 de Agosto de 2022',
+        ytid: 'LijXkzFK2gE',
+        citation: '',
+        linkCitation: '',
+        description: 'Thor: Amor e Trovão, quarta aventura solo do herói na Marvel, ganhou data de lançamento no Disney+.',
+        body: 'Thor: Amor e Trovão, quarta aventura solo do herói na Marvel, ganhou data de lançamento no Disney+. Segundo um vídeo oficial, o longa será disponibilizado em 8 de setembro, que marca o chamado Disney+ Day. A data também será seguida no Brasil.',
+        body2: 'Além dele, o dia também terá o lançamento do live-action de Pinóquio e outras produções originais.',
+        body3: 'No novo filme, Thor (Chris Hemsworth) precisa enfrentar a chegada de Gorr (Christian Bale), conhecido como Carniceiro dos Deuses. Enquanto isso, Jane Foster (Natalie Portman) se torna a Poderosa Thor.',
+        body4: '',
+    },
 ]
 
 export default posts
