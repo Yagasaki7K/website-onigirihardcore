@@ -10,7 +10,7 @@ const LastNews = () => {
     <LastNewsDetails>
         <div className="tecnologies" id="news">
             <div className="header">
-                <p>Últimas notícias</p>
+                <p>Últimas Notícias</p>
             </div>
 
             <div className="content">
