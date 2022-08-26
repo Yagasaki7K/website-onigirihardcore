@@ -24,7 +24,7 @@ const TecnologiesDetails = styled.div `
             }
 
             p {
-                width: 9rem;
+                width: 9.5rem;
                 background: ${colors.blue};
                 color: ${colors.white};
                 padding: 5px 10px;
@@ -65,6 +65,7 @@ const TecnologiesDetails = styled.div `
 
                     h1 {
                         width: 14rem;
+                        margin-top: -2rem;
                         font-size: 1.2rem;
                         margin-bottom: 0rem;
                     }
