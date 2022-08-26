@@ -705,6 +705,25 @@ const posts = [
         body3: 'Ainda sem detalhes de elenco ou previsão de lançamento, a adaptação será feita em associação à Sony Pictures Television e a PlayStation Productions. ',
         body4: '',
     },
+    {
+        id: 37,
+        author: 'Anderson "Yagasaki" Marlon',
+        image: '/post/primegaming.jpg',
+        title: 'Prime Gaming dará Assassin’s Creed Origins, Sombras de Mordor e mais jogos de graça',
+        smalltitle: 'Prime Gaming dará Assassin’s Creed Origins, Sombras ...',
+        categories: 'Games',
+        slug: 'prime-gaming-dara-assassins-creed-origins-sombras-de-mordor-e-mais-jogos-de-graca',
+        createdAt: '26/08/2022',
+        createdAtExtended: '26 de Agosto de 2022',
+        ytid: 'wWOA0Uzsg0A',
+        citation: 'Clique aqui e acesse a página do Prime Gaming!',
+        linkCitation: 'https://gaming.amazon.com/home',
+        description: 'A Amazon Prime Gaming anunciou nesta quinta-feira (25) que dará mais cópias de jogos gratuitos em setembro.',
+        body: 'A Amazon Prime Gaming anunciou nesta quinta-feira (25) que dará mais cópias de jogos gratuitos em setembro. Ao todo, sete títulos vão ficar disponíveis para os assinantes durante o mês.',
+        body2: 'Assassin’s Creed Origins, Terra-média: Sombras de Mordor — Edição Jogo do Ano, The Dig, Defend the Rook, We. The Revolution, Castle on the Coast, Word of the Law: Death Mask Collector’s Edition',
+        body3: 'Para fazer o resgate, basta acessar a aba de jogos gratuitos na página do Amazon Prime Gaming a partir de 1º de setembro.',
+        body4: 'Além disso, o Prime Gaming também oferecerá conteúdo in-game para outros títulos em setembro, como Valorant, Destiny 2, Call of Duty, New World e mais.',
+    },
 ]
 
 export default posts
