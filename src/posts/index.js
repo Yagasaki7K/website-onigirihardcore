@@ -838,6 +838,25 @@ const posts = [
         body3: 'The Devil in Me será lançado no dia 18 de novembro para PlayStation 4, PlayStation 5, Xbox One, Xbox Series X|S e PC.',
         body4: '',
     },
+    {
+        id: 44,
+        author: 'Anderson "Yagasaki" Marlon',
+        image: '/post/fnx.jpg',
+        title: 'FNX agora é treinador e criador de conteúdo para Imperial',
+        smalltitle: 'FNX agora é treinador, coach e criador de conteúdo para ...',
+        categories: 'Games',
+        slug: 'fnx-agora-e-treinador-e-criador-de-conteudo-para-imperial',
+        createdAt: '30/08/2022',
+        createdAtExtended: '30 de Agosto de 2022',
+        ytid: '',
+        citation: '"Quem tá preocupado não tá mais😱🤪 Muito felizes em anunciar que o @linfnx segue imperializado e vai ser nosso novo coach/streamer/criador de conteúdo ! Bora continuar escrevendo essa história juntos, primo 🤝🇧🇷" - No Twitter',
+        linkCitation: 'https://twitter.com/imperialesports/status/1561493682762792960',
+        description: 'A Imperial anunciou que Lincoln "⁠fnx⁠" Lau não será mais um jogador em sua lista inicial e, em vez disso, assumirá as funções de treinador ...',
+        body: 'A Imperial anunciou que Lincoln "⁠fnx⁠" Lau não será mais um jogador em sua lista inicial e, em vez disso, assumirá as funções de treinador do IEM Rio Americas RMR e do próprio Major, se a equipe se qualificar. Embora não esteja claro se ele permanecerá como treinador depois disso, a organização também anunciou que permanecerá como streamer e criador de conteúdo.',
+        body2: 'A mudança ocorre após a saída de Luis "⁠peacemaker⁠" Tadeu da equipe em 12 de agosto, e em meio a relatos de que Marcelo "⁠chelo⁠" Cespedes assumirá o lugar da fnx no elenco ativo. O jovem de 24 anos já partiu da MIBR, indicando que sua chegada à Imperial deve acontecer em um futuro próximo.',
+        body3: 'A mudança marca o fim do período de seis meses do fnx como jogador do Imperial. O jogador de 32 anos havia retornado da inatividade para se juntar a Gabriel "⁠FalleN⁠" Toledo e Fernando "⁠fer⁠" Alvarenga em um reencontro do bicampeão de Majors brasileiro apelidado de "The Last Dance", com o equipe surpreendente no PGL Major Antwerp com um 9-11º lugar.',
+        body4: 'A equipe deve anunciar a substituição do fnx em um futuro próximo, pois participará do ESL Challenger Melbourne de 2 a 4 de setembro, para o qual eles já adquiriram vistos e farão um bootcamp antes.',
+    },
 ]
 
 export default posts
