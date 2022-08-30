@@ -800,6 +800,25 @@ const posts = [
         body3: 'The Last of Us foi lançado originalmente em 2013 para PlayStation 3 e recebeu uma remasterização no ano seguinte, para PlayStation 4.',
         body4: 'O remake será lançado no dia 2 de setembro para PlayStation 5 e posteriormente para PC.',
     },
+    {
+        id: 42,
+        author: 'Anderson "Yagasaki" Marlon',
+        image: '/post/hellraiser.jpg',
+        title: 'Jamie Clayton é Pinhead em primeiro teaser do reboot de Hellraiser',
+        smalltitle: 'Jamie Clayton é Pinhead em primeiro teaser do reboot ...',
+        categories: 'Movies',
+        slug: 'the-last-of-us-part-i-destaca-acessibilidade-em-novo-trailer',
+        createdAt: '30/08/2022',
+        createdAtExtended: '30 de Agosto de 2022',
+        ytid: 'c2kU2-Tpsbs',
+        citation: '',
+        linkCitation: '',
+        description: 'A Hulu divulgou recentemente o primeiro teaser do reboot de Hellraiser, que terá Jamie Clayton (Sense8) como a nova versão de ...',
+        body: 'A Hulu divulgou recentemente o primeiro teaser do reboot de Hellraiser, que terá Jamie Clayton (Sense8) como a nova versão de Pinhead.',
+        body2: 'O vídeo é bem curtinho e destaca principalmente o logo do título, mas já mostra um pouco do visual do vilão de Clayton dentro das letras avermelhas. Além disso, também foi revelada a data de estreia do filme na plataforma: 7 de outubro deste ano.',
+        body3: 'A nova versão tem a direção de David Bruckner (A Casa Sombria) e o elenco conta ainda com Odessa A’zion (Grand Army), Brandon Flynn (13 Reasons Why), Selina Lo (Boss Level – O Último Nível) e Goran Visnjic (Santa Clarita Diet).',
+        body4: 'O reboot de Hellraiser estreia na plataforma da Hulu no dia 7 de outubro, nos EUA.',
+    },
 ]
 
 export default posts
