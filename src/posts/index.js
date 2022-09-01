@@ -1028,6 +1028,25 @@ const posts = [
         body3: 'Mas não se anime tanto, porque o microblog definiu alguns limites para o uso. Os tuítes só poderão ser editados nos 30 minutos seguintes à publicação original, e contarão com um histórico mostrando todas as edições.',
         body4: 'Como de costume, o Twitter ainda não estabeleceu uma data oficial para o lançamento geral da ferramenta. Já seu serviço de assinatura está disponível. O Twitter Blue, como conhecido tem assinaturas mensais a US$ 4,99 (R$ 25, na cotação de hoje).',
     },
+    {
+        id: 54,
+        author: 'Anderson "Yagasaki" Marlon',
+        image: '/post/fortnite-paradigma.jpg',
+        title: 'Fortnite: Gwen e Miles Morales, do Homem-Aranha no Aranhaverso, estarão na S4',
+        smalltitle: 'Fortnite: Gwen e Miles Morales, do Homem-Aranha no ...',
+        categories: 'Games',
+        slug: 'fortnite-gwen-e-miles-morales-do-homem-aranha-no-aranhaverso-estarao-na-s4',
+        createdAt: '01/09/2022',
+        createdAtExtended: '01 de Setembro de 2022',
+        ytid: '',
+        citation: "Fortnite x Spider-Verse (Gwen) is in S4 Battle Pass. Which means Miles Morales comes later in the item shop 🔥 I've gotten confirmation for this from multiple reliable people and @MidaRadogot confirmation from his side too! - No Twitter",
+        linkCitation: 'https://twitter.com/HYPEX/status/1565355656034390017',
+        description: 'Os personagens Miles Morales e Gwen, que estrelam o filme Homem-Aranha no Aranhaverso, devem ser estrelas da 4ª ...',
+        body: 'Os personagens Miles Morales e Gwen, que estrelam o filme Homem-Aranha no Aranhaverso, devem ser estrelas da 4ª temporada do Capítulo 3 de Fortnite. As informações são do leaker HYPEX, conhecido na comunidade por suas previsões certeiras dos itens que chegam ao jogo.',
+        body2: 'De acordo com HYPEX, apesar de os personagens da Marvel estarem confirmados para o Passe de Batalha da próxima temporada, que começa em breve, o Passe em si não será temático da Marvel. Até o momento não se sabe a temática da S4, mas uma imagem foi vazada nesta quinta (01) com uma mão que parece ser da Paradigma, que faz parte d’Os Sete.',
+        body3: 'A 4ª temporada do Capítulo 3 do Fortnite deve chegar no dia 18 de setembro.',
+        body4: '',
+    },
 ]
 
 export default posts
