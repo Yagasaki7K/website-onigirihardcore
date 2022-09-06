@@ -1047,6 +1047,25 @@ const posts = [
         body3: 'A 4ª temporada do Capítulo 3 do Fortnite deve chegar no dia 18 de setembro.',
         body4: '',
     },
+    {
+        id: 55,
+        author: 'Anderson "Yagasaki" Marlon',
+        image: '/post/iphone.jpg',
+        title: 'Ministério da Justiça suspende vendas de iPhone sem carregador no Brasil',
+        smalltitle: 'Ministério da Justiça suspende vendas de iPhone sem carregador no Brasil',
+        categories: 'Technology',
+        slug: 'ministerio-da-justica-suspende-vendas-de-iphone-no-brasil',
+        createdAt: '06/09/2022',
+        createdAtExtended: '06 de Setembro de 2022',
+        ytid: '',
+        citation: "",
+        linkCitation: '',
+        description: 'O Ministério da Justiça e Segurança Pública determinou a suspensão das vendas de iPhone sem carregador no Brasil a partir de hoje (6).',
+        body: 'O Ministério da Justiça e Segurança Pública determinou a suspensão das vendas de iPhone sem carregador no Brasil a partir de hoje (6). Em um despacho publicado no Diário Oficial da União, o órgão rejeitou a alegação de que os carregadores foram retirados das embalagens pelo “alegado compromisso ambiental”, e também citou que a empresa adotou “fornecimento de produto incompleto ou despido de funcionalidade essencial. Prática discriminatória sobre os consumidores realizada de forma deliberada. Transferência de responsabilidades exclusivas do fornecedor.”',
+        body2: 'Com isso, a Apple foi multada em R$ 12.274.500 (doze milhões duzentos e setenta e quatro mil e quinhentos reais), e o Ministério da Justiça determinou ainda: “cassação dos registros dos smartphones da marca iPhone introduzidos no mercado a partir do modelo iPhone 12 e suspensão imediata do fornecimento de todos os smartphones da marca iPhone, independentemente do modelo ou geração, desacompanhados do carregador de bateria.”',
+        body3: 'Sobre a multa, o órgão afirma que ela não será aplicada imediatamente, caso a empresa cumpra as normas e suspenda a venda de aparelhos sem carregador. A Apple iniciou a prática em outubro de 2020 e, na época, chegou a ser notificada pelo Procon de São Paulo. A partir de então, outras marcas aderiram à prática, citando a questão ambiental.',
+        body4: 'Recentemente, a empresa também passou por problemas no Reino Unido, dessa vez sobre a proposta de unificar todas as entradas para USB-C.',
+    },
 ]
 
 export default posts
