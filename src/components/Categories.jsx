@@ -21,7 +21,7 @@ const Categories = () => {
         <CategoriesDetails>
             <div className="firstCategories" id="animes">
                 <div className="header">
-                    <p>&nbsp;&nbsp;Animes {`&`} HQs</p>
+                    <p className="animes">&nbsp;&nbsp;Animes {`&`} HQs</p>
                 </div>
 
                 {
@@ -69,7 +69,7 @@ const Categories = () => {
 
             <div className="secondCategories">
                 <div className="header">
-                    <p>&nbsp;&nbsp;Video Games</p>
+                    <p className="games">&nbsp;&nbsp;Video Games</p>
                 </div>
 
                 {
@@ -117,7 +117,7 @@ const Categories = () => {
 
             <div className="secondCategories">
                 <div className="header">
-                    <p>&nbsp;&nbsp;Filmes {`&`} Séries</p>
+                    <p  className="movies">&nbsp;&nbsp;Filmes {`&`} Séries</p>
                 </div>
 
                 {

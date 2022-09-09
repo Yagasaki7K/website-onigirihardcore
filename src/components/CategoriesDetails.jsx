@@ -10,20 +10,29 @@ const CategoriesDetails = styled.div `
         margin-top: 1rem;
     }
 
+    .animes, .games {
+        width: 9.2rem;
+        background: ${colors.blue};
+        color: ${colors.text};
+        padding: 5px 10px;
+        margin-bottom: -2px;
+        font-weight: bold;
+    }
+
+    .movies {
+        width: 10rem;
+        background: ${colors.blue};
+        color: ${colors.text};
+        padding: 5px 10px;
+        margin-bottom: -2px;
+        font-weight: bold;
+    }
+
     .firstCategories, .secondCategories, .thirdCategories {
         margin-right: 30px;
         .header {
             border-bottom: 2px solid ${colors.blue};
             width: 22rem;
-
-            p {
-                width: 9.2rem;
-                background: ${colors.blue};
-                color: ${colors.text};
-                padding: 5px 10px;
-                margin-bottom: -2px;
-                font-weight: bold;
-            }
         }
 
         img {
