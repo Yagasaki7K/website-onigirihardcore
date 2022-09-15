@@ -11,27 +11,20 @@ const SlugDetails = styled.div `
 
     section {
         margin-left: 28rem;
-
-        @media (max-width: 1366px) {
-            margin-left: 1rem;
-            width: 90%;
-        }
+        width: 50%;
 
         @media (max-width: 1600px) {
             margin-left: 20rem;
         }
-
-        width: 50%;
-
+        
+        @media (max-width: 1366px) {
+            margin-left: 12rem;
+        }
+        
         margin-bottom: 5rem;
         background: ${colors.whitelight};
     
         h1 {
-        
-            @media (max-width: 1366px) {
-                margin-left: 8rem;
-            }
-
             margin-top: -1rem;
             color: ${colors.blue};
             font-size: 2rem;
@@ -43,10 +36,6 @@ const SlugDetails = styled.div `
         .date {
             margin-bottom: 0rem;
             margin-left: 48rem;
-
-            @media (max-width: 1366px) {
-                margin-left: 3rem;
-            }
         }
 
         .block__content {
@@ -54,10 +43,6 @@ const SlugDetails = styled.div `
             text-align: justify;
             font-size: 1.1rem;
             line-height: 1.5rem;
-
-            @media (max-width: 1366px) {
-                margin-left: 8rem;
-            }
         }
 
         .title__content {
@@ -80,10 +65,6 @@ const SlugDetails = styled.div `
             width: 60rem;
             margin-left: 0rem;
             height: 38rem;
-
-            @media (max-width: 1366px) {
-                margin-left: 7.5rem;
-            }
         }
     }
 `
