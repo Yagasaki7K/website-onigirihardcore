@@ -17,6 +17,10 @@ const SlugDetails = styled.div `
             width: 90%;
         }
 
+        @media (max-width: 1600px) {
+            margin-left: 20rem;
+        }
+
         width: 50%;
 
         margin-bottom: 5rem;
