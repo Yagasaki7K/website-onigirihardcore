@@ -29,7 +29,6 @@ const SlugDetails = styled.div `
             }
 
             margin-top: -1rem;
-
             color: ${colors.blue};
             font-size: 2rem;
             font-weight: 700;
@@ -47,7 +46,7 @@ const SlugDetails = styled.div `
         }
 
         .block__content {
-            width: 70rem;
+            width: 60rem;
             text-align: justify;
             font-size: 1.1rem;
             line-height: 1.5rem;
@@ -55,6 +54,10 @@ const SlugDetails = styled.div `
             @media (max-width: 1366px) {
                 margin-left: 8rem;
             }
+        }
+
+        .title__content {
+            width: 60rem;
         }
 
         .citation {
@@ -70,7 +73,7 @@ const SlugDetails = styled.div `
         }
 
         iframe {
-            width: 70rem;
+            width: 60rem;
             margin-left: 0rem;
             height: 38rem;
 
