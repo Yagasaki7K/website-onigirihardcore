@@ -3,7 +3,7 @@ import Footer from '../src/components/Footer'
 import Header from '../src/components/Header'
 import FullNewsDetails from '../src/components/FullNewsDetails'
 
-import post from '../src/posts/index'
+import post from '../server/index.json'
 const posts = post.reverse()
 
 const FullNews = () => {

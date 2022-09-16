@@ -1,6 +1,6 @@
 import React from 'react'
 
-import posts from '../../src/posts/index'
+import posts from '../../server/index.json'
 
 let animeContent = posts.filter(posts => posts.categories === 'Animes')
 let firstAnime = animeContent.slice(0, 1)

@@ -1,5 +1,5 @@
 import express from 'express'
-import posts from '../src/posts/index.json' assert { type: "json" };
+import posts from './index.json' assert { type: "json" };
 
 const app = express()
 

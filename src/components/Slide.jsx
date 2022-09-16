@@ -1,5 +1,5 @@
 import React from 'react'
-import post from '../posts/index'
+import post from '../../server/index.json'
 
 import SlideDetails from './SlideDetails'
 import 'keen-slider/keen-slider.min.css'

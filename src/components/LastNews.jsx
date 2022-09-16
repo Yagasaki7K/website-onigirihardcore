@@ -1,5 +1,5 @@
 import LastNewsDetails from './LastNewsDetails'
-import post from '../posts/index'
+import post from '../../server/index.json'
 
 const posts = post.slice(0, 4)
 const secondPosts = post.slice(4, 8)

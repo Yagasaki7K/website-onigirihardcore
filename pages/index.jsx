@@ -1,4 +1,4 @@
-import posts from '../src/posts/index'
+import posts from '../server/index.json'
 import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
 import Slide from '../src/components/Slide'
