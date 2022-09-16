@@ -7,4 +7,4 @@ app.get('/api/news', (req, res) => {
     return res.json(posts)
 })
 
-app.listen(3333)
+app.listen(3000)
