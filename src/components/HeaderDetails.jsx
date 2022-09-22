@@ -8,9 +8,18 @@ const HeaderDetails = styled.div`
         padding: 1rem 20rem;
         justify-content: space-between;
 
-        @media (max-width: 1366px) {
-            padding: 1rem 2rem;
+        @media (max-width: 1600px) {
+            padding: 1rem 6rem;
         }
+
+        @media (max-width: 1440px) {
+            padding: 1rem 4rem;
+        }
+
+        @media (max-width: 1366px) {
+            padding: 1rem 3rem;
+        }
+
 
         @media (max-width: 1024px) {
             .advice {

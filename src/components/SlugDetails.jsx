@@ -16,6 +16,10 @@ const SlugDetails = styled.div `
         @media (max-width: 1600px) {
             margin-left: 20rem;
         }
+
+        @media (max-width: 1440px) {
+            margin-left: 14rem;
+        }
         
         @media (max-width: 1366px) {
             margin-left: 12rem;
