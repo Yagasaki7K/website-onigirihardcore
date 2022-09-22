@@ -5,7 +5,7 @@ const HeaderDetails = styled.div`
 
     .header {
         display: flex;
-        padding: 1rem 20rem;
+        padding: 1rem 15rem;
         justify-content: space-between;
 
         @media (max-width: 1600px) {
