@@ -10,6 +10,24 @@ const FullNewsDetails = styled.div `
         margin-top: 1rem;
         margin-left: 28rem;
 
+        button {
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.2rem;
+            background-color: #01acfe;
+            color: #e5e5e5;
+            border: none;
+            margin-bottom: 2rem;
+            cursor: pointer;
+
+            :hover {
+                transition: 1s;
+                transform: scale(1.05);
+            }
+        }
+
         @media (max-width: 1366px) {
             margin-left: 10rem;
         }
