@@ -23,8 +23,7 @@ const Post = () => {
                                 <section key={post?.id}>
                                     <p className="block__content">{post.createdAtExtended} | {post.author}</p>
                                     <h1 className="title__content">{post?.title}</h1>
-                                    <p className="block__content">{post?.body}</p>
-                                    <p className="block__content">{post?.body2}</p>
+                                    <p className="block__content" style={{whiteSpace: "pre-wrap"}}>{post?.body}</p>
 
                                     {
                                         post.citation != '' ? (
@@ -34,9 +33,7 @@ const Post = () => {
                                         ) : null
                                     }
 
-                                    <p className="block__content">{post?.body3}</p>
-                                    <p className="block__content">{post?.body4}</p>
-                                    <p className="block__content">{post?.body5}</p>
+                                    <p className="block__content" style={{whiteSpace: "pre-wrap"}}>{post?.body2}</p>
 
                                     {
                                         post?.ytid ?
