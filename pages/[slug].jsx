@@ -31,6 +31,8 @@ export async function getStaticPaths() {
 const Post = ({data}) => {
     const router = useRouter()
     const { slug } = router.query
+    const thumbnail = 'https://c4.wallpaperflare.com/wallpaper/998/145/207/onigiri-hardcore-onigiri-hardcore-wallpaper-preview.jpg'
+    
     return (
         <>
             <Header />
@@ -41,22 +43,25 @@ const Post = ({data}) => {
                         post.slug === slug ? (
                             <>
                                 <Head>
-                                    <title>{post?.title}</title>
-                                    <meta name="title" content={post?.title} />
-                                    <meta name="author" content="Anderson 'Yagasaki' Marlon" />
-
+                                    <title>{post.title}</title>
+                                    <meta name="author" content='Anderson "Yagasaki" Marlon' />
                                     <meta name="description" content={post.description} />
-                                    <meta property="og:url" content={'https://onigirihardcore.vercel.app/' + post.slug} />
                                     <meta property="og:title" content={post.title} />
                                     <meta property="og:description" content={post.description} />
-                                    <meta property="og:image" content={post.image} />
-
-                                    <meta property="twitter:url" content={'https://onigirihardcore.vercel.app/' + post.slug}/>
-                                    <meta property="twitter:title" content={post.title} />
-                                    <meta property="twitter:description" content={post.description} />
-                                    <meta property="twitter:image" content={post.image} />
+                                    <meta property="og:site_name" content="Anderson Marlon // Software Developer" />
+                                    <meta property="og:url" content="https://yagasaki.vercel.app/" />
+                                    <meta property="og:image" content={thumbnail} />
+                                    <meta property="og:type" content="Website" />
+                                    <meta property="og:image:width" content="1200" />
+                                    <meta property="og:image:height" content="627" />
+                                    <meta name="twitter:card" content="summary" />
+                                    <meta name="twitter:site" content={post.title} />
+                                    <meta name="twitter:creator" content='Anderson "Yagasaki" Marlon' />
+                                    <meta name="twitter:title" content={post.title} />
+                                    <meta name="twitter:description" content={post.description} />
+                                    <meta name="twitter:image:src" content={thumbnail} />
                                 </Head>
-                                
+
                                 <img src={post?.image}></img>
                                 <section key={post?.id}>
                                     <p className="block__content">{post.createdAtExtended} | {post.author}</p>
