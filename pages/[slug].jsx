@@ -28,13 +28,12 @@ export async function getStaticPaths() {
     }
 }
 
-// Test using Localhost || Hidde getStaticPaths and getStaticProps
-// import posts from '../server/index.json'
+// Test using Localhost || Hidde getStaticPaths and getStaticProps and props inside on Post
+// import data from '../server/index.json'
 
 const Post = ({data}) => {
     const router = useRouter()
     const { slug } = router.query
-    const thumbnail = 'https://c4.wallpaperflare.com/wallpaper/998/145/207/onigiri-hardcore-onigiri-hardcore-wallpaper-preview.jpg'
 
     return (
         <>
