@@ -5,33 +5,33 @@ import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
 import SlugDetails from '../src/components/SlugDetails'
 
-export async function getStaticProps() {
-    const DataAPI = await fetch('https://apionigirihardcore.up.railway.app/api/news')
-    const data = await DataAPI.json()
-    return {
-        props: {
-            data
-        }
-    }
-}
+// export async function getStaticProps() {
+//     const DataAPI = await fetch('https://apionigirihardcore.up.railway.app/api/news')
+//     const data = await DataAPI.json()
+//     return {
+//         props: {
+//             data
+//         }
+//     }
+// }
 
-export async function getStaticPaths() {
-    const request = await fetch('https://apionigirihardcore.up.railway.app/api/news')
-    const posts = await request.json()
-    const paths = posts.map(client => ({
-        params: { slug: client.slug.toString() },
-    }))
+// export async function getStaticPaths() {
+//     const request = await fetch('https://apionigirihardcore.up.railway.app/api/news')
+//     const posts = await request.json()
+//     const paths = posts.map(client => ({
+//         params: { slug: client.slug.toString() },
+//     }))
 
-    return {
-        paths,
-        fallback: false
-    }
-}
+//     return {
+//         paths,
+//         fallback: false
+//     }
+// }
 
 // Test using Localhost || Hidde getStaticPaths and getStaticProps and props inside on Post
-// import data from '../server/index.json'
+import data from '../server/index.json'
 
-const Post = ({data}) => {
+const Post = () => {
     const router = useRouter()
     const { slug } = router.query
 
