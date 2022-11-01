@@ -6,7 +6,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    background: #181a1b;
+    background: #15171b;
     color: #d3cfc9;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -22,15 +22,20 @@ a {
 }
 
 body::-webkit-scrollbar {
-    width: 14px;               /* width of the entire scrollbar */
+    width: 14px;
+    /* width of the entire scrollbar */
 }
-  
+
 body::-webkit-scrollbar-track {
-    background: #181a1b;        /* color of the tracking area */
+    background: #15171b;
+    /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #00acff;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 3px solid #181a1b;  /* creates padding around scroll thumb */
+    background-color: #00acff;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #15171b;
+    /* creates padding around scroll thumb */
 }

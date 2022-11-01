@@ -16,7 +16,7 @@ const FooterDetails = styled.div`
 
     .footer {
         width: 100%;
-        background: #272f32;
+        background: #1d1e26;
         color: ${colors.white};
         display: flex;
         padding: .5rem 0;

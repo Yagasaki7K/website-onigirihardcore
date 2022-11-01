@@ -7,26 +7,26 @@ export default class MyDocument extends Document {
     static async getInitialProps(ctx) {
         const sheet = new ServerStyleSheet()
         const originalRenderPage = ctx.renderPage
-    
+
         try {
-          ctx.renderPage = () =>
-            originalRenderPage({
-              enhanceApp: (App) => (props) =>
-                sheet.collectStyles(<App {...props} />),
-            })
-    
-          const initialProps = await Document.getInitialProps(ctx)
-          return {
-            ...initialProps,
-            styles: (
-              <>
-                {initialProps.styles}
-                {sheet.getStyleElement()}
-              </>
-            ),
-          }
+            ctx.renderPage = () =>
+                originalRenderPage({
+                    enhanceApp: (App) => (props) =>
+                        sheet.collectStyles(<App {...props} />),
+                })
+
+            const initialProps = await Document.getInitialProps(ctx)
+            return {
+                ...initialProps,
+                styles: (
+                    <>
+                        {initialProps.styles}
+                        {sheet.getStyleElement()}
+                    </>
+                ),
+            }
         } finally {
-          sheet.seal()
+            sheet.seal()
         }
     }
     // Finish Here
@@ -34,7 +34,7 @@ export default class MyDocument extends Document {
     render() {
         return (
             <Html lang="pt-br">
-                    <title>Onigiri Hardcore</title>
+                <title>Onigiri Hardcore | Portal de Notícias e Entretenimento</title>
                 <Head>
                     {/* PWA primary color */}
                     <link rel="shortcut icon" href="/icone.png" type="image/png"></link>
@@ -45,6 +45,6 @@ export default class MyDocument extends Document {
                     <NextScript />
                 </body>
             </Html>
-                    )
+        )
     }
 }
