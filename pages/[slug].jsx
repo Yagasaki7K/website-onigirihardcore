@@ -31,7 +31,7 @@ export async function getStaticPaths() {
 // Test using Localhost || Hidde getStaticPaths and getStaticProps and props inside on Post
 // import data from '../server/index.json'
 
-const Post = ({data}) => {
+const Post = ({ data }) => {
     const router = useRouter()
     const { slug } = router.query
 
@@ -41,9 +41,9 @@ const Post = ({data}) => {
 
             <SlugDetails>
                 {
-                    data && data.map(post => (
+                    data && data.map((post, index) => (
                         post.slug === slug ? (
-                            <>
+                            <div key={index}>
                                 <Head>
                                     <title>{post.title}</title>
                                     <meta name="author" content='Anderson "Yagasaki" Marlon' />
@@ -68,7 +68,7 @@ const Post = ({data}) => {
                                 <section key={post.id}>
                                     <p className="block__content">{post.createdAtExtended} | {post.author}</p>
                                     <h1 className="title__content">{post.title}</h1>
-                                    <p className="block__content" style={{whiteSpace: "pre-wrap"}}>{post.body}</p>
+                                    <p className="block__content" style={{ whiteSpace: "pre-wrap" }}>{post.body}</p>
 
                                     {
                                         post.citation != '' ? (
@@ -78,14 +78,14 @@ const Post = ({data}) => {
                                         ) : null
                                     }
 
-                                    <p className="block__content" style={{whiteSpace: "pre-wrap"}}>{post.body2}</p>
+                                    <p className="block__content" style={{ whiteSpace: "pre-wrap" }}>{post.body2}</p>
 
                                     {
                                         post.ytid ?
                                             <iframe width="550" height="480" src={'https://www.youtube.com/embed/' + post?.ytid} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : null
                                     }
                                 </section>
-                            </>
+                            </div>
                         ) : (
                             null
                         )
