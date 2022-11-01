@@ -1642,7 +1642,7 @@
         "author": "Anderson \"Yagasaki\" Marlon",
         "image": "/post/elonmusk.jpg",
         "title": "Elon Musk quer cobrar US$ 20 por mês de usuários verificados no Twitter",
-        "smalltitle": "Elon Musk quer cobrar US$ 20 por mês ...",
+        "smalltitle": "Elon Musk quer cobrar US$ 20 por mês de usuários ...",
         "categories": "Technology",
         "slug": "elon-musk-quer-cobrar-us-20-por-mes-de-usuarios-verificados-no-twitter",
         "createdAt": "31/10/2022",
@@ -1653,5 +1653,22 @@
         "description": "Elon Musk está dando os primeiros passos para alavancar os lucros do Twitter. A mais nova ideia do chefão da rede social é cobrar ...",
         "body": "Elon Musk está dando os primeiros passos para alavancar os lucros do Twitter. A mais nova ideia do chefão da rede social é cobrar US$ 20 no Twitter Blue para a verificação de contas, processo que dá aos usuários o famoso selo azul — garantia de que se trata da conta oficial da personalidade ou empresa. A atualização deve chegar no dia 7 de novembro.\n\nO Twitter Blue, serviço de assinatura premium do Twitter, fornece funcionalidades extras para os seus usuários, como a opção de editar tweets e personalização de abas. Atualmente, ele custa US$ 4,99, contudo a proposta de Musk é que o novo valor de US$ 20 (R$ 105,93 em conversão direta) inclua o selo verificado — sim, agora será oficial ter o selo como \"ostentação\".Nada de direito adquirido no Twitter de Elon Musk. De acordo com o site Plataform, os usuários verificados serão obrigados a assinar o Twitter Blue para manter o icônico selo azul. Quem não iniciar a assinatura em 90 dias, perderá a verificação. O veículo também afirma que a atualização do Twitter Blue chega em 7 de novembro — e se não chegar, os responsáveis pela novidade serão demitidos.\n\nA fonte do Plataform disse que os funcionários do projeto trabalharam neste final de semana e estão usando a noite para terminar a atualização no prazo determinado — e ainda tem mais um fim de semana pela frente. O curioso é que o Twitter Blue está disponível para quatro países (Austrália, Canadá, Estados Unidos e Nova Zelândia), enquanto a rede social possui usuários verificados em diversos lugares do mundo.",
         "body2": "Se os desenvolvedores do Twitter estão virando a noite e perdendo finais de semana, pode ser que o lançamento do Twitter Blue e do verificado pago aconteçam simultaneamente na próxima segunda-feira. Afinal, há um grande problema ao cobrar pela verificação de contas: resolver a cobrança com governos e instituições.\n\nAinda não há mais detalhes de como o serviço funcionará com grandes empresas e governos, mas uma possível remoção do selo de verificado de órgãos governamentais amplia os riscos de desinformação — e de fiscalização.\n\nDeixando de lado o valor de US$ 20 (R$ 105,93) para a verificação, cobrar pelo selo é injusto para qualquer nível de influencer — do regional até alguém no nível Jade Picon — pelo motivo de que o Twitter não possui um sistema de parceria com os criadores de conteúdo.\n\nInstagram, TikTok e YouTube possuem ferramentas para que criadores ganhem dinheiro da plataforma. O Twitter, no momento, permite o uso do Super Follow, serviço de assinatura para que seguidores tenham acesso a conteúdo exclusivo de seus influenciadores favoritos. Ela tem opção fixa de três valores e só está liberada em quatro países."
+    },
+    {
+        "id": 97,
+        "author": "Anderson \"Yagasaki\" Marlon",
+        "image": "/post/bluesky.jpg",
+        "title": "Criador do Twitter lançará Bluesky, nova rede social descentralizada",
+        "smalltitle": "Criador do Twitter lançará Bluesky, nova rede social ...",
+        "categories": "Technology",
+        "slug": "elon-musk-quer-cobrar-us-20-por-mes-de-usuarios-verificados-no-twitter",
+        "createdAt": "01/11/2022",
+        "createdAtExtended": "01 de Novembro de 2022",
+        "ytid": "",
+        "citation": "It’s clear there’s a lot of interest in a new approach to social media. We’ll be rolling out invites to the private beta in stages, making sure the protocol scales and taking user feedback as we go. Join the waitlist to try the beta before it's publicly available - No Twitter",
+        "linkCitation": "https://bsky.app/",
+        "description": "Jack Dorsey, cofundador e ex-CEO do Twitter, está criando uma nova rede social que deve ser lançada em breve. A notícia chega logo após ...",
+        "body": "Jack Dorsey, cofundador e ex-CEO do Twitter, está criando uma nova rede social que deve ser lançada em breve. A notícia chega logo após Elon Musk finalizar a compra da “plataforma do passarinho azul”.\n\nEssa nova “praça digital”, que provavelmente se chamará Bluesky, começou a ser gerada em 2019 – e Dorsey levou o projeto consigo quando saiu do Twitter, em 2021. A ideia é que a plataforma seja totalmente descentralizada e que opere em código aberto. Nas palavras do fundador:\n\n“O objetivo maior e de longo prazo é construir um protocolo aberto e duradouro para conversas públicas. Que não seja de propriedade de nenhuma organização, mas construído pelo maior número [de pessoas] possível.”",
+        "body2": "A base desse projeto é o AT Protocol (Protocolo de Transferência Autenticado, em tradução livre). Essa tecnologia promete a portabilidade entre contas, a possibilidade de escolher os algoritmos que pretende utilizar e a interoperabilidade entre diferentes redes sociais.\n\nA Bluesky já está com lista de registro aberta para quem quiser ser um usuário beta da rede social. Você pode cadastrar seu e-mail e aguardar atualizações."
     }
 ]
