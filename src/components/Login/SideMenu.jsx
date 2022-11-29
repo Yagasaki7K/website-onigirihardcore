@@ -16,11 +16,11 @@ const SideMenu = () => {
                             <i className="uil uil-file-edit-alt" /> Publicações
                         </li>
                     </Link>
-                    <Link href="#stats">
+                    {/* <Link href="#stats">
                         <li>
                             <i className="uil uil-arrow-growth" /> Estatísticas
                         </li>
-                    </Link>
+                    </Link> */}
                     <Link href="/">
                         <li>
                             <i className="uil uil-sign-out-alt" /> Sair

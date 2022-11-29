@@ -5,7 +5,6 @@ const SideMenuDetails = styled.div`
     background: #15171b;
     color: #fff;
     width: 18rem;
-    height: 100vh;
     margin-right: 1rem;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 

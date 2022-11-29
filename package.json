@@ -10,15 +10,17 @@
     "yagasaki": "yarn upgrade-interactive --latest"
   },
   "dependencies": {
-    "keen-slider": "^6.8.3",
-    "next": "13.0.3",
+    "@uiw/react-md-editor": "^3.19.7",
+    "keen-slider": "^6.8.5",
+    "next": "13.0.5",
+    "next-remove-imports": "^1.0.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
-    "eslint": "^8.27.0",
-    "eslint-config-next": "13.0.3",
-    "eslint-plugin-react": "^7.31.10"
+    "eslint": "^8.28.0",
+    "eslint-config-next": "13.0.5",
+    "eslint-plugin-react": "^7.31.11"
   }
 }

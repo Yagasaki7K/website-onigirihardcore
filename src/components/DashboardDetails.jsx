@@ -9,6 +9,7 @@ const DashboardDetails = styled.div`
         flex-direction: column;
         width: 100%;
         padding: 0 20px;
+        margin-bottom: 1rem;
         background: #1d1e26;
         font-family: 'Poppins', sans-serif;
 
@@ -26,7 +27,7 @@ const DashboardDetails = styled.div`
                 width: 50%;
                 margin-top: 1rem;
 
-                input, textarea {
+                input, textarea, select, option {
                     background: #1d1e26;
                     border: 1px solid #fff;
                     color: #fff;
@@ -34,6 +35,24 @@ const DashboardDetails = styled.div`
                     border-radius: 5px;
                     margin-top: 10px;
                     font-family: 'Poppins', sans-serif;
+                }
+
+                textarea {
+                    height: 120px;
+                }
+            }
+
+            .item-markdown {
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                margin-top: 1rem;
+
+                button {
+                    margin-top: 0;
+                    padding: 1px;
+                    border: none;
+                    background: transparent;
                 }
             }
 

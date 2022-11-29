@@ -2,12 +2,21 @@ import { useState } from 'react'
 import SideMenu from '../src/components/Login/SideMenu'
 import LoginDetails from "../src/components/LoginDetails"
 import DashboardDetails from "../src/components/DashboardDetails"
+import dynamic from "next/dynamic";
+import "@uiw/react-md-editor/markdown-editor.css";
+import "@uiw/react-markdown-preview/markdown.css";
 
 const SoreyeAsuka = 'OnigiriHardcore'
 const EVA02 = '0GkMepi*r]hj'
 
+const MarkdownEditor = dynamic(
+    () => import("@uiw/react-md-editor").then((mod) => mod.default),
+    { ssr: false }
+);
+
 const Login = () => {
     const [isLogged, setIsLogged] = useState(false)
+    const [value, setValue] = useState('# Corpo da Publicação')
     const Lgn = SoreyeAsuka
     const Pswd = EVA02
 
@@ -35,6 +44,13 @@ const Login = () => {
                             <form onSubmit={(e) => e.preventDefault()}>
 
                                 <div className="item">
+                                    <label htmlFor="author">Autor*: </label>
+                                    <select>
+                                        <option value={"Anderson 'Yagasaki' Marlon"}>Anderson "Yagasaki" Marlon</option>
+                                    </select>
+                                </div>
+
+                                <div className="item">
                                     <label htmlFor="title">Título da Publicação*: </label>
                                     <input type="text" name="title" id="title" placeholder="Título da Publicação" required />
                                 </div>
@@ -55,9 +71,9 @@ const Login = () => {
                                     <input type="file" name="image" id="image" required />
                                 </div>
 
-                                <div className="item">
+                                <div className="item-markdown">
                                     <label htmlFor="body">Conteúdo da Publicação*: </label>
-                                    <textarea name="body" id="body" required />
+                                    <MarkdownEditor height={300} value={value} onChange={setValue} />
                                 </div>
 
                                 <div className="item">
