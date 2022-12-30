@@ -55,13 +55,19 @@ const Post = ({ data }) => {
                                     <meta property="og:description" content={post.description} />
                                     <meta property="og:url" content="https://onigirihardcore.vercel.app/" />
                                     <meta property="og:site_name" content="Onigiri Hardcore" />
-                                    <meta property="og:image" content={"https://onigirihardcore.vercel.app/" + post.image} />
+                                    <meta property="og:image" content={post.image} />
                                     <meta property="og:image:type" content="image/jpeg" />
                                     <meta property="og:image:width" content="1200" />
                                     <meta property="og:image:height" content="630" />
                                     <meta property="og:image:alt" content={post.title} />
-                                    <meta property="og:image:secure_url" content={"https://onigirihardcore.vercel.app/" + post.image} />
-                                    <meta property="og:image:alt" content={post.title} />
+                                    <meta property="twitter:card" content="summary_large_image" />
+                                    <meta property="twitter:description" content={post.description} />
+                                    <meta property="twitter:title" content={post.title} />
+                                    <meta property="twitter:image" content={post.image} />
+                                    <meta property="twitter:image:alt" content={post.title} />
+                                    <meta property="twitter:site" content="@onigirihardcore" />
+                                    <meta property="twitter:creator" content="@onigirihardcore" />
+
                                 </Head>
 
                                 <img src={post.image}></img>
