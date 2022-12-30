@@ -41,27 +41,6 @@ const Post = ({ data }) => {
                     data && data.map((post, index) => (
                         post.slug === slug ? (
                             <div key={index}>
-                                <Head>
-                                    <title>{post.title}</title>
-                                    <meta name="description" content={post.description} />
-                                    <meta name="author" content={post.author} />
-                                    <meta name="robots" content="index, follow" />
-                                    <meta name="language" content="pt-br" />
-                                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                                    <meta property="og:title" content={post.title} />
-                                    <meta property="og:description" content={post.description} />
-                                    <meta property="og:url" content="https://onigirihardcore.vercel.app/" />
-                                    <meta property="og:image" content={post.image} />
-                                    <meta property="og:image:width" content="1200" />
-                                    <meta property="og:image:height" content="630" />
-                                    <meta property="og:image:alt" content={post.title} />
-                                    <meta property="twitter:card" content="summary_large_image" />
-                                    <meta property="twitter:description" content={post.description} />
-                                    <meta property="twitter:title" content={post.title} />
-                                    <meta property="twitter:image" content={post.image} />
-                                    <meta property="twitter:site" content="@onigirihardcore" />
-                                    <meta property="twitter:creator" content="@onigirihardcore" />
-                                </Head>
 
                                 <img src={post.image} />
                                 <section key={post.id}>
