@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { NextSeo } from 'next-seo'
+import { Head } from 'next/head'
 
 import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
@@ -31,7 +31,6 @@ export async function getStaticPaths() {
 const Post = ({ data }) => {
     const router = useRouter()
     const { slug } = router.query
-    const postImage = `https://www.onigirihardcore.vercel.app/ + ${slug}`
 
     return (
         <>
@@ -42,30 +41,29 @@ const Post = ({ data }) => {
                     data && data.map((post, index) => (
                         post.slug === slug ? (
                             <div key={index}>
-                                <NextSeo
-                                    title={post.title}
-                                    description={post.description}
-                                    canonical="https://www.onigirihardcore.vercel.app/"
-                                    twitter={{
-                                        handle: '@Yagasaki7K',
-                                        site: '@Yagasaki7K',
-                                        cardType: 'summary_large_image',
-                                    }}
-                                    openGraph={{
-                                        title: post.title,
-                                        description: post.description,
-                                        images: [
-                                            {
-                                                url: postImage,
-                                                width: 800,
-                                                height: 600,
-                                                alt: post.title,
-                                            }
-                                        ]
-                                    }}
-                                    datePublished={post.createdAt}
-                                    authorName='Anderson "Yagasaki" Marlon'
-                                />
+                                <Head>
+                                    <title>{post.title}</title>
+                                    <meta name="description" content={post.description} />
+                                    <meta name="keywords" content={post.keywords} />
+                                    <meta name="author" content={post.author} />
+                                    <meta name="robots" content="index, follow" />
+                                    <meta name="language" content="pt-br" />
+                                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                                    <meta property="og:locale" content="pt_BR" />
+                                    <meta property="og:type" content="website" />
+                                    <meta property="og:title" content={post.title} />
+                                    <meta property="og:description" content={post.description} />
+                                    <meta property="og:url" content="https://onigirihardcore.vercel.app/" />
+                                    <meta property="og:site_name" content="Onigiri Hardcore" />
+                                    <meta property="og:image" content={"https://onigirihardcore.vercel.app/" + post.image} />
+                                    <meta property="og:image:type" content="image/jpeg" />
+                                    <meta property="og:image:width" content="1200" />
+                                    <meta property="og:image:height" content="630" />
+                                    <meta property="og:image:alt" content={post.title} />
+                                    <meta property="og:image:secure_url" content={"https://onigirihardcore.vercel.app/" + post.image} />
+                                    <meta property="og:image:alt" content={post.title} />
+                                </Head>
+
                                 <img src={post.image}></img>
                                 <section key={post.id}>
                                     <p className="block__content">{post.createdAtExtended} | {post.author}</p>
