@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import Head from 'next/head'
+import { NextSeo } from 'next-seo'
 
 import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
@@ -44,26 +44,17 @@ const Post = ({ data }) => {
                     data && data.map((post, index) => (
                         post.slug === slug ? (
                             <div key={index}>
-                                <Head>
-                                    <title>{post.title}</title>
-                                    <meta name="author" content='Anderson "Yagasaki" Marlon' />
-                                    <meta name="description" content={post.description} />
-                                    <meta property="og:title" content={post.title} />
-                                    <meta property="og:description" content={post.description} />
-                                    <meta property="og:site_name" content="Anderson Marlon // Software Developer" />
-                                    <meta property="og:url" content="https://yagasaki.vercel.app/" />
-                                    <meta property="og:image" content={post.image} />
-                                    <meta property="og:type" content="Website" />
-                                    <meta property="og:image:width" content="1200" />
-                                    <meta property="og:image:height" content="627" />
-                                    <meta name="twitter:card" content="summary" />
-                                    <meta name="twitter:site" content={post.title} />
-                                    <meta name="twitter:creator" content='Anderson "Yagasaki" Marlon' />
-                                    <meta name="twitter:title" content={post.title} />
-                                    <meta name="twitter:description" content={post.description} />
-                                    <meta name="twitter:image:src" content={post.image} />
-                                </Head>
-
+                                <NextSeo
+                                    title={post.title}
+                                    description={post.description}
+                                    canonical="https://www.onigirihardcore.vercel.app/"
+                                    twitter={{
+                                        cardType: 'summary_large_image',
+                                    }}
+                                    images={post.image}
+                                    datePublished={post.createdAt}
+                                    authorName='Anderson "Yagasaki" Marlon'
+                                />
                                 <img src={post.image}></img>
                                 <section key={post.id}>
                                     <p className="block__content">{post.createdAtExtended} | {post.author}</p>
