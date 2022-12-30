@@ -49,14 +49,10 @@ const Post = ({ data }) => {
                                     <meta name="robots" content="index, follow" />
                                     <meta name="language" content="pt-br" />
                                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                                    <meta property="og:locale" content="pt_BR" />
-                                    <meta property="og:type" content="website" />
                                     <meta property="og:title" content={post.title} />
                                     <meta property="og:description" content={post.description} />
                                     <meta property="og:url" content="https://onigirihardcore.vercel.app/" />
-                                    <meta property="og:site_name" content="Onigiri Hardcore" />
                                     <meta property="og:image" content={post.image} />
-                                    <meta property="og:image:type" content="image/jpeg" />
                                     <meta property="og:image:width" content="1200" />
                                     <meta property="og:image:height" content="630" />
                                     <meta property="og:image:alt" content={post.title} />
@@ -64,13 +60,11 @@ const Post = ({ data }) => {
                                     <meta property="twitter:description" content={post.description} />
                                     <meta property="twitter:title" content={post.title} />
                                     <meta property="twitter:image" content={post.image} />
-                                    <meta property="twitter:image:alt" content={post.title} />
                                     <meta property="twitter:site" content="@onigirihardcore" />
                                     <meta property="twitter:creator" content="@onigirihardcore" />
-
                                 </Head>
 
-                                <img src={post.image}></img>
+                                <img src={post.image} />
                                 <section key={post.id}>
                                     <p className="block__content">{post.createdAtExtended} | {post.author}</p>
                                     <h1 className="title__content">{post.title}</h1>
