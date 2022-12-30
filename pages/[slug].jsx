@@ -49,7 +49,23 @@ const Post = ({ data }) => {
                                     description={post.description}
                                     canonical="https://www.onigirihardcore.vercel.app/"
                                     twitter={{
+                                        handle: '@Yagasaki7K',
+                                        site: '@Yagasaki7K',
                                         cardType: 'summary_large_image',
+                                    }}
+                                    openGraph={{
+                                        url: 'https://www.onigirihardcore.vercel.app/',
+                                        title: post.title,
+                                        description: post.description,
+                                        images: [
+                                            {
+                                                url: post.image,
+                                                width: 800,
+                                                height: 600,
+                                                alt: post.title,
+                                            }
+                                        ],
+                                        site_name: 'Onigiri Hardcore',
                                     }}
                                     images={post.image}
                                     datePublished={post.createdAt}

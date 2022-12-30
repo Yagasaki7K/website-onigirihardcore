@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import colors from './Colors'
 
-const SlideDetails = styled.div `
+const SlideDetails = styled.div`
     .keen-slider {
         width: 100%;
         height: 40rem;
@@ -29,7 +29,6 @@ const SlideDetails = styled.div `
                 left: 50%;
                 transform: translate(-50%, -50%);
                 text-transform: initial;
-                font-family: 'Poppins', sans-serif;
                 line-height: 40px;
                 text-align: left;
                 width: 58rem;
