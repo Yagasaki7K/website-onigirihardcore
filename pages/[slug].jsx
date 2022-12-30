@@ -28,12 +28,10 @@ export async function getStaticPaths() {
     }
 }
 
-// Test using Localhost || Hidde getStaticPaths and getStaticProps and props inside on Post
-// import data from '../server/index.json'
-
 const Post = ({ data }) => {
     const router = useRouter()
     const { slug } = router.query
+    const postImage = `https://www.onigirihardcore.vercel.app/ + ${slug}`
 
     return (
         <>
@@ -54,20 +52,17 @@ const Post = ({ data }) => {
                                         cardType: 'summary_large_image',
                                     }}
                                     openGraph={{
-                                        url: 'https://www.onigirihardcore.vercel.app/',
                                         title: post.title,
                                         description: post.description,
                                         images: [
                                             {
-                                                url: post.image,
+                                                url: postImage,
                                                 width: 800,
                                                 height: 600,
                                                 alt: post.title,
                                             }
-                                        ],
-                                        site_name: 'Onigiri Hardcore',
+                                        ]
                                     }}
-                                    images={post.image}
                                     datePublished={post.createdAt}
                                     authorName='Anderson "Yagasaki" Marlon'
                                 />
