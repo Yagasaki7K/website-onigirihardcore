@@ -8,11 +8,11 @@ import LastNews from '../src/components/LastNews'
 export default function Home() {
     return (
         <>
-        <Header/>
-        <Slide />
-        <Categories data={posts}/>
-        <LastNews/>
-        <Footer/>
+            <Header />
+            <Slide />
+            <Categories data={posts} />
+            <LastNews />
+            <Footer />
         </>
     )
 }
