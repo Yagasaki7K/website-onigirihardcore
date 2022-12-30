@@ -43,6 +43,7 @@ const Post = ({ data }) => {
                             <div key={index}>
                                 <Head>
                                     <meta name="twitter:card" content="summary_large_image" />
+                                    <meta name="twitter:site" content="@OnigiriHardcore" />
                                     <meta name="twitter:title" content={post.title} />
                                     <meta name="twitter:description" content={post.description} />
                                     <meta name="twitter:image" content={post.image} />
