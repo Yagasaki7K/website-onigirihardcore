@@ -44,7 +44,6 @@ const Post = ({ data }) => {
                                 <Head>
                                     <title>{post.title}</title>
                                     <meta name="description" content={post.description} />
-                                    <meta name="keywords" content={post.keywords} />
                                     <meta name="author" content={post.author} />
                                     <meta name="robots" content="index, follow" />
                                     <meta name="language" content="pt-br" />
