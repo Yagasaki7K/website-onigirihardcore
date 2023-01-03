@@ -8,7 +8,7 @@ const OwnHead = ({ title, description, canonicalUrl, ogTwitterImage, ogType }) =
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content={description} />
 
-            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:site" content={SEO.twitterHandle} />
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />
