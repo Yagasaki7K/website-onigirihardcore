@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router'
-import { Head } from 'next/head'
 
 import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
 import SlugDetails from '../src/components/SlugDetails'
+import OwnHead from '../src/components/OwnHead'
+import SEO from '../src/SEO'
 
 export async function getStaticProps() {
     const response = await fetch('https://raw.githubusercontent.com/Yagasaki7K/website-onigirihardcore/main/server/index.json')
@@ -32,8 +33,11 @@ const Post = ({ data }) => {
     const router = useRouter()
     const { slug } = router.query
 
+    const title = 'Onigiri Hardcore | '
+
     return (
         <>
+
             <Header />
 
             <SlugDetails>
@@ -41,17 +45,12 @@ const Post = ({ data }) => {
                     data && data.map((post, index) => (
                         post.slug === slug ? (
                             <div key={index}>
-                                <Head>
-                                    <meta name="twitter:card" content="summary_large_image" />
-                                    <meta name="twitter:site" content="@OnigiriHardcore" />
-                                    <meta name="twitter:title" content={post.title} />
-                                    <meta name="twitter:description" content={post.description} />
-                                    <meta name="twitter:image" content={post.image} />
-                                </Head>
+                                <OwnHead title={title + post.title} description={post.description}
+                                    canonicalUrl={SEO.website + slug} ogTwitterImage={post.image} ogType={SEO.ogType} />
 
                                 <img src={post.image} />
                                 <section key={post.id}>
-                                    <p className="block__content">{post.createdAtExtended} | {post.author}</p>
+                                    <p className="block__content">{post.createdAtExtended + ' | ' + post.author}</p>
                                     <h1 className="title__content">{post.title}</h1>
                                     <p className="block__content" style={{ whiteSpace: "pre-wrap" }}>{post.body}</p>
 
