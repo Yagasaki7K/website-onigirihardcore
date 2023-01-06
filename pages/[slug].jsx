@@ -46,7 +46,7 @@ const Post = ({ data }) => {
                         post.slug === slug ? (
                             <div key={index}>
                                 <OwnHead title={title + post.title} description={post.description}
-                                    canonicalUrl={SEO.website + slug} ogTwitterImage={post.image} ogType={SEO.ogType} />
+                                    canonicalUrl={SEO.website + slug} ogTwitterImage={post.image ? post.image : SEO.siteThumbnail} ogType={SEO.ogType} />
 
                                 <img src={post.image} />
                                 <section key={post.id}>
