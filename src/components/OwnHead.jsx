@@ -1,7 +1,7 @@
 import Head from "next/head"
 import SEO from '../../src/SEO'
 
-const OwnHead = ({ title, description, canonicalUrl, ogTwitterImage, ogType }) => {
+const OwnHead = ({ title, description, canonicalUrl, siteThumbnail, ogType }) => {
     return (
         <Head>
             <title>{title}</title>
@@ -12,7 +12,7 @@ const OwnHead = ({ title, description, canonicalUrl, ogTwitterImage, ogType }) =
             <meta name="twitter:site" content={SEO.twitterHandle} />
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />
-            <meta name="twitter:image" content={ogTwitterImage} />
+            <meta name="twitter:image" content={siteThumbnail} />
 
             <link rel="canonical" href={canonicalUrl} />
 
@@ -21,7 +21,7 @@ const OwnHead = ({ title, description, canonicalUrl, ogTwitterImage, ogType }) =
             <meta property="og:type" content={ogType} />
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />
-            <meta property="og:image" content={ogTwitterImage} />
+            <meta property="og:image" content={siteThumbnail} />
             <meta property="og:url" content={canonicalUrl} />
         </Head>
     )
