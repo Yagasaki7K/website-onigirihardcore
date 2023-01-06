@@ -42,7 +42,6 @@ const HeaderDetails = styled.div`
         display: flex;
         height: 3rem;
         width: 100%;
-        font-family: 'Poppins', sans-serif;
 
         @media (max-width: 600px) {
             height: 21rem;

@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router'
-import { NextSeo } from 'next-seo'
 
 import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
 import SlugDetails from '../src/components/SlugDetails'
+import OwnHead from '../src/components/OwnHead'
+import SEO from '../src/SEO'
 
 export async function getStaticProps() {
     const response = await fetch('https://raw.githubusercontent.com/Yagasaki7K/website-onigirihardcore/main/server/index.json')
@@ -28,15 +29,15 @@ export async function getStaticPaths() {
     }
 }
 
-// Test using Localhost || Hidde getStaticPaths and getStaticProps and props inside on Post
-// import data from '../server/index.json'
-
 const Post = ({ data }) => {
     const router = useRouter()
     const { slug } = router.query
 
+    const title = 'Onigiri Hardcore | '
+
     return (
         <>
+
             <Header />
 
             <SlugDetails>
@@ -44,20 +45,12 @@ const Post = ({ data }) => {
                     data && data.map((post, index) => (
                         post.slug === slug ? (
                             <div key={index}>
-                                <NextSeo
-                                    title={post.title}
-                                    description={post.description}
-                                    canonical="https://www.onigirihardcore.vercel.app/"
-                                    twitter={{
-                                        cardType: 'summary_large_image',
-                                    }}
-                                    images={post.image}
-                                    datePublished={post.createdAt}
-                                    authorName='Anderson "Yagasaki" Marlon'
-                                />
-                                <img src={post.image}></img>
+                                <OwnHead title={title + post.title} description={post.description}
+                                    canonicalUrl={SEO.website + slug} ogTwitterImage={post.image} ogType={SEO.ogType} />
+
+                                <img src={post.image} />
                                 <section key={post.id}>
-                                    <p className="block__content">{post.createdAtExtended} | {post.author}</p>
+                                    <p className="block__content">{post.createdAtExtended + ' | ' + post.author}</p>
                                     <h1 className="title__content">{post.title}</h1>
                                     <p className="block__content" style={{ whiteSpace: "pre-wrap" }}>{post.body}</p>
 

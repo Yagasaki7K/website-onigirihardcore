@@ -1,5 +1,5 @@
 import { ServerStyleSheet } from 'styled-components';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Main, Head, NextScript } from 'next/document';
 
 export default class MyDocument extends Document {
 
@@ -34,12 +34,15 @@ export default class MyDocument extends Document {
     render() {
         return (
             <Html lang="pt-br">
-                <title>Onigiri Hardcore | Portal de Notícias e Entretenimento</title>
                 <Head>
-                    {/* PWA primary color */}
-                    <link rel="shortcut icon" href="/icone.png" type="image/png"></link>
-                    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"></link>
+                    <meta charSet="utf-8" />
+                    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+                    <link rel="icon" type="image/png" href="/icone.png" />
+                    <meta name="robots" content="index, follow" />
+
+                    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
                 </Head>
+
                 <body>
                     <Main />
                     <NextScript />
