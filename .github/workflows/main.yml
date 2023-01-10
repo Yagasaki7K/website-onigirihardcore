@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2 # Checkout the repository
+    - name: Fetch local
+      run: git pull origin master --allow-unrelated-histories
     - name: Set up upstream remote
       run: git remote add upstream https://github.com/KalifyInc/website-onigirihardcore.git
     - name: Fetch from upstream
