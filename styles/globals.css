@@ -6,8 +6,8 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    background: #15171b;
-    color: #d3cfc9;
+    background: #282a36;
+    color: #ededed;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
