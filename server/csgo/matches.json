@@ -1,0 +1,894 @@
+[
+    {
+      "id": 2361073,
+      "time": "2023-01-12T14:15:00.000Z",
+      "event": {
+        "name": "OMEN WGR Challenge 2023 Closed Qualifier",
+        "logo": "https://img-cdn.hltv.org/eventlogo/lIzTqjJS2JHv3qRo6OfgnB.png?ixlib=java-2.1.0&w=50&s=5cc1586ec18ce4714ef812f9270414aa"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 10999,
+          "name": "EC Brugge",
+          "logo": "https://img-cdn.hltv.org/teamlogo/9Th-FajKXtdAJzK_P8RX8m.png?ixlib=java-2.1.0&w=50&s=131afb2ae2bffc666593ae949a1064d8"
+        },
+        {
+          "id": 7379,
+          "name": "FTW",
+          "logo": "https://img-cdn.hltv.org/teamlogo/Ort7RO8KZTclHRDYvt95GZ.svg?ixlib=java-2.1.0&s=bb8d27f8ee1a4f395eeb7933586ee7b2"
+        }
+      ]
+    },
+    {
+      "id": 2361090,
+      "time": "2023-01-13T09:00:00.000Z",
+      "event": {
+        "name": "European Pro League Season 5",
+        "logo": "https://img-cdn.hltv.org/eventlogo/3PzRdXGwdTkCaFZfVTBSTd.png?ixlib=java-2.1.0&w=50&s=2e7850904c4a14a66487c0af24fe83ee"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 11811,
+          "name": "Monte",
+          "logo": "https://img-cdn.hltv.org/teamlogo/2tc9n4fHkiRIX2FiJSkhgt.png?ixlib=java-2.1.0&w=50&s=7334ef0dd24ba5349b404dfd0e8c6148"
+        },
+        {
+          "id": 9506,
+          "name": "Viperio",
+          "logo": "https://img-cdn.hltv.org/teamlogo/onKeFpvytk7QFZ9ZMcN3t1.png?ixlib=java-2.1.0&w=50&s=3c6e11c209c77332cd7f275d316fb2a8"
+        }
+      ]
+    },
+    {
+      "id": 2361076,
+      "time": "2023-01-13T10:00:00.000Z",
+      "event": {
+        "name": "OMEN WGR Challenge 2023 Closed Qualifier",
+        "logo": "https://img-cdn.hltv.org/eventlogo/lIzTqjJS2JHv3qRo6OfgnB.png?ixlib=java-2.1.0&w=50&s=5cc1586ec18ce4714ef812f9270414aa"
+      },
+      "stars": 0,
+      "maps": "bo1",
+      "teams": [
+        {
+          "id": 4501,
+          "name": "ALTERNATE aTTaX",
+          "logo": "https://img-cdn.hltv.org/teamlogo/JoPCUmjz0PcCiCPqNHIyR3.svg?ixlib=java-2.1.0&s=24f23b651e49eaab76bae4945b19d7ec"
+        },
+        {
+          "id": 11569,
+          "name": "Fourteen",
+          "logo": "https://img-cdn.hltv.org/teamlogo/Rd-HLyUPlpQEMRbWMLbBiF.png?ixlib=java-2.1.0&w=50&s=2f51d7df458cdaca6ed11c50caef00e6"
+        }
+      ]
+    },
+    {
+      "id": 2361077,
+      "time": "2023-01-13T11:15:00.000Z",
+      "event": {
+        "name": "OMEN WGR Challenge 2023 Closed Qualifier",
+        "logo": "https://img-cdn.hltv.org/eventlogo/lIzTqjJS2JHv3qRo6OfgnB.png?ixlib=java-2.1.0&w=50&s=5cc1586ec18ce4714ef812f9270414aa"
+      },
+      "stars": 0,
+      "maps": "bo1",
+      "teams": [
+        {
+          "id": 12091,
+          "name": "INVSN",
+          "logo": "https://img-cdn.hltv.org/teamlogo/9Zy_WJhDUVqks02g8qad6g.png?ixlib=java-2.1.0&w=50&s=0b90560c5f7c321290c65f0a5c149359"
+        },
+        {
+          "id": 12092,
+          "name": "Rapid Ninjas",
+          "logo": "https://img-cdn.hltv.org/teamlogo/_B5q932BCjFKgw1f1wmfx4.png?ixlib=java-2.1.0&w=50&s=d2d3ac0fe7058cdcf8eb4a551c760684"
+        }
+      ]
+    },
+    {
+      "id": 2361096,
+      "time": "2023-01-14T09:00:00.000Z",
+      "event": {
+        "name": "European Pro League Season 5",
+        "logo": "https://img-cdn.hltv.org/eventlogo/3PzRdXGwdTkCaFZfVTBSTd.png?ixlib=java-2.1.0&w=50&s=2e7850904c4a14a66487c0af24fe83ee"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 11419,
+          "name": "ECSTATIC",
+          "logo": "https://img-cdn.hltv.org/teamlogo/-Wa4og1Vm7ZxJesd3xbnUu.png?ixlib=java-2.1.0&w=50&s=3685491e9a4a1c9db60d16e4e973be75"
+        },
+        {
+          "id": null,
+          "name": "n/a"
+        }
+      ]
+    },
+    {
+      "id": 2361082,
+      "time": "2023-01-14T09:30:00.000Z",
+      "event": {
+        "name": "CCT South Europe Series 2",
+        "logo": "https://img-cdn.hltv.org/eventlogo/pZilj4KsiWwrk4iXKo1poy.png?ixlib=java-2.1.0&w=50&s=92696169cab8082836ebbe1f8304b013"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 11425,
+          "name": "PROSPECTS",
+          "logo": "https://img-cdn.hltv.org/teamlogo/A5CoNYCc83FVpWPLGEgqMZ.png?ixlib=java-2.1.0&w=50&s=5c5c12b07e2fdde221ba74739612cf3c"
+        },
+        {
+          "id": 4501,
+          "name": "ALTERNATE aTTaX",
+          "logo": "https://img-cdn.hltv.org/teamlogo/JoPCUmjz0PcCiCPqNHIyR3.svg?ixlib=java-2.1.0&s=24f23b651e49eaab76bae4945b19d7ec"
+        }
+      ]
+    },
+    {
+      "id": 2361092,
+      "time": "2023-01-14T11:30:00.000Z",
+      "event": {
+        "name": "European Pro League Season 5",
+        "logo": "https://img-cdn.hltv.org/eventlogo/3PzRdXGwdTkCaFZfVTBSTd.png?ixlib=java-2.1.0&w=50&s=2e7850904c4a14a66487c0af24fe83ee"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 10854,
+          "name": "los kogutos",
+          "logo": "https://img-cdn.hltv.org/teamlogo/NMU2Lnz-mLBvh56_Z56lu0.png?ixlib=java-2.1.0&w=50&s=bb1f37a609450ae0f90fbeb6d909119d"
+        },
+        {
+          "id": 10999,
+          "name": "EC Brugge",
+          "logo": "https://img-cdn.hltv.org/teamlogo/9Th-FajKXtdAJzK_P8RX8m.png?ixlib=java-2.1.0&w=50&s=131afb2ae2bffc666593ae949a1064d8"
+        }
+      ]
+    },
+    {
+      "id": 2361083,
+      "time": "2023-01-14T12:30:00.000Z",
+      "event": {
+        "name": "CCT South Europe Series 2",
+        "logo": "https://img-cdn.hltv.org/eventlogo/pZilj4KsiWwrk4iXKo1poy.png?ixlib=java-2.1.0&w=50&s=92696169cab8082836ebbe1f8304b013"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 5347,
+          "name": "BLUEJAYS",
+          "logo": "https://img-cdn.hltv.org/teamlogo/g1gnqFhoa0FrcbRHXRAToF.png?ixlib=java-2.1.0&w=50&s=54d3d3762492bd158c053de080910c5f"
+        },
+        {
+          "id": 10509,
+          "name": "Juggernauts",
+          "logo": "/img/static/team/placeholder.svg"
+        }
+      ]
+    },
+    {
+      "id": 2361084,
+      "time": "2023-01-14T15:30:00.000Z",
+      "event": {
+        "name": "CCT South Europe Series 2",
+        "logo": "https://img-cdn.hltv.org/eventlogo/pZilj4KsiWwrk4iXKo1poy.png?ixlib=java-2.1.0&w=50&s=92696169cab8082836ebbe1f8304b013"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 10831,
+          "name": "Entropiq",
+          "logo": "https://img-cdn.hltv.org/teamlogo/_x9xMubeeb-fqq_21BJ6Fd.png?ixlib=java-2.1.0&w=50&s=3ab3a2cbfb2ed2e30c1a71ca8113ae39"
+        },
+        {
+          "id": 11331,
+          "name": "Websterz",
+          "logo": "https://img-cdn.hltv.org/teamlogo/fV_RQeFanEK5HDw4uChDX4.png?ixlib=java-2.1.0&w=50&s=bbf240918b405adc88492f2b984b7986"
+        }
+      ]
+    },
+    {
+      "id": 2361085,
+      "time": "2023-01-14T18:30:00.000Z",
+      "event": {
+        "name": "CCT South Europe Series 2",
+        "logo": "https://img-cdn.hltv.org/eventlogo/pZilj4KsiWwrk4iXKo1poy.png?ixlib=java-2.1.0&w=50&s=92696169cab8082836ebbe1f8304b013"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 10333,
+          "name": "Sangal",
+          "logo": "https://img-cdn.hltv.org/teamlogo/zPv_FeMF8CANC10Jz32P9l.png?ixlib=java-2.1.0&w=50&s=741a13d27b484b39f24cdc76dbf80568"
+        },
+        {
+          "id": 5412,
+          "name": "eSuba",
+          "logo": "https://img-cdn.hltv.org/teamlogo/PgWX23wbk91XOMICbUWzoO.png?ixlib=java-2.1.0&w=50&s=ff8427e38cde8dbec9aefaca8ab623f0"
+        }
+      ]
+    },
+    {
+      "id": 2361091,
+      "time": "2023-01-15T09:00:00.000Z",
+      "event": {
+        "name": "European Pro League Season 5",
+        "logo": "https://img-cdn.hltv.org/eventlogo/3PzRdXGwdTkCaFZfVTBSTd.png?ixlib=java-2.1.0&w=50&s=2e7850904c4a14a66487c0af24fe83ee"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 4803,
+          "name": "iNation",
+          "logo": "https://img-cdn.hltv.org/teamlogo/SI34lLN0NYg74Vx4wGY5Pr.png?ixlib=java-2.1.0&w=50&s=f61b22dd034531626215fa942fae8595"
+        },
+        {
+          "id": 10817,
+          "name": "Invictus International",
+          "logo": "https://img-cdn.hltv.org/teamlogo/vM5C752c4ohII9v7hpk-Pe.png?ixlib=java-2.1.0&w=50&s=a34b5202c09a76850067edfc8146ecd0"
+        }
+      ]
+    },
+    {
+      "id": 2361086,
+      "time": "2023-01-15T09:30:00.000Z",
+      "event": {
+        "name": "CCT South Europe Series 2",
+        "logo": "https://img-cdn.hltv.org/eventlogo/pZilj4KsiWwrk4iXKo1poy.png?ixlib=java-2.1.0&w=50&s=92696169cab8082836ebbe1f8304b013"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 7234,
+          "name": "Endpoint",
+          "logo": "https://img-cdn.hltv.org/teamlogo/LrJW0lI8ifto6tzTjNkxpw.png?ixlib=java-2.1.0&w=50&s=57e8d46eb4d443936734da803412311f"
+        },
+        {
+          "id": 12068,
+          "name": "Katuna",
+          "logo": "https://img-cdn.hltv.org/teamlogo/tG1Szr2HJ1zpVlg_nmhEJz.png?ixlib=java-2.1.0&w=50&s=b204040835e3e835188e76e6827b7941"
+        }
+      ]
+    },
+    {
+      "id": 2361093,
+      "time": "2023-01-15T11:30:00.000Z",
+      "event": {
+        "name": "European Pro League Season 5",
+        "logo": "https://img-cdn.hltv.org/eventlogo/3PzRdXGwdTkCaFZfVTBSTd.png?ixlib=java-2.1.0&w=50&s=2e7850904c4a14a66487c0af24fe83ee"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 11982,
+          "name": "IKLA",
+          "logo": "https://img-cdn.hltv.org/teamlogo/nyynn1_cYzdR8RDdkL_9_s.png?ixlib=java-2.1.0&w=50&s=459530816ae161887186c28c488cd198"
+        },
+        {
+          "id": 10894,
+          "name": "Case",
+          "logo": "https://img-cdn.hltv.org/teamlogo/mk0eycjclCIAqaZZ0kA3o3.png?ixlib=java-2.1.0&w=50&s=8cd5ebabd4c4089981bce7b7470c64cb"
+        }
+      ]
+    },
+    {
+      "id": 2361087,
+      "time": "2023-01-15T12:30:00.000Z",
+      "event": {
+        "name": "CCT South Europe Series 2",
+        "logo": "https://img-cdn.hltv.org/eventlogo/pZilj4KsiWwrk4iXKo1poy.png?ixlib=java-2.1.0&w=50&s=92696169cab8082836ebbe1f8304b013"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 4602,
+          "name": "Tricked",
+          "logo": "https://img-cdn.hltv.org/teamlogo/WOz_0au0ekFmz6bf1NH8yP.png?ixlib=java-2.1.0&w=50&s=390a4a83ba39be4358071eb1cf4dd49c"
+        },
+        {
+          "id": 12091,
+          "name": "INVSN",
+          "logo": "https://img-cdn.hltv.org/teamlogo/9Zy_WJhDUVqks02g8qad6g.png?ixlib=java-2.1.0&w=50&s=0b90560c5f7c321290c65f0a5c149359"
+        }
+      ]
+    },
+    {
+      "id": 2361095,
+      "time": "2023-01-15T14:30:00.000Z",
+      "event": {
+        "name": "European Pro League Season 5",
+        "logo": "https://img-cdn.hltv.org/eventlogo/3PzRdXGwdTkCaFZfVTBSTd.png?ixlib=java-2.1.0&w=50&s=2e7850904c4a14a66487c0af24fe83ee"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 11915,
+          "name": "Flames Ascent",
+          "logo": "https://img-cdn.hltv.org/teamlogo/CqAgRXbfaWKiQ3S9ty6CbK.png?ixlib=java-2.1.0&w=50&s=c68fad7ef3481a391b43f6d84b3a6a6b"
+        },
+        {
+          "id": 12006,
+          "name": "ESTOWNIA",
+          "logo": "/img/static/team/placeholder.svg"
+        }
+      ]
+    },
+    {
+      "id": 2361088,
+      "time": "2023-01-15T15:30:00.000Z",
+      "event": {
+        "name": "CCT South Europe Series 2",
+        "logo": "https://img-cdn.hltv.org/eventlogo/pZilj4KsiWwrk4iXKo1poy.png?ixlib=java-2.1.0&w=50&s=92696169cab8082836ebbe1f8304b013"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 11838,
+          "name": "Partizan",
+          "logo": "https://img-cdn.hltv.org/teamlogo/_-grtuTkWmB-dOHP4QkSbG.png?ixlib=java-2.1.0&w=50&s=4d672ae53c4f9d0b4dcb69c8756d8679"
+        },
+        {
+          "id": 10867,
+          "name": "MASONIC",
+          "logo": "https://img-cdn.hltv.org/teamlogo/LXy16DLCLqmbZWSr4RxeQu.svg?ixlib=java-2.1.0&s=dcd79250b3b5e2e757a89b7c27c6770d"
+        }
+      ]
+    },
+    {
+      "id": 2361094,
+      "time": "2023-01-15T17:30:00.000Z",
+      "event": {
+        "name": "European Pro League Season 5",
+        "logo": "https://img-cdn.hltv.org/eventlogo/3PzRdXGwdTkCaFZfVTBSTd.png?ixlib=java-2.1.0&w=50&s=2e7850904c4a14a66487c0af24fe83ee"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 10954,
+          "name": "Astralis Talent",
+          "logo": "https://img-cdn.hltv.org/teamlogo/CjJ724E0EVB8cIXAVmwi5w.svg?ixlib=java-2.1.0&s=41f113b08d461bee5d8673d4612811dd"
+        },
+        {
+          "id": 10973,
+          "name": "Anonymo",
+          "logo": "https://img-cdn.hltv.org/teamlogo/CPMNyI3CHuAdN8M-UNvr04.png?ixlib=java-2.1.0&w=50&s=ff5f16b16796c9f70b2f695b10c8ef05"
+        }
+      ]
+    },
+    {
+      "id": 2361089,
+      "time": "2023-01-15T18:30:00.000Z",
+      "event": {
+        "name": "CCT South Europe Series 2",
+        "logo": "https://img-cdn.hltv.org/eventlogo/pZilj4KsiWwrk4iXKo1poy.png?ixlib=java-2.1.0&w=50&s=92696169cab8082836ebbe1f8304b013"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 9806,
+          "name": "Apeks",
+          "logo": "https://img-cdn.hltv.org/teamlogo/IBGw2qcLFA7xL1Ju9HwJpe.png?ixlib=java-2.1.0&w=50&s=23679f2fa7cc90bddd18f54650b79b56"
+        },
+        {
+          "id": 10697,
+          "name": "BLINK",
+          "logo": "https://img-cdn.hltv.org/teamlogo/5NRu_RnNWb40s1OwgfNn76.png?ixlib=java-2.1.0&w=50&s=752a7ab012ddeeae71b5970a3b217c54"
+        }
+      ]
+    },
+    {
+      "id": 2361097,
+      "time": "2023-01-16T09:00:00.000Z",
+      "event": {
+        "name": "European Pro League Season 5",
+        "logo": "https://img-cdn.hltv.org/eventlogo/3PzRdXGwdTkCaFZfVTBSTd.png?ixlib=java-2.1.0&w=50&s=2e7850904c4a14a66487c0af24fe83ee"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 11387,
+          "name": "UNGENTIUM",
+          "logo": "https://img-cdn.hltv.org/teamlogo/xz9NlA3V6drorLSHJSgaCy.png?ixlib=java-2.1.0&w=50&s=11a648aeaf65c920d4cb3e1c95e0e494"
+        },
+        {
+          "id": null,
+          "name": "n/a"
+        }
+      ]
+    },
+    {
+      "id": 2361015,
+      "time": "2023-01-16T15:30:00.000Z",
+      "event": {
+        "name": "ESL Pro League Season 17 Conference Europe",
+        "logo": "https://img-cdn.hltv.org/eventlogo/PhVPy7kXO_J_nfTng7a87h.png?ixlib=java-2.1.0&w=50&s=a56cc668c5dfeb6b8bc8676b7ad8021a"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 10577,
+          "name": "SINNERS",
+          "logo": "https://img-cdn.hltv.org/teamlogo/9l_WdQSU9JsNHzpK-pwOG2.svg?ixlib=java-2.1.0&s=af432c3ef61c0c843331cc0dc2fed1ed"
+        },
+        {
+          "id": 11283,
+          "name": "Falcons",
+          "logo": "https://img-cdn.hltv.org/teamlogo/4eJSkDQINNM6Tbs4WvLzkN.png?ixlib=java-2.1.0&w=50&s=d8c857ea47046f61eca695beab0d12ef"
+        }
+      ]
+    },
+    {
+      "id": 2361016,
+      "time": "2023-01-16T15:30:00.000Z",
+      "event": {
+        "name": "ESL Pro League Season 17 Conference Europe",
+        "logo": "https://img-cdn.hltv.org/eventlogo/PhVPy7kXO_J_nfTng7a87h.png?ixlib=java-2.1.0&w=50&s=a56cc668c5dfeb6b8bc8676b7ad8021a"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 11501,
+          "name": "HEET",
+          "logo": "https://img-cdn.hltv.org/teamlogo/AjqeTZmRBevRSRD57V8R8B.png?ixlib=java-2.1.0&w=50&s=a2c30dbbf1d19d01d9e8dd5e7b621adb"
+        },
+        {
+          "id": 11838,
+          "name": "Partizan",
+          "logo": "https://img-cdn.hltv.org/teamlogo/_-grtuTkWmB-dOHP4QkSbG.png?ixlib=java-2.1.0&w=50&s=4d672ae53c4f9d0b4dcb69c8756d8679"
+        }
+      ]
+    },
+    {
+      "id": 2361017,
+      "time": "2023-01-16T15:30:00.000Z",
+      "event": {
+        "name": "ESL Pro League Season 17 Conference Europe",
+        "logo": "https://img-cdn.hltv.org/eventlogo/PhVPy7kXO_J_nfTng7a87h.png?ixlib=java-2.1.0&w=50&s=a56cc668c5dfeb6b8bc8676b7ad8021a"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 11301,
+          "name": "Genk",
+          "logo": "https://img-cdn.hltv.org/teamlogo/OLlMJ6bpxc14R2TdKqR6TV.png?ixlib=java-2.1.0&w=50&s=c3a5e27589a3c2ba62f22bb1433dc507"
+        },
+        {
+          "id": 11251,
+          "name": "Eternal Fire",
+          "logo": "https://img-cdn.hltv.org/teamlogo/MoSNHyDSjZ3EaLpeSA9_oN.png?ixlib=java-2.1.0&w=50&s=51797860a2c764f879550d5775324496"
+        }
+      ]
+    },
+    {
+      "id": 2361018,
+      "time": "2023-01-16T18:00:00.000Z",
+      "event": {
+        "name": "ESL Pro League Season 17 Conference Europe",
+        "logo": "https://img-cdn.hltv.org/eventlogo/PhVPy7kXO_J_nfTng7a87h.png?ixlib=java-2.1.0&w=50&s=a56cc668c5dfeb6b8bc8676b7ad8021a"
+      },
+      "stars": 1,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 10567,
+          "name": "SAW",
+          "logo": "https://img-cdn.hltv.org/teamlogo/7iWEFSeqhDdqbG4U2Su9Vy.png?ixlib=java-2.1.0&w=50&s=4adccb0378e285d75db4cd2f244f6abb"
+        },
+        {
+          "id": 10448,
+          "name": "Babos",
+          "logo": "https://img-cdn.hltv.org/teamlogo/gPJJGcgdPu-EQHhtxXNmYZ.png?ixlib=java-2.1.0&w=50&s=38bf1078cebbce8f4a0a9f6a1ed277d7"
+        }
+      ]
+    },
+    {
+      "id": 2361019,
+      "time": "2023-01-16T18:00:00.000Z",
+      "event": {
+        "name": "ESL Pro League Season 17 Conference Europe",
+        "logo": "https://img-cdn.hltv.org/eventlogo/PhVPy7kXO_J_nfTng7a87h.png?ixlib=java-2.1.0&w=50&s=a56cc668c5dfeb6b8bc8676b7ad8021a"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 10894,
+          "name": "Case",
+          "logo": "https://img-cdn.hltv.org/teamlogo/mk0eycjclCIAqaZZ0kA3o3.png?ixlib=java-2.1.0&w=50&s=8cd5ebabd4c4089981bce7b7470c64cb"
+        },
+        {
+          "id": 7234,
+          "name": "Endpoint",
+          "logo": "https://img-cdn.hltv.org/teamlogo/LrJW0lI8ifto6tzTjNkxpw.png?ixlib=java-2.1.0&w=50&s=57e8d46eb4d443936734da803412311f"
+        }
+      ]
+    },
+    {
+      "id": 2361020,
+      "time": "2023-01-16T18:00:00.000Z",
+      "event": {
+        "name": "ESL Pro League Season 17 Conference Europe",
+        "logo": "https://img-cdn.hltv.org/eventlogo/PhVPy7kXO_J_nfTng7a87h.png?ixlib=java-2.1.0&w=50&s=a56cc668c5dfeb6b8bc8676b7ad8021a"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 10278,
+          "name": "9INE",
+          "logo": "https://img-cdn.hltv.org/teamlogo/BGC4LXlC8s4W0xWyelk2BI.png?ixlib=java-2.1.0&w=50&s=9b131e9589738e2c66ad28f1c1ed1d4b"
+        },
+        {
+          "id": 12009,
+          "name": "Permitta",
+          "logo": "https://img-cdn.hltv.org/teamlogo/ve_WNn65M3OSUttb64JnqS.png?ixlib=java-2.1.0&w=50&s=95b1daa824c97c9ee6610726ab281b52"
+        }
+      ]
+    },
+    {
+      "id": 2361023,
+      "time": "2023-01-17T15:30:00.000Z",
+      "event": {
+        "name": "ESL Pro League Season 17 Conference Europe",
+        "logo": "https://img-cdn.hltv.org/eventlogo/PhVPy7kXO_J_nfTng7a87h.png?ixlib=java-2.1.0&w=50&s=a56cc668c5dfeb6b8bc8676b7ad8021a"
+      },
+      "stars": 1,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 8637,
+          "name": "Sprout",
+          "logo": "https://img-cdn.hltv.org/teamlogo/Ut8iEF66VCIbZGniMYn5jL.svg?ixlib=java-2.1.0&s=e6ae4904320fcbb566d098641e22a474"
+        },
+        {
+          "id": null,
+          "name": "n/a"
+        }
+      ]
+    },
+    {
+      "id": 2361026,
+      "time": "2023-01-17T18:00:00.000Z",
+      "event": {
+        "name": "ESL Pro League Season 17 Conference Europe",
+        "logo": "https://img-cdn.hltv.org/eventlogo/PhVPy7kXO_J_nfTng7a87h.png?ixlib=java-2.1.0&w=50&s=a56cc668c5dfeb6b8bc8676b7ad8021a"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 8135,
+          "name": "forZe",
+          "logo": "https://img-cdn.hltv.org/teamlogo/CnkiXvqQY48-pBo9ahnKm-.png?ixlib=java-2.1.0&w=50&s=0de38d80fd26e1df7b08e725cd4dea6f"
+        },
+        {
+          "id": null,
+          "name": "n/a"
+        }
+      ]
+    },
+    {
+      "id": 2361006,
+      "time": "2023-01-18T09:00:00.000Z",
+      "event": {
+        "name": "ESL Pro League Season 17 Conference Oceania",
+        "logo": "https://img-cdn.hltv.org/eventlogo/PhVPy7kXO_J_nfTng7a87h.png?ixlib=java-2.1.0&w=50&s=a56cc668c5dfeb6b8bc8676b7ad8021a"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 9881,
+          "name": "Rooster",
+          "logo": "https://img-cdn.hltv.org/teamlogo/LPjU8AAPrha2zdFvetTTMp.png?ixlib=java-2.1.0&w=50&s=e3db90a303823ddd00ad39fa7b963a8d"
+        },
+        {
+          "id": null,
+          "name": "n/a"
+        }
+      ]
+    },
+    {
+      "id": 2361003,
+      "time": "2023-01-18T12:00:00.000Z",
+      "event": {
+        "name": "ESL Pro League Season 17 Conference Asia",
+        "logo": "https://img-cdn.hltv.org/eventlogo/PhVPy7kXO_J_nfTng7a87h.png?ixlib=java-2.1.0&w=50&s=a56cc668c5dfeb6b8bc8676b7ad8021a"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 11514,
+          "name": "Rare Atom",
+          "logo": "https://img-cdn.hltv.org/teamlogo/CH9I3Xh0tW94uEN1BMe9Pu.png?ixlib=java-2.1.0&w=50&s=fda7c0e83d4889a4164b99316b8f358f"
+        },
+        {
+          "id": 11585,
+          "name": "IHC",
+          "logo": "https://img-cdn.hltv.org/teamlogo/Dmy6A1T8EZ9OKU-x7yT4VR.png?ixlib=java-2.1.0&w=50&s=94ec104bae0e1fdfc5a1c39941bd89f0"
+        }
+      ]
+    },
+    {
+      "id": 2361009,
+      "time": "2023-01-18T21:30:00.000Z",
+      "event": {
+        "name": "ESL Pro League Season 17 Conference South America",
+        "logo": "https://img-cdn.hltv.org/eventlogo/PhVPy7kXO_J_nfTng7a87h.png?ixlib=java-2.1.0&w=50&s=a56cc668c5dfeb6b8bc8676b7ad8021a"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 11309,
+          "name": "00NATION",
+          "logo": "https://img-cdn.hltv.org/teamlogo/6A9CymtM1CHNEwCEtwhGpf.png?ixlib=java-2.1.0&w=50&s=a73900f7a69d689594aceaec23a26ab7"
+        },
+        {
+          "id": null,
+          "name": "n/a"
+        }
+      ]
+    },
+    {
+      "id": 2361012,
+      "time": "2023-01-19T02:00:00.000Z",
+      "event": {
+        "name": "ESL Pro League Season 17 Conference North America",
+        "logo": "https://img-cdn.hltv.org/eventlogo/PhVPy7kXO_J_nfTng7a87h.png?ixlib=java-2.1.0&w=50&s=a56cc668c5dfeb6b8bc8676b7ad8021a"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 11948,
+          "name": "Nouns",
+          "logo": "https://img-cdn.hltv.org/teamlogo/hZai-tlfz3XBR5AAiF2w3D.png?ixlib=java-2.1.0&w=50&s=c264e2bae3dc8bac05016dcf8fb8dc72"
+        },
+        {
+          "id": 9215,
+          "name": "MIBR",
+          "logo": "https://img-cdn.hltv.org/teamlogo/sVnH-oAf1J5TnMwoY4cxUC.png?ixlib=java-2.1.0&w=50&s=b0ef463fa0f1638bce72a89590fbaddf"
+        }
+      ]
+    },
+    {
+      "id": 2361007,
+      "time": "2023-01-19T09:00:00.000Z",
+      "event": {
+        "name": "ESL Pro League Season 17 Conference Oceania",
+        "logo": "https://img-cdn.hltv.org/eventlogo/PhVPy7kXO_J_nfTng7a87h.png?ixlib=java-2.1.0&w=50&s=a56cc668c5dfeb6b8bc8676b7ad8021a"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 8008,
+          "name": "Grayhound",
+          "logo": "https://img-cdn.hltv.org/teamlogo/IjyAECYg-7zLXJEUj-aRqa.svg?ixlib=java-2.1.0&s=def9c53f5b91c85af4a5a0a6f2606d26"
+        },
+        {
+          "id": null,
+          "name": "n/a"
+        }
+      ]
+    },
+    {
+      "id": 2361004,
+      "time": "2023-01-19T12:00:00.000Z",
+      "event": {
+        "name": "ESL Pro League Season 17 Conference Asia",
+        "logo": "https://img-cdn.hltv.org/eventlogo/PhVPy7kXO_J_nfTng7a87h.png?ixlib=java-2.1.0&w=50&s=a56cc668c5dfeb6b8bc8676b7ad8021a"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 8840,
+          "name": "Lynn Vision",
+          "logo": "https://img-cdn.hltv.org/teamlogo/vO_s8NWgDhLzqFsj6p9xTt.png?ixlib=java-2.1.0&w=50&s=1fd5c4b19dd9d173c7d1981614ba0094"
+        },
+        {
+          "id": null,
+          "name": "n/a"
+        }
+      ]
+    },
+    {
+      "id": 2361046,
+      "time": "2023-01-19T14:00:00.000Z",
+      "event": {
+        "name": "BLAST Premier Spring Groups 2023",
+        "logo": "https://img-cdn.hltv.org/eventlogo/7k60AiYcHhC1rCcJGWWUvx.png?ixlib=java-2.1.0&w=50&s=4b9bc9148f3a5dcda189e96e6369fd0d"
+      },
+      "stars": 1,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 7175,
+          "name": "Heroic",
+          "logo": "https://img-cdn.hltv.org/teamlogo/Q6BGM_VQRz8Y9m3UgaqiUx.svg?ixlib=java-2.1.0&s=9424e99a6d77c8f154ea2d74175b3e17"
+        },
+        {
+          "id": 10399,
+          "name": "Evil Geniuses",
+          "logo": "https://img-cdn.hltv.org/teamlogo/p6OXTVsTFEhOcbTJ8gmuP6.png?ixlib=java-2.1.0&w=50&s=41a619052f610fec335d17028d1f32af"
+        }
+      ]
+    },
+    {
+      "id": 2361047,
+      "time": "2023-01-19T17:30:00.000Z",
+      "event": {
+        "name": "BLAST Premier Spring Groups 2023",
+        "logo": "https://img-cdn.hltv.org/eventlogo/7k60AiYcHhC1rCcJGWWUvx.png?ixlib=java-2.1.0&w=50&s=4b9bc9148f3a5dcda189e96e6369fd0d"
+      },
+      "stars": 2,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 9565,
+          "name": "Vitality",
+          "logo": "https://img-cdn.hltv.org/teamlogo/GAlByJtDTnkgbb9p_71SUL.png?ixlib=java-2.1.0&w=50&s=2838cd78a5ebb5c9fea4c485908e9dbb"
+        },
+        {
+          "id": 6665,
+          "name": "Astralis",
+          "logo": "https://img-cdn.hltv.org/teamlogo/9bgXHp-oh1oaXr7F0mTGmd.svg?ixlib=java-2.1.0&s=f567161ab183001be33948b98c4b2067"
+        }
+      ]
+    },
+    {
+      "id": 2361010,
+      "time": "2023-01-19T21:30:00.000Z",
+      "event": {
+        "name": "ESL Pro League Season 17 Conference South America",
+        "logo": "https://img-cdn.hltv.org/eventlogo/PhVPy7kXO_J_nfTng7a87h.png?ixlib=java-2.1.0&w=50&s=a56cc668c5dfeb6b8bc8676b7ad8021a"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 9455,
+          "name": "Imperial",
+          "logo": "https://img-cdn.hltv.org/teamlogo/WF5P55R5fxcmhoew6vHZQr.png?ixlib=java-2.1.0&w=50&s=ecc0a33173ed783477ab8be4cfa6e215"
+        },
+        {
+          "id": null,
+          "name": "n/a"
+        }
+      ]
+    },
+    {
+      "id": 2361013,
+      "time": "2023-01-20T02:00:00.000Z",
+      "event": {
+        "name": "ESL Pro League Season 17 Conference North America",
+        "logo": "https://img-cdn.hltv.org/eventlogo/PhVPy7kXO_J_nfTng7a87h.png?ixlib=java-2.1.0&w=50&s=a56cc668c5dfeb6b8bc8676b7ad8021a"
+      },
+      "stars": 0,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 9943,
+          "name": "ATK",
+          "logo": "https://img-cdn.hltv.org/teamlogo/GNv19bHJI8jhNV_jUtxE55.png?ixlib=java-2.1.0&w=50&s=38277e885fc101b281e83a155d1bc4af"
+        },
+        {
+          "id": null,
+          "name": "n/a"
+        }
+      ]
+    },
+    {
+      "id": 2361048,
+      "time": "2023-01-20T11:00:00.000Z",
+      "event": {
+        "name": "BLAST Premier Spring Groups 2023",
+        "logo": "https://img-cdn.hltv.org/eventlogo/7k60AiYcHhC1rCcJGWWUvx.png?ixlib=java-2.1.0&w=50&s=4b9bc9148f3a5dcda189e96e6369fd0d"
+      },
+      "stars": 1,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 6667,
+          "name": "FaZe",
+          "logo": "https://img-cdn.hltv.org/teamlogo/SMhzsxzbkIrgqCOOKGRXlW.svg?ixlib=java-2.1.0&s=e6a9ce0345c7d703e5eaac14307f69aa"
+        },
+        {
+          "id": 5005,
+          "name": "Complexity",
+          "logo": "https://img-cdn.hltv.org/teamlogo/R0CzydpyX02BnkAYhy3I89.svg?ixlib=java-2.1.0&s=8c5833d6069ef924fdbb2e220fefea00"
+        }
+      ]
+    },
+    {
+      "id": 2361049,
+      "time": "2023-01-20T14:00:00.000Z",
+      "event": {
+        "name": "BLAST Premier Spring Groups 2023",
+        "logo": "https://img-cdn.hltv.org/eventlogo/7k60AiYcHhC1rCcJGWWUvx.png?ixlib=java-2.1.0&w=50&s=4b9bc9148f3a5dcda189e96e6369fd0d"
+      },
+      "stars": 2,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 5973,
+          "name": "Liquid",
+          "logo": "https://img-cdn.hltv.org/teamlogo/JMeLLbWKCIEJrmfPaqOz4O.svg?ixlib=java-2.1.0&s=c02caf90234d3a3ebac074c84ba1ea62"
+        },
+        {
+          "id": 10503,
+          "name": "OG",
+          "logo": "https://img-cdn.hltv.org/teamlogo/VZHA__RIJY6gisB-l6HfiO.png?ixlib=java-2.1.0&w=50&s=978f70078a418cf82dff8a162b180731"
+        }
+      ]
+    },
+    {
+      "id": 2361050,
+      "time": "2023-01-20T17:30:00.000Z",
+      "event": {
+        "name": "BLAST Premier Spring Groups 2023",
+        "logo": "https://img-cdn.hltv.org/eventlogo/7k60AiYcHhC1rCcJGWWUvx.png?ixlib=java-2.1.0&w=50&s=4b9bc9148f3a5dcda189e96e6369fd0d"
+      },
+      "stars": 2,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 5995,
+          "name": "G2",
+          "logo": "https://img-cdn.hltv.org/teamlogo/zFLwAELOD15BjJSDMMNBWQ.png?ixlib=java-2.1.0&w=50&s=affb583e6716d8ee904826992255cc4b"
+        },
+        {
+          "id": 7532,
+          "name": "BIG",
+          "logo": "https://img-cdn.hltv.org/teamlogo/OgMRQA35hopXA8kDwMFHIY.svg?ixlib=java-2.1.0&s=ec7bc44165c7acf4224a22a1338ab7d7"
+        }
+      ]
+    },
+    {
+      "id": 2361051,
+      "time": "2023-01-21T11:00:00.000Z",
+      "event": {
+        "name": "BLAST Premier Spring Groups 2023",
+        "logo": "https://img-cdn.hltv.org/eventlogo/7k60AiYcHhC1rCcJGWWUvx.png?ixlib=java-2.1.0&w=50&s=4b9bc9148f3a5dcda189e96e6369fd0d"
+      },
+      "stars": 2,
+      "maps": "bo3",
+      "teams": [
+        {
+          "id": 4608,
+          "name": "Natus Vincere",
+          "logo": "https://img-cdn.hltv.org/teamlogo/9iMirAi7ArBLNU8p3kqUTZ.svg?ixlib=java-2.1.0&s=4dd8635be16122656093ae9884675d0c"
+        },
+        {
+          "id": 4411,
+          "name": "Ninjas in Pyjamas",
+          "logo": "https://img-cdn.hltv.org/teamlogo/-ttGATBV_P_HcZazxNNtIb.png?ixlib=java-2.1.0&w=50&s=ba94f7812d1f47183a83f3f34ab959eb"
+        }
+      ]
+    }
+  ]
