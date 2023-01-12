@@ -48,7 +48,7 @@ const SlideDetails = styled.div`
                     }
 
                     .tag {
-                        padding: 2px 10px;
+                        padding: 2.6px 10px;
                         background: ${colors.blue};
                         font-size: 0.9rem;
                         font-weight: bold;
@@ -97,6 +97,47 @@ const SlideDetails = styled.div`
                 }
             }
         }
+    }
+
+    .keen-slider_navigation {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align:center;
+        height: 3rem;
+        color: ${colors.white};
+        border-bottom: 1px solid ${colors.white};
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        .keen-slider__slide {
+            width: 100%;
+
+            .match {
+                img {
+                    width: 1rem;
+                }
+            }
+        }
+    }
+
+    .keen-slider_csgo {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align:center;
     }
 `
 

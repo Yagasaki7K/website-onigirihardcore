@@ -46,26 +46,26 @@ const Slide = () => {
     return (
         <SlideDetails>
             <div ref={refCallback} className="keen-slider">
-                { posts && posts.map(post => (
-                <div className="keen-slider__slide" key={post?.id}>
-                    <a href={post?.slug}>
-                        <img src={post?.image} alt={post?.title}/>
-                    </a>
-                    <div className="slider-description">
-                        <div className="slide-tag">
-                            <span className="latest">HOT NEWS 🔥</span>
-                            {/* <span className="tag">{posts?.category.title}</span> */}
-                            <span className="date">{post?.createdAt}</span>
-                            <span> - </span>
-                            <span className="author">
-                                <a href="https://yagasaki.vercel.app/" target="_blank" rel="noreferrer">Anderson Marlon</a>
-                            </span>
-                        </div>
+                {posts && posts.map(post => (
+                    <div className="keen-slider__slide" key={post?.id}>
+                        <a href={post?.slug}>
+                            <img src={post?.image} alt={post?.title} />
+                        </a>
+                        <div className="slider-description">
+                            <div className="slide-tag">
+                                <span className="latest">HOT NEWS 🔥</span>
+                                <span className="tag">{post?.categories}</span>
+                                <span className="date">{post?.createdAt}</span>
+                                <span> - </span>
+                                <span className="author">
+                                    <a href="https://yagasaki.vercel.app/" target="_blank" rel="noreferrer">Anderson Marlon</a>
+                                </span>
+                            </div>
 
-                        <a href={post?.slug}><h1>{post?.title}</h1></a>
-                        <p>{post?.description}</p>
+                            <a href={post?.slug}><h1>{post?.title}</h1></a>
+                            <p>{post?.description}</p>
                         </div>
-                </div>
+                    </div>
                 ))}
             </div>
         </SlideDetails>

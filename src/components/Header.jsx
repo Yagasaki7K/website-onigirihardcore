@@ -1,83 +1,90 @@
 import HeaderDetails from './HeaderDetails'
-import HLTV from 'hltv-api'
-import Ticker from 'react-ticker'
+import Link from 'next/link'
+import matches from '../../server/csgo/matches.json'
+import { useKeenSlider } from 'keen-slider/react'
+import SlideDetails from './SlideDetails'
+import moment from 'moment';
 
-export async function getStaticProps() {
-    const matches = await HLTV.getMatches()
-    const dataMatches = matches.map((post, index) => ({
-        championship: post.event.name,
-        championshipLogo: post.event.logo,
-        maps: post.maps,
-        teamFirstName: post.teams[0].name || null,
-        teamFirstLogo: post.teams[0].logo || null,
-        teamSecondName: post.teams[1].name || null,
-        teamSecondLogo: post.teams[1].logo || null
-    }))
+export default function Header() {
 
-    return {
-        props: {
-            dataMatches
-        }
+    const animation = { duration: 50000, easing: (t) => t }
+
+    function changeToMoment(date) {
+        date = moment(date).format('lll')
+        return date
     }
-}
 
-export default function Header({ dataMatches }) {
+    const [sliderRef] = useKeenSlider({
+        loop: true,
+        renderMode: "performance",
+        drag: false,
+        created(s) {
+            s.moveToIdx(5, true, animation)
+        },
+        updated(s) {
+            s.moveToIdx(s.track.details.abs + 5, true, animation)
+        },
+        animationEnded(s) {
+            s.moveToIdx(s.track.details.abs + 5, true, animation)
+        },
+    })
 
     return (
         <HeaderDetails>
             <div className="header">
-                <a href="/" className="logotipo">
+                <Link href="/" className="logotipo">
                     <img src="/logotipo-white.png" className="logotipo" alt="logo" />
-                </a>
-                <a href="/">
+                </Link>
+                <Link href="/">
                     <img src="/anuncio.png" className="advice" alt="Anuncio" />
-                </a>
+                </Link>
             </div>
 
             <div className="navigation">
                 <ul id="ul-menu">
                     <li className="burguer">
-                        <a href="#"><i className="uil uil-bars"></i></a>
+                        <Link href="#"><i className="uil uil-bars"></i></Link>
                     </li>
                     <span id="item-menu">
                         <li>
-                            <a href="/noticias">Notícias</a>
+                            <Link href="/noticias">Notícias</Link>
                         </li>
                         <li>
-                            <a href="/#animes">Animes {`&`} HQ{`'`}s</a>
+                            <Link href="/#animes">Animes {`&`} HQ{`'`}s</Link>
                         </li>
                         <li>
-                            <a href="/#news">Tecnologia</a>
+                            <Link href="/#news">Tecnologia</Link>
                         </li>
                         <li>
-                            <a href="/csgo">CSGO ~ HLTV News</a>
+                            <Link href="/csgo">CSGO ~ HLTV News</Link>
                         </li>
                         <li>
-                            <a href="https://onigiri-hardcore.blogspot.com/" target="_blank" rel="noreferrer">
+                            <Link href="https://onigiri-hardcore.blogspot.com/" target="_blank" rel="noreferrer">
                                 OH: Arquivos
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="https://kalify.vercel.app" target="_blank" rel="noreferrer">
+                            <Link href="https://kalify.vercel.app" target="_blank" rel="noreferrer">
                                 Kalify Inc
-                            </a>
+                            </Link>
                         </li>
                     </span>
                 </ul>
             </div>
 
-            {
-                dataMatches && dataMatches.map((post, index) => (
-                    <Ticker>
-                        {() => (
-                            <p key={index}>
-                                <img src={post.championshipLogo} className="championship" /> | <img src={post.teamFirstLogo} />
-                                {post.teamFirstName} x {post.teamSecondName}
-                            </p>
-                        )}
-                    </Ticker>
-                ))
-            }
+            <SlideDetails>
+                <div ref={sliderRef} className="keen-slider_navigation">
+                    {
+                        matches && matches.map(match =>
+                            <div className="keen-slider__slide" key={match?.id}>
+                                <div className="match">
+                                    <Link href="/csgo"><img src={match.event.logo} /> | {match.event.name} | {match.maps} | {changeToMoment(match.time)} | <img src={match.teams[0].logo} alt={match.teams[0].name} /> {match.teams[0].name} x {match.teams[1].name} <img src={match.teams[1].logo} alt={match.teams[1].name} /></Link>
+                                </div>
+                            </div>
+                        )
+                    }
+                </div>
+            </SlideDetails>
         </HeaderDetails>
     )
 }
