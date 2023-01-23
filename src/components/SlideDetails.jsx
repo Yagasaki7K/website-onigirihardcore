@@ -88,7 +88,12 @@ const SlideDetails = styled.div`
                     color: ${colors.white};
                     border-left: 5px solid ${colors.blue};
                     padding-left: 10px;
-                    width: 50rem;
+                    max-width: 50rem;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
 
                     a {
                         text-decoration: none;

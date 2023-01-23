@@ -16,7 +16,7 @@ const LastNews = () => {
                                 <img src={post.image} alt={post.title} title={post.title} />
 
                                 <div className="title">
-                                    <h1>{post.smalltitle}</h1>
+                                    <h1>{post.title}</h1>
                                     <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i>
                                 </div>
                             </a>
@@ -31,7 +31,7 @@ const LastNews = () => {
                                 <img src={post.image} alt={post.title} title={post.title} />
 
                                 <div className="title">
-                                    <h1>{post.smalltitle}</h1>
+                                    <h1>{post.title}</h1>
                                     <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i>
                                 </div>
                             </a>
@@ -46,7 +46,7 @@ const LastNews = () => {
                                 <img src={post.image} alt={post.title} title={post.title} />
 
                                 <div className="title">
-                                    <h1>{post.smalltitle}</h1>
+                                    <h1>{post.title}</h1>
                                     <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i>
                                 </div>
                             </a>

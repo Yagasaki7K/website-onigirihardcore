@@ -29,7 +29,7 @@ const Categories = () => {
                         post.categories === 'Animes' ? (
                             <a href={post.slug} key={post.id}>
                                 <img src={post.image} alt={post.title} />
-                                <h1>{post.smalltitle}</h1>
+                                <h1>{post.title}</h1>
 
                                 <span>
                                     <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i>
@@ -52,13 +52,13 @@ const Categories = () => {
 
                                         <div className="post-side">
                                             <h3>
-                                                {post.smalltitle}
+                                                {post.title}
                                             </h3>
                                             <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i>
                                             <hr />
                                         </div>
                                     </a>
-                                </div> 
+                                </div>
                             ) : (
                                 null
                             )
@@ -77,7 +77,7 @@ const Categories = () => {
                         post.categories === 'Games' ? (
                             <a href={post.slug} key={post.id}>
                                 <img src={post.image} alt={post.title} />
-                                <h1>{post.smalltitle}</h1>
+                                <h1>{post.title}</h1>
 
                                 <span>
                                     <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i>
@@ -100,13 +100,13 @@ const Categories = () => {
 
                                         <div className="post-side">
                                             <h3>
-                                                {post.smalltitle}
+                                                {post.title}
                                             </h3>
                                             <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i>
                                             <hr />
                                         </div>
                                     </a>
-                                </div> 
+                                </div>
                             ) : (
                                 null
                             )
@@ -117,7 +117,7 @@ const Categories = () => {
 
             <div className="secondCategories">
                 <div className="header">
-                    <p  className="movies">&nbsp;&nbsp;Filmes {`&`} Séries</p>
+                    <p className="movies">&nbsp;&nbsp;Filmes {`&`} Séries</p>
                 </div>
 
                 {
@@ -125,7 +125,7 @@ const Categories = () => {
                         post.categories === 'Movies' ? (
                             <a href={post.slug} key={post.id}>
                                 <img src={post.image} alt={post.title} />
-                                <h1>{post.smalltitle}</h1>
+                                <h1>{post.title}</h1>
 
                                 <span>
                                     <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i>
@@ -148,13 +148,13 @@ const Categories = () => {
 
                                         <div className="post-side">
                                             <h3>
-                                                {post.smalltitle}
+                                                {post.title}
                                             </h3>
                                             <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i>
                                             <hr />
                                         </div>
                                     </a>
-                                </div> 
+                                </div>
                             ) : (
                                 null
                             )

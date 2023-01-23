@@ -48,7 +48,7 @@ const TecnologiesDetails = styled.div`
                     height: 12rem;
                     padding: 0;
                     object-fit: cover;
-
+                    
                     @media (max-width: 1366px) {
                         width: 17rem;
                     }
@@ -68,6 +68,11 @@ const TecnologiesDetails = styled.div`
                         margin-top: -2rem;
                         font-size: 1.2rem;
                         margin-bottom: 0rem;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
 
                     i {
