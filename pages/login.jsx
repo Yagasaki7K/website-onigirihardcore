@@ -14,7 +14,18 @@ const MarkdownEditor = dynamic(
     { ssr: false }
 );
 
-const Login = () => {
+const Login = () => {    
+
+    /*       Form resources        */
+    const [OniAuthor, setOniAuthor] = useState('')
+    const [OniTitle, setOniTitle] = useState('')
+    const [OniSmalltitle, setOniSmalltitle] = useState('')
+    const [OniDescription, setOniDescription] = useState('')
+    const [OniImage, setOniImage] = useState('')
+    const [OniCitation, setOniCitation] = useState('')
+    const [OniLinkCitation, setOniLinkCitation] = useState('')
+    const [OniYtid, setOniYtid] = useState('')
+
     const [isLogged, setIsLogged] = useState(false)
     const [value, setValue] = useState('# Corpo da Publicação')
     const Lgn = SoreyeAsuka
@@ -31,6 +42,24 @@ const Login = () => {
         }
     }
 
+    function collectData() {
+        const formAuthor = document.getElementById('author')
+        const resultAuthor = formAuthor.options[formAuthor.selectedIndex].text
+        setOniAuthor(resultAuthor)
+        
+        const formTitle = document.getElementById('title')
+        const resultTitle = formTitle.value
+        setOniTitle(resultTitle)
+
+        const formSmalltitle = document.getElementById('smarttitle')
+        const resultSmalltitle = formSmalltitle.value
+        setOniSmalltitle(resultSmalltitle)
+
+        const formDescription = document.getElementById('description')
+        const resultDescription = formDescription.value
+        setOniDescription(resultDescription)
+    }
+
     if (isLogged) {
         return (
             <DashboardDetails>
@@ -41,11 +70,11 @@ const Login = () => {
                         <h1>Criar Publicações</h1>
 
                         <div className="form-group">
-                            <form onSubmit={(e) => e.preventDefault()}>
+                            <form onSubmit={(e) => e.preventDefault()} onChange={() => collectData()}>
 
                                 <div className="item">
                                     <label htmlFor="author">Autor*: </label>
-                                    <select>
+                                    <select id="author">
                                         <option value={"Anderson 'Yagasaki' Marlon"}>Anderson "Yagasaki" Marlon</option>
                                     </select>
                                 </div>
