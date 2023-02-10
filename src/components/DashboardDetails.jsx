@@ -70,6 +70,16 @@ const DashboardDetails = styled.div`
                 cursor: pointer;
                 margin-right: 1rem;
             }
+
+            .sendbtn {
+                background: green;
+                border: none;
+                padding: 0.8rem;
+            }
+
+            .clrbtn {
+                background: red;
+            }
         }
 
         .stats {

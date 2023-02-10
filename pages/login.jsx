@@ -133,8 +133,8 @@ const Login = () => {
                                     <input name="ytid" id="ytid" placeholder="RfiKg_Sfg-o" />
                                 </div>
 
-                                <button onClick={collectData}>Enviar</button>
-                                <button>Limpar</button>
+                                <button onClick={collectData} className='sendbtn'>Enviar</button>
+                                <button className='clrbtn'>Limpar</button>
                             </form>
                         </div>
                     </div>
