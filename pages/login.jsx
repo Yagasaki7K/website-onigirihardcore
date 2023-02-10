@@ -14,17 +14,14 @@ const MarkdownEditor = dynamic(
     { ssr: false }
 );
 
-const Login = () => {    
-
-    /*       Form resources        */
-    const [OniAuthor, setOniAuthor] = useState('')
-    const [OniTitle, setOniTitle] = useState('')
-    const [OniSmalltitle, setOniSmalltitle] = useState('')
-    const [OniDescription, setOniDescription] = useState('')
-    const [OniImage, setOniImage] = useState('')
-    const [OniCitation, setOniCitation] = useState('')
-    const [OniLinkCitation, setOniLinkCitation] = useState('')
-    const [OniYtid, setOniYtid] = useState('')
+const Login = () => {
+    const [Author, setAuthor] = useState('')
+    const [Title, setTitle] = useState('')
+    const [Description, setDescription] = useState('')
+    const [Image, setImage] = useState('')
+    const [Citation, setCitation] = useState('')
+    const [LinkCitation, setLinkCitation] = useState('')
+    const [Ytid, setYtid] = useState('')
 
     const [isLogged, setIsLogged] = useState(false)
     const [value, setValue] = useState('# Corpo da Publicação')
@@ -42,25 +39,46 @@ const Login = () => {
         }
     }
 
+    function sendDataFirebase() {
+        alert('Publicação criada com sucesso')
+        window.location.reload()
+    }
+
     function collectData() {
         const formAuthor = document.getElementById('author')
         const resultAuthor = formAuthor.options[formAuthor.selectedIndex].text
-        setOniAuthor(resultAuthor)
-        
+        setAuthor(resultAuthor)
+
         const formTitle = document.getElementById('title')
         const resultTitle = formTitle.value
-        setOniTitle(resultTitle)
-
-        const formSmalltitle = document.getElementById('smarttitle')
-        const resultSmalltitle = formSmalltitle.value
-        setOniSmalltitle(resultSmalltitle)
+        setTitle(resultTitle)
 
         const formDescription = document.getElementById('description')
         const resultDescription = formDescription.value
-        setOniDescription(resultDescription)
+        setDescription(resultDescription)
+
+        const formImage = document.getElementById('image')
+        const resultImage = formImage.value
+        setImage(resultImage)
+
+        const formCitation = document.getElementById('citation')
+        const resultCitation = formCitation.value
+        setCitation(resultCitation)
+
+        const formLinkCitation = document.getElementById('linkcitation')
+        const resultLinkCitation = formLinkCitation.value
+        setLinkCitation(resultLinkCitation)
+
+        const formYtid = document.getElementById('ytid')
+        const resultYtid = formYtid.value
+        setYtid(resultYtid)
+
+        if (Author != '' && Title != '' && Description != '' && Image != '') {
+            sendDataFirebase()
+        }
     }
 
-    if (isLogged) {
+    if (isLogged === true) {
         return (
             <DashboardDetails>
                 <SideMenu />
@@ -82,11 +100,6 @@ const Login = () => {
                                 <div className="item">
                                     <label htmlFor="title">Título da Publicação*: </label>
                                     <input type="text" name="title" id="title" placeholder="Título da Publicação" required />
-                                </div>
-
-                                <div className="item">
-                                    <label htmlFor="title">Título Curto*: </label>
-                                    <input type="text" name="title" id="smarttitle" className="form-control" placeholder="Título Curto da Publicação (Max.55)" maxLength={55} required />
                                 </div>
 
                                 <div className="item">
@@ -120,7 +133,7 @@ const Login = () => {
                                     <input name="ytid" id="ytid" placeholder="RfiKg_Sfg-o" />
                                 </div>
 
-                                <button>Enviar</button>
+                                <button onClick={collectData}>Enviar</button>
                                 <button>Limpar</button>
                             </form>
                         </div>

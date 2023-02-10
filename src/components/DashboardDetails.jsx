@@ -20,7 +20,7 @@ const DashboardDetails = styled.div`
         .publi {
             display: flex;
             flex-direction: column;
-            
+
             .item {
                 display: flex;
                 flex-direction: column;
@@ -47,6 +47,10 @@ const DashboardDetails = styled.div`
                 flex-direction: column;
                 width: 80%;
                 margin-top: 1rem;
+
+                label {
+                    margin-bottom: 1rem;
+                }
 
                 button {
                     margin-top: 0;
