@@ -2,9 +2,10 @@ import { useState } from 'react'
 import SideMenu from '../src/components/Login/SideMenu'
 import LoginDetails from "../src/components/LoginDetails"
 import DashboardDetails from "../src/components/DashboardDetails"
-import dynamic from "next/dynamic";
-import "@uiw/react-md-editor/markdown-editor.css";
-import "@uiw/react-markdown-preview/markdown.css";
+import postService from '../services/post.service'
+import dynamic from "next/dynamic"
+import "@uiw/react-md-editor/markdown-editor.css"
+import "@uiw/react-markdown-preview/markdown.css"
 
 const SoreyeAsuka = 'OnigiriHardcore'
 const EVA02 = '0GkMepi*r]hj'
@@ -79,7 +80,7 @@ const Login = () => {
             alert('Por favor, preencha todos os campos')
         }else{
             async function addToFirebase() {
-                const NewPost = {
+                const NewPosts = {
                     Author: Author,
                     Title: Title,
                     Description: Description,
@@ -88,7 +89,16 @@ const Login = () => {
                     LinkCitation: LinkCitation,
                     Ytid: Ytid
                 }
+
+                await (postService.addpost(NewPosts))
+                function Redirect() {
+                    location.assign("/post")
+                }
+                Redirect()
             }
+            addToFirebase()
+
+            /* Image upload resources */
         }
     }
 
