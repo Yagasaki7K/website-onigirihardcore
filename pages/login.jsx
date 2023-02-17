@@ -7,7 +7,7 @@ import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
 
 const SoreyeAsuka = 'OnigiriHardcore'
-const EVA02 = '0GkMepi*r]hj'
+const EVA02 = '1'
 
 const MarkdownEditor = dynamic(
     () => import("@uiw/react-md-editor").then((mod) => mod.default),
@@ -57,10 +57,6 @@ const Login = () => {
         const resultDescription = formDescription.value
         setDescription(resultDescription)
 
-        const formImage = document.getElementById('image')
-        const resultImage = formImage.value
-        setImage(resultImage)
-
         const formCitation = document.getElementById('citation')
         const resultCitation = formCitation.value
         setCitation(resultCitation)
@@ -72,9 +68,27 @@ const Login = () => {
         const formYtid = document.getElementById('ytid')
         const resultYtid = formYtid.value
         setYtid(resultYtid)
+    }
 
-        if (Author != '' && Title != '' && Description != '' && Image != '') {
-            sendDataFirebase()
+    function getImage(event) {
+        setImage(event.target.files[0]);
+    }
+
+    function sendData(){
+        if (!Author || !Title || !Description || !Image) {
+            alert('Por favor, preencha todos os campos')
+        }else{
+            async function addToFirebase() {
+                const NewPost = {
+                    Author: Author,
+                    Title: Title,
+                    Description: Description,
+                    Image: Image.name,
+                    Citation: Citation,
+                    LinkCitation: LinkCitation,
+                    Ytid: Ytid
+                }
+            }
         }
     }
 
@@ -110,7 +124,7 @@ const Login = () => {
 
                                 <div className="item">
                                     <label htmlFor="image">Imagem da Publicação*: </label>
-                                    <input type="file" name="image" id="image" required />
+                                    <input type="file" name="image" id="image" onChange={getImage} required />
                                 </div>
 
                                 <div className="item-markdown">
@@ -133,7 +147,7 @@ const Login = () => {
                                     <input name="ytid" id="ytid" placeholder="RfiKg_Sfg-o" />
                                 </div>
 
-                                <button onClick={collectData} className='sendbtn'>Enviar</button>
+                                <button onClick={sendData} className='sendbtn'>Enviar</button>
                                 <button className='clrbtn'>Limpar</button>
                             </form>
                         </div>
