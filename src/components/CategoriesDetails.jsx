@@ -1,13 +1,22 @@
 import styled from 'styled-components'
 import colors from './Colors'
+import { screenSize, device } from './Breakpoints'
 
 const CategoriesDetails = styled.div`
     display: flex;
     justify-content: center;
     padding: 30px 20rem;
 
-    @media (max-width: 1366px) {
-        margin-top: 1rem;
+    @media (${device.mobileM}) {
+
+    }
+
+    @media (${device.tablet}) {
+
+    }
+
+    @media (${device.laptop}) {
+
     }
 
     .animes, .games {
@@ -129,6 +138,7 @@ const CategoriesDetails = styled.div`
             }
         }
     }
+
 `
 
 export default CategoriesDetails

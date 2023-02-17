@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { screenSize, device } from './Breakpoints'
 
 const FullNewsDetails = styled.div `
     .fullnews {
@@ -28,7 +29,7 @@ const FullNewsDetails = styled.div `
             }
         }
 
-        @media (max-width: 1366px) {
+        @media (${device.laptop}) {
             margin-left: 10rem;
         }
         

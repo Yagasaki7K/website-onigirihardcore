@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import colors from './Colors'
+import { screenSize, device } from './Breakpoints'
+
 
 const HeaderDetails = styled.div`
 
@@ -8,20 +10,20 @@ const HeaderDetails = styled.div`
         padding: 1rem 15rem;
         justify-content: space-between;
 
-        @media (max-width: 1600px) {
+        @media (${device.desktop}) {
             padding: 1rem 6rem;
         }
 
-        @media (max-width: 1440px) {
+        @media (${device.laptopL}) {
             padding: 1rem 4rem;
         }
 
-        @media (max-width: 1366px) {
+        @media (${device.laptop}) {
             padding: 1rem 3rem;
         }
 
 
-        @media (max-width: 1024px) {
+        @media (${device.tabletL}) {
             .advice {
                 display: none;
             }
@@ -43,7 +45,7 @@ const HeaderDetails = styled.div`
         height: 3rem;
         width: 100%;
 
-        @media (max-width: 600px) {
+        @media (${device.tablet}) {
             height: 21rem;
             border-radius: 15px;
             background: transparent;
@@ -66,11 +68,11 @@ const HeaderDetails = styled.div`
                 display: none;
             }
 
-            @media (max-width: 1366px) {
+            @media (${device.laptop}) {
                 margin-left: 5rem;
             }
 
-            @media (max-width: 768px) {
+            @media (${device.tablet}) {
                 #item-menu {
                     display: none;
                 }
@@ -83,7 +85,7 @@ const HeaderDetails = styled.div`
                 height: 3rem;
             }
 
-            @media (max-width: 600px) {
+            @media (${device.tablet}) {
                 margin-left: 0;
                 flex-direction: column;
                 align-items: center;
@@ -102,12 +104,12 @@ const HeaderDetails = styled.div`
                 padding: 0.7rem 1rem;
                 
 
-                @media (max-width: 768px) {
+                @media (${device.tablet}) {
                     margin-left: 0.625rem;
                     padding: 0.7rem 0;
                 }
 
-                @media (max-width: 600px) {
+                @media (${device.tablet}) {
                     margin-left: 2rem;
                     padding: 0.7rem 0;
                 }
@@ -128,7 +130,7 @@ const HeaderDetails = styled.div`
                 :hover {
                     border-bottom: 4px solid ${colors.white};
                     
-                    @media (max-width: 600px) {
+                    @media (${device.tablet}) {
                         background: ${colors.blue};
                         
                         :hover {
