@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import colors from './Colors'
+import { screenSize, device } from './Breakpoints'
 
 const FooterDetails = styled.div`
 

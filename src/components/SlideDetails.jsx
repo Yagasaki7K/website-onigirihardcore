@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 import colors from './Colors'
+import { screenSize, device } from './Breakpoints'
 
 const SlideDetails = styled.div`
     .keen-slider {
         width: 100%;
         height: 40rem;
 
-        @media (max-width: 1366px) {
+        @media (${device.laptop}) {
             height: 30rem;
         }
 
@@ -33,7 +34,7 @@ const SlideDetails = styled.div`
                 text-align: left;
                 width: 58rem;
 
-                @media (max-width: 1366px) {
+                @media (${device.laptop}) {
                     top: 50%;
                 }
 
@@ -138,7 +139,6 @@ const SlideDetails = styled.div`
 
     .keen-slider_csgo {
         width: 100%;
-
         display: flex;
         justify-content: center;
         align-items: center;

@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { screenSize, device } from './Breakpoints'
+
 
 const CSGODetails = styled.div`
 
