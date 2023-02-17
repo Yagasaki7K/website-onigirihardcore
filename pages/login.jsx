@@ -7,7 +7,7 @@ import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
 
 const SoreyeAsuka = 'OnigiriHardcore'
-const EVA02 = '1'
+const EVA02 = '0GkMepi*r]hj'
 
 const MarkdownEditor = dynamic(
     () => import("@uiw/react-md-editor").then((mod) => mod.default),
