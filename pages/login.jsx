@@ -3,6 +3,8 @@ import SideMenu from '../src/components/Login/SideMenu'
 import LoginDetails from "../src/components/LoginDetails"
 import DashboardDetails from "../src/components/DashboardDetails"
 import postService from '../services/post.service'
+import { storage } from '../client'
+import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import dynamic from "next/dynamic"
 import "@uiw/react-md-editor/markdown-editor.css"
 import "@uiw/react-markdown-preview/markdown.css"
@@ -98,7 +100,25 @@ const Login = () => {
             }
             addToFirebase()
 
-            /* Image upload resources */
+            const storageRef = ref(storage, `/files/${Image.name}`)
+            const uploadTask = uploadBytesResumable(storageRef, Image)
+
+            uploadTask.on(
+                "state_changed",
+                (snapshot) => {
+                    const percent = Math.round(
+                        (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+                    )
+                    
+                    /* show upload percentage? */
+                },
+                (error) => console.log(error),
+                () => {
+                    getDownloadURL(uploadTask.snapshot.ref).then((url) =>{
+                        console.log(url)
+                    })
+                }
+            )
         }
     }
 
