@@ -94,7 +94,7 @@ const Login = () => {
 
                 await (postService.addpost(NewPosts))
                 function Redirect() {
-                    location.assign("/post")
+                    location.assign("/posts")
                 }
                 Redirect()
             }
