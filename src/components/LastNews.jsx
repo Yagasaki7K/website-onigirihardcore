@@ -63,7 +63,7 @@ const LastNews = () => {
                         Posts.slice(8, 12).map((post, index) => (
                             <a href={post.slug} key={index}>
                                 <img src={post.imageUrl} alt={post?.name} />
-                                <img src={post.imageUrl} alt={post.title} title={post.title} />
+                                {/* <img src={post.imageUrl} alt={post.title} title={post.title} /> */}
 
                                 <div className="title">
                                     <h1>{post.title}</h1>
