@@ -10,6 +10,7 @@ import postService from '../../services/post.service'
 const Slide = () => {
 
     const [Posts, setPosts] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         getPosts()
@@ -18,6 +19,7 @@ const Slide = () => {
     const getPosts = async () => {
         const data = await postService.getAllPosts()
         setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+        setIsLoading(false)
     }
 
     const slidePosts = Posts.sort().reverse().slice(0, 3)
@@ -56,34 +58,35 @@ const Slide = () => {
     )
 
     return (
-        <SlideDetails>
-            <div ref={refCallback} className="keen-slider">
-                {slidePosts && slidePosts.map(post => (
-                    <div className="keen-slider__slide" key={post?.id}>
-                        <a href={post?.slug}>
-                            <img src={post.imageUrl} alt={post?.name} />
-                            {/* <img src={post?.image} alt={post?.title}/> */}
-                        </a>
-                        <div className="slider-description">
-                            <div className="slide-tag">
-                                <span className="latest">HOT NEWS 🔥</span>
-                                {/* <span className="tag">{posts?.category.title}</span> */}
-                                <span className="date">{post?.lessDate}</span>
-                                {/* <span className="date">{post?.createdAt}</span> */}
-                                <span> - </span>
-                                <span className="author">
-                                    <a href="#">{post.author}</a>
-                                    {/* <a href="https://yagasaki.vercel.app/" target="_blank" rel="noreferrer">Anderson Marlon</a> */}
-                                </span>
-                            </div>
+        isLoading ? <p>Loading...</p> :
+            <SlideDetails>
+                <div ref={refCallback} className="keen-slider">
+                    {slidePosts && slidePosts.map(post => (
+                        <div className="keen-slider__slide" key={post?.id}>
+                            <a href={post?.slug}>
+                                <img src={post.imageUrl} alt={post?.name} />
+                                {/* <img src={post?.image} alt={post?.title}/> */}
+                            </a>
+                            <div className="slider-description">
+                                <div className="slide-tag">
+                                    <span className="latest">HOT NEWS 🔥</span>
+                                    {/* <span className="tag">{posts?.category.title}</span> */}
+                                    <span className="date">{post?.lessDate}</span>
+                                    {/* <span className="date">{post?.createdAt}</span> */}
+                                    <span> - </span>
+                                    <span className="author">
+                                        <a href="#">{post.author}</a>
+                                        {/* <a href="https://yagasaki.vercel.app/" target="_blank" rel="noreferrer">Anderson Marlon</a> */}
+                                    </span>
+                                </div>
 
-                            <a href={post?.slug}><h1>{post?.title}</h1></a>
-                            <p>{post?.description}</p>
+                                <a href={post?.slug}><h1>{post?.title}</h1></a>
+                                <p>{post?.description}</p>
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div>
-        </SlideDetails>
+                    ))}
+                </div>
+            </SlideDetails>
     )
 }
 
