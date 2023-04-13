@@ -19,7 +19,6 @@ const FullNews = () => {
         setPost(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
     }
 
-    const firebaseURL = 'https://firebasestorage.googleapis.com/v0/b/onigirihardcore-88090.appspot.com/o/files%2F'
     return (
         <>
             <Header />
@@ -29,7 +28,7 @@ const FullNews = () => {
                     {posts && posts.map((item, index) => {
                         return (
                             <a href={item.slug} key={index}>
-                                <img src={item.image ? firebaseURL + item.image + `?alt=media` : null} alt={item?.name} width="320"></img>
+                                <img src={item.imageUrl} alt={item?.name} width="320"></img>
                                 {/* <img src={item.image} width="320" /> */}
                                 <div className="title">
                                     <p>{item.createdAtExtended}</p>
