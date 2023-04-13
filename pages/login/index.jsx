@@ -167,7 +167,7 @@ const Login = () => {
                     <div className="menu">
                         <ul>
                             <Link href="#">
-                                <li className='active'>
+                                <li className="active">
                                     <i className="uil uil-file-edit-alt" /> Criar Publicações
                                 </li>
                             </Link>
@@ -176,11 +176,6 @@ const Login = () => {
                                     <i className="uil uil-file-edit-alt" /> Editar Publicações
                                 </li>
                             </Link>
-                            {/* <Link href="#stats">
-                        <li>
-                            <i className="uil uil-arrow-growth" /> Estatísticas
-                        </li>
-                    </Link> */}
                             <Link href="/">
                                 <li>
                                     <i className="uil uil-sign-out-alt" /> Sair
