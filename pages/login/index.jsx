@@ -18,6 +18,7 @@ const MarkdownEditor = dynamic(
 );
 
 const Login = () => {
+    const [date, setDate] = useState('')
     const [lessDate, setLessDate] = useState('')
     const [moreDate, setMoreDate] = useState('')
     const [slug, setSlug] = useState('')
@@ -50,6 +51,7 @@ const Login = () => {
 
     async function sendData() {
         const NewPosts = {
+            date,
             lessDate,
             moreDate,
             slug,
@@ -86,6 +88,8 @@ const Login = () => {
 
     function collectData() {
         const date = new Date()
+        setDate(date)
+
         const day = date.getDate()
         const month = date.getMonth() + 1
         const year = date.getFullYear()
@@ -187,9 +191,9 @@ const Login = () => {
                                 <div className="item">
                                     <label htmlFor="categories">Categoria da Publicação*: </label>
                                     <select id="categories">
-                                        <option value={"Animes"}>Animes</option>
-                                        <option value={"Games"}>Games</option>
-                                        <option value={"Movies"}>Movies/Séries</option>
+                                        <option>Animes</option>
+                                        <option>Games</option>
+                                        <option>Movies</option>
                                     </select>
                                 </div>
 
