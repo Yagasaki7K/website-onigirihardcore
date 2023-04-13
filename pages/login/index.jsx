@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import SideMenu from '../../src/components/Login/SideMenu'
 import LoginDetails from "../../src/components/LoginDetails"
 import DashboardDetails from "../../src/components/DashboardDetails"
 import postService from '../../services/post.service'
@@ -8,6 +7,8 @@ import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import dynamic from "next/dynamic"
 import "@uiw/react-md-editor/markdown-editor.css"
 import "@uiw/react-markdown-preview/markdown.css"
+import SideMenuDetails from '../../src/components/Login/SideMenuDetails'
+import Link from 'next/link'
 
 const SoreyeAsuka = 'OnigiriHardcore'
 const EVA02 = '0GkMepi*r]hj'
@@ -130,7 +131,7 @@ const Login = () => {
     function getImage(event) {
         const file = event.target.files[0]
 
-        if(!file) return
+        if (!file) return
 
         setImage(file.name)
 
@@ -158,7 +159,36 @@ const Login = () => {
     if (isLogged === true) {
         return (
             <DashboardDetails>
-                <SideMenu />
+                <SideMenuDetails>
+                    <Link href="/">
+                        <img src="/logotipo-white.png" alt="logo" />
+                    </Link>
+
+                    <div className="menu">
+                        <ul>
+                            <Link href="#">
+                                <li className='active'>
+                                    <i className="uil uil-file-edit-alt" /> Criar Publicações
+                                </li>
+                            </Link>
+                            <Link href="/login/posts">
+                                <li>
+                                    <i className="uil uil-file-edit-alt" /> Editar Publicações
+                                </li>
+                            </Link>
+                            {/* <Link href="#stats">
+                        <li>
+                            <i className="uil uil-arrow-growth" /> Estatísticas
+                        </li>
+                    </Link> */}
+                            <Link href="/">
+                                <li>
+                                    <i className="uil uil-sign-out-alt" /> Sair
+                                </li>
+                            </Link>
+                        </ul>
+                    </div>
+                </SideMenuDetails>
 
                 <div className="content">
                     <div className="publi" id="publi">
@@ -224,13 +254,7 @@ const Login = () => {
                             </form>
                         </div>
                     </div>
-
-                    <div className="stats" id="stats">
-                        <h1>Estatísticas Gerais</h1>
-                    </div>
                 </div>
-
-
             </DashboardDetails>
         )
     } else {

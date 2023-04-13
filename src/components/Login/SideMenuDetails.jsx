@@ -36,6 +36,21 @@ const SideMenuDetails = styled.div`
             }
         }
     }
+
+    .active {
+            font-size: 1.2rem;
+            background: #00acff;
+            border-top: 1px solid #e5e5e5;
+            padding: 1rem 0.5rem;
+
+            :hover {
+                transition: 1s;
+                padding: 1rem 1rem;
+                background: transparent;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
 `
 
 export default SideMenuDetails
