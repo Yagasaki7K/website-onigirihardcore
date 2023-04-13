@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import LoginDetails from "../../src/components/LoginDetails"
+import postService from '../../services/post.service'
 import DashboardDetails from "../../src/components/DashboardDetails"
 import "@uiw/react-md-editor/markdown-editor.css"
 import "@uiw/react-markdown-preview/markdown.css"
@@ -24,6 +25,18 @@ const Login = () => {
         } else {
             alert('Login ou senha estão incorretos')
         }
+    }
+
+
+    const [Posts, setPosts] = useState([])
+
+    useEffect(() => {
+        getPosts()
+    }, [])
+
+    const getPosts = async () => {
+        const data = await postService.getAllPosts()
+        setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
     }
 
     if (isLogged === true) {
@@ -58,9 +71,29 @@ const Login = () => {
                 <div className="content">
                     <div className="publi" id="publi">
                         <h1>Modificar Publicações</h1>
-
                         <div className="container">
-                            <h1>xxxxxx</h1>
+                        <table>
+                            <tr>
+                                <th>ID</th>
+                                <th>Título</th>
+                                <th>Autor</th>
+                                <th>Categoria</th>
+                                <th>Data de Criação</th>
+                                <th>Data de Modificação</th>
+                                <th>Ações</th>
+                            </tr>
+                            {
+                                Posts.slice(0, 4).map((post) =>(
+                                    <tr>
+                                        <td>0</td>
+                                        <td>{post.title}</td>
+                                        <td>{post.author}</td>
+                                        <td>{post.categories}</td>
+                                        <td>{post.moreDate}</td>
+                                    </tr>
+                                ))
+                            }
+                        </table> 
                         </div>
                     </div>
                 </div>
