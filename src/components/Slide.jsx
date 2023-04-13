@@ -7,8 +7,6 @@ import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react'
 import postService from '../../services/post.service'
 
-
-
 const Slide = () => {
 
     const [Posts, setPosts] = useState([])
@@ -22,7 +20,7 @@ const Slide = () => {
         setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
     }
 
-    const posts = Posts.sort().reverse().slice(0, 3)
+    const slidePosts = Posts.sort().reverse().slice(0, 3)
 
     const [refCallback] = useKeenSlider({ loop: true },
         [
@@ -60,7 +58,7 @@ const Slide = () => {
     return (
         <SlideDetails>
             <div ref={refCallback} className="keen-slider">
-                {posts && posts.map(post => (
+                {slidePosts && slidePosts.map(post => (
                     <div className="keen-slider__slide" key={post?.id}>
                         <a href={post?.slug}>
                             <img src={post.imageUrl} alt={post?.name} />
