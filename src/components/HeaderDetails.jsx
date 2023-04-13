@@ -1,7 +1,5 @@
 import styled from 'styled-components'
-import colors from './Colors'
-import { screenSize, device } from './Breakpoints'
-
+import { device, colors } from './variables'
 
 const HeaderDetails = styled.div`
 
@@ -10,7 +8,7 @@ const HeaderDetails = styled.div`
         padding: 1rem 15rem;
         justify-content: space-between;
 
-        @media (${device.desktop}) {
+        @media (${device.desktopS}) {
             padding: 1rem 6rem;
         }
 
@@ -18,12 +16,12 @@ const HeaderDetails = styled.div`
             padding: 1rem 4rem;
         }
 
-        @media (${device.laptop}) {
+        @media (${device.laptopM}) {
             padding: 1rem 3rem;
         }
 
 
-        @media (${device.tabletL}) {
+        @media (${device.laptopS}) {
             .advice {
                 display: none;
             }
@@ -38,19 +36,19 @@ const HeaderDetails = styled.div`
             }
         }
     }
-    
+
     .navigation {
         background: ${colors.blue};
         display: flex;
         height: 3rem;
         width: 100%;
 
-        @media (${device.tablet}) {
+        @media (max-width: 600px) {
             height: 21rem;
             border-radius: 15px;
             background: transparent;
         }
-        
+
         ul {
             display: flex;
             list-style: none;
@@ -68,11 +66,11 @@ const HeaderDetails = styled.div`
                 display: none;
             }
 
-            @media (${device.laptop}) {
+            @media (max-width: 1366px) {
                 margin-left: 5rem;
             }
 
-            @media (${device.tablet}) {
+            @media (max-width: 768px) {
                 #item-menu {
                     display: none;
                 }
@@ -85,12 +83,12 @@ const HeaderDetails = styled.div`
                 height: 3rem;
             }
 
-            @media (${device.tablet}) {
+            @media (max-width: 600px) {
                 margin-left: 0;
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
-                
+
                 width: 100%;
                 border-radius: 15px;
 
@@ -102,18 +100,18 @@ const HeaderDetails = styled.div`
             li {
                 display: flex;
                 padding: 0.7rem 1rem;
-                
 
-                @media (${device.tablet}) {
+
+                @media (max-width: 768px) {
                     margin-left: 0.625rem;
                     padding: 0.7rem 0;
                 }
 
-                @media (${device.tablet}) {
+                @media (max-width: 600px) {
                     margin-left: 2rem;
                     padding: 0.7rem 0;
                 }
-                
+
                 margin: 0;
                 font-size: 1rem;
                 font-weight: 400;
@@ -129,10 +127,10 @@ const HeaderDetails = styled.div`
 
                 :hover {
                     border-bottom: 4px solid ${colors.white};
-                    
-                    @media (${device.tablet}) {
+
+                    @media (max-width: 600px) {
                         background: ${colors.blue};
-                        
+
                         :hover {
                             text-decoration: underline;
                         }

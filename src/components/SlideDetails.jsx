@@ -1,13 +1,12 @@
 import styled from 'styled-components'
-import colors from './Colors'
-import { screenSize, device } from './Breakpoints'
+import { device, colors } from './variables'
 
 const SlideDetails = styled.div`
     .keen-slider {
         width: 100%;
         height: 40rem;
 
-        @media (${device.laptop}) {
+        @media (${device.laptopM}) {
             height: 30rem;
         }
 
@@ -34,7 +33,7 @@ const SlideDetails = styled.div`
                 text-align: left;
                 width: 58rem;
 
-                @media (${device.laptop}) {
+                @media (${device.laptopM}) {
                     top: 50%;
                 }
 

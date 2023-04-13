@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { screenSize, device } from './Breakpoints'
 
 
 const CSGODetails = styled.div`
@@ -33,7 +32,7 @@ const CSGODetails = styled.div`
         width: 100%;
         flex-direction: row;
     }
-    
+
     a {
         text-decoration: none;
     }
@@ -42,7 +41,7 @@ const CSGODetails = styled.div`
         width: 4rem;
         margin-bottom: -1.6rem;
     }
-    
+
     img {
         width: 3.5rem;
     }
@@ -58,7 +57,7 @@ const CSGODetails = styled.div`
         flex-direction: row;
     }
 }
-    
+
 `
 
 export default CSGODetails

@@ -1,23 +1,10 @@
 import styled from 'styled-components'
-import colors from './Colors'
-import { screenSize, device } from './Breakpoints'
+import { colors } from './variables'
 
 const CategoriesDetails = styled.div`
     display: flex;
     justify-content: center;
     padding: 30px 20rem;
-
-    @media (${device.mobileM}) {
-
-    }
-
-    @media (${device.tablet}) {
-
-    }
-
-    @media (${device.laptop}) {
-
-    }
 
     .animes, .games {
         width: 9.2rem;

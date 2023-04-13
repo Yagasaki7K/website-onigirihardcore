@@ -29,26 +29,26 @@
 
 # 📌 Table of Contents
 
--   [Demo Website](#eyes-demo-website)
--   [Technologies](#computer-technologies)
--   [Features](#rocket-features)
--   [Found a bug? Missing a specific feature?](#bug-issues)
--   [Contributing](#tada-contributing)
--   [License](#closed_book-license)
+* [Demo Website](#eyes-demo-website)
+* [Technologies](#computer-technologies)
+* [Features](#rocket-features)
+* [Found a bug? Missing a specific feature?](#bug-issues)
+* [Contributing](#tada-contributing)
+* [License](#closed_book-license)
 
 # 👀 Demo Website
 
-👉 Demo: https://onigirihardcore.vercel.app/
+👉  Demo: https://webonigirihardcore.com.br/
 
 # 💻 Technologies
 
 This project was made using the follow technologies:
 
--   ReactJS
--   NextJS
--   Javascript
--   JSON
--   Styled Components
+* ReactJS
+* NextJS
+* Javascript
+* JSON
+* Styled Components
 
 # 🚀 Features
 
@@ -72,12 +72,12 @@ Feel free to **file a new issue** with a respective title and description on the
 
 # 🎉 Contributing
 
-First of all, thank you for being interested in helping out, your time is always appreciated in every way. 💯
+First of all, thank you for being interested in helping out, your time is always appreciated in every way. :100:
 
 Here's some tips:
 
--   Check the [issues page](https://github.com/Yagasaki7K/website-onigirihardcore/issues) for already opened issues (or maybe even closed ones) that might already address your question/bug/feature request.
--   Feature requests are welcomed! Provide some details on why it would be helpful for you and others, explain how you're using bull-board and if possible even some screenshots if you are willing to mock something!
+* Check the [issues page](https://github.com/Yagasaki7K/website-onigirihardcore/issues) for already opened issues (or maybe even closed ones) that might already address your question/bug/feature request.
+* Feature requests are welcomed! Provide some details on why it would be helpful for you and others, explain how you're using bull-board and if possible even some screenshots if you are willing to mock something!
 
 Check out the [contributing](./CONTRIBUTING.md) page to see the best places to file issues, start discussions and begin contributing.
 

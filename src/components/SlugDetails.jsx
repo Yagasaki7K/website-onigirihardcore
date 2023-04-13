@@ -1,8 +1,7 @@
 import styled from 'styled-components'
-import colors from './Colors'
-import { screenSize, device } from './Breakpoints'
+import { colors, device } from './variables'
 
-const SlugDetails = styled.div `
+const SlugDetails = styled.div`
 
     img {
         width: 100%;
@@ -14,21 +13,21 @@ const SlugDetails = styled.div `
         margin-left: 28rem;
         width: 50%;
 
-        @media (${device.laptopL}) {
+        @media (${device.desktopS}) {
             margin-left: 20rem;
         }
 
         @media (${device.laptopL}) {
             margin-left: 14rem;
         }
-        
-        @media (${device.laptop}) {
+
+        @media (${device.laptopM}) {
             margin-left: 12rem;
         }
-        
+
         margin-bottom: 5rem;
         background: ${colors.whitelight};
-    
+
         h1 {
             margin-top: -1rem;
             color: ${colors.blue};

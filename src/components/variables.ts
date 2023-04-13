@@ -1,0 +1,46 @@
+export const colors = {
+    black: "#1a1a1a",
+    blackdark: "#1d1e26",
+    blacklight: "#2f2f2f",
+    blue: "#00acff",
+    bluedark: "#0078b2",
+    green: "#008000",
+    red: "#ff0000",
+    gray: "#f5f5f5",
+    graylight: "#e5e5e5",
+    graydark: "#767676",
+    white: "#ffffff",
+    orange: "#f33413",
+    yellow: "#e7a720",
+    text: "#e8eae4",
+};
+
+export const screenSize = {
+    mobileS: "320px",
+    mobileM: "375px",
+    mobileL: "500px",
+    tablet: "768px",
+    tabletL: "900px",
+    laptop: "1024px",
+    laptopS: "1200px",
+    laptopM: "1366px",
+    laptopL: "1440px",
+    desktopS: "1600px",
+    desktopM: "1920px",
+    desktop: "2560px",
+};
+
+export const device = {
+    mobileS: `(max-width: 320px)`,
+    mobileM: `(max-width: 375px)`,
+    mobileL: `(max-width: 500px)`,
+    tablet: `(max-width: 768px)`,
+    tabletL: `(max-width: 900px)`,
+    laptop: `(max-width: 1024px)`,
+    laptopS: `(max-width: 1200px)`,
+    laptopM: `(max-width: 1366px)`,
+    laptopL: `(max-width: 1440px)`,
+    desktopS: `(max-width: 1600px)`,
+    desktopM: `(max-width: 1920px)`,
+    desktop: `(max-width: 2560px)`,
+};

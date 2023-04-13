@@ -1,10 +1,10 @@
-import express from 'express'
-import posts from './index.json' assert { type: "json" };
+import express from "express";
+import posts from "./index.json";
 
-const app = express()
+const app = express();
 
-app.get('/api/news', (req, res) => {
-    return res.json(posts)
-})
+app.get("/api/news", (req, res) => {
+    return res.json(posts);
+});
 
-app.listen(3000)
+app.listen(3000);
