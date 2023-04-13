@@ -76,7 +76,6 @@ const Login = () => {
     }
 
     function TitleToSlug() {
-
         let title = document.getElementById('title').value;
 
         let slug = title.toLowerCase().replace(/ /g, '-')
@@ -130,7 +129,7 @@ const Login = () => {
     function getImage(event) {
         const file = event.target.files[0]
 
-        if(!file) return
+        if (!file) return
 
         setImage(file.name)
 
