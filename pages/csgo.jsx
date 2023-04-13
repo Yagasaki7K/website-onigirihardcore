@@ -10,7 +10,7 @@ import SlideDetails from '../src/components/SlideDetails';
 
 export async function getStaticProps() {
     const news = await HLTV.getNews()
-    const data = news.map((post, index) => ({
+    const data = news.map((post) => ({
         title: post.title,
         description: post.description,
         link: post.link

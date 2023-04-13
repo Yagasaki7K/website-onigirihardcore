@@ -1,6 +1,7 @@
 import Head from "next/head"
 import SEO from '../../src/SEO'
 
+// eslint-disable-next-line react/prop-types
 const OwnHead = ({ title, description, canonicalUrl, ogTwitterImage, ogType }) => {
     return (
         <Head>
