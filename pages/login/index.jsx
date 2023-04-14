@@ -128,10 +128,8 @@ const Login = () => {
         TitleToSlug()
     }
 
-    function getImage(event) {
-        const file = event.target.files[0]
-
-        if (!file) return
+    async function getImage(event) {
+        const file = await event.target.files[0]
 
         setImage(file.name)
 
