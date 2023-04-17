@@ -37,7 +37,7 @@ const Login = () => {
             event.addEventListener('click', () => {
                 // Get the row associated with this checkbox
                 console.log('teste')
-                const rowPosts = closest('tr')
+                const rowPosts = this.closest('tr')
                 
                 // Get the data from the cells in the row
                 const title = rowPosts.getElementsByTagName('td')[0].innerText
