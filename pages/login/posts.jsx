@@ -84,7 +84,7 @@ const Login = () => {
                             </tr>
                             {
                                 Posts.slice(0, 4).map((post) =>(
-                                    <tr>
+                                    <tr key={post}>
                                         <td>0</td>
                                         <td>{post.title}</td>
                                         <td>{post.author}</td>
