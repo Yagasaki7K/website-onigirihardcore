@@ -11,6 +11,7 @@ const SoreyeAsuka = 'OnigiriHardcore'
 const EVA02 = '0GkMepi*r]hj'
 
 const Login = () => {
+    const [Posts, setPosts] = useState([])
 
     const [isLogged, setIsLogged] = useState(false)
     const Lgn = SoreyeAsuka
@@ -27,8 +28,26 @@ const Login = () => {
         }
     }
 
+    function getCheckBoxPosts(){
+        // Get all checkboxs
+        const checkPosts = document.querySelectorAll('checkboxes')
 
-    const [Posts, setPosts] = useState([])
+        // Add an event that will catch each checkbox
+        checkPosts.forEach((event) => {
+            event.addEventListener('click', () => {
+                // Get the row associated with this checkbox
+                console.log('teste')
+                const rowPosts = closest('tr')
+                
+                // Get the data from the cells in the row
+                const title = rowPosts.getElementsByTagName('td')[0].innerText
+                const author = rowPosts.getElementsByTagName('td')[1].innerText
+
+                //Show the data
+                console.log(title, author)
+            })
+        })
+    }
 
     useEffect(() => {
         getPosts()
@@ -72,7 +91,7 @@ const Login = () => {
                     <div className="publi" id="publi">
                         <h1>Modificar Publicações</h1>
                         <div className="container">
-                        <table>
+                        <table onChange={getCheckBoxPosts}>
                             <tr>
                                 <th>ID</th>
                                 <th>Título</th>
@@ -85,11 +104,11 @@ const Login = () => {
                             {
                                 Posts.slice(0, 4).map((post) =>(
                                     <tr key={post}>
-                                        <td>0</td>
+                                        <td><input type="checkbox" id="checkboxes" /></td>
                                         <td>{post.title}</td>
                                         <td>{post.author}</td>
                                         <td>{post.categories}</td>
-                                        <td>{post.moreDate}</td>
+                                        <td>{post.lessDate}</td>
                                     </tr>
                                 ))
                             }
