@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, device } from './variables'
+import { colors } from './variables'
 
 const FullNewsDetails = styled.div`
     .fullnews {
@@ -7,9 +7,8 @@ const FullNewsDetails = styled.div`
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 70rem;
         margin-top: 1rem;
-        margin-left: 28rem;
+        margin-left: 2rem;
 
         button {
             padding: 1rem 2rem;
@@ -24,21 +23,14 @@ const FullNewsDetails = styled.div`
             cursor: pointer;
         }
 
-        @media (${device.laptopM}) {
-            margin-left: 10rem;
-        }
-
-
         a {
-            padding: 20px 80px 70px 40px;
+            padding: 20px 120px 70px 40px;
             margin-bottom: 10px;
+            width: 80%;
 
             :hover {
                 transition: 1s;
-                transform: scale(1.05);
                 background: ${colors.blacklight};
-                transition: 1s;
-                transform: scale(1.05);
             }
 
             img {
@@ -49,8 +41,8 @@ const FullNewsDetails = styled.div`
             }
 
             .title {
-                margin-top: -10rem;
-                margin-left: 22rem;
+                margin-top: -8rem;
+                margin-left: 20rem;
             }
         }
 `

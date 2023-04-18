@@ -8,32 +8,32 @@ import postService from '../services/post.service'
 
 const FullNews = () => {
     const [Post, setPost] = useState([])
-    const posts = Post.reverse()
+    const posts = Post.sort((a, b) => b.moreDate - a.moreDate);
 
     useEffect(() => {
         getPost()
+        console.log(posts)
     }, [])
 
     const getPost = async () => {
         const data = await postService.getAllPosts()
-        setPost(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+        setPost(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })).reverse());
     }
 
-    const firebaseURL = 'https://firebasestorage.googleapis.com/v0/b/onigirihardcore-88090.appspot.com/o/files%2F'
     return (
         <>
             <Header />
             <FullNewsDetails>
                 <div className="fullnews">
-                    <h1>TODAS AS NOTÍCIAS DO ONIGIRI</h1>
-                    {posts && posts.map((item, index) => {
+                    <h1>ARQUIVOS DO ONIGIRI HARDCORE</h1>
+                    {posts && posts.map((post, index) => {
                         return (
-                            <a href={item.slug} key={index}>
-                                <img src={item.image ? firebaseURL + item.image + `?alt=media` : null} alt={item?.name} width="320"></img>
+                            <a href={post.slug} key={index}>
+                                <img src={post.imageUrl} alt={post?.name} />
                                 {/* <img src={item.image} width="320" /> */}
                                 <div className="title">
-                                    <p>{item.createdAtExtended}</p>
-                                    <h2>{item.title}</h2>
+                                    <p>{post.createdAtExtended}</p>
+                                    <h2>{post.title}</h2>
                                 </div>
                             </a>
                         )
