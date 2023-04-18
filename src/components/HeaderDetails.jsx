@@ -7,6 +7,7 @@ const HeaderDetails = styled.div`
         display: flex;
         padding: 1rem 15rem;
         justify-content: space-between;
+        background: ${colors.blackAlt};
 
         @media (${device.desktopS}) {
             padding: 1rem 6rem;
