@@ -79,29 +79,27 @@ const Login = () => {
                     <div className="publi" id="publi">
                         <h1>Modificar Publicações</h1>
                         <div className="container">
-                        <table>
-                            <tr>
-                                <th>ID</th>
-                                <th>Título</th>
-                                <th>Autor</th>
-                                <th>Categoria</th>
-                                <th>Data de Criação</th>
-                                <th>Data de Modificação</th>
-                                <th>Ações</th>
-                            </tr>
-                            {
-                                Posts.map((post) =>(
-                                    <tr key={post}>
-                                        <td><button onClick={() => handleEdit(post.id)}>Editar</button></td>
-                                        <td><button onClick={() => handleDelete(post.id)}>Deletar</button></td>
-                                        <td>{post.title}</td>
-                                        <td>{post.author}</td>
-                                        <td>{post.categories}</td>
-                                        <td>{post.lessDate}</td>
-                                    </tr>
-                                ))
-                            }
-                        </table> 
+                            <table>
+                                <tr>
+                                    <th>Título</th>
+                                    <th>Autor</th>
+                                    <th>Categoria</th>
+                                    <th>Data de Modificação</th>
+                                    <th>Ações</th>
+                                </tr>
+                                {
+                                    Posts.map((post) => (
+                                        <tr key={post}>
+                                            <a href={'/' + post.slug}><td>{post.title}</td></a>
+                                            <td>{post.author}</td>
+                                            <td>{post.categories}</td>
+                                            <td>{post.lessDate}</td>
+                                            <td><button className="editar" onClick={() => handleEdit(post.id)}>Editar</button></td>
+                                            <td><button className="deletar" onClick={() => handleDelete(post.id)}>Deletar</button></td>
+                                        </tr>
+                                    ))
+                                }
+                            </table>
                         </div>
                     </div>
                 </div>
