@@ -33,13 +33,14 @@ const Login = () => {
         setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
     }
 
-    const handleDelete = (id) => {
-        console.log(id)
-    }
-
     useEffect(() => {
         getPosts()
     }, [])
+
+    const handleDelete = async (id) => {
+        await postService.deletePost(id)
+        getPosts()
+    }
 
     if (isLogged === true) {
         return (
@@ -85,7 +86,7 @@ const Login = () => {
                                 <th>Ações</th>
                             </tr>
                             {
-                                Posts.slice(0, 4).map((post) =>(
+                                Posts.map((post) =>(
                                     <tr key={post}>
                                         <td><button onClick={() => handleDelete(post.id)}>Deletar</button></td>
                                         <td>{post.title}</td>
