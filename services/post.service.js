@@ -6,6 +6,8 @@ import {
     addDoc,
     deleteDoc,
     doc,
+    orderBy,
+    query,
 } from "firebase/firestore";
 
 const postCollectionRef = collection(database, "posts");
@@ -25,8 +27,11 @@ class postService {
         return deleteDoc(postDoc);
     };
 
-    getAllPosts = () => {
-        return getDocs(postCollectionRef);
+    getAllPosts = async () => {
+        const posts = await getDocs(
+            query(postCollectionRef, orderBy("date", "desc"))
+        );
+        return posts;
     };
 
     getPost = (id) => {

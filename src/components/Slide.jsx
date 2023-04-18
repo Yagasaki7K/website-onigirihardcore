@@ -22,7 +22,7 @@ const Slide = () => {
         setIsLoading(false)
     }
 
-    const slidePosts = Posts.sort().reverse().slice(0, 3)
+    const slidePosts = Posts.sort().slice(0, 3)
 
     const [refCallback] = useKeenSlider({ loop: true },
         [
