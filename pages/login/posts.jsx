@@ -28,35 +28,18 @@ const Login = () => {
         }
     }
 
-    function getCheckBoxPosts(){
-        // Get all checkboxs
-        const checkPosts = document.querySelectorAll('checkboxes')
+    const getPosts = async () => {
+        const data = await postService.getAllPosts()
+        setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+    }
 
-        // Add an event that will catch each checkbox
-        checkPosts.forEach((event) => {
-            event.addEventListener('click', () => {
-                // Get the row associated with this checkbox
-                console.log('teste')
-                const rowPosts = this.closest('tr')
-                
-                // Get the data from the cells in the row
-                const title = rowPosts.getElementsByTagName('td')[0].innerText
-                const author = rowPosts.getElementsByTagName('td')[1].innerText
-
-                //Show the data
-                console.log(title, author)
-            })
-        })
+    const handleDelete = (id) => {
+        console.log(id)
     }
 
     useEffect(() => {
         getPosts()
     }, [])
-
-    const getPosts = async () => {
-        const data = await postService.getAllPosts()
-        setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-    }
 
     if (isLogged === true) {
         return (
@@ -91,7 +74,7 @@ const Login = () => {
                     <div className="publi" id="publi">
                         <h1>Modificar Publicações</h1>
                         <div className="container">
-                        <table onChange={getCheckBoxPosts}>
+                        <table>
                             <tr>
                                 <th>ID</th>
                                 <th>Título</th>
@@ -104,7 +87,7 @@ const Login = () => {
                             {
                                 Posts.slice(0, 4).map((post) =>(
                                     <tr key={post}>
-                                        <td><input type="checkbox" id="checkboxes" /></td>
+                                        <td><button onClick={() => handleDelete(post.id)}>Deletar</button></td>
                                         <td>{post.title}</td>
                                         <td>{post.author}</td>
                                         <td>{post.categories}</td>
