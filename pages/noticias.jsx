@@ -7,17 +7,17 @@ import postService from '../services/post.service'
 // import post from '../server/index.json'
 
 const FullNews = () => {
-    const [Post, setPost] = useState([])
-    const posts = Post.sort((a, b) => b.moreDate - a.moreDate);
+    const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        getPost()
-        console.log(posts)
+        getPosts()
     }, [])
 
-    const getPost = async () => {
-        const data = await postService.getAllPosts()
-        setPost(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })).reverse());
+    const getPosts = async () => {
+        const data = await postService.getAllPosts();
+        const posts = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+        posts.sort((a, b) => b.id - a.id);
+        setPosts(posts);
     }
 
     return (
@@ -32,7 +32,7 @@ const FullNews = () => {
                                 <img src={post.imageUrl} alt={post?.name} />
                                 {/* <img src={item.image} width="320" /> */}
                                 <div className="title">
-                                    <p>{post.createdAtExtended}</p>
+                                    <i className="uil uil-clock-nine">&nbsp;{post.moreDate}</i>
                                     <h2>{post.title}</h2>
                                 </div>
                             </a>

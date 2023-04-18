@@ -99,7 +99,7 @@ const Login = () => {
         ];
 
         const resultDate = `${day}/${month}/${year}`
-        const resultMoreDate = `${day} de ${monthNames[date.getMonth()]} de ${year + 1}`
+        const resultMoreDate = `${day} de ${monthNames[date.getMonth()]} de ${year}`
         setLessDate(resultDate)
         setMoreDate(resultMoreDate)
 
