@@ -38,6 +38,7 @@ const Login = () => {
     }, [])
 
     const handleDelete = async (id) => {
+        // Delete post
         await postService.deletePost(id)
         getPosts()
     }
