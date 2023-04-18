@@ -42,6 +42,10 @@ const Login = () => {
         getPosts()
     }
 
+    const handleEdit = async (id) => {
+        await postService.getPost(id)
+    }
+
     if (isLogged === true) {
         return (
             <DashboardDetails>
@@ -88,6 +92,7 @@ const Login = () => {
                             {
                                 Posts.map((post) =>(
                                     <tr key={post}>
+                                        <td><button onClick={() => handleEdit(post.id)}>Editar</button></td>
                                         <td><button onClick={() => handleDelete(post.id)}>Deletar</button></td>
                                         <td>{post.title}</td>
                                         <td>{post.author}</td>
