@@ -28,17 +28,22 @@ const Login = () => {
         }
     }
 
+    const getPosts = async () => {
+        const data = await postService.getAllPosts()
+        setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+    }
+
     useEffect(() => {
         getPosts()
     }, [])
 
-    const getPosts = async () => {
-        const data = await postService.getAll()
-        setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-    }
-
     const handleDelete = async (id) => {
         await postService.deletePost(id)
+        getPosts()
+    }
+
+    const handleEdit = async (id) => {
+        await postService.getPost(id)
     }
 
     if (isLogged) {
@@ -74,30 +79,27 @@ const Login = () => {
                     <div className="publi" id="publi">
                         <h1>Modificar Publicações</h1>
                         <div className="container">
-                        <table>
-                            <tr>
-                                <th>ID</th>
-                                <th>Título</th>
-                                <th>Autor</th>
-                                <th>Categoria</th>
-                                <th>Data de Criação</th>
-                                <th>Data de Modificação</th>
-                                <th>Ações</th>
-                            </tr>
-                            {
-                                Posts.slice(0, 4).map((post) => (
-                                    <tr key={post.id}>
-                                        <td>
-                                            <button onClick={() => handleDelete(post.id)}>Deletar Post</button>
-                                        </td>
-                                        <td>{post.title}</td>
-                                        <td>{post.author}</td>
-                                        <td>{post.categories}</td>
-                                        <td>{post.lessDate}</td>
-                                    </tr>
-                                ))
-                            }
-                        </table>
+                            <table>
+                                <tr>
+                                    <th>Título</th>
+                                    <th>Autor</th>
+                                    <th>Categoria</th>
+                                    <th>Data de Modificação</th>
+                                    <th>Ações</th>
+                                </tr>
+                                {
+                                    Posts.map((post) => (
+                                        <tr key={post}>
+                                            <a href={'/' + post.slug} target='_blank' rel="noreferrer"><td>{post.title}</td></a>
+                                            <td>{post.author}</td>
+                                            <td>{post.categories}</td>
+                                            <td>{post.lessDate}</td>
+                                            <td><button className="editar" onClick={() => handleEdit(post.id)}>Editar</button></td>
+                                            <td><button className="deletar" onClick={() => handleDelete(post.id)}>Deletar</button></td>
+                                        </tr>
+                                    ))
+                                }
+                            </table>
                         </div>
                     </div>
                 </div>

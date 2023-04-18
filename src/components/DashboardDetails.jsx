@@ -95,6 +95,65 @@ const DashboardDetails = styled.div`
         .stats {
             display: none;
         }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 1rem;
+
+                tr {
+
+                    th, td {
+                        color: ${colors.white};
+                        padding: 0.5rem;
+                        text-align: center;
+
+                        button {
+                            margin-right: 1rem;
+                            margin-left: -4.5rem;
+                        }
+
+                        .editar {
+                            background: ${colors.yellow};
+                            color: ${colors.white};
+                            border: none;
+                            padding: 10px;
+                            margin-right: -1rem;
+                        }
+
+                        .deletar {
+                            background: ${colors.red};
+                            color: ${colors.white};
+                            border: none;
+                            padding: 10px;
+                        }
+
+                        &:nth-child(1) {
+                            width: 20%;
+
+                            @media (max-width: 768px) {
+                                width: 100%;
+
+                                &:nth-child(1) {
+                                    width: 100%;
+                                }
+                            }
+
+                            td {
+                                text-align: center;
+                            }
+
+                        }
+                    }
+                }
+            }
+
+        }
     }
 `
 
