@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 // import post from '../../server/index.json'
 
-import SlideDetails from './SlideDetails'
 import 'keen-slider/keen-slider.min.css'
+import SlideDetails from './SlideDetails'
 
 import { useKeenSlider } from 'keen-slider/react'
-import postService from '../../services/post.service'
+import postService from '../../services/post.service.js'
 
 
 
@@ -18,7 +18,7 @@ const Slide = () => {
     }, [])
 
     const getPosts = async () => {
-        const data = await postService.getAllPosts()
+        const data = await postService.getAll()
         setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
     }
 

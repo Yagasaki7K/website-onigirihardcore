@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react'
-import LoginDetails from "../../src/components/LoginDetails"
+import "@uiw/react-markdown-preview/markdown.css"
+import "@uiw/react-md-editor/markdown-editor.css"
+import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import postService from '../../services/post.service'
 import DashboardDetails from "../../src/components/DashboardDetails"
-import "@uiw/react-md-editor/markdown-editor.css"
-import "@uiw/react-markdown-preview/markdown.css"
 import SideMenuDetails from '../../src/components/Login/SideMenuDetails'
-import Link from 'next/link'
+import LoginDetails from "../../src/components/LoginDetails"
 
 const SoreyeAsuka = 'OnigiriHardcore'
 const EVA02 = '0GkMepi*r]hj'
@@ -28,37 +28,20 @@ const Login = () => {
         }
     }
 
-    function getCheckBoxPosts(){
-        // Get all checkboxs
-        const checkPosts = document.querySelectorAll('checkboxes')
-
-        // Add an event that will catch each checkbox
-        checkPosts.forEach((event) => {
-            event.addEventListener('click', () => {
-                // Get the row associated with this checkbox
-                console.log('teste')
-                const rowPosts = this.closest('tr')
-                
-                // Get the data from the cells in the row
-                const title = rowPosts.getElementsByTagName('td')[0].innerText
-                const author = rowPosts.getElementsByTagName('td')[1].innerText
-
-                //Show the data
-                console.log(title, author)
-            })
-        })
-    }
-
     useEffect(() => {
         getPosts()
     }, [])
 
     const getPosts = async () => {
-        const data = await postService.getAllPosts()
+        const data = await postService.getAll()
         setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
     }
 
-    if (isLogged === true) {
+    const handleDelete = async (id) => {
+        await postService.deletePost(id)
+    }
+
+    if (isLogged) {
         return (
             <DashboardDetails>
                 <SideMenuDetails>
@@ -91,7 +74,7 @@ const Login = () => {
                     <div className="publi" id="publi">
                         <h1>Modificar Publicações</h1>
                         <div className="container">
-                        <table onChange={getCheckBoxPosts}>
+                        <table>
                             <tr>
                                 <th>ID</th>
                                 <th>Título</th>
@@ -102,9 +85,11 @@ const Login = () => {
                                 <th>Ações</th>
                             </tr>
                             {
-                                Posts.slice(0, 4).map((post) =>(
-                                    <tr key={post}>
-                                        <td><input type="checkbox" id="checkboxes" /></td>
+                                Posts.slice(0, 4).map((post) => (
+                                    <tr key={post.id}>
+                                        <td>
+                                            <button onClick={() => handleDelete(post.id)}>Deletar Post</button>
+                                        </td>
                                         <td>{post.title}</td>
                                         <td>{post.author}</td>
                                         <td>{post.categories}</td>
@@ -112,13 +97,13 @@ const Login = () => {
                                     </tr>
                                 ))
                             }
-                        </table> 
+                        </table>
                         </div>
                     </div>
                 </div>
             </DashboardDetails>
         )
-    } else {
+    }
         return (
             <LoginDetails>
                 <div className="container">
@@ -134,7 +119,7 @@ const Login = () => {
                 </div>
             </LoginDetails>
         )
-    }
+
 }
 
 export default Login

@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import LoginDetails from "../../src/components/LoginDetails"
-import DashboardDetails from "../../src/components/DashboardDetails"
-import postService from '../../services/post.service'
-import { storage } from '../../client'
+import "@uiw/react-markdown-preview/markdown.css"
+import "@uiw/react-md-editor/markdown-editor.css"
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import dynamic from "next/dynamic"
-import "@uiw/react-md-editor/markdown-editor.css"
-import "@uiw/react-markdown-preview/markdown.css"
-import SideMenuDetails from '../../src/components/Login/SideMenuDetails'
 import Link from 'next/link'
+import { useState } from 'react'
+import { storage } from '../../client'
+import postService from '../../services/post.service'
+import DashboardDetails from "../../src/components/DashboardDetails"
+import SideMenuDetails from '../../src/components/Login/SideMenuDetails'
+import LoginDetails from "../../src/components/LoginDetails"
 
 const SoreyeAsuka = 'OnigiriHardcore'
 const EVA02 = '0GkMepi*r]hj'

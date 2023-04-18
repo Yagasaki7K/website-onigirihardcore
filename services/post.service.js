@@ -1,37 +1,41 @@
-import database from "../client";
 import {
-    collection,
-    getDocs,
-    getDoc,
     addDoc,
+    collection,
     deleteDoc,
     doc,
+    getDoc,
+    getDocs,
+    orderBy,
+    query,
+    updateDoc
 } from "firebase/firestore";
+import database from "../client";
 
 const postCollectionRef = collection(database, "posts");
 
 class postService {
-    addPost = (newPosts) => {
-        return addDoc(postCollectionRef, newPosts);
+    add = async (post) => {
+        return await addDoc(postCollectionRef, post);
     };
 
-    updatePost = (id, updateDoc) => {
+    update = async (id, updateData) => {
         const postDoc = doc(database, "posts", id);
-        return updateDoc(postDoc, updateDoc);
+        return await updateDoc(postDoc, updateData);
     };
 
-    deletePost = (id) => {
+    delete = async (id) => {
         const postDoc = doc(database, "posts", id);
-        return deleteDoc(postDoc);
+        return await deleteDoc(postDoc);
     };
 
-    getAllPosts = () => {
-        return getDocs(postCollectionRef);
-    };
+    getAll = async () => {
+        const posts = await getDocs(query(postCollectionRef, orderBy("date", "desc")));
+        return posts
+    }
 
-    getPost = (id) => {
+    getById = async (id) => {
         const postDoc = doc(database, "posts", id);
-        return getDoc(postDoc);
+        return await getDoc(postDoc);
     };
 }
 

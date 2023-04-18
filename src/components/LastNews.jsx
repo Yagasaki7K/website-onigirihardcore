@@ -1,7 +1,7 @@
 import LastNewsDetails from './LastNewsDetails'
 // import post from '../../server/index.json'
-import postService from '../../services/post.service'
 import { useEffect, useState } from 'react'
+import postService from '../../services/post.service'
 
 const LastNews = () => {
     const [Posts, setPosts] = useState([])
@@ -11,7 +11,7 @@ const LastNews = () => {
     }, [])
 
     const getPosts = async () => {
-        const data = await postService.getAllPosts()
+        const data = await postService.getAll()
         setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
     }
 
