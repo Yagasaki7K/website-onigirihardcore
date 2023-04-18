@@ -90,7 +90,7 @@ const Login = () => {
                                 {
                                     Posts.map((post) => (
                                         <tr key={post}>
-                                            <a href={'/' + post.slug}><td>{post.title}</td></a>
+                                            <a href={'/' + post.slug} target='_blank' rel="noreferrer"><td>{post.title}</td></a>
                                             <td>{post.author}</td>
                                             <td>{post.categories}</td>
                                             <td>{post.lessDate}</td>
