@@ -60,25 +60,31 @@ const Post = () => {
                         post.slug === slug ? (
                             <div key={index}>
                                 <Head>
+                                    {/* Meta tags relacionadas ao SEO */}
                                     <title>{post.title}</title>
                                     <meta name="author" content={post.author} />
-                                    {/* <meta name="author" content='Anderson "Yagasaki" Marlon' /> */}
                                     <meta name="description" content={post.description} />
+
+                                    {/* Meta tags relacionadas ao Open Graph */}
                                     <meta property="og:title" content={post.title} />
                                     <meta property="og:description" content={post.description} />
-                                    <meta property="og:site_name" content="Onigiri Hardcore" />
-                                    <meta property="og:url" content="https://onigirihardcore.vercel.app/" />
-                                    <meta property="og:image" content={post.image} />
-                                    <meta property="og:type" content="Website" />
+                                    <meta property="og:image" content={post.image ? post.image : "https://i.imgur.com/VoOogmx.png"} />
                                     <meta property="og:image:width" content="1200" />
                                     <meta property="og:image:height" content="627" />
+                                    <meta property="og:site_name" content="Onigiri Hardcore" />
+                                    <meta property="og:type" content="Website" />
+                                    <meta property="og:url" content="https://onigirihardcore.vercel.app/" />
+
+                                    {/* Meta tags relacionadas ao Twitter Card */}
                                     <meta name="twitter:card" content="summary" />
-                                    <meta name="twitter:site" content={post.title} />
-                                    <meta name="twitter:creator" content={post.author} />
-                                    {/* <meta name="twitter:creator" content='Anderson "Yagasaki" Marlon' /> */}
                                     <meta name="twitter:title" content={post.title} />
                                     <meta name="twitter:description" content={post.description} />
-                                    <meta name="twitter:image:src" content={post.image} />
+                                    <meta name="twitter:image:src" content={post.image ? post.image : "https://i.imgur.com/VoOogmx.png"} />
+                                    <meta name="twitter:site" content={post.title} />
+                                    <meta name="twitter:creator" content={post.author} />
+
+                                    {/* Exemplo de autor pré-definido */}
+                                    <meta name="author" content={post.author} />
                                 </Head>
 
                                 {/* <img src={post.image}></img> */}

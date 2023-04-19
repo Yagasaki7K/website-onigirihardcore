@@ -36,25 +36,24 @@ export default class MyDocument extends Document {
             <Html lang="pt-br">
                 <title>Onigiri Hardcore | Portal de Notícias e Entretenimento</title>
                 <Head>
-                    {/* PWA primary color */}
                     <link rel="shortcut icon" type="image/png" href="/logo.png" />
                     <link rel="apple-touch-icon" href="/logo.png" />
+
                     <meta name="application-name" content="Onigiri Hardcore | Portal de Notícias e Entretenimento" />
+                    <meta name="description" content="Um site nerd com conteúdos nerds" />
+                    <meta name="keywords" content="anime, noticia, filme, serie, entretenimento, onigiri, hardcore, nerd, geek" />
+                    <meta name="author" content="Anderson 'Yagasaki' Marlon" />
+                    <meta name="robots" content="index, follow" />
+
+                    <meta name="theme-color" content='#00acff' />
                     <meta name="apple-mobile-web-app-capable" content="yes" />
                     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
                     <meta name="apple-mobile-web-app-title" content="Essentials" />
-                    <link rel="manifest" href="/manifest.json" />
-                    <meta name="theme-color" content='#00acff' />
 
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
                     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"></link>
 
-                    <meta name="title" content="Onigiri Hardcore | Portal de Notícias e Entretenimento" />
-                    <meta name="keywords" content="anime, noticia, filme, serie, entretenimento, onigiri, hardcore, nerd, geek" />
-                    <meta name="robots" content="index, follow" />
-                    <meta name="author" content="Anderson 'Yagasaki' Marlon" />
-
-                    <meta name="description" content="Um site nerd com conteúdos nerds" />
                     <meta property="og:type" content="website" />
                     <meta property="og:url" content="https://onigirihardcore.vercel.com/" />
                     <meta property="og:title" content="Onigiri Hardcore | Portal de Notícias e Entretenimento" />
@@ -66,7 +65,6 @@ export default class MyDocument extends Document {
                     <meta property="twitter:title" content="Onigiri Hardcore | Portal de Notícias e Entretenimento" />
                     <meta property="twitter:description" content="Um site nerd com conteúdos nerds" />
                     <meta property="twitter:image" content="https://i.imgur.com/VoOogmx.png" />
-
                 </Head>
                 <body>
                     <Main />
