@@ -1,6 +1,7 @@
-const removeImports = require('next-remove-imports')()
+/* eslint-disable no-undef */
+const removeImports = require("next-remove-imports")();
 module.exports = removeImports({
-  webpack(config, options) {
-    return config
-  },
+    webpack(config) {
+        return config;
+    },
 });
