@@ -73,7 +73,7 @@ const Login = () => {
             await (postService.addPost(NewPosts))
 
             alert('Publicação criada com sucesso')
-            location.assign("/")
+            location.assign(`/${slug}`)
         }
     }
 
