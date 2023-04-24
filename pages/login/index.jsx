@@ -36,7 +36,6 @@ const Login = () => {
 
     const [showConfetti, setShowConfetti] = useState(false);
 
-    
     const [isLogged, setIsLogged] = useState(false)
     const [bodyPost, setBodyPost] = useState('# Corpo da Publicação')
     const Lgn = SoreyeAsuka
@@ -75,12 +74,14 @@ const Login = () => {
             alert('Por favor, preencha todos os campos')
         } else {
             await (postService.addPost(NewPosts))
+            location.href = "#publi"
             setShowConfetti(true);
 
+
+
             setTimeout(() => {
-                setShowConfetti(false);
-                location.assign(`/${slug}`)                
-              }, 3000);                         
+                location.assign(`/${slug}`)
+            }, 5000);
         }
     }
 
@@ -168,7 +169,7 @@ const Login = () => {
     if (isLogged === true) {
         return (
             <DashboardDetails>
-             {showConfetti && <Confetti />}
+                {showConfetti && <Confetti />}
                 <SideMenu />
 
                 <div className="content">
