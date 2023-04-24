@@ -169,7 +169,7 @@ const Login = () => {
     if (isLogged === true) {
         return (
             <DashboardDetails>
-                {showConfetti && <Confetti />}
+                {showConfetti && <Confetti gravity={0.7} height={1300}/>}
                 <SideMenu />
 
                 <div className="content">
