@@ -66,7 +66,7 @@ const Login = () => {
             linkCitation,
             ytid,
         }
-
+        
         if (!author || !title || !description || !url || !categories) {
             alert('Por favor, preencha todos os campos')
         } else {
