@@ -77,8 +77,6 @@ const Login = () => {
             location.href = "#publi"
             setShowConfetti(true);
 
-
-
             setTimeout(() => {
                 location.assign(`/${slug}`)
             }, 5000);
@@ -169,7 +167,7 @@ const Login = () => {
     if (isLogged === true) {
         return (
             <DashboardDetails>
-                {showConfetti && <Confetti gravity={0.7} height={1300}/>}
+                {showConfetti && <Confetti gravity={0.7} height={1300} />}
                 <SideMenu />
 
                 <div className="content">
@@ -250,7 +248,6 @@ const Login = () => {
         return (
             <LoginDetails>
                 <div className="container">
-
                     <form onSubmit={(e) => e.preventDefault()}>
                         <img src="logotipo-white.png" alt="Logo" />
                         <input type="text" placeholder="Login" id="Login" required />
