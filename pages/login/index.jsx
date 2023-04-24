@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Confetti from 'react-confetti';
 import SideMenu from '../../src/components/Login/SideMenu'
 import LoginDetails from "../../src/components/LoginDetails"
 import DashboardDetails from "../../src/components/DashboardDetails"
@@ -33,6 +34,9 @@ const Login = () => {
     const [linkCitation, setLinkCitation] = useState('')
     const [ytid, setYtid] = useState('')
 
+    const [showConfetti, setShowConfetti] = useState(false);
+
+    
     const [isLogged, setIsLogged] = useState(false)
     const [bodyPost, setBodyPost] = useState('# Corpo da Publicação')
     const Lgn = SoreyeAsuka
@@ -66,14 +70,17 @@ const Login = () => {
             linkCitation,
             ytid,
         }
-        
+
         if (!author || !title || !description || !url || !categories) {
             alert('Por favor, preencha todos os campos')
         } else {
             await (postService.addPost(NewPosts))
+            setShowConfetti(true);
 
-            alert('Publicação criada com sucesso')
-            location.assign(`/${slug}`)
+            setTimeout(() => {
+                setShowConfetti(false);
+                location.assign(`/${slug}`)                
+              }, 3000);                         
         }
     }
 
@@ -161,6 +168,7 @@ const Login = () => {
     if (isLogged === true) {
         return (
             <DashboardDetails>
+             {showConfetti && <Confetti />}
                 <SideMenu />
 
                 <div className="content">
