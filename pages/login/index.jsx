@@ -194,6 +194,7 @@ const Login = () => {
                                         <option>Animes</option>
                                         <option>Games</option>
                                         <option>Movies</option>
+                                        <option>Technologies</option>
                                     </select>
                                 </div>
 

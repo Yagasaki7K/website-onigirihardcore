@@ -12,7 +12,7 @@ export default function Footer() {
 
             <div className="footer">
                 <p>
-                    <a href="/login">©</a> 2013 - {new Date().getFullYear()} <a href="/">Onigiri Hardcore</a> - &nbsp;
+                    <a href="/login">©</a> 2015 - {new Date().getFullYear()} <a href="/">Onigiri Hardcore</a> - &nbsp;
                     <a href="https://kalifyinc.vercel.app/" target="_blank" rel="noreferrer">Kalify Inc.</a> | &nbsp;
                 </p>
                 <p>

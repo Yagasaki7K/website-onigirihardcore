@@ -41,7 +41,7 @@ const SlideDetails = styled.div`
                     color: ${colors.gray};
 
                     .latest {
-                        padding: 2px 10px;
+                        padding: 2.5px 10px;
                         background: ${colors.orange};
                         font-size: 0.9rem;
                         font-weight: bold;
