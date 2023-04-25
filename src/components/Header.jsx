@@ -21,6 +21,9 @@ const Header = () => {
                     </li>
                     <span id="item-menu">
                         <li>
+                            <Link href="/">Início</Link>
+                        </li>
+                        <li>
                             <Link href="/noticias">Notícias</Link>
                         </li>
                         <li>
