@@ -131,6 +131,11 @@ const DashboardDetails = styled.div`
                             color: ${colors.white};
                             border: none;
                             padding: 10px;
+                            margin-left: -5rem;
+
+                            @media (max-width: 1366px) {
+                                margin-left: -3rem;
+                            }
                         }
 
                         &:nth-child(1) {

@@ -11,16 +11,16 @@ const SideMenu = () => {
 
             <div className="menu">
                 <ul>
-                    <Link href="#publi">
+                    <Link href="/login">
                         <li>
                             <i className="uil uil-file-edit-alt" /> Criar Publicações
                         </li>
                     </Link>
-                    {/* <Link href="#stats">
+                    <Link href="/login/posts">
                         <li>
-                            <i className="uil uil-arrow-growth" /> Estatísticas
+                            <i className="uil uil-file-edit-alt" /> Editar Publicações
                         </li>
-                    </Link> */}
+                    </Link>
                     <Link href="/">
                         <li>
                             <i className="uil uil-sign-out-alt" /> Sair

@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import Confetti from 'react-confetti';
-import SideMenu from '../../src/components/Login/SideMenu.jsx'
 import LoginDetails from "../../src/components/LoginDetails"
 import DashboardDetails from "../../src/components/DashboardDetails"
 import postService from '../../services/post.service'
 import { storage } from '../../client'
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import dynamic from "next/dynamic"
+import "@uiw/react-md-editor/markdown-editor.css"
+import "@uiw/react-markdown-preview/markdown.css"
+import SideMenuDetails from '../../src/components/Login/SideMenuDetails.jsx';
+import Link from 'next/link.js';
 
 const SoreyeAsuka = 'OnigiriHardcore'
 const EVA02 = '0GkMepi*r]hj'
@@ -164,7 +167,31 @@ const Login = () => {
         return (
             <DashboardDetails>
                 {showConfetti && <Confetti gravity={0.5} height={1300} />}
-                <SideMenu />
+                <SideMenuDetails>
+                    <Link href="/">
+                        <img src="/logotipo-white.png" alt="logo" />
+                    </Link>
+
+                    <div className="menu">
+                        <ul>
+                            <Link href="/login">
+                                <li className="active">
+                                    <i className="uil uil-file-edit-alt" /> Criar Publicações
+                                </li>
+                            </Link>
+                            <Link href="/login/posts">
+                                <li >
+                                    <i className="uil uil-file-edit-alt" /> Editar Publicações
+                                </li>
+                            </Link>
+                            <Link href="/">
+                                <li>
+                                    <i className="uil uil-sign-out-alt" /> Sair
+                                </li>
+                            </Link>
+                        </ul>
+                    </div>
+                </SideMenuDetails>
 
                 <div className="content">
                     <div className="publi" id="publi">
