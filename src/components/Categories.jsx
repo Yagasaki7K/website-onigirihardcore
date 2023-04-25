@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
 // import posts from '../../server/index.json'
-import postService from '../../services/post.service'
+import postService from '../../services/post.service';
 
-import CategoriesDetails from './CategoriesDetails'
+
+import CategoriesDetails from './CategoriesDetails';
 
 const Categories = () => {
 

@@ -1,7 +1,7 @@
 import LastNewsDetails from './LastNewsDetails'
 // import post from '../../server/index.json'
-import postService from '../../services/post.service'
 import { useEffect, useState } from 'react'
+import postService from '../../services/post.service'
 
 const LastNews = () => {
     const [Posts, setPosts] = useState([])

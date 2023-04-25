@@ -1,14 +1,12 @@
 import { useState } from 'react'
 import Confetti from 'react-confetti';
-import SideMenu from '../../src/components/Login/SideMenu'
+import SideMenu from '../../src/components/Login/SideMenu.jsx'
 import LoginDetails from "../../src/components/LoginDetails"
 import DashboardDetails from "../../src/components/DashboardDetails"
 import postService from '../../services/post.service'
 import { storage } from '../../client'
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import dynamic from "next/dynamic"
-import "@uiw/react-md-editor/markdown-editor.css"
-import "@uiw/react-markdown-preview/markdown.css"
 
 const SoreyeAsuka = 'OnigiriHardcore'
 const EVA02 = '0GkMepi*r]hj'
@@ -136,10 +134,8 @@ const Login = () => {
         TitleToSlug()
     }
 
-    function getImage(event) {
-        const file = event.target.files[0]
-
-        if (!file) return
+    async function getImage(event) {
+        const file = await event.target.files[0]
 
         setImage(file.name)
 
@@ -235,13 +231,7 @@ const Login = () => {
                             </form>
                         </div>
                     </div>
-
-                    <div className="stats" id="stats">
-                        <h1>Estatísticas Gerais</h1>
-                    </div>
                 </div>
-
-
             </DashboardDetails>
         )
     } else {

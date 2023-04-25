@@ -1,18 +1,20 @@
-import { initializeApp } from 'firebase/app'
-import { getFirestore } from 'firebase/firestore'
-import { getStorage } from 'firebase/storage';
+/* eslint-disable no-undef */
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
+import { getAuth } from "firebase/auth";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCLMSvQ9JX5N_zEZ4-_HJM-RT7oBV9H4KA",
-  authDomain: "onigirihardcore-88090.firebaseapp.com",
-  projectId: "onigirihardcore-88090",
-  storageBucket: "onigirihardcore-88090.appspot.com",
-  messagingSenderId: "831799809088",
-  appId: "1:831799809088:web:05dea243ba8cd249aa7ba5"
-};
+const app = initializeApp({
+    apiKey: process.env.FIREBASE_API_KEY,
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.FIREBASE_ESSAGOMG_SEMDER_ID,
+    appId: process.env.FIREBASE_APP_ID,
+});
 
-const app = initializeApp(firebaseConfig);
-const database = getFirestore(app)
-export const storage = getStorage(app)
+export const storage = getStorage(app);
+export const auth = getAuth(app);
+const database = getFirestore(app);
 
-export default database
+export default database;
