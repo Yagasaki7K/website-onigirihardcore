@@ -3,6 +3,7 @@ import "@uiw/react-md-editor/markdown-editor.css"
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import postService from '../../services/post.service'
+import imgService from "../../services/img.service"
 import DashboardDetails from "../../src/components/DashboardDetails"
 import SideMenuDetails from '../../src/components/Login/SideMenuDetails'
 import LoginDetails from "../../src/components/LoginDetails"
@@ -37,8 +38,8 @@ const Login = () => {
         getPosts()
     }, [])
 
-    const handleDelete = async (id) => {
-        await postService.deletePost(id)
+    const handleDelete = async (id, urlImage) => {
+        await Promise.all([postService.deletePost(id), imgService.deleteImage(urlImage)])
         getPosts()
     }
 

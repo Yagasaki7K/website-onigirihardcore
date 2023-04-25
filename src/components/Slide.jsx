@@ -18,7 +18,7 @@ const Slide = () => {
     }, [])
 
     const getPosts = async () => {
-        const data = await postService.getAll()
+        const data = await postService.getAllPosts()
         setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
     }
 

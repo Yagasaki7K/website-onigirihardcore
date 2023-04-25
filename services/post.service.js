@@ -14,26 +14,26 @@ import database from "../client";
 const postCollectionRef = collection(database, "posts");
 
 class postService {
-    add = async (post) => {
+    addPost = async (post) => {
         return await addDoc(postCollectionRef, post);
     };
 
-    update = async (id, updateData) => {
+    updatePost = async (id, updateData) => {
         const postDoc = doc(database, "posts", id);
         return await updateDoc(postDoc, updateData);
     };
 
-    delete = async (id) => {
+    deletePost = async (id) => {
         const postDoc = doc(database, "posts", id);
         return await deleteDoc(postDoc);
     };
 
-    getAll = async () => {
+    getAllPosts = async () => {
         const posts = await getDocs(query(postCollectionRef, orderBy("date", "desc")));
         return posts
     }
 
-    getById = async (id) => {
+    getPost = async (id) => {
         const postDoc = doc(database, "posts", id);
         return await getDoc(postDoc);
     };
