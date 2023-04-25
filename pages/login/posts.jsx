@@ -96,7 +96,7 @@ const Login = () => {
                                             <td>{post.categories}</td>
                                             <td>{post.lessDate}</td>
                                             <td><button className="editar" onClick={() => handleEdit(post.id)}>Editar</button></td>
-                                            <td><button className="deletar" onClick={() => handleDelete(post.id)}>Deletar</button></td>
+                                            <td><button className="deletar" onClick={() => handleDelete(post.id, post.imageUrl)}>Deletar</button></td>
                                         </tr>
                                     ))
                                 }
