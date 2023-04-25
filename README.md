@@ -38,7 +38,7 @@
 
 # 👀 Demo Website
 
-👉  Demo: https://webonigirihardcore.com.br/
+👉  Demo: https://onigirihardcore.com.br/
 
 # 💻 Technologies
 
