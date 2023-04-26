@@ -38,8 +38,8 @@ const Login = () => {
         getPosts()
     }, [])
 
-    const handleDelete = async (id, urlImage) => {
-        await Promise.all([postService.deletePost(id), imgService.deleteImage(urlImage)])
+    const handleDelete = async (id, nameImage) => {
+        await Promise.all([postService.deletePost(id), imgService.deleteImage(nameImage)])
         getPosts()
     }
 
@@ -96,7 +96,7 @@ const Login = () => {
                                             <td>{post.categories}</td>
                                             <td>{post.lessDate}</td>
                                             <td><button className="editar" onClick={() => handleEdit(post.id)}>Editar</button></td>
-                                            <td><button className="deletar" onClick={() => handleDelete(post.id, post.imageUrl)}>Deletar</button></td>
+                                            <td><button className="deletar" onClick={() => handleDelete(post.id, post.image)}>Deletar</button></td>
                                         </tr>
                                     ))
                                 }
