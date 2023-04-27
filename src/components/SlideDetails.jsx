@@ -10,6 +10,10 @@ const SlideDetails = styled.div`
             height: 30rem;
         }
 
+        @media (${device.mobileL}) {
+            width: 28rem; 
+        }
+
         a {
             text-decoration: none;
         }
@@ -32,13 +36,34 @@ const SlideDetails = styled.div`
                 line-height: 40px;
                 text-align: left;
                 width: 58rem;
+ 
 
                 @media (${device.laptopM}) {
                     top: 50%;
                 }
 
+                @media (${device.mobileL}) {
+                    width: 90%;
+                    transform: scale(0.9);
+                    left: 0;
+                    top: 15%;
+                }
+
+                @media (${device.mobileM}) {
+                    left: -2%;
+                }
+
+                @media (${device.mobileS}) {
+                    left: -10%;
+                }
+       
                 .slide-tag {
                     color: ${colors.gray};
+                    
+                    @media (${device.mobileL}) {
+                         font-size: 0.8em;
+                         width: 300px;
+                     }
 
                     .latest {
                         padding: 2.5px 10px;
@@ -66,6 +91,12 @@ const SlideDetails = styled.div`
                             color: ${colors.white};
                         }
                     }
+
+                    @media (${device.mobileS}) {
+                        font-size: 0.8em;
+                        transform: scale(0.8);
+                    }
+
                 }
 
                 h1 {
@@ -79,6 +110,15 @@ const SlideDetails = styled.div`
                     a {
                         text-decoration: none;
                         color: ${colors.white};
+                    }
+
+                    @media (${device.mobileL}) {
+                        font-size: 1.8em;
+                   }
+
+                   @media (${device.mobileS}) {
+                        font-size: 1.5em;
+                        transform: scale(0.8);
                     }
                 }
 
@@ -94,6 +134,11 @@ const SlideDetails = styled.div`
                     -webkit-box-orient: vertical;
                     overflow: hidden;
                     text-overflow: ellipsis;
+
+                    @media (${device.mobileS}) {
+                        font-size: 1.5em;
+                        transform: scale(0.8);
+                    }
 
                     a {
                         text-decoration: none;

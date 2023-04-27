@@ -1,10 +1,29 @@
 import styled from 'styled-components'
-import { colors } from './variables'
+import { device, colors } from './variables'
+
+
 
 const CategoriesDetails = styled.div`
     display: flex;
     justify-content: center;
     padding: 30px 20rem;
+
+
+    @media (${device.mobileL}) {
+        display: inline-block;
+        padding: 20px;
+        font-size: 0.8em;
+    }
+
+    @media (${device.mobileM}) {
+        padding: 12px;
+    
+    }
+
+    @media (${device.mobileS}) {
+        padding: 0;
+
+    }
 
     .animes, .games {
         width: 9.2rem;
@@ -42,6 +61,8 @@ const CategoriesDetails = styled.div`
                 width: 22rem;
                 transform: scale(1.025);
             }
+
+       
         }
 
         a {
@@ -55,6 +76,11 @@ const CategoriesDetails = styled.div`
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 text-overflow: ellipsis;
+           
+                @media (${device.mobileS}) {
+                  padding: 0;
+                  width: 85%;
+                }
             }
         }
 
@@ -74,6 +100,11 @@ const CategoriesDetails = styled.div`
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 text-overflow: ellipsis;
+
+                @media (${device.mobileS}) {
+                            max-width: 20rem;
+                       }
+
             }
         }
 
@@ -101,6 +132,11 @@ const CategoriesDetails = styled.div`
                         -webkit-box-orient: vertical;
                         overflow: hidden;
                         text-overflow: ellipsis;
+
+                        @media (${device.mobileS}) {
+                            max-width: 15rem;
+                            max-height: 5rem;
+                       }
                     }
 
                     color: ${colors.text};

@@ -3,6 +3,9 @@ import { device, colors } from './variables'
 
 const HeaderDetails = styled.div`
 
+
+
+
     .header {
         display: flex;
         padding: 1rem 15rem;
@@ -36,7 +39,13 @@ const HeaderDetails = styled.div`
                 width: 20rem;
             }
         }
+
+        @media (${device.mobileL}) {
+            justify-content: center;
+       }
+     
     }
+    
 
     .navigation {
         background: ${colors.blue};

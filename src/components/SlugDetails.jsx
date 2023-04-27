@@ -3,10 +3,19 @@ import { colors, device } from './variables'
 
 const SlugDetails = styled.div`
 
+  
+        
+
     img {
         width: 100%;
         height: 30rem;
         object-fit: cover;
+
+        
+        @media (${device.mobileL}) {
+            object-fit: contain;
+            height: 20rem;
+        }
     }
 
     section {
@@ -23,6 +32,11 @@ const SlugDetails = styled.div`
 
         @media (${device.laptopM}) {
             margin-left: 12rem;
+        }
+
+        @media (${device.mobileL}) {
+             margin-left: 1rem;
+             width: 90%;
         }
 
         margin-bottom: 5rem;
@@ -43,7 +57,9 @@ const SlugDetails = styled.div`
         }
 
         .block__content {
-            width: 60rem;
+            width: 100%;
+            min-width: 80%;
+            max-width: 100%;
             text-align: justify;
             font-size: 1.1rem;
             line-height: 1.5rem;
@@ -51,6 +67,13 @@ const SlugDetails = styled.div`
 
         .title__content {
             width: 60rem;
+
+            @media (${device.mobileL}) {
+             margin-top: 3%;
+             font-size: 1.6em;
+             line-height: 30px;
+             width: 90%;
+        }
         }
 
         .citation {
@@ -62,6 +85,7 @@ const SlugDetails = styled.div`
                 font-size: 1.5rem;
                 border-left: 2px solid ${colors.blue};
                 padding-left: 1rem;
+                width: 100%;
             }
         }
 
@@ -69,6 +93,12 @@ const SlugDetails = styled.div`
             width: 60rem;
             margin-left: 0rem;
             height: 38rem;
+
+
+            @media (${device.mobileL}) {
+                width: 100%;
+               height: 25rem;
+        }
         }
     }
 `

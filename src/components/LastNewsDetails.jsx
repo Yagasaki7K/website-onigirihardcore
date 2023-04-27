@@ -2,15 +2,34 @@ import styled from 'styled-components'
 import { colors, device } from './variables'
 
 const TecnologiesDetails = styled.div`
-    display: flex;
-    justify-content: center;
-    margin: -2rem 0 5rem 7rem;
+        display: flex;
+        justify-content: center;
+        margin: -2rem 0 5rem 7rem;
+        padding: 30px 0;
 
-    padding: 30px 0;
+        @media (${device.mobileL}) {
+              display: block;
+              padding: 0px;   
+              text-align: center;
+              margin-left: 35%;
+       }
 
-    .tecnologies {
+       @media (${device.mobileM}) {
+          margin-left: 40%;
+          margin-top: 5%;
+                 
+        }
+
+        @media (${device.mobileS}) {
+            margin-left: 45%;
+
+        }
+
+
+
+       .tecnologies {
         margin-left: -8rem;
-
+    
         @media (${device.laptopM}) {
             margin-left: -9rem;
         }
@@ -36,7 +55,14 @@ const TecnologiesDetails = styled.div`
         .content, .secondContent, .thirdContent {
             display: flex;
             margin-left: -1rem;
+            
 
+            @media (${device.mobileL}) {
+              display: inline-block;
+              padding: 2px;      
+            }
+
+          
             a {
                 text-decoration: none;
                 color: ${colors.white};
