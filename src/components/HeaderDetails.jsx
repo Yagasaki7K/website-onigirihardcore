@@ -58,15 +58,15 @@ const HeaderDetails = styled.div`
             padding: 0;
             margin: 0;
             color: ${colors.white};
-            margin-left: 23rem;
+            margin-left: 15rem;
             background: ${colors.blue};
 
             #item-menu {
                 display: flex;
             }
 
-            @media (max-width: ${device.laptopM}) {
-                margin-left: 5rem;
+            .burguer {
+                display: none;
             }
 
             @media (max-width: ${device.tablet}) {
