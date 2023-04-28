@@ -59,10 +59,10 @@ const HeaderDetails = styled.div`
             padding: 0;
             margin: 0;
             color: ${colors.white};
-            margin-left: 3rem;
+            margin-left: 15rem;
 
-            @media (max-width: 1920px) {
-                margin-left: 15rem;
+            @media (max-width: 1366px) {
+                margin-left: 3rem;
             }
 
             background: ${colors.blue};
