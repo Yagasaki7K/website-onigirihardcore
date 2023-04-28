@@ -3,9 +3,6 @@ import { device, colors } from './variables'
 
 const HeaderDetails = styled.div`
 
-
-
-
     .header {
         display: flex;
         padding: 1rem 15rem;
@@ -23,8 +20,6 @@ const HeaderDetails = styled.div`
         @media (${device.laptopM}) {
             padding: 1rem 3rem;
         }
-
-
         @media (${device.laptopS}) {
             .advice {
                 display: none;
@@ -43,9 +38,7 @@ const HeaderDetails = styled.div`
         @media (${device.mobileL}) {
             justify-content: center;
        }
-     
     }
-    
 
     .navigation {
         background: ${colors.blue};
@@ -54,7 +47,7 @@ const HeaderDetails = styled.div`
         width: 100%;
 
         @media (max-width: 600px) {
-            height: 21rem;
+            height: 5rem;
             border-radius: 15px;
             background: transparent;
         }
@@ -72,25 +65,23 @@ const HeaderDetails = styled.div`
                 display: flex;
             }
 
-            .burguer {
-                display: none;
-            }
-
             @media (max-width: 1366px) {
                 margin-left: 5rem;
             }
 
             @media (max-width: 768px) {
+                margin-left: 3rem;
+                height: 2rem;
+
                 #item-menu {
                     display: none;
                 }
 
                 .burguer {
-                    display: block;
+                    display: flex;
+                    margin-top: -1.2rem;
+                    margin-left: -1.2rem;
                 }
-
-                margin-left: 0;
-                height: 3rem;
             }
 
             @media (max-width: 600px) {
@@ -101,16 +92,11 @@ const HeaderDetails = styled.div`
 
                 width: 100%;
                 border-radius: 15px;
-
-                .burguer {
-                    display: initial;
-                }
             }
 
             li {
                 display: flex;
                 padding: 0.7rem 1rem;
-
 
                 @media (max-width: 768px) {
                     margin-left: 0.625rem;
@@ -137,14 +123,6 @@ const HeaderDetails = styled.div`
 
                 :hover {
                     border-bottom: 4px solid ${colors.white};
-
-                    @media (max-width: 600px) {
-                        background: ${colors.blue};
-
-                        :hover {
-                            text-decoration: underline;
-                        }
-                    }
                 }
             }
         }

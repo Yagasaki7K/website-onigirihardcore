@@ -2,25 +2,28 @@ import styled from 'styled-components'
 import { colors, device } from './variables'
 
 const SlugDetails = styled.div`
-
-  
-        
-
     img {
         width: 100%;
         height: 30rem;
         object-fit: cover;
 
-        
         @media (${device.mobileL}) {
             object-fit: contain;
             height: 20rem;
+            margin-top: -30rem;
+        }
+
+        @media (${device.tablet}) {
+            object-fit: contain;
+            height: 20rem;
+            margin-top: -5rem;
+            margin-bottom: -3rem;
         }
     }
 
     section {
         margin-left: 28rem;
-        width: 50%;
+        width: 71%;
 
         @media (${device.desktopS}) {
             margin-left: 20rem;
@@ -34,9 +37,14 @@ const SlugDetails = styled.div`
             margin-left: 12rem;
         }
 
+        @media (${device.tablet}) {
+            margin-left: 5rem;
+            width: 80%;
+        }
+
         @media (${device.mobileL}) {
-             margin-left: 1rem;
-             width: 90%;
+            margin-left: 1rem;
+            width: 90%;
         }
 
         margin-bottom: 5rem;
@@ -69,11 +77,16 @@ const SlugDetails = styled.div`
             width: 60rem;
 
             @media (${device.mobileL}) {
-             margin-top: 3%;
-             font-size: 1.6em;
-             line-height: 30px;
-             width: 90%;
-        }
+                font-size: 1.6em;
+                line-height: 30px;
+                width: 90%;
+            }
+
+            @media (${device.tablet}) {
+                font-size: 1.6em;
+                line-height: 30px;
+                width: 100%;
+            }
         }
 
         .citation {
@@ -94,11 +107,15 @@ const SlugDetails = styled.div`
             margin-left: 0rem;
             height: 38rem;
 
-
             @media (${device.mobileL}) {
                 width: 100%;
-               height: 25rem;
-        }
+                height: 25rem;
+            }
+
+            @media (${device.tablet}) {
+                width: 100%;
+                height: 25rem;
+            }
         }
     }
 `
