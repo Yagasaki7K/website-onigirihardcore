@@ -65,11 +65,11 @@ const HeaderDetails = styled.div`
                 display: flex;
             }
 
-            @media (max-width: 1366px) {
+            @media (max-width: ${device.laptopM}) {
                 margin-left: 5rem;
             }
 
-            @media (max-width: 768px) {
+            @media (max-width: ${device.tablet}) {
                 margin-left: 3rem;
                 height: 2rem;
 
@@ -98,7 +98,7 @@ const HeaderDetails = styled.div`
                 display: flex;
                 padding: 0.7rem 1rem;
 
-                @media (max-width: 768px) {
+                @media (max-width: ${device.tablet}) {
                     margin-left: 0.625rem;
                     padding: 0.7rem 0;
                 }
