@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, device } from './variables';
+import { colors } from './variables';
 
 const DashboardDetails = styled.div`
     display: flex;
@@ -133,7 +133,7 @@ const DashboardDetails = styled.div`
                             padding: 10px;
                             margin-left: -5rem;
 
-                            @media (max-width: ${device.laptopM}) {
+                            @media (max-width: 1366px) {
                                 margin-left: -3rem;
                             }
                         }
@@ -141,7 +141,7 @@ const DashboardDetails = styled.div`
                         &:nth-child(1) {
                             width: 20%;
 
-                            @media (max-width: ${device.tablet}) {
+                            @media (max-width: 768px) {
                                 width: 100%;
 
                                 &:nth-child(1) {

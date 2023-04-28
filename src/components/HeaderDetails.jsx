@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { device, colors } from './variables'
+import { colors } from './variables'
 
 const HeaderDetails = styled.div`
 
@@ -9,18 +9,19 @@ const HeaderDetails = styled.div`
         justify-content: space-between;
         background: ${colors.blackAlt};
 
-        @media (${device.desktopS}) {
+        @media (max-width: 1600px) {
             padding: 1rem 6rem;
         }
 
-        @media (${device.laptopL}) {
+        @media (max-width: 1440px) {
             padding: 1rem 4rem;
         }
 
-        @media (${device.laptopM}) {
+        @media (max-width: 1366px) {
             padding: 1rem 3rem;
         }
-        @media (${device.laptopS}) {
+
+        @media (max-width: 1200px) {
             .advice {
                 display: none;
             }
@@ -35,7 +36,7 @@ const HeaderDetails = styled.div`
             }
         }
 
-        @media (${device.mobileL}) {
+        @media (max-width: 500px) {
             justify-content: center;
        }
     }
@@ -58,7 +59,12 @@ const HeaderDetails = styled.div`
             padding: 0;
             margin: 0;
             color: ${colors.white};
-            margin-left: 15rem;
+            margin-left: 3rem;
+
+            @media (max-width: 1920px) {
+                margin-left: 15rem;
+            }
+
             background: ${colors.blue};
 
             #item-menu {
@@ -69,7 +75,7 @@ const HeaderDetails = styled.div`
                 display: none;
             }
 
-            @media (max-width: ${device.tablet}) {
+            @media (max-width: 768px) {
                 margin-left: 3rem;
                 height: 2rem;
 
@@ -98,7 +104,7 @@ const HeaderDetails = styled.div`
                 display: flex;
                 padding: 0.7rem 1rem;
 
-                @media (max-width: ${device.tablet}) {
+                @media (max-width: 768px) {
                     margin-left: 0.625rem;
                     padding: 0.7rem 0;
                 }

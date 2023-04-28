@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { device, colors } from './variables'
+import { colors } from './variables'
 
 const FooterDetails = styled.div`
     .imgfooter {
@@ -11,15 +11,13 @@ const FooterDetails = styled.div`
         img {
             width: 30rem;
 
+            @media (max-width: 500px) {
+                width: 20rem;
+            }
 
-        @media (${device.mobileL}) {
-            width: 20rem;
-       }
-
-        @media (${device.mobileS}) {
-            width: 18rem;
-        }
-
+            @media (max-width: 320px) {
+                width: 18rem;
+            }
         }
     }
 
@@ -31,7 +29,7 @@ const FooterDetails = styled.div`
         padding: .5rem 0;
         justify-content: center;
 
-        @media (${device.mobileL}) {
+        @media (max-width: 500px) {
            font-size: 0.9em ;
            display: block;
            padding: 10px;

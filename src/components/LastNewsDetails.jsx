@@ -7,20 +7,20 @@ const TecnologiesDetails = styled.div`
         margin: -2rem 0 5rem 7rem;
         padding: 30px 0;
 
-        @media (${device.mobileL}) {
+        @media (max-width: 500px) {
               display: block;
-              padding: 0px;   
+              padding: 0px;
               text-align: center;
               margin-left: 35%;
        }
 
-       @media (${device.mobileM}) {
+       @media (max-width: 375px) {
           margin-left: 40%;
           margin-top: 5%;
-                 
+
         }
 
-        @media (${device.mobileS}) {
+        @media (max-width: 320px) {
             margin-left: 45%;
 
         }
@@ -29,8 +29,8 @@ const TecnologiesDetails = styled.div`
 
        .tecnologies {
         margin-left: -8rem;
-    
-        @media (${device.laptopM}) {
+
+        @media (max-width: 1366px) {
             margin-left: -9rem;
         }
 
@@ -38,7 +38,7 @@ const TecnologiesDetails = styled.div`
             border-bottom: 2px solid ${colors.blue};
             width: 63rem;
 
-            @media (${device.laptopM}) {
+            @media (max-width: 1366px) {
                 width: 71rem;
             }
 
@@ -55,14 +55,14 @@ const TecnologiesDetails = styled.div`
         .content, .secondContent, .thirdContent {
             display: flex;
             margin-left: -1rem;
-            
 
-            @media (${device.mobileL}) {
+
+            @media (max-width: 500px) {
               display: inline-block;
-              padding: 2px;      
+              padding: 2px;
             }
 
-          
+
             a {
                 text-decoration: none;
                 color: ${colors.white};
