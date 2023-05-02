@@ -10,6 +10,14 @@ const FooterDetails = styled.div`
 
         img {
             width: 30rem;
+
+            @media (max-width: 500px) {
+                width: 20rem;
+            }
+
+            @media (max-width: 320px) {
+                width: 18rem;
+            }
         }
     }
 
@@ -21,7 +29,15 @@ const FooterDetails = styled.div`
         padding: .5rem 0;
         justify-content: center;
 
-        a {
+        @media (max-width: 500px) {
+           font-size: 0.9em ;
+           display: block;
+           padding: 10px;
+           text-align: center;
+
+       }
+
+       a {
             text-decoration: none;
             color: ${colors.white};
         }

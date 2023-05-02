@@ -16,9 +16,19 @@ const Header = () => {
 
             <div className="navigation">
                 <ul id="ul-menu">
-                    <li className="burguer">
-                        <Link href="#"><i className="uil uil-bars"></i></Link>
-                    </li>
+                    <div className="burguer">
+                        <li>
+                            <Link href="/">Início</Link>
+                        </li>
+                        <li>
+                            <Link href="/noticias">Notícias</Link>
+                        </li>
+                        <li>
+                            <Link href="https://kalify.vercel.app" target="_blank" rel="noreferrer">
+                                Kalify Inc
+                            </Link>
+                        </li>
+                    </div>
                     <span id="item-menu">
                         <li>
                             <Link href="/">Início</Link>

@@ -1,13 +1,18 @@
 import styled from 'styled-components'
-import { device, colors } from './variables'
+import { colors } from './variables'
 
 const SlideDetails = styled.div`
     .keen-slider {
         width: 100%;
         height: 40rem;
 
-        @media (${device.laptopM}) {
+        @media (max-width: 1366px) {
             height: 30rem;
+            width: 100%;
+        }
+
+        @media (max-width: 500px) {
+            width: 28rem;
         }
 
         a {
@@ -33,12 +38,32 @@ const SlideDetails = styled.div`
                 text-align: left;
                 width: 58rem;
 
-                @media (${device.laptopM}) {
+                @media (max-width: 1366px) {
                     top: 50%;
+                }
+
+                @media (max-width: 500px) {
+                    width: 90%;
+                    transform: scale(0.9);
+                    left: 0;
+                    top: 15%;
+                }
+
+                @media (max-width: 375px) {
+                    left: -2%;
+                }
+
+                @media (max-width: 320px) {
+                    left: -10%;
                 }
 
                 .slide-tag {
                     color: ${colors.gray};
+
+                    @media (max-width: 500px) {
+                         font-size: 0.8em;
+                         width: 300px;
+                     }
 
                     .latest {
                         padding: 2.5px 10px;
@@ -66,6 +91,12 @@ const SlideDetails = styled.div`
                             color: ${colors.white};
                         }
                     }
+
+                    @media (max-width: 320px) {
+                        font-size: 0.8em;
+                        transform: scale(0.8);
+                    }
+
                 }
 
                 h1 {
@@ -79,6 +110,15 @@ const SlideDetails = styled.div`
                     a {
                         text-decoration: none;
                         color: ${colors.white};
+                    }
+
+                    @media (max-width: 500px) {
+                        font-size: 1.8em;
+                   }
+
+                   @media (max-width: 320px) {
+                        font-size: 1.5em;
+                        transform: scale(0.8);
                     }
                 }
 
@@ -94,6 +134,11 @@ const SlideDetails = styled.div`
                     -webkit-box-orient: vertical;
                     overflow: hidden;
                     text-overflow: ellipsis;
+
+                    @media (max-width: 320px) {
+                        font-size: 1.5em;
+                        transform: scale(0.8);
+                    }
 
                     a {
                         text-decoration: none;

@@ -6,6 +6,23 @@ const CategoriesDetails = styled.div`
     justify-content: center;
     padding: 30px 20rem;
 
+
+    @media (max-width: 500px) {
+        display: inline-block;
+        padding: 20px;
+        font-size: 0.8em;
+    }
+
+    @media (max-width: 375px) {
+        padding: 12px;
+
+    }
+
+    @media (max-width: 320px) {
+        padding: 0;
+
+    }
+
     .animes, .games {
         width: 9.2rem;
         background: ${colors.blue};
@@ -42,6 +59,8 @@ const CategoriesDetails = styled.div`
                 width: 22rem;
                 transform: scale(1.025);
             }
+
+
         }
 
         a {
@@ -55,6 +74,11 @@ const CategoriesDetails = styled.div`
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 text-overflow: ellipsis;
+
+                @media (max-width: 320px) {
+                  padding: 0;
+                  width: 85%;
+                }
             }
         }
 
@@ -74,6 +98,11 @@ const CategoriesDetails = styled.div`
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 text-overflow: ellipsis;
+
+                @media (max-width: 320px) {
+                            max-width: 20rem;
+                       }
+
             }
         }
 
@@ -101,6 +130,11 @@ const CategoriesDetails = styled.div`
                         -webkit-box-orient: vertical;
                         overflow: hidden;
                         text-overflow: ellipsis;
+
+                        @media (max-width: 320px) {
+                            max-width: 15rem;
+                            max-height: 5rem;
+                       }
                     }
 
                     color: ${colors.text};

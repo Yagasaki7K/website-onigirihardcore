@@ -10,6 +10,16 @@ const FullNewsDetails = styled.div`
         margin-top: 1rem;
         margin-left: 2rem;
 
+
+        @media (max-width: 500px) {
+            margin: 0;
+            font-size: 0.8em;
+
+            h1{
+                text-align: center;
+            }
+        }
+
         button {
             padding: 1rem 2rem;
             border-radius: 10px;
@@ -28,6 +38,12 @@ const FullNewsDetails = styled.div`
             margin-bottom: 10px;
             width: 80%;
 
+
+            @media (max-width: 500px) {
+                  padding: 0;
+                  text-align: center;
+            }
+
             :hover {
                 transition: 1s;
                 background: ${colors.blacklight};
@@ -44,8 +60,8 @@ const FullNewsDetails = styled.div`
                 margin-top: -8rem;
                 margin-left: 20rem;
 
-                h2 {
-                    font-size: 1.2rem;
+                @media (max-width: 500px) {
+                  margin: 0;
                 }
             }
         }

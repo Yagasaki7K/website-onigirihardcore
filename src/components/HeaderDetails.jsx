@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { device, colors } from './variables'
+import { colors } from './variables'
 
 const HeaderDetails = styled.div`
 
@@ -9,20 +9,19 @@ const HeaderDetails = styled.div`
         justify-content: space-between;
         background: ${colors.blackAlt};
 
-        @media (${device.desktopS}) {
+        @media (max-width: 1600px) {
             padding: 1rem 6rem;
         }
 
-        @media (${device.laptopL}) {
+        @media (max-width: 1440px) {
             padding: 1rem 4rem;
         }
 
-        @media (${device.laptopM}) {
+        @media (max-width: 1366px) {
             padding: 1rem 3rem;
         }
 
-
-        @media (${device.laptopS}) {
+        @media (max-width: 1200px) {
             .advice {
                 display: none;
             }
@@ -36,6 +35,10 @@ const HeaderDetails = styled.div`
                 width: 20rem;
             }
         }
+
+        @media (max-width: 500px) {
+            justify-content: center;
+       }
     }
 
     .navigation {
@@ -45,18 +48,23 @@ const HeaderDetails = styled.div`
         width: 100%;
 
         @media (max-width: 600px) {
-            height: 21rem;
+            height: 5rem;
             border-radius: 15px;
             background: transparent;
         }
 
-        ul {
+        ul{
             display: flex;
             list-style: none;
             padding: 0;
             margin: 0;
             color: ${colors.white};
-            margin-left: 23rem;
+            margin-left: 15rem;
+
+            @media (max-width: 1366px) {
+                margin-left: 3rem;
+            }
+
             background: ${colors.blue};
 
             #item-menu {
@@ -67,21 +75,19 @@ const HeaderDetails = styled.div`
                 display: none;
             }
 
-            @media (max-width: 1366px) {
-                margin-left: 5rem;
-            }
-
             @media (max-width: 768px) {
+                margin-left: 3rem;
+                height: 2rem;
+
                 #item-menu {
                     display: none;
                 }
 
                 .burguer {
-                    display: block;
+                    display: flex;
+                    margin-top: -1.2rem;
+                    margin-left: -1.2rem;
                 }
-
-                margin-left: 0;
-                height: 3rem;
             }
 
             @media (max-width: 600px) {
@@ -92,16 +98,11 @@ const HeaderDetails = styled.div`
 
                 width: 100%;
                 border-radius: 15px;
-
-                .burguer {
-                    display: initial;
-                }
             }
 
             li {
                 display: flex;
                 padding: 0.7rem 1rem;
-
 
                 @media (max-width: 768px) {
                     margin-left: 0.625rem;
@@ -128,14 +129,6 @@ const HeaderDetails = styled.div`
 
                 :hover {
                     border-bottom: 4px solid ${colors.white};
-
-                    @media (max-width: 600px) {
-                        background: ${colors.blue};
-
-                        :hover {
-                            text-decoration: underline;
-                        }
-                    }
                 }
             }
         }

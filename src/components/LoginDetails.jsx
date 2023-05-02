@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, device } from './variables'
+import { colors } from './variables'
 
 const LoginDetails = styled.div`
     background: url(https://images.unsplash.com/photo-1569701813229-33284b643e3c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=914&q=80);
@@ -16,7 +16,7 @@ const LoginDetails = styled.div`
         margin-top: 15rem;
         margin-left: 47rem;
 
-        @media (${device.laptopM}) {
+        @media (max-width: 1366px) {
             margin-top: 9rem;
             margin-left: 30rem;
         }
