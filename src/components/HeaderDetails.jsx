@@ -53,7 +53,7 @@ const HeaderDetails = styled.div`
             background: transparent;
         }
 
-        ul {
+        ul{
             display: flex;
             list-style: none;
             padding: 0;
