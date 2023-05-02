@@ -1,7 +1,5 @@
 import styled from 'styled-components'
-import { device, colors } from './variables'
-
-
+import { colors } from './variables'
 
 const FullNewsDetails = styled.div`
     .fullnews {
@@ -12,8 +10,8 @@ const FullNewsDetails = styled.div`
         margin-top: 1rem;
         margin-left: 2rem;
 
-        
-        @media (${device.mobileL}) {
+
+        @media (max-width: 500px) {
             margin: 0;
             font-size: 0.8em;
 
@@ -39,9 +37,9 @@ const FullNewsDetails = styled.div`
             padding: 20px 120px 70px 40px;
             margin-bottom: 10px;
             width: 80%;
-            
 
-            @media (${device.mobileL}) {
+
+            @media (max-width: 500px) {
                   padding: 0;
                   text-align: center;
             }
@@ -62,7 +60,7 @@ const FullNewsDetails = styled.div`
                 margin-top: -8rem;
                 margin-left: 20rem;
 
-                @media (${device.mobileL}) {
+                @media (max-width: 500px) {
                   margin: 0;
                 }
             }

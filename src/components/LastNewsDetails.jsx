@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, device } from './variables'
+import { colors } from './variables'
 
 const TecnologiesDetails = styled.div`
         display: flex;

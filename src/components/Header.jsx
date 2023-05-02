@@ -16,7 +16,7 @@ const Header = () => {
 
             <div className="navigation">
                 <ul id="ul-menu">
-                    <li className="burguer">
+                    <div className="burguer">
                         <li>
                             <Link href="/">Início</Link>
                         </li>
@@ -28,7 +28,7 @@ const Header = () => {
                                 Kalify Inc
                             </Link>
                         </li>
-                    </li>
+                    </div>
                     <span id="item-menu">
                         <li>
                             <Link href="/">Início</Link>

@@ -1,7 +1,5 @@
 import styled from 'styled-components'
-import { device, colors } from './variables'
-
-
+import { colors } from './variables'
 
 const CategoriesDetails = styled.div`
     display: flex;
