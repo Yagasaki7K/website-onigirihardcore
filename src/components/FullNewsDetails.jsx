@@ -43,6 +43,10 @@ const FullNewsDetails = styled.div`
             .title {
                 margin-top: -8rem;
                 margin-left: 20rem;
+
+                h2 {
+                    font-size: 1.2rem;
+                }
             }
         }
 `

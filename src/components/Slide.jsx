@@ -70,7 +70,7 @@ const Slide = () => {
                             <div className="slider-description">
                                 <div className="slide-tag">
                                     <span className="latest">HOT NEWS 🔥</span>
-                                    <span className="tag">{post.categories}</span>
+                                    <span className="tag">{post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null}</span>
                                     {/* <span className="tag">{posts?.category.title}</span> */}
                                     <span className="date">{post?.lessDate}</span>
                                     {/* <span className="date">{post?.createdAt}</span> */}

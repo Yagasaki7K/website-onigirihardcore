@@ -90,7 +90,7 @@ const Post = () => {
                                 {/* <img src={post.image}></img> */}
                                 <img src={post.imageUrl} alt={post?.name}></img>
                                 <section key={post.id}>
-                                    <p className="block__content">{post.moreDate} | {post.categories} | {post.author}</p>
+                                    <p className="block__content">{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null} | {post.author}</p>
                                     {/* <p className="block__content">{post.createdAtExtended} | {post.author}</p> */}
                                     <h1 className="title__content">{post.title}</h1>
                                     <p className="block__content" style={{ whiteSpace: "pre-wrap" }}>{post.bodyPost}</p>
@@ -108,7 +108,7 @@ const Post = () => {
 
                                     {
                                         post.ytid ?
-                                            <iframe width="550" height="480" src={'https://www.youtube.com/embed/' + post?.ytid} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : null
+                                            <iframe width="550" height="480" src={'https://www.youtube.com/embed/' + post?.ytid} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : null
                                     }
                                 </section>
                             </div>
