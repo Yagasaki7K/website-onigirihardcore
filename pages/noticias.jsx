@@ -28,6 +28,7 @@ const FullNews = () => {
                     <h1>ARQUIVOS DO ONIGIRI HARDCORE</h1>
                     {posts && posts.map((post, index) => {
                         return (
+
                             <a href={post.slug} key={index}>
                                 <img src={post.imageUrl} alt={post?.name} />
                                 {/* <img src={item.image} width="320" /> */}

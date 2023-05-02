@@ -1,5 +1,7 @@
 import styled from 'styled-components'
-import { colors } from './variables'
+import { device, colors } from './variables'
+
+
 
 const FullNewsDetails = styled.div`
     .fullnews {
@@ -9,6 +11,16 @@ const FullNewsDetails = styled.div`
         flex-direction: column;
         margin-top: 1rem;
         margin-left: 2rem;
+
+        
+        @media (${device.mobileL}) {
+            margin: 0;
+            font-size: 0.8em;
+
+            h1{
+                text-align: center;
+            }
+        }
 
         button {
             padding: 1rem 2rem;
@@ -27,6 +39,12 @@ const FullNewsDetails = styled.div`
             padding: 20px 120px 70px 40px;
             margin-bottom: 10px;
             width: 80%;
+            
+
+            @media (${device.mobileL}) {
+                  padding: 0;
+                  text-align: center;
+            }
 
             :hover {
                 transition: 1s;
@@ -43,6 +61,10 @@ const FullNewsDetails = styled.div`
             .title {
                 margin-top: -8rem;
                 margin-left: 20rem;
+
+                @media (${device.mobileL}) {
+                  margin: 0;
+                }
             }
         }
 `
