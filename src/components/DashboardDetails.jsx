@@ -152,12 +152,10 @@ const DashboardDetails = styled.div`
                             td {
                                 text-align: center;
                             }
-
                         }
                     }
                 }
             }
-
         }
     }
 `

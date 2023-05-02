@@ -16,7 +16,7 @@ const LoginDetails = styled.div`
         margin-top: 15rem;
         margin-left: 47rem;
 
-        @media (${device.laptopM}) {
+        @media (max-width: 1366px) {
             margin-top: 9rem;
             margin-left: 30rem;
         }

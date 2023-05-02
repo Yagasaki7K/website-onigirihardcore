@@ -1,42 +1,50 @@
 import styled from 'styled-components'
-import { colors, device } from './variables'
+import { colors } from './variables'
 
 const SlugDetails = styled.div`
-
-  
-        
-
     img {
         width: 100%;
         height: 30rem;
         object-fit: cover;
 
-        
-        @media (${device.mobileL}) {
+        @media (max-width: 500px) {
             object-fit: contain;
             height: 20rem;
+            margin-top: -30rem;
+        }
+
+        @media (max-width: 768px) {
+            object-fit: contain;
+            height: 20rem;
+            margin-top: -5rem;
+            margin-bottom: -3rem;
         }
     }
 
     section {
         margin-left: 28rem;
-        width: 50%;
+        width: 71%;
 
-        @media (${device.desktopS}) {
+        @media (max-width: 1600px) {
             margin-left: 20rem;
         }
 
-        @media (${device.laptopL}) {
+        @media (max-width: 1440px) {
             margin-left: 14rem;
         }
 
-        @media (${device.laptopM}) {
+        @media (max-width: 1366px) {
             margin-left: 12rem;
         }
 
-        @media (${device.mobileL}) {
-             margin-left: 1rem;
-             width: 90%;
+        @media (max-width: 768px) {
+            margin-left: 5rem;
+            width: 80%;
+        }
+
+        @media (max-width: 500px) {
+            margin-left: 1rem;
+            width: 90%;
         }
 
         margin-bottom: 5rem;
@@ -68,12 +76,17 @@ const SlugDetails = styled.div`
         .title__content {
             width: 60rem;
 
-            @media (${device.mobileL}) {
-             margin-top: 3%;
-             font-size: 1.6em;
-             line-height: 30px;
-             width: 90%;
-        }
+            @media (max-width: 500px) {
+                font-size: 1.6em;
+                line-height: 30px;
+                width: 90%;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 1.6em;
+                line-height: 30px;
+                width: 100%;
+            }
         }
 
         .citation {
@@ -94,11 +107,15 @@ const SlugDetails = styled.div`
             margin-left: 0rem;
             height: 38rem;
 
-
-            @media (${device.mobileL}) {
+            @media (max-width: 500px) {
                 width: 100%;
-               height: 25rem;
-        }
+                height: 25rem;
+            }
+
+            @media (max-width: 768px) {
+                width: 100%;
+                height: 25rem;
+            }
         }
     }
 `

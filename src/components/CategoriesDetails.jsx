@@ -9,18 +9,18 @@ const CategoriesDetails = styled.div`
     padding: 30px 20rem;
 
 
-    @media (${device.mobileL}) {
+    @media (max-width: 500px) {
         display: inline-block;
         padding: 20px;
         font-size: 0.8em;
     }
 
-    @media (${device.mobileM}) {
+    @media (max-width: 375px) {
         padding: 12px;
-    
+
     }
 
-    @media (${device.mobileS}) {
+    @media (max-width: 320px) {
         padding: 0;
 
     }
@@ -62,7 +62,7 @@ const CategoriesDetails = styled.div`
                 transform: scale(1.025);
             }
 
-       
+
         }
 
         a {
@@ -76,8 +76,8 @@ const CategoriesDetails = styled.div`
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 text-overflow: ellipsis;
-           
-                @media (${device.mobileS}) {
+
+                @media (max-width: 320px) {
                   padding: 0;
                   width: 85%;
                 }
@@ -101,7 +101,7 @@ const CategoriesDetails = styled.div`
                 overflow: hidden;
                 text-overflow: ellipsis;
 
-                @media (${device.mobileS}) {
+                @media (max-width: 320px) {
                             max-width: 20rem;
                        }
 
@@ -133,7 +133,7 @@ const CategoriesDetails = styled.div`
                         overflow: hidden;
                         text-overflow: ellipsis;
 
-                        @media (${device.mobileS}) {
+                        @media (max-width: 320px) {
                             max-width: 15rem;
                             max-height: 5rem;
                        }

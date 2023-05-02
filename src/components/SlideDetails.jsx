@@ -1,17 +1,18 @@
 import styled from 'styled-components'
-import { device, colors } from './variables'
+import { colors } from './variables'
 
 const SlideDetails = styled.div`
     .keen-slider {
         width: 100%;
         height: 40rem;
 
-        @media (${device.laptopM}) {
+        @media (max-width: 1366px) {
             height: 30rem;
+            width: 100%;
         }
 
-        @media (${device.mobileL}) {
-            width: 28rem; 
+        @media (max-width: 500px) {
+            width: 28rem;
         }
 
         a {
@@ -36,31 +37,30 @@ const SlideDetails = styled.div`
                 line-height: 40px;
                 text-align: left;
                 width: 58rem;
- 
 
-                @media (${device.laptopM}) {
+                @media (max-width: 1366px) {
                     top: 50%;
                 }
 
-                @media (${device.mobileL}) {
+                @media (max-width: 500px) {
                     width: 90%;
                     transform: scale(0.9);
                     left: 0;
                     top: 15%;
                 }
 
-                @media (${device.mobileM}) {
+                @media (max-width: 375px) {
                     left: -2%;
                 }
 
-                @media (${device.mobileS}) {
+                @media (max-width: 320px) {
                     left: -10%;
                 }
-       
+
                 .slide-tag {
                     color: ${colors.gray};
-                    
-                    @media (${device.mobileL}) {
+
+                    @media (max-width: 500px) {
                          font-size: 0.8em;
                          width: 300px;
                      }
@@ -92,7 +92,7 @@ const SlideDetails = styled.div`
                         }
                     }
 
-                    @media (${device.mobileS}) {
+                    @media (max-width: 320px) {
                         font-size: 0.8em;
                         transform: scale(0.8);
                     }
@@ -112,11 +112,11 @@ const SlideDetails = styled.div`
                         color: ${colors.white};
                     }
 
-                    @media (${device.mobileL}) {
+                    @media (max-width: 500px) {
                         font-size: 1.8em;
                    }
 
-                   @media (${device.mobileS}) {
+                   @media (max-width: 320px) {
                         font-size: 1.5em;
                         transform: scale(0.8);
                     }
@@ -135,7 +135,7 @@ const SlideDetails = styled.div`
                     overflow: hidden;
                     text-overflow: ellipsis;
 
-                    @media (${device.mobileS}) {
+                    @media (max-width: 320px) {
                         font-size: 1.5em;
                         transform: scale(0.8);
                     }
