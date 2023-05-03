@@ -90,11 +90,7 @@ const Post = () => {
                                 {/* <img src={post.image}></img> */}
                                 <img src={post.imageUrl} alt={post?.name}></img>
                                 <section key={post.id}>
-<<<<<<< HEAD
                                     <p className="block__content">{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null} | {post.author}</p>
-=======
-                                    <p className="block__content">{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : post.categories || post.categories === 'Games' ? 'Jogos' : post.categories || post.categories === 'Games' ? 'Video Games' : post.categories || post.categories === 'Technologies' ? 'Tecnologias' : post.categories} | {post.author}</p>
->>>>>>> Responsive
                                     {/* <p className="block__content">{post.createdAtExtended} | {post.author}</p> */}
                                     <h1 className="title__content">{post.title}</h1>
                                     <p className="block__content" style={{ whiteSpace: "pre-wrap" }}>{post.bodyPost}</p>
