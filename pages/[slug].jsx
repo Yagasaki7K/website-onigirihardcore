@@ -72,7 +72,7 @@ const Post = () => {
                                     <meta property="og:image:width" content="1200" />
                                     <meta property="og:image:height" content="627" />
                                     <meta property="og:site_name" content="Onigiri Hardcore" />
-                                    <meta property="og:type" content="Website" />
+                                    <meta property="og:type" content="website" />
                                     <meta property="og:url" content="https://onigirihardcore.vercel.app/" />
 
                                     {/* Meta tags relacionadas ao Twitter Card */}
@@ -91,6 +91,7 @@ const Post = () => {
                                 <img src={post.imageUrl} alt={post?.name}></img>
                                 <section key={post.id}>
                                     <p className="block__content">{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null} | {post.author}</p>
+
                                     {/* <p className="block__content">{post.createdAtExtended} | {post.author}</p> */}
                                     <h1 className="title__content">{post.title}</h1>
                                     <p className="block__content" style={{ whiteSpace: "pre-wrap" }}>{post.bodyPost}</p>
