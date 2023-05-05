@@ -29,12 +29,14 @@
 
 # 📌 Table of Contents
 
-* [Demo Website](#eyes-demo-website)
-* [Technologies](#computer-technologies)
-* [Features](#rocket-features)
-* [Found a bug? Missing a specific feature?](#bug-issues)
-* [Contributing](#tada-contributing)
-* [License](#closed_book-license)
+- [📌 Table of Contents](#-table-of-contents)
+- [👀 Demo Website](#-demo-website)
+- [💻 Technologies](#-technologies)
+- [🚀 Features](#-features)
+- [🚧 How to run](#-how-to-run)
+- [🐛 Issues](#-issues)
+- [🎉 Contributing](#-contributing)
+- [📕 License](#-license)
 
 # 👀 Demo Website
 
@@ -79,11 +81,9 @@ Here's some tips:
 * Check the [issues page](https://github.com/Yagasaki7K/website-onigirihardcore/issues) for already opened issues (or maybe even closed ones) that might already address your question/bug/feature request.
 * Feature requests are welcomed! Provide some details on why it would be helpful for you and others, explain how you're using bull-board and if possible even some screenshots if you are willing to mock something!
 
-Check out the [contributing](./CONTRIBUTING.md) page to see the best places to file issues, start discussions and begin contributing.
-
 # 📕 License
 
 Released in 2013
 
-Made by [Anderson Marlon](https://github.com/Yagasaki7K).
+Made by [Anderson Marlon](https://github.com/Yagasaki7K) & [Kalify Team](https://github.com/KalifyInc).
 This project is under the [MIT license](./LICENSE).
