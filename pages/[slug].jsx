@@ -68,7 +68,7 @@ const Post = () => {
                                     {/* Meta tags relacionadas ao Open Graph */}
                                     <meta property="og:title" content={post.title} />
                                     <meta property="og:description" content={post.description} />
-                                    <meta property="og:image" content={post.image ? post.image : "https://i.imgur.com/VoOogmx.png"} />
+                                    <meta property="og:image" content={post.imageUrl ? post.imageUrl : "https://i.imgur.com/VoOogmx.png"} />
                                     <meta property="og:image:width" content="1200" />
                                     <meta property="og:image:height" content="627" />
                                     <meta property="og:site_name" content="Onigiri Hardcore" />
@@ -79,7 +79,7 @@ const Post = () => {
                                     <meta name="twitter:card" content="summary" />
                                     <meta name="twitter:title" content={post.title} />
                                     <meta name="twitter:description" content={post.description} />
-                                    <meta name="twitter:image:src" content={post.image ? post.image : "https://i.imgur.com/VoOogmx.png"} />
+                                    <meta name="twitter:image:src" content={post.imageUrl ? post.imageUrl : "https://i.imgur.com/VoOogmx.png"} />
                                     <meta name="twitter:site" content={post.title} />
                                     <meta name="twitter:creator" content={post.author} />
 
