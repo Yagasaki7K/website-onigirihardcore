@@ -12,7 +12,6 @@ const FullNewsDetails = styled.div`
         margin-top: 1rem;
         margin-left: 2rem;
 
-        
         @media (${device.mobileL}) {
             margin: 0;
             font-size: 0.8em;

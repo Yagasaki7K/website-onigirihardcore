@@ -10,7 +10,7 @@ const SlideDetails = styled.div`
             height: 30rem;
             width: 100%;
         }
-
+       
         @media (max-width: 500px) {
             width: 28rem;
         }
@@ -39,11 +39,16 @@ const SlideDetails = styled.div`
                 width: 58rem;
 
                 @media (max-width: 1366px) {
-                    top: 50%;
+                    width: 100%;
+                }
+
+                @media (max-width: 768px) {
+                 width: 100%;
+            
                 }
 
                 @media (max-width: 500px) {
-                    width: 90%;
+                    width: 85%;
                     transform: scale(0.9);
                     left: 0;
                     top: 15%;
@@ -51,6 +56,7 @@ const SlideDetails = styled.div`
 
                 @media (max-width: 375px) {
                     left: -2%;
+                    width: 75%;
                 }
 
                 @media (max-width: 320px) {

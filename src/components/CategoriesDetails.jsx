@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { device, colors } from './variables'
+import { colors } from './variables'
 
 
 
@@ -8,7 +8,17 @@ const CategoriesDetails = styled.div`
     justify-content: center;
     padding: 30px 20rem;
 
+    @media (max-width: 1024px) {
+        display: inline-block;
+        padding: 10px;
+        font-size: 1em;
+    }
 
+    @media (max-width: 768px) {
+        display: inline-block;
+        padding: 10px;
+        font-size: 1em;
+    }
     @media (max-width: 500px) {
         display: inline-block;
         padding: 20px;
@@ -17,12 +27,10 @@ const CategoriesDetails = styled.div`
 
     @media (max-width: 375px) {
         padding: 12px;
-
     }
 
     @media (max-width: 320px) {
         padding: 0;
-
     }
 
     .animes, .games {
@@ -32,6 +40,7 @@ const CategoriesDetails = styled.div`
         padding: 5px 10px;
         margin-bottom: -2px;
         font-weight: bold;
+
     }
 
     .movies {
@@ -56,9 +65,12 @@ const CategoriesDetails = styled.div`
             height: 22rem;
             object-fit: cover;
             transition: 0.5s all ease-in-out;
+          
+            @media (max-width: 1024px) {
+                width: 100%;
+            }
 
             :hover {
-                width: 22rem;
                 transform: scale(1.025);
             }
 
@@ -76,6 +88,9 @@ const CategoriesDetails = styled.div`
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                @media (max-width: 1024px) {
+                width: 90%;
+            }
 
                 @media (max-width: 320px) {
                   padding: 0;
@@ -100,11 +115,14 @@ const CategoriesDetails = styled.div`
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                
+                @media (max-width: 1024px) {
+                    max-width: 90%;
+                }
 
                 @media (max-width: 320px) {
                             max-width: 20rem;
-                       }
-
+               }
             }
         }
 
@@ -115,9 +133,14 @@ const CategoriesDetails = styled.div`
                 img {
                     width: 4.063rem;
                     height: 4.063rem;
+
                 }
 
                 .post-side {
+                    @media (max-width: 1024px) {
+                            width: 100%;
+                        }
+
                     h3 {
                         margin-left: 5rem;
                         margin-top: -4.5rem;
@@ -132,6 +155,10 @@ const CategoriesDetails = styled.div`
                         -webkit-box-orient: vertical;
                         overflow: hidden;
                         text-overflow: ellipsis;
+
+                        @media (max-width: 1024px) {
+                            width: 80%;
+                        }
 
                         @media (max-width: 320px) {
                             max-width: 15rem;
@@ -156,6 +183,11 @@ const CategoriesDetails = styled.div`
                         width: 22rem;
                         margin-left: 0px;
                         border: 1px solid ${colors.graylight};
+
+                    @media (max-width: 1024px) {
+                        width: 100%;
+                    }   
+
                     }
                 }
             }

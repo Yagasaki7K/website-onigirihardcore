@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, device } from './variables'
+import { colors } from './variables'
 
 const TecnologiesDetails = styled.div`
         display: flex;
@@ -7,25 +7,22 @@ const TecnologiesDetails = styled.div`
         margin: -2rem 0 5rem 7rem;
         padding: 30px 0;
 
-        @media (max-width: 500px) {
+        @media (max-width: 1366px) {
+            display: inline-block;
+              padding: 0px;
+        }
+
+        @media (max-width: 768px) {
               display: block;
               padding: 0px;
-              text-align: center;
-              margin-left: 35%;
        }
 
-       @media (max-width: 375px) {
-          margin-left: 40%;
-          margin-top: 5%;
+        @media (max-width: 500px) {
+              display: inline-block;
+              padding: 0px;
+       }
 
-        }
-
-        @media (max-width: 320px) {
-            margin-left: 45%;
-
-        }
-
-
+  
 
        .tecnologies {
         margin-left: -8rem;
@@ -42,6 +39,10 @@ const TecnologiesDetails = styled.div`
                 width: 71rem;
             }
 
+            @media (max-width: 768px) {
+              margin-left: 5%;
+             }
+             
             p {
                 width: 9.5rem;
                 background: ${colors.blue};
@@ -55,7 +56,24 @@ const TecnologiesDetails = styled.div`
         .content, .secondContent, .thirdContent {
             display: flex;
             margin-left: -1rem;
+     
+          @media (max-width: 1024px) {
+              display: inline-block;
+              margin-left: 2%;
+              width: 25%;
+          }
+          @media (max-width: 900px) {
+              display: inline-block;
+              margin-left: 2%;
+              width: 40%;
+          }
 
+
+            @media (max-width: 768px) {
+              display: inline-block;
+              margin-left: 5%;
+              width: 45%;
+             }
 
             @media (max-width: 500px) {
               display: inline-block;
