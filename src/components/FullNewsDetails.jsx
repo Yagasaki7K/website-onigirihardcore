@@ -10,7 +10,6 @@ const FullNewsDetails = styled.div`
         margin-top: 1rem;
         margin-left: 2rem;
 
-
         @media (max-width: 500px) {
             margin: 0;
             font-size: 0.8em;
