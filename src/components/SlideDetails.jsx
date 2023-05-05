@@ -8,9 +8,8 @@ const SlideDetails = styled.div`
 
         @media (max-width: 1366px) {
             height: 30rem;
-            width: 100%;
         }
-       
+
         @media (max-width: 500px) {
             width: 28rem;
         }
@@ -39,12 +38,7 @@ const SlideDetails = styled.div`
                 width: 58rem;
 
                 @media (max-width: 1366px) {
-                    width: 100%;
-                }
-
-                @media (max-width: 768px) {
-                 width: 100%;
-            
+                    width: 80%;
                 }
 
                 @media (max-width: 500px) {
