@@ -3,14 +3,12 @@ import { colors } from './variables'
 
 const SlugDetails = styled.div`
 
-
     img {
         width: 100%;
         height: 30rem;
         object-fit: cover;
 
-
-        @media (max-width: 500px) {
+        @media (max-width: 1920px) {
             object-fit: contain;
         }
 
@@ -18,7 +16,6 @@ const SlugDetails = styled.div`
             object-fit: contain;
             height: 20rem;
             margin-bottom: 3%;
-
         }
     }
 
@@ -27,10 +24,10 @@ const SlugDetails = styled.div`
         width: 71%;
 
 
-        @media (max-width: 500px) {
+        @media (max-width: 1920px) {
             width: 50%;
             margin: auto;
-            margin-bottom: 5% ;
+            margin-bottom: 5%;
         }
 
         @media (max-width: 1600px) {
@@ -68,7 +65,6 @@ const SlugDetails = styled.div`
             font-weight: 700;
             line-height: 35px;
             text-shadow: 1px 1px 2px rgb(0 0 0 / 30%);
-
         }
 
         .date {
