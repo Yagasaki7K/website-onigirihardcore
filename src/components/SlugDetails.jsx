@@ -1,23 +1,24 @@
 import styled from 'styled-components'
-import { colors } from './variables'
+import { colors, device } from './variables'
 
 const SlugDetails = styled.div`
+
+
     img {
         width: 100%;
         height: 30rem;
         object-fit: cover;
 
-        @media (max-width: 500px) {
+        
+        @media (${device.desktopM}) {
             object-fit: contain;
-            height: 20rem;
-            margin-top: -30rem;
         }
 
         @media (max-width: 768px) {
             object-fit: contain;
             height: 20rem;
-            margin-top: -5rem;
-            margin-bottom: -3rem;
+            margin-bottom: 3%;
+
         }
     }
 
@@ -25,16 +26,26 @@ const SlugDetails = styled.div`
         margin-left: 28rem;
         width: 71%;
 
+
+        @media (${device.desktopM}) {
+            width: 50%;
+            margin: auto;
+            margin-bottom: 5% ;
+        }
+
         @media (max-width: 1600px) {
             margin-left: 20rem;
+            width: 50%;
         }
 
         @media (max-width: 1440px) {
             margin-left: 14rem;
+            width: 60%;
         }
 
         @media (max-width: 1366px) {
             margin-left: 12rem;
+            width: 70%;
         }
 
         @media (max-width: 768px) {
@@ -57,6 +68,7 @@ const SlugDetails = styled.div`
             font-weight: 700;
             line-height: 35px;
             text-shadow: 1px 1px 2px rgb(0 0 0 / 30%);
+
         }
 
         .date {
@@ -76,17 +88,23 @@ const SlugDetails = styled.div`
         .title__content {
             width: 60rem;
 
-            @media (max-width: 500px) {
+        @media (max-width: 1366px) {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+                font-size: 1.6em;
+                line-height: 30px;
+                width: 100%;
+        }
+         
+        @media (max-width: 500px) {
                 font-size: 1.6em;
                 line-height: 30px;
                 width: 90%;
             }
 
-            @media (max-width: 768px) {
-                font-size: 1.6em;
-                line-height: 30px;
-                width: 100%;
-            }
+        
         }
 
         .citation {
