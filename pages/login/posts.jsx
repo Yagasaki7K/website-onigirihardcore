@@ -1,11 +1,12 @@
 import "@uiw/react-markdown-preview/markdown.css"
 import "@uiw/react-md-editor/markdown-editor.css"
-import Link from 'next/link'
+//import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import postService from '../../services/post.service'
 import imgService from "../../services/img.service"
 import DashboardDetails from "../../src/components/DashboardDetails"
-import SideMenuDetails from '../../src/components/Login/SideMenuDetails'
+//import SideMenuDetails from '../../src/components/Login/SideMenuDetails'
+import SideMenu from '../../src/components/Login/SideMenu'
 import LoginDetails from "../../src/components/LoginDetails"
 
 const SoreyeAsuka = 'OnigiriHardcore'
@@ -50,32 +51,7 @@ const Login = () => {
     if (isLogged) {
         return (
             <DashboardDetails>
-                <SideMenuDetails>
-                    <Link href="/">
-                        <img src="/logotipo-white.png" alt="logo" />
-                    </Link>
-
-                    <div className="menu">
-                        <ul>
-                            <Link href="/login">
-                                <li>
-                                    <i className="uil uil-file-edit-alt" /> Criar Publicações
-                                </li>
-                            </Link>
-                            <Link href="#">
-                                <li className="active">
-                                    <i className="uil uil-file-edit-alt" /> Editar Publicações
-                                </li>
-                            </Link>
-                            <Link href="/">
-                                <li>
-                                    <i className="uil uil-sign-out-alt" /> Sair
-                                </li>
-                            </Link>
-                        </ul>
-                    </div>
-                </SideMenuDetails>
-
+                <SideMenu/>
                 <div className="content">
                     <div className="publi" id="publi">
                         <h1>Modificar Publicações</h1>
