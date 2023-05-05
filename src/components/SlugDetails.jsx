@@ -8,10 +8,6 @@ const SlugDetails = styled.div`
         height: 30rem;
         object-fit: cover;
 
-        @media (max-width: 1920px) {
-            object-fit: contain;
-        }
-
         @media (max-width: 768px) {
             object-fit: contain;
             height: 20rem;
@@ -22,7 +18,6 @@ const SlugDetails = styled.div`
     section {
         margin-left: 28rem;
         width: 71%;
-
 
         @media (max-width: 1920px) {
             width: 50%;
