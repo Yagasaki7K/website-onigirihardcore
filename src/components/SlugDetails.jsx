@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, device } from './variables'
+import { colors } from './variables'
 
 const SlugDetails = styled.div`
 
@@ -9,8 +9,8 @@ const SlugDetails = styled.div`
         height: 30rem;
         object-fit: cover;
 
-        
-        @media (${device.desktopM}) {
+
+        @media (max-width: 500px) {
             object-fit: contain;
         }
 
@@ -27,7 +27,7 @@ const SlugDetails = styled.div`
         width: 71%;
 
 
-        @media (${device.desktopM}) {
+        @media (max-width: 500px) {
             width: 50%;
             margin: auto;
             margin-bottom: 5% ;
@@ -97,14 +97,14 @@ const SlugDetails = styled.div`
                 line-height: 30px;
                 width: 100%;
         }
-         
+
         @media (max-width: 500px) {
                 font-size: 1.6em;
                 line-height: 30px;
                 width: 90%;
             }
 
-        
+
         }
 
         .citation {
