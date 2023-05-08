@@ -26,38 +26,32 @@ const SignUpModal = () => {
                             <form onSubmit={(e) => e.preventDefault()}>
 
                                 <div className="item">
-                                    <label htmlFor="title">Nome: </label>
-                                    <input type="text" name="title" id="title" placeholder="Título da Publicação" required />
+                                    <label htmlFor="name">Nome: </label>
+                                    <input type="text" name="title" id="title" required />
                                 </div>
 
                                 <div className="item">
-                                    <label htmlFor="description">Sobrenome: </label>
-                                    <textarea name="description" id="description" maxLength={126} required />
+                                    <label htmlFor="lastname">Sobrenome: </label>
+                                    <input type="text" name="title" id="title" required />
                                 </div>
 
                                 <div className="item">
-                                    <label htmlFor="image">Imagem da Publicação*: </label>
-                                    <input type="file" name="image" id="image" required />
+                                    <label htmlFor="e-mail">E-mail: </label>
+                                    <input type="text" name="title" id="title" required />
                                 </div>
 
                                 <div className="item">
-                                    <label htmlFor="citation">Citação de Twitter: </label>
-                                    <textarea name="citation" id="citation" placeholder="Uma citação que foi encontrada no Twitter ou em outra fonte" />
+                                    <label htmlFor="passwd">Senha: </label>
+                                    <input type="text" name="title" id="title" required />
                                 </div>
 
                                 <div className="item">
-                                    <label htmlFor="linkcitation">Link da Citação: </label>
-                                    <input name="linkcitation" id="linkcitation" placeholder="https://twitter.com/Yagasaki7K/example" />
-                                </div>
-
-                                <div className="item">
-                                    <label htmlFor="ytid">ID do Youtube: </label>
-                                    <input name="ytid" id="ytid" placeholder="RfiKg_Sfg-o" />
+                                    <label htmlFor="passwd again">Confirmar senha: </label>
+                                    <input type="text" name="title" id="title" required />
                                 </div>
 
                                 <button className='sendbtn'>Enviar</button>
-                                <button className='clrbtn'>Limpar</button>
-                                <button></button>
+                                <button onClick={handleCloseModal} className='clrbtn'>Fechar</button>
                             </form>
                         </div>
                     </div>
