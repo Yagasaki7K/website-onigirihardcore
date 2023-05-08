@@ -37,6 +37,11 @@ const SignUpModal = () => {
 
                                 <button className='sendbtn'>Entrar</button>
                                 <button onClick={handleCloseModal} className='clrbtn'>Fechar</button>
+
+                                <div className='item'>
+                                    Acesse com o Google:
+                                    <button>Google</button>
+                                </div>
                             </form>
                         </div>
                     </div>
