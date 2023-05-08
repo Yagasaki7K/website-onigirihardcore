@@ -47,7 +47,7 @@ This project was made using the follow technologies:
 * ReactJS
 * NextJS
 * Javascript
-* JSON
+* Firebase
 * Styled Components
 
 # 🚀 Features
