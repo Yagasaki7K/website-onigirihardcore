@@ -8,11 +8,11 @@ const Authentication = () => {
     return (
         <LoginDetails>
             <div className="container">
-                <form>
-                    <img src="logotipo-white.png" alt="Logo" />
+                <div>
+                    <img src="logotipo-white.png" alt="Logo" />  {/*Tag img not work..*/}
                     <SignUpModal/>
                     <SignInModal/>
-                </form>
+                </div>
             </div>
         </LoginDetails>
     )

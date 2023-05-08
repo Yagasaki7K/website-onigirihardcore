@@ -28,7 +28,7 @@ const LoginDetails = styled.div`
             margin-bottom: 3rem;
         }
 
-        form {
+        div {
             display: flex;
             justify-content: center;
             align-items: center;
