@@ -1,6 +1,6 @@
 import LoginDetails from "../../src/components/LoginDetails"
 import SignUpModal from "../../src/components/Modals/SignUpModal"
-import SignInModal from "../../src/components/modals/SignInModal"
+import SignInModal from "../../src/components/Modals/SignInModal"
 
 const Authentication = () => {
     //....
