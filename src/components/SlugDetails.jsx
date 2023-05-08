@@ -103,11 +103,17 @@ const SlugDetails = styled.div`
             font-style: italic;
             color: ${colors.blue};
 
-            p {
-                font-size: 1.5rem;
-                border-left: 2px solid ${colors.blue};
-                padding-left: 1rem;
-                width: 100%;
+            a {
+                p {
+                    font-size: 1.5rem;
+                    border-left: 2px solid ${colors.blue};
+                    padding-left: 1rem;
+                    width: 100%;
+                }
+
+                :hover {
+                    text-decoration: underline;
+                }
             }
         }
 
