@@ -37,7 +37,7 @@ const LoginDetails = styled.div`
             width: 25rem;
             padding: 3rem;
             border-radius: 15px;
-            background: ${colors.blackdark}};
+            background: ${colors.blackdark};
             color: ${colors.black};
 
             input {
@@ -53,8 +53,9 @@ const LoginDetails = styled.div`
                     outline: none;
                 }
             }
-
-            button {
+            div{
+        
+                button {
                 color: ${colors.white};
                 background: ${colors.blue};
                 border-radius: 5px;
@@ -67,12 +68,15 @@ const LoginDetails = styled.div`
                 text-transform: uppercase;
                 cursor: pointer;
 
-                :hover {
-                    opacity: 0.8;
-                    transition: 1s;
+                    :hover {
+                        opacity: 0.8;
+                        transition: 1s;
+                    }
                 }
             }
         }
+    }
+    
 `
 
 export default LoginDetails
