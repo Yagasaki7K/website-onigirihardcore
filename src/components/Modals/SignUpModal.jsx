@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
-import LoginDetails from '../LoginDetails';
 
 const SignUpModal = () => {
     const [modalOpen, setModalOpen] = useState(false);
@@ -16,7 +15,9 @@ const SignUpModal = () => {
     return (
         <div>
             <button onClick={handleOpenModal}>Cadastrar</button>
-            <Modal></Modal>
+            <Modal isOpen={modalOpen} onRequestClose={handleCloseModal}>
+                {/**/}
+            </Modal>
         </div>
     )
 }
