@@ -6,11 +6,11 @@ import userService from '../../../services/auth.service'
 const SignUpModal = () => {
     const [modalOpen, setModalOpen] = useState(false);
 
-    const [registerName, setRegisterName] = useState('')
-    const [registerLastName, setRegisterLastName] = useState('')
-    const [registerEmail, setRegisterEmail] = useState('')
-    const [registerPassword, setRegisterPasswd] = useState('')
-    const [registerPasswdConfirm, setRegisterPasswdConfirm] = useState('')
+    //const [registerName, setRegisterName] = useState('')
+    //const [registerLastName, setRegisterLastName] = useState('')
+    //const [registerEmail, setRegisterEmail] = useState('')
+    //const [registerPassword, setRegisterPasswd] = useState('')
+    //const [registerPasswdConfirm, setRegisterPasswdConfirm] = useState('')
 
     function handleOpenModal() {
         setModalOpen(true)
