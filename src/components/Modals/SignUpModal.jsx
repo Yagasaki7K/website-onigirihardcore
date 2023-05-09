@@ -1,9 +1,16 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
 import ModalDetails from './ModalDetails';
+import userService from '../../../services/auth.service'
 
 const SignUpModal = () => {
     const [modalOpen, setModalOpen] = useState(false);
+
+    const [name, setName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [email, setEmail] = useState('')
+    const [passwd, setPasswd] = useState('')
+    const [passwdConfirm, setPasswdConfirm] = useState('')
 
     function handleOpenModal() {
         setModalOpen(true)
@@ -11,6 +18,14 @@ const SignUpModal = () => {
 
     function handleCloseModal() {
         setModalOpen(false)
+    }
+
+    function collectData() {
+        return null
+    }
+
+    async function requestSignUp() {
+        await userService.usersSignUpWithEmailPassword(null, null)
     }
 
     return (
@@ -23,7 +38,7 @@ const SignUpModal = () => {
                         <h1>Formulário de Cadastro</h1>
 
                         <div className="form-group">
-                            <form onSubmit={(e) => e.preventDefault()}>
+                            <form onSubmit={collectData}>
 
                                 <div className="item">
                                     <label htmlFor="name">Nome: </label>
@@ -50,7 +65,7 @@ const SignUpModal = () => {
                                     <input type="text" name="title" id="title" required />
                                 </div>
 
-                                <button className='sendbtn'>Enviar</button>
+                                <button onClick={requestSignUp} className='sendbtn'>Enviar</button>
                                 <button onClick={handleCloseModal} className='closebtn'>Fechar</button>
                             </form>
                         </div>

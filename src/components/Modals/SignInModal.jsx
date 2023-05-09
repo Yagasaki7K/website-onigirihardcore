@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
 import ModalDetails from './ModalDetails';
+import userService from '../../../services/auth.service'
 
-
-const SignUpModal = () => {
+const SignInModal = () => {
     const [modalOpen, setModalOpen] = useState(false);
+
+    const [email, setEmail] = useState('')
+    const [passwd, setPasswd] = useState('')
 
     function handleOpenModal() {
         setModalOpen(true)
@@ -13,6 +16,15 @@ const SignUpModal = () => {
     function handleCloseModal() {
         setModalOpen(false)
     }
+
+    function collectData() {
+        //...
+    }
+
+    async function requestSignIn() {
+        await userService.usersSignInWithEmailAndPassword()
+    }
+
 
     return (
         <div>
@@ -24,7 +36,7 @@ const SignUpModal = () => {
                         <h1>Acessar conta do Onigiri</h1>
 
                         <div className="form-group">
-                            <form onSubmit={(e) => e.preventDefault()}>
+                            <form onSubmit={collectData}>
 
                                 <div className="item">
                                     <label htmlFor="e-mail">E-mail: </label>
@@ -36,7 +48,7 @@ const SignUpModal = () => {
                                     <input type="text" name="title" id="title" required />
                                 </div>
 
-                                <button className='sendbtn'>Entrar</button>
+                                <button onClick={requestSignIn} className='sendbtn'>Entrar</button>
                                 <button onClick={handleCloseModal} className='closebtn'>Fechar</button>
 
                                 <div className='item'>
@@ -53,4 +65,4 @@ const SignUpModal = () => {
     )
 }
 
-export default SignUpModal
+export default SignInModal

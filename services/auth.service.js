@@ -5,7 +5,7 @@ import {
 import auth from "../client";
 
 class userService {
-    usersSignOutWithEmailPassword = async (email, password) => {
+    usersSignUpWithEmailPassword = async (email, password) => {
         return await createUserWithEmailAndPassword(auth, email, password)
     }
 
