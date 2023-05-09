@@ -6,8 +6,8 @@ import ModalDetails from './ModalDetails';
 const SignInModal = () => {
     const [modalOpen, setModalOpen] = useState(false);
 
-    const [email, setEmail] = useState('')
-    const [passwd, setPasswd] = useState('')
+    const [loginEmail, setLoginEmail] = useState('')
+    const [loginPassword, setLoginPassword] = useState('')
 
     function handleOpenModal() {
         setModalOpen(true)
@@ -19,15 +19,15 @@ const SignInModal = () => {
 
     function collectData() {
         const formEmail = document.getElementById('email').value
-        setEmail(formEmail)
+        setLoginEmail(formEmail)
 
         const formPasswd = document.getElementById('passwd').value
-        setPasswd(formPasswd)
+        setLoginPassword(formPasswd)
     }
 
     function sendData() {
         //await (userService.signInWithEmail(email, passwd))
-        console.log(email, passwd)
+        console.log(loginEmail, loginPassword)
     }
 
     return (
