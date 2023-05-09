@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Modal from 'react-modal';
 import ModalDetails from './ModalDetails';
 
-
 const SignUpModal = () => {
     const [modalOpen, setModalOpen] = useState(false);
 

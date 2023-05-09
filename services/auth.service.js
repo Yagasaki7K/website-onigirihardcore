@@ -4,7 +4,7 @@ import {
 } from "firebase/auth";
 import auth from "../client";
 
-class usersService {
+class userService {
     usersSignOutWithEmailPassword = async (email, password) => {
         return await createUserWithEmailAndPassword(auth, email, password)
     }
@@ -13,4 +13,4 @@ class usersService {
         return await signInWithEmailAndPassword(auth, email, password)
     }
 }
-export default new usersService();
+export default new userService();

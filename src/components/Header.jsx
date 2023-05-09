@@ -53,7 +53,7 @@ const Header = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href='/login/auth'>
+                            <Link href='/login'>
                                 Acesso
                             </Link>
                         </li>
