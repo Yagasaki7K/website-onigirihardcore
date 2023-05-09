@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
-import DashboardDetails from '../DashboardDetails';
+import ModalDetails from './ModalDetails';
+
 
 const SignUpModal = () => {
     const [modalOpen, setModalOpen] = useState(false);
@@ -17,7 +18,7 @@ const SignUpModal = () => {
         <div>
             <button onClick={handleOpenModal}>Acessar</button>
             <Modal isOpen={modalOpen} onRequestClose={handleCloseModal}>
-                <DashboardDetails>
+                <ModalDetails>
                 <div className="content">
                     <div className="publi" id="publi">
                         <h1>Acessar conta do Onigiri</h1>
@@ -36,7 +37,7 @@ const SignUpModal = () => {
                                 </div>
 
                                 <button className='sendbtn'>Entrar</button>
-                                <button onClick={handleCloseModal} className='clrbtn'>Fechar</button>
+                                <button onClick={handleCloseModal} className='closebtn'>Fechar</button>
 
                                 <div className='item'>
                                     Acesse com o Google:
@@ -46,7 +47,7 @@ const SignUpModal = () => {
                         </div>
                     </div>
                 </div>                  
-                </DashboardDetails>
+                </ModalDetails>
             </Modal>
         </div>
     )
