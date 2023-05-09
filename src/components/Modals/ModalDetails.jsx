@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from './variables';
+import { colors } from '../variables';
 
 const ModalDetails = styled.div`
     display: flex;
