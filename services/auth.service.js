@@ -5,11 +5,11 @@ import {
 import auth from "../client";
 
 class userService {
-    usersSignUpWithEmailPassword = async (email, password) => {
+    signUpWithEmail = async (email, password) => {
         return await createUserWithEmailAndPassword(auth, email, password)
     }
 
-    usersSignInWithEmailAndPassword = async (email, password) => {
+    signInWithEmail = async (email, password) => {
         return await signInWithEmailAndPassword(auth, email, password)
     }
 }

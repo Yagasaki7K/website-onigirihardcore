@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
 import ModalDetails from './ModalDetails';
-import userService from '../../../services/auth.service'
+//import userService from '../../../services/auth.service'
 
 const SignInModal = () => {
     const [modalOpen, setModalOpen] = useState(false);
@@ -18,13 +18,17 @@ const SignInModal = () => {
     }
 
     function collectData() {
-        //...
+        const formEmail = document.getElementById('email').value
+        setEmail(formEmail)
+
+        const formPasswd = document.getElementById('passwd').value
+        setPasswd(formPasswd)
     }
 
-    async function requestSignIn() {
-        await userService.usersSignInWithEmailAndPassword()
+    function sendData() {
+        //await (userService.signInWithEmail(email, passwd))
+        console.log(email, passwd)
     }
-
 
     return (
         <div>
@@ -36,19 +40,19 @@ const SignInModal = () => {
                         <h1>Acessar conta do Onigiri</h1>
 
                         <div className="form-group">
-                            <form onSubmit={collectData}>
+                            <form onChange={collectData}>
 
                                 <div className="item">
-                                    <label htmlFor="e-mail">E-mail: </label>
-                                    <input type="text" name="title" id="title" required />
+                                    <label htmlFor="email">E-mail: </label>
+                                    <input type="text" name="email" id="email" required />
                                 </div>
 
                                 <div className="item">
                                     <label htmlFor="passwd">Senha: </label>
-                                    <input type="text" name="title" id="title" required />
+                                    <input type="text" name="passwd" id="passwd" required />
                                 </div>
 
-                                <button onClick={requestSignIn} className='sendbtn'>Entrar</button>
+                                <button onClick={sendData} className='sendbtn'>Entrar</button>
                                 <button onClick={handleCloseModal} className='closebtn'>Fechar</button>
 
                                 <div className='item'>
