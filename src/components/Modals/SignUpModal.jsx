@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
 import ModalDetails from './ModalDetails';
-import userService from '../../../services/auth.service'
+//import userServiceEmail from '../../../services/auth.service'
 
 const SignUpModal = () => {
     const [modalOpen, setModalOpen] = useState(false);
@@ -24,10 +24,6 @@ const SignUpModal = () => {
         return null
     }
 
-    async function requestSignUp() {
-        await userService.usersSignUpWithEmailPassword(null, null)
-    }
-
     return (
         <div>
             <button onClick={handleOpenModal}>Cadastrar</button>
@@ -39,34 +35,7 @@ const SignUpModal = () => {
 
                         <div className="form-group">
                             <form onSubmit={collectData}>
-
-                                <div className="item">
-                                    <label htmlFor="name">Nome: </label>
-                                    <input type="text" name="title" id="title" required />
-                                </div>
-
-                                <div className="item">
-                                    <label htmlFor="lastname">Sobrenome: </label>
-                                    <input type="text" name="title" id="title" required />
-                                </div>
-
-                                <div className="item">
-                                    <label htmlFor="e-mail">E-mail: </label>
-                                    <input type="text" name="title" id="title" required />
-                                </div>
-
-                                <div className="item">
-                                    <label htmlFor="passwd">Senha: </label>
-                                    <input type="text" name="title" id="title" required />
-                                </div>
-
-                                <div className="item">
-                                    <label htmlFor="passwd again">Confirmar senha: </label>
-                                    <input type="text" name="title" id="title" required />
-                                </div>
-
-                                <button onClick={requestSignUp} className='sendbtn'>Enviar</button>
-                                <button onClick={handleCloseModal} className='closebtn'>Fechar</button>
+                                Em construção...
                             </form>
                         </div>
                     </div>

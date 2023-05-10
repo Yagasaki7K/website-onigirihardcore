@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
 import ModalDetails from './ModalDetails';
-//import userService from '../../../services/auth.service'
+import authService from '../../../services/auth.service'
 
 const SignInModal = () => {
     const [modalOpen, setModalOpen] = useState(false);
 
-    const [loginEmail, setLoginEmail] = useState('')
-    const [loginPassword, setLoginPassword] = useState('')
+    //const [loginEmail, setLoginEmail] = useState('')
+    //const [loginPassword, setLoginPassword] = useState('')
 
     function handleOpenModal() {
         setModalOpen(true)
@@ -18,16 +18,16 @@ const SignInModal = () => {
     }
 
     function collectData() {
-        const formEmail = document.getElementById('email').value
-        setLoginEmail(formEmail)
+        //const formEmail = document.getElementById('email').value
+        //setLoginEmail(formEmail)
 
-        const formPasswd = document.getElementById('passwd').value
-        setLoginPassword(formPasswd)
+        //const formPasswd = document.getElementById('password').value
+        //setLoginPassword(formPasswd)
+        return null
     }
 
-    function sendData() {
-        //await (userService.signInWithEmail(email, passwd))
-        console.log(loginEmail, loginPassword)
+    async function sendData() {
+        return authService.signInGoogle();
     }
 
     return (
@@ -40,24 +40,10 @@ const SignInModal = () => {
                         <h1>Acessar conta do Onigiri</h1>
 
                         <div className="form-group">
-                            <form onChange={collectData}>
-
-                                <div className="item">
-                                    <label htmlFor="email">E-mail: </label>
-                                    <input type="text" name="email" id="email" required />
-                                </div>
-
-                                <div className="item">
-                                    <label htmlFor="passwd">Senha: </label>
-                                    <input type="text" name="passwd" id="passwd" required />
-                                </div>
-
-                                <button onClick={sendData} className='sendbtn'>Entrar</button>
-                                <button onClick={handleCloseModal} className='closebtn'>Fechar</button>
-
+                            <form onSubmit={collectData}>
                                 <div className='item'>
                                     Acesse com o Google:
-                                    <button>Google</button>
+                                    <button onClick={sendData}>Google</button>
                                 </div>
                             </form>
                         </div>
