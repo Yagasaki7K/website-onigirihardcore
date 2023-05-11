@@ -1,14 +1,12 @@
-/*
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import auth from "../client";
-
-const provider = new GoogleAuthProvider();
+import { GoogleAuthProvider, signInWithPopup, } from "firebase/auth";
+import { auth } from "../client"
 
 class authService {
-    signInGoogle = async () => {
-        const result = await signInWithPopup(auth, provider)
+
+    signInGoogle = () => {
+        const provider = new GoogleAuthProvider();
+        return signInWithPopup(auth, provider)
     }
 }
 
 export default new authService();
-*/
