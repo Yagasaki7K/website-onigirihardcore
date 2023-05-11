@@ -9,7 +9,7 @@ const TecnologiesDetails = styled.div`
 
         @media (max-width: 1366px) {
             display: inline-block;
-              padding: 0px;
+            padding: 0px;
         }
 
         @media (max-width: 768px) {
@@ -22,13 +22,11 @@ const TecnologiesDetails = styled.div`
               padding: 0px;
        }
 
-  
-
        .tecnologies {
         margin-left: -8rem;
 
         @media (max-width: 1366px) {
-            margin-left: -9rem;
+            margin-left: -2rem;
         }
 
         .header {
@@ -42,7 +40,7 @@ const TecnologiesDetails = styled.div`
             @media (max-width: 768px) {
               margin-left: 5%;
              }
-             
+
             p {
                 width: 9.5rem;
                 background: ${colors.blue};
@@ -56,28 +54,29 @@ const TecnologiesDetails = styled.div`
         .content, .secondContent, .thirdContent {
             display: flex;
             margin-left: -1rem;
-     
-          @media (max-width: 1024px) {
-              display: inline-block;
-              margin-left: 2%;
-              width: 25%;
-          }
+
+        @media (max-width: 1024px) {
+            display: inline-block;
+            margin-left: 2%;
+            width: 25%;
+        }
+
           @media (max-width: 900px) {
-              display: inline-block;
-              margin-left: 2%;
-              width: 40%;
+            display: inline-block;
+            margin-left: 2%;
+            width: 40%;
           }
 
 
             @media (max-width: 768px) {
-              display: inline-block;
-              margin-left: 5%;
-              width: 45%;
+                display: inline-block;
+                margin-left: 5%;
+                width: 45%;
              }
 
             @media (max-width: 500px) {
-              display: inline-block;
-              padding: 2px;
+                display: inline-block;
+                padding: 2px;
             }
 
 
