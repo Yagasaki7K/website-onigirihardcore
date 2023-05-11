@@ -9,7 +9,7 @@ const firebaseConfig = {
     projectId: "onigirihardcore-88090",
     storageBucket: "onigirihardcore-88090.appspot.com",
     messagingSenderId: "831799809088",
-    appId: "1:831799809088:web:05dea243ba8cd249aa7ba5",
+    appId: "1:831799809088:web:05dea243ba8cd249aa7ba5"
 };
 
 const app = initializeApp(firebaseConfig);
