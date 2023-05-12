@@ -8,6 +8,7 @@ import DashboardDetails from "../../src/components/DashboardDetails"
 //import SideMenuDetails from '../../src/components/Login/SideMenuDetails'
 import SideMenu from '../../src/components/Login/SideMenu'
 //import LoginDetails from "../../src/components/LoginDetails"
+import EditPostModal from "../../src/components/Modals/EditPostModal"
 
 const Login = () => {
     const [Posts, setPosts] = useState([])
@@ -25,10 +26,7 @@ const Login = () => {
         await Promise.all([postService.deletePost(id), imgService.deleteImage(nameImage)])
         getPosts()
     }
-
-    const handleEdit = async (id) => {
-        await postService.getPost(id)
-    }
+    
     return (
         <DashboardDetails>
             <SideMenu/>
@@ -51,7 +49,7 @@ const Login = () => {
                                         <td>{post.author}</td>
                                         <td>{post.categories}</td>
                                         <td>{post.lessDate}</td>
-                                        <td><button className="editar" onClick={() => handleEdit(post.id)}>Editar</button></td>
+                                        <td><EditPostModal /></td>
                                         <td><button className="deletar" onClick={() => handleDelete(post.id, post.image)}>Deletar</button></td>
                                     </tr>
                                 ))

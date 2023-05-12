@@ -9,13 +9,9 @@ const SignInModal = () => {
     //const [loginEmail, setLoginEmail] = useState('')
     //const [loginPassword, setLoginPassword] = useState('')
 
-    function handleOpenModal() {
-        setModalOpen(true)
-    }
+    function handleOpenModal() {setModalOpen(true)}
 
-    function handleCloseModal() {
-        setModalOpen(false)
-    }
+    function handleCloseModal() {setModalOpen(false)}
 
     function collectData() {
         const formEmail = document.getElementById('email').value
