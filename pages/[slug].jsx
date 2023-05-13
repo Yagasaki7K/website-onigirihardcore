@@ -12,7 +12,7 @@ import Image from 'next/image'
 // import data from '../server/index.json'
 
 // eslint-disable-next-line react/prop-types
-const Post = (posts) => {
+const Post = () => {
     const router = useRouter()
     const { slug } = router.query
 
