@@ -61,29 +61,11 @@ const Post = () => {
                             <div key={index}>
                                 <Head>
                                     {/* Meta tags relacionadas ao SEO */}
-                                    <title>{post.title}</title>
-                                    <meta name="author" content={post.author} />
-                                    <meta name="description" content={post.description} />
-
-                                    {/* Meta tags relacionadas ao Open Graph */}
-                                    <meta property="og:title" content={post.title} />
-                                    <meta property="og:description" content={post.description} />
-                                    <meta property="og:image" content={post.imageUrl ? post.imageUrl : "https://i.imgur.com/VoOogmx.png"} />
-                                    <meta property="og:image:width" content="1200" />
-                                    <meta property="og:image:height" content="627" />
-                                    <meta property="og:site_name" content="Onigiri Hardcore" />
-                                    <meta property="og:type" content="website" />
-                                    <meta property="og:url" content="https://onigirihardcore.vercel.app/" />
-
-                                    {/* Meta tags relacionadas ao Twitter Card */}
-                                    <meta name="twitter:card" content="summary" />
-                                    <meta name="twitter:title" content={post.title} />
-                                    <meta name="twitter:description" content={post.description} />
-                                    <meta name="twitter:image:src" content={post.imageUrl ? post.imageUrl : "https://i.imgur.com/VoOogmx.png"} />
-                                    <meta name="twitter:site" content={post.title} />
-                                    <meta name="twitter:creator" content={post.author} />
-
-                                    {/* Exemplo de autor pré-definido */}
+                                    <title>Cool Title</title>
+                                    <meta name="description" content={post?.description} key="desc" />
+                                    <meta property="og:title" content={post?.title} />
+                                    <meta property="og:description" content={post?.description} />
+                                    <meta property="og:image" content={post.imageUrl} />
                                     <meta name="author" content={post.author} />
                                 </Head>
 
