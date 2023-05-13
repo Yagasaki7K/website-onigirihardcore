@@ -8,38 +8,17 @@ import SlugDetails from '../src/components/SlugDetails'
 import postService from '../services/post.service'
 import Image from 'next/image'
 
-// export async function getStaticProps() {
-//     const response = await fetch('https://raw.githubusercontent.com/Yagasaki7K/website-onigirihardcore/main/server/index.json')
-//     const data = await response.json()
-//     return {
-//         props: {
-//             data
-//         }
-//     }
-// }
-
-// export async function getStaticPaths() {
-//     const request = await fetch('https://raw.githubusercontent.com/Yagasaki7K/website-onigirihardcore/main/server/index.json')
-//     const posts = await request.json()
-//     const paths = posts.map(client => ({
-//         params: { slug: client.slug.toString() },
-//     }))
-
-//     return {
-//         paths,
-//         fallback: false
-//     }
-// }
-
 // Test using Localhost || Hidde getStaticPaths and getStaticProps and props inside on Post
 // import data from '../server/index.json'
 
 // eslint-disable-next-line react/prop-types
-const Post = () => {
+const Post = (posts) => {
     const router = useRouter()
     const { slug } = router.query
 
     const [Post, setPost] = useState([])
+
+    let src = ''
 
     useEffect(() => {
         getPost()
@@ -59,6 +38,7 @@ const Post = () => {
                     // eslint-disable-next-line react/prop-types
                     Post && Post.map((post, index) => (
                         post.slug === slug ? (
+                            src = post.imageUrl,
                             <div key={index}>
                                 <Head>
                                     {/* Meta tags relacionadas ao SEO */}
@@ -70,8 +50,7 @@ const Post = () => {
                                     <meta name="author" content={post.author} />
                                 </Head>
 
-                                {/* <img src={post.image}></img> */}
-                                <Image src={post.imageUrl} alt={post?.name} width={'100%'} height={'30rem'} />
+                                <Image loader={() => src} src={src} alt={post?.name} width={100} height={30} priority={true} />
                                 <section key={post.id}>
                                     <p className="block__content">{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null} | {post.author}</p>
 

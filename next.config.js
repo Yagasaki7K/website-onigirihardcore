@@ -5,4 +5,14 @@ module.exports = removeImports({
     webpack: (config) => {
         return config;
     },
+    images: {
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "firebasestorage.googleapis.com",
+                port: "",
+                pathname: "/images/**",
+            },
+        ],
+    },
 });
