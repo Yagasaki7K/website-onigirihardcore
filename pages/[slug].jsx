@@ -44,6 +44,7 @@ const Post = () => {
                                     <meta property="og:description" content={post?.description} />
                                     <meta property="og:image" content={post.imageUrl} />
                                     <meta name="author" content={post.author} />
+                                    <meta name="twitter:card" content="summary_large_image" />
                                 </Head>
 
                                 <img src={post.imageUrl} alt={post?.name} />
