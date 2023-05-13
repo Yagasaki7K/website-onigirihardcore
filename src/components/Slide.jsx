@@ -6,6 +6,7 @@ import SlideDetails from './SlideDetails'
 
 import { useKeenSlider } from 'keen-slider/react'
 import postService from '../../services/post.service.js'
+import Head from 'next/head'
 
 const Slide = () => {
 
@@ -69,6 +70,16 @@ const Slide = () => {
                             </a>
                             <div className="slider-description">
                                 <div className="slide-tag">
+                                    <Head>
+                                        {/* Meta tags relacionadas ao SEO */}
+                                        <title>{post.title}</title>
+                                        <meta name="description" content={post?.description} key="desc" />
+                                        <meta property="og:title" content={post?.title} />
+                                        <meta property="og:description" content={post?.description} />
+                                        <meta property="og:image" content={post.imageUrl} />
+                                        <meta name="author" content={post.author} />
+                                    </Head>
+
                                     <span className="latest">HOT NEWS 🔥</span>
                                     <span className="tag">{post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null}</span>
                                     {/* <span className="tag">{posts?.category.title}</span> */}

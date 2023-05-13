@@ -61,7 +61,7 @@ const Post = () => {
                             <div key={index}>
                                 <Head>
                                     {/* Meta tags relacionadas ao SEO */}
-                                    <title>Cool Title</title>
+                                    <title>{post.title}</title>
                                     <meta name="description" content={post?.description} key="desc" />
                                     <meta property="og:title" content={post?.title} />
                                     <meta property="og:description" content={post?.description} />

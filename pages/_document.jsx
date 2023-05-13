@@ -39,7 +39,7 @@ export default class MyDocument extends Document {
                     <link rel="shortcut icon" type="image/png" href="/logo.png" />
                     <link rel="apple-touch-icon" href="/logo.png" />
 
-                    <meta name="application-name" content="Onigiri Hardcore | Portal de Notícias e Entretenimento" />
+                    {/* <meta name="application-name" content="Onigiri Hardcore | Portal de Notícias e Entretenimento" />
                     <meta name="description" content="Um site nerd com conteúdos nerds" />
                     <meta name="keywords" content="anime, noticia, filme, serie, entretenimento, onigiri, hardcore, nerd, geek" />
                     <meta name="author" content="Anderson 'Yagasaki' Marlon" />
@@ -64,7 +64,7 @@ export default class MyDocument extends Document {
                     <meta property="twitter:url" content="https://onigirihardcore.vercel.com/" />
                     <meta property="twitter:title" content="Onigiri Hardcore | Portal de Notícias e Entretenimento" />
                     <meta property="twitter:description" content="Um site nerd com conteúdos nerds" />
-                    <meta property="twitter:image" content="https://i.imgur.com/VoOogmx.png" />
+                    <meta property="twitter:image" content="https://i.imgur.com/VoOogmx.png" /> */}
                 </Head>
                 <body>
                     <Main />
