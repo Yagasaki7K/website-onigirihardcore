@@ -50,7 +50,7 @@ const Post = () => {
                                     <meta name="author" content={post.author} />
                                 </Head>
 
-                                <Image loader={() => src} src={src} alt={post?.name} width={100} height={30} priority={true} />
+                                <Image src={src} alt={post?.name} width={1300} height={500} priority={true} />
                                 <section key={post.id}>
                                     <p className="block__content">{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null} | {post.author}</p>
 

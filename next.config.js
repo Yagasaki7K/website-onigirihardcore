@@ -6,13 +6,6 @@ module.exports = removeImports({
         return config;
     },
     images: {
-        remotePatterns: [
-            {
-                protocol: "https",
-                hostname: "firebasestorage.googleapis.com",
-                port: "",
-                pathname: "/images/**",
-            },
-        ],
+        domains: ["firebasestorage.googleapis.com"],
     },
 });
