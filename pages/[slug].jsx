@@ -71,7 +71,7 @@ const Post = () => {
                                 </Head>
 
                                 {/* <img src={post.image}></img> */}
-                                <Image src={post.imageUrl} alt={post?.name} />
+                                <Image src={post.imageUrl} alt={post?.name} width={'100%'} height={'30rem'} />
                                 <section key={post.id}>
                                     <p className="block__content">{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null} | {post.author}</p>
 
