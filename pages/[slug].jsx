@@ -6,7 +6,6 @@ import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
 import SlugDetails from '../src/components/SlugDetails'
 import postService from '../services/post.service'
-import Image from 'next/image'
 
 // Test using Localhost || Hidde getStaticPaths and getStaticProps and props inside on Post
 // import data from '../server/index.json'
@@ -17,8 +16,6 @@ const Post = () => {
     const { slug } = router.query
 
     const [Post, setPost] = useState([])
-
-    let src = ''
 
     useEffect(() => {
         getPost()
@@ -38,7 +35,6 @@ const Post = () => {
                     // eslint-disable-next-line react/prop-types
                     Post && Post.map((post, index) => (
                         post.slug === slug ? (
-                            src = post.imageUrl,
                             <div key={index}>
                                 <Head>
                                     {/* Meta tags relacionadas ao SEO */}
@@ -50,7 +46,7 @@ const Post = () => {
                                     <meta name="author" content={post.author} />
                                 </Head>
 
-                                <Image src={src} alt={post?.name} width={1300} height={500} priority={true} />
+                                <img src={post.imageUrl} alt={post?.name} />
                                 <section key={post.id}>
                                     <p className="block__content">{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null} | {post.author}</p>
 
