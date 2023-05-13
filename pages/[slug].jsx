@@ -6,6 +6,7 @@ import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
 import SlugDetails from '../src/components/SlugDetails'
 import postService from '../services/post.service'
+import Image from 'next/image'
 
 // export async function getStaticProps() {
 //     const response = await fetch('https://raw.githubusercontent.com/Yagasaki7K/website-onigirihardcore/main/server/index.json')
@@ -70,7 +71,7 @@ const Post = () => {
                                 </Head>
 
                                 {/* <img src={post.image}></img> */}
-                                <img src={post.imageUrl} alt={post?.name}></img>
+                                <Image src={post.imageUrl} alt={post?.name} />
                                 <section key={post.id}>
                                     <p className="block__content">{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null} | {post.author}</p>
 
