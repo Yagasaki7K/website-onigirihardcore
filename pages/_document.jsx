@@ -35,19 +35,20 @@ export default class MyDocument extends Document {
     render() {
         return (
             <Html lang="pt-br">
+                <title>Onigiri Hardcore | Portal de Notícias e Entretenimento</title>
                 <Head>
                     <link rel="shortcut icon" type="image/png" href="/logo.png" />
                     <link rel="apple-touch-icon" href="/logo.png" />
                     <meta name="keywords" content="anime, noticia, filme, serie, entretenimento, onigiri, hardcore, nerd, geek" />
                     <meta name="author" content="Anderson 'Yagasaki' Marlon" />
                     <meta name="robots" content="index, follow" />
+                    <meta property="og:locale" content="pt_BR" />
 
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 
                     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"></link>
 
-                    {/*
-
+                    {/* <meta property="og:site_name" content="Onigiri Hardcore" />
                     <meta property="og:type" content="website" />
                     <meta property="og:url" content="https://onigirihardcore.vercel.com/" />
                     <meta property="og:title" content="Onigiri Hardcore | Portal de Notícias e Entretenimento" />
