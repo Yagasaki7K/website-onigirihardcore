@@ -49,13 +49,14 @@ const Post = () => {
                                                 width: 800,
                                                 height: 600,
                                                 alt: post.title,
+                                                type: 'image/jpeg',
                                             }
                                         ],
                                         siteName: 'Onigiri Hardcore',
                                     }}
                                     twitter={{
-                                        handle: '@onigirihardcore',
-                                        site: 'https://onigirihardcore.com.br/',
+                                        handle: '@OnigiriHardcore',
+                                        site: '@OnigiriHardcore',
                                         cardType: 'summary_large_image',
                                     }}
                                 />
