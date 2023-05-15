@@ -61,31 +61,6 @@ export default class MyDocument extends Document {
                     <meta property="twitter:description" content="Um site nerd com conteúdos nerds" />
                     <meta property="twitter:image" content="https://i.imgur.com/VoOogmx.png" /> */}
                 </Head>
-                <NextSeo
-                    title='Onigiri Hardcore | Portal de Notícias e Entretenimento'
-                    description='Um site nerd com conteúdos nerds'
-                    canonical={`https://onigirihardcore.com.br/`}
-                    openGraph={{
-                        url: 'https://onigirihardcore.com.br/',
-                        title: 'Onigiri Hardcore | Portal de Notícias e Entretenimento',
-                        description: 'Um site nerd com conteúdos nerds',
-                        images: [
-                            {
-                                url: 'https://i.imgur.com/VoOogmx.png',
-                                width: 460,
-                                height: 460,
-                                alt: 'Onigiri Hardcore | Portal de Notícias e Entretenimento',
-                                type: 'image/jpeg' || 'image/png',
-                            }
-                        ],
-                        siteName: 'Onigiri Hardcore',
-                    }}
-                    twitter={{
-                        handle: '@OnigiriHardcore',
-                        site: '@OnigiriHardcore',
-                        cardType: 'summary_large_image',
-                    }}
-                />
                 <body>
                     <Main />
                     <NextScript />

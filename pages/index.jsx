@@ -4,15 +4,41 @@ import Footer from '../src/components/Footer'
 import Slide from '../src/components/Slide'
 import Categories from '../src/components/Categories'
 import LastNews from '../src/components/LastNews'
+import { NextSeo } from 'next-seo'
 
 export default function Home() {
     return (
         <>
-        <Header/>
-        <Slide />
-        <Categories data={posts}/>
-        <LastNews/>
-        <Footer/>
+            <NextSeo
+                title='Onigiri Hardcore | Portal de Notícias e Entretenimento'
+                description='Um site nerd com conteúdos nerds'
+                canonical={`https://onigirihardcore.com.br/`}
+                openGraph={{
+                    url: 'https://onigirihardcore.com.br/',
+                    title: 'Onigiri Hardcore | Portal de Notícias e Entretenimento',
+                    description: 'Um site nerd com conteúdos nerds',
+                    images: [
+                        {
+                            url: 'https://i.imgur.com/VoOogmx.png',
+                            width: 460,
+                            height: 460,
+                            alt: 'Onigiri Hardcore | Portal de Notícias e Entretenimento',
+                            type: 'image/jpeg' || 'image/png',
+                        }
+                    ],
+                    siteName: 'Onigiri Hardcore',
+                }}
+                twitter={{
+                    handle: '@OnigiriHardcore',
+                    site: '@OnigiriHardcore',
+                    cardType: 'summary_large_image',
+                }}
+            />
+            <Header />
+            <Slide />
+            <Categories data={posts} />
+            <LastNews />
+            <Footer />
         </>
     )
 }
