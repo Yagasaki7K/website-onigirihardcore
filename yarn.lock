@@ -3342,6 +3342,11 @@ next-remove-imports@^1.0.11:
     babel-loader "^9.1.2"
     babel-plugin-transform-remove-imports "^1.7.0"
 
+next-seo@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-6.0.0.tgz#4568dc61a44dbdf5fe5ff44156cd0ff8804889a2"
+  integrity sha512-jKKt1p1z4otMA28AyeoAONixVjdYmgFCWwpEFtu+DwRHQDllVX3RjtyXbuCQiUZEfQ9rFPBpAI90vDeLZlMBdg==
+
 next@13.3.1:
   version "13.3.1"
   resolved "https://registry.npmjs.org/next/-/next-13.3.1.tgz"

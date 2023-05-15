@@ -6,6 +6,7 @@ import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
 import SlugDetails from '../src/components/SlugDetails'
 import postService from '../services/post.service'
+import { NextSeo } from 'next-seo';
 
 // Test using Localhost || Hidde getStaticPaths and getStaticProps and props inside on Post
 // import data from '../server/index.json'
@@ -36,16 +37,29 @@ const Post = () => {
                     Post && Post.map((post, index) => (
                         post.slug === slug ? (
                             <div key={index}>
-                                <Head>
-                                    {/* Meta tags relacionadas ao SEO */}
-                                    <title>{post.title}</title>
-                                    <meta name="description" content={post?.description} key="desc" />
-                                    <meta property="og:title" content={post?.title} />
-                                    <meta property="og:description" content={post?.description} />
-                                    <meta property="og:image" content={post.imageUrl} />
-                                    <meta name="author" content={post.author} />
-                                    <meta name="twitter:card" content="summary_large_image" />
-                                </Head>
+                                <NextSeo
+                                    title={post.title}
+                                    description={post?.description}
+                                    openGraph={{
+                                        url: 'https://onigirihardcore.com.br/' + post.slug,
+                                        title: post.title,
+                                        description: post?.description,
+                                        images: [
+                                            {
+                                                url: post.imageUrl,
+                                                width: 800,
+                                                height: 600,
+                                                alt: post.title,
+                                            }
+                                        ],
+                                        siteName: 'Onigiri Hardcore',
+                                    }}
+                                    twitter={{
+                                        handle: '@onigirihardcore',
+                                        site: 'https://onigirihardcore.com.br/',
+                                        cardType: 'summary_large_image',
+                                    }}
+                                />
 
                                 <img src={post.imageUrl} alt={post?.name} />
                                 <section key={post.id}>
