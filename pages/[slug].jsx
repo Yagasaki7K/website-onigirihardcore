@@ -69,7 +69,8 @@ const Post = () => {
                                     }}
                                 />
 
-                                <img src={post.imageUrl} alt={post?.name} />
+                                {post.imageUrl && (<Image src={post.imageUrl} alt={post?.name} width={1300} height={480} />)}
+
                                 <section key={post.id}>
                                     <p className="block__content">{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null} | {post.author}</p>
 
