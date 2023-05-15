@@ -6,6 +6,7 @@ import Footer from '../src/components/Footer'
 import SlugDetails from '../src/components/SlugDetails'
 import postService from '../services/post.service'
 import { NextSeo } from 'next-seo';
+import Head from 'next/head'
 
 // Test using Localhost || Hidde getStaticPaths and getStaticProps and props inside on Post
 // import data from '../server/index.json'
@@ -36,9 +37,16 @@ const Post = () => {
                     Post && Post.map((post, index) => (
                         post.slug === slug ? (
                             <div key={index}>
+                                <Head>
+                                    <meta
+                                        name="twitter:image"
+                                        content={post.imageUrl}
+                                    />
+                                </Head>
                                 <NextSeo
                                     title={post.title}
                                     description={post?.description}
+                                    canonical={`https://onigirihardcore.com.br/${slug}`}
                                     openGraph={{
                                         url: 'https://onigirihardcore.com.br/' + post.slug,
                                         title: post.title,
@@ -46,8 +54,8 @@ const Post = () => {
                                         images: [
                                             {
                                                 url: post.imageUrl,
-                                                width: 800,
-                                                height: 600,
+                                                width: 460,
+                                                height: 460,
                                                 alt: post.title,
                                                 type: 'image/jpeg' || 'image/png',
                                             }
