@@ -1,6 +1,5 @@
 import { ServerStyleSheet } from 'styled-components';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { NextSeo } from 'next-seo';
 
 export default class MyDocument extends Document {
 
