@@ -7,6 +7,7 @@ import SlugDetails from '../src/components/SlugDetails'
 import postService from '../services/post.service'
 import { NextSeo } from 'next-seo';
 import Head from 'next/head'
+import Image from 'next/image'
 
 // Test using Localhost || Hidde getStaticPaths and getStaticProps and props inside on Post
 // import data from '../server/index.json'
