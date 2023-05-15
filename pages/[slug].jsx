@@ -49,7 +49,7 @@ const Post = () => {
                                                 width: 800,
                                                 height: 600,
                                                 alt: post.title,
-                                                type: 'image/jpeg',
+                                                type: 'image/jpeg' || 'image/png',
                                             }
                                         ],
                                         siteName: 'Onigiri Hardcore',
