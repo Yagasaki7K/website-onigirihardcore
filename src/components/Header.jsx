@@ -3,6 +3,8 @@ import HeaderDetails from './HeaderDetails';
 
 const Header = () => {
 
+    const LoggedInUser = false
+
     return (
         <HeaderDetails>
             <div className="header">
@@ -57,6 +59,20 @@ const Header = () => {
                                 Acesso
                             </Link>
                         </li>
+                        { LoggedInUser ? (
+                                <li>
+                                    <Link href='/user_dash'>
+                                        Dashbord
+                                    </Link>
+                                </li>
+                            ) : (
+                                <li>
+                                    <Link href='/login'>
+                                        Acesso
+                                    </Link>
+                                </li>
+                            )
+                        }
                     </span>
                 </ul>
             </div>

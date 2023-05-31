@@ -29,6 +29,10 @@ export function EditPostModal(id) {
 
     function handleCloseModal() {setModalOpen(false)}
 
+    function updatePost() {
+        console.log('Deve ser atualizado')
+    }
+    
     return (
         <div>
             <button className="editar" onClick={handleOpenModal}>Editar</button>
@@ -59,6 +63,7 @@ export function EditPostModal(id) {
                                         <input type="text" name="password" id="linkCitation" value=""/>
                                     </div>
                                     <button onClick={handleCloseModal} className='closebtn'>Fechar</button>
+                                    <button onClick={updatePost}>Atualizar</button>
                                 </form>
                             </div>
                         </div>
