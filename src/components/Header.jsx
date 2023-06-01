@@ -54,11 +54,6 @@ const Header = () => {
                                 Kalify Inc
                             </Link>
                         </li>
-                        <li>
-                            <Link href='/login'>
-                                Acesso
-                            </Link>
-                        </li>
                         { LoggedInUser ? (
                                 <li>
                                     <Link href='/user_dash'>
