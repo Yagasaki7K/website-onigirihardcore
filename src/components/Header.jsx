@@ -6,15 +6,11 @@ const Header = () => {
     const [value, setValue] = useState(null)
 
     useEffect(() => {
-        LoggedInUser().then(data => {
-            setValue(data)
-        })
+        if (typeof window !== 'undefined') {
+            const data = sessionStorage.getItem('GoogleAccess');
+            setValue(data);
+        }
     }, [])
-
-    async function LoggedInUser() {
-        const data = sessionStorage.getItem('GoogleAccess')
-        return data
-    }
 
     return (
         <HeaderDetails>
@@ -66,7 +62,7 @@ const Header = () => {
                             </Link>
                         </li>
                         {
-                           typeof window !== 'undefined' && value !== null ? (
+                            value !== null ? (
                                 <li>
                                     <Link href='/user_dash/creat'>
                                         Dashbord

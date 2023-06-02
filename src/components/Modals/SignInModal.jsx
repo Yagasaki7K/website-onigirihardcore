@@ -1,10 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import ModalDetails from './ModalDetails';
 import authService from '../../../services/auth.service'
 
 const SignInModal = () => {
-    const [modalOpen, setModalOpen] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false)
+    const [value, setValue] = useState(null)
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const data = sessionStorage.getItem('GoogleAccess');
+            setValue(data);
+        }
+    }, [])
 
     //const [loginEmail, setLoginEmail] = useState('')
     //const [loginPassword, setLoginPassword] = useState('')
@@ -30,7 +38,7 @@ const SignInModal = () => {
     }
     return (
         <div>
-            {sessionStorage.getItem("GoogleAccess") ? location.assign("/") :
+            { value ? location.assign("/") :
                 <div>
                     <button onClick={handleOpenModal}>Acessar</button>
                     <Modal isOpen={modalOpen} onRequestClose={handleCloseModal}>
