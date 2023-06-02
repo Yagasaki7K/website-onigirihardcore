@@ -1,9 +1,20 @@
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import HeaderDetails from './HeaderDetails';
 
 const Header = () => {
+    const [value, setValue] = useState(null)
 
-    const LoggedInUser = false
+    useEffect(() => {
+        LoggedInUser().then(data => {
+            setValue(data)
+        })
+    }, [])
+
+    async function LoggedInUser() {
+        const data = sessionStorage.getItem('GoogleAccess')
+        return data
+    }
 
     return (
         <HeaderDetails>
@@ -54,12 +65,13 @@ const Header = () => {
                                 Kalify Inc
                             </Link>
                         </li>
-                        { LoggedInUser ? (
+                        {
+                           typeof window !== 'undefined' && value !== null ? (
                                 <li>
-                                    <Link href='/user_dash'>
+                                    <Link href='/user_dash/creat'>
                                         Dashbord
                                     </Link>
-                                </li>
+                                </li> 
                             ) : (
                                 <li>
                                     <Link href='/login'>

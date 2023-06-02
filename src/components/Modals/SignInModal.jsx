@@ -14,10 +14,10 @@ const SignInModal = () => {
     function handleCloseModal() {setModalOpen(false)}
 
     function collectData() {
-        const formEmail = document.getElementById('email').value
+        const formEmail = document.getElementById("email").value
         console.log(formEmail)
 
-        const formPasswd = document.getElementById('password').value
+        const formPasswd = document.getElementById("password").value
         console.log(formPasswd)
     }
 
@@ -26,41 +26,44 @@ const SignInModal = () => {
     }
 
     function sendGoogleReq() {
-        return authService.signInGoogle()
+        authService.signInGoogle()
     }
-
     return (
         <div>
-            <button onClick={handleOpenModal}>Acessar</button>
-            <Modal isOpen={modalOpen} onRequestClose={handleCloseModal}>
-                <ModalDetails>
-                <div className="content">
-                    <div className="publi" id="publi">
-                        <h1>Acessar conta do Onigiri</h1>
-                        <div className="form-group">
-                            <form onSubmit={collectData}>
-                                <div className='item'>
-                                    <label htmlFor="email">E-mail: </label>
-                                    <input type="text" name="email" id="email"/>
-                                </div>
+            {sessionStorage.getItem("GoogleAccess") ? location.assign("/") :
+                <div>
+                    <button onClick={handleOpenModal}>Acessar</button>
+                    <Modal isOpen={modalOpen} onRequestClose={handleCloseModal}>
+                        <ModalDetails>
+                        <div className="content">
+                            <div className="publi" id="publi">
+                                <h1>Acessar conta do Onigiri</h1>
+                                <div className="form-group">
+                                    <form onSubmit={collectData}>
+                                        <div className='item'>
+                                            <label htmlFor="email">E-mail: </label>
+                                            <input type="text" name="email" id="email"/>
+                                        </div>
 
-                                <div className='item'>
-                                    <label htmlFor="password">Senha: </label>
-                                    <input type="text" name="password" id="password"/>
-                                </div>
+                                        <div className='item'>
+                                            <label htmlFor="password">Senha: </label>
+                                            <input type="text" name="password" id="password"/>
+                                        </div>
 
-                                <button onClick={sendData} className='sendbtn'>Entrar</button>
-                                <button onClick={handleCloseModal} className='closebtn'>Fechar</button>
-                            </form>
-                            <div className='item'>
-                                Acesse com o Google:
-                                <button onClick={sendGoogleReq}>Google</button>
+                                        <button onClick={sendData} className='sendbtn'>Entrar</button>
+                                        <button onClick={handleCloseModal} className='closebtn'>Fechar</button>
+                                    </form>
+                                    <div className='item'>
+                                        Acesse com o Google:
+                                        <button onClick={sendGoogleReq}>Google</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>                  
-                </ModalDetails>
-            </Modal>
+                        </div>                  
+                        </ModalDetails>
+                    </Modal>
+                </div>
+            }   
         </div>
     )
 }

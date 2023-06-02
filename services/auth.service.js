@@ -7,12 +7,14 @@ class authService {
         const provider = new GoogleAuthProvider()
         return await signInWithPopup(auth, provider).then(
             (result) => {
-                const credential = GoogleAuthProvider.credentialFromResult(result)
                 const userInfo = {
-                    token: credential.accessToken,
-                    user: result.user
+                    Name: result.user.displayName,
+                    Email: result.user.email,
+                    Photo: result.user.photoURL,
+                    UId: result.user.uid
                 }
-                return console.log(userInfo)
+                sessionStorage.setItem("GoogleAccess", JSON.stringify(userInfo))
+                location.assign("/") 
             }
         )
     }
