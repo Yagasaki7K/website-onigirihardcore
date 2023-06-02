@@ -4,9 +4,8 @@ import ModalDetails from './ModalDetails';
 import postService from '../../../services/post.service';
 
 export function EditPostModal(id) {
-    const [modalOpen, setModalOpen] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false)
 
-    
     async function handleOpenModal() {
         setModalOpen(true)
 

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import SideMenuDetails from './SideMenuDetails'
 
 const SideMenu = () => {
+    
     return (
         <SideMenuDetails>
             <Link href="/">
