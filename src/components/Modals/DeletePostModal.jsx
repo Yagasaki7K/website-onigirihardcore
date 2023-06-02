@@ -11,7 +11,7 @@ export function DeletePostModal(id, nameImage) {
     function handleCloseModal() {setModalOpen(false)}
 
     async function handleDelete() {
-        await Promise.all([postService.deletePost(id), imgService.deleteImage(nameImage)])
+        await Promise.all([postService.deletePost(id.id), imgService.deleteImage(nameImage.name)])
     }
 
     return (

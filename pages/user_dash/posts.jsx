@@ -42,8 +42,8 @@ const Login = () => {
                                         <td>{post.author}</td>
                                         <td>{post.categories}</td>
                                         <td>{post.lessDate}</td>
-                                        <td><EditPostModal param={post.id}/></td>
-                                        <td><DeletePostModal param={post.id, post.image}/></td>
+                                        <td><EditPostModal id={post.id}/></td>
+                                        <td><DeletePostModal id={post.id} image={post.image}/></td>
                                     </tr>
                                 ))
                             }

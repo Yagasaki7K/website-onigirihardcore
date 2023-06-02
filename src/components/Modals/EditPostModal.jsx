@@ -9,7 +9,7 @@ export function EditPostModal(id) {
     async function handleOpenModal() {
         setModalOpen(true)
 
-        const data = await postService.getPost(id.param)
+        const data = await postService.getPost(id.id)
         const fields = data.data(document)
 
         const inputTitle = document.getElementById('title')
