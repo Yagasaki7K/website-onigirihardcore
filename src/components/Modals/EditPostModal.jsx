@@ -3,13 +3,13 @@ import Modal from 'react-modal';
 import ModalDetails from './ModalDetails';
 import postService from '../../../services/post.service';
 
-export function EditPostModal(id) {
+export function EditPostModal(param) {
     const [modalOpen, setModalOpen] = useState(false)
 
     async function handleOpenModal() {
         setModalOpen(true)
 
-        const data = await postService.getPost(id.id)
+        const data = await postService.getPost(param.id)
         const fields = data.data(document)
 
         const inputTitle = document.getElementById('title')
