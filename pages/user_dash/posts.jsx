@@ -43,7 +43,7 @@ const Login = () => {
                                         <td>{post.categories}</td>
                                         <td>{post.lessDate}</td>
                                         <td><EditPostModal id={post.id} /></td>
-                                        <td><DeletePostModal id={post.id} /></td>
+                                        <td><DeletePostModal id={post.id} url={post.imageUrl}/></td>
                                     </tr>
                                 ))
                             }
