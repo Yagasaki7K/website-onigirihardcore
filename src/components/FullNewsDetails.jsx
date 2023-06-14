@@ -39,8 +39,8 @@ const FullNewsDetails = styled.div`
 
 
             @media (max-width: 500px) {
-                  padding: 0;
-                  text-align: center;
+                padding: 0;
+                text-align: center;
             }
 
             :hover {
