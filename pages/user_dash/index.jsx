@@ -1,33 +1,23 @@
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import DashCreat from '../../src/components/Dashboard/DashCreat';
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import PropTypes from "prop-types";
 
-const PrivatePage = () => {
-  const router = useRouter();
-  const [value, setValue] = useState('')
- 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-        const data = sessionStorage.getItem('GoogleAccess');
-        setValue(data);
-    }
-  }, [])
+const UserDash = ({ children }) => {
+    const router = useRouter();
 
-  useEffect(() => {
-    if (!value) {
-      // Redirecionar o usuário para a página de login
-      router.replace('/login');
-    } else {
-      return (
-        <>
-          <DashCreat/>
-        </>
-      )
-    }
-  }, [value])
+    useEffect(() => {
+        const isAdmin = true;
 
-  // Renderizar a página privada
-  return <div>Conteúdo da página privada</div>;
+        if (isAdmin) {
+            router.push("/login");
+        }
+    }, []);
+
+    return <>{children}</>;
 };
 
-export default PrivatePage;
+UserDash.propTypes = {
+    children: PropTypes.node.isRequired,
+};
+
+export default UserDash;

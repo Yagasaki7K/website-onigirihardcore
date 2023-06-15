@@ -1,20 +1,22 @@
 import { useEffect } from "react";
-import Authentication from "../../src/components/Login/Authentication";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
+import PropTypes from "prop-types";
 
-export default function Login() {
-    const router = useRouter()
+const Login = ({ children }) => {
+    const router = useRouter();
     useEffect(() => {
-        const isAuthenticated = sessionStorage.getItem('GoogleAccess')
+        const isAuthenticated = sessionStorage.getItem("GoogleAccessAuth");
 
         if (isAuthenticated) {
-            router.push('/')
-        } 
-    },[])
+            router.push("/");
+        }
+    }, []);
 
-    return (
-        <>
-            <Authentication/>
-        </>
-    )
-}
+    return <>{children}</>;
+};
+
+Login.propTypes = {
+    children: PropTypes.node.isRequired,
+};
+
+export default Login;

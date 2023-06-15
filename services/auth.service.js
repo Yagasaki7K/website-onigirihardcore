@@ -13,7 +13,7 @@ class authService {
                     Photo: result.user.photoURL,
                     UId: result.user.uid
                 }
-                sessionStorage.setItem("GoogleAccess", JSON.stringify(userInfo))
+                sessionStorage.setItem("GoogleAccessAuth", JSON.stringify(userInfo))
                 location.assign("/") 
             }
         )
