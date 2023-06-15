@@ -3,8 +3,8 @@ import Modal from 'react-modal';
 import ModalDetails from './ModalDetails';
 import postService from '../../../services/post.service';
 
-export function EditPostModal(param) {
-    const [modalOpen, setModalOpen] = useState(false)
+const EditPostModal = (param) => {
+    const [modalOpen, setModalOpen] = useState(false);
 
     async function handleOpenModal() {
         setModalOpen(true)
@@ -72,3 +72,5 @@ export function EditPostModal(param) {
         </div>
     )
 }
+
+export default EditPostModal;

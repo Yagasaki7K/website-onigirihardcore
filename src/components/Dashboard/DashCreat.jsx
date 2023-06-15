@@ -1,23 +1,20 @@
-import { useState } from 'react'
-import Confetti from 'react-confetti';
-//import LoginDetails from "../../src/components/LoginDetails"
-import DashboardDetails from "../../src/components/DashboardDetails"
-import postService from '../../services/post.service'
-import { storage } from '../../client'
-import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
-import dynamic from "next/dynamic"
-import "@uiw/react-md-editor/markdown-editor.css"
-import "@uiw/react-markdown-preview/markdown.css"
-//import SideMenuDetails from '../../src/components/Login/SideMenuDetails.jsx';
-import SideMenu from '../../src/components/Login/SideMenu'
-//import Link from 'next/link.js';
+import { useState } from "react";
+import Confetti from "react-confetti";
+import DashboardDetails from "../DashboardDetails";
+import postService from "../../../services/post.service";
+import { storage } from "../../../client";
+import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
+import dynamic from "next/dynamic";
+import "@uiw/react-md-editor/markdown-editor.css";
+import "@uiw/react-markdown-preview/markdown.css";
+import SideMenu from "../../components/Login/SideMenu";
 
 const MarkdownEditor = dynamic(
     () => import("@uiw/react-md-editor").then((mod) => mod.default),
     { ssr: false }
 );
 
-const Login = () => {
+const DashCreat = () => {
     const [date, setDate] = useState('')
     const [lessDate, setLessDate] = useState('')
     const [moreDate, setMoreDate] = useState('')
@@ -33,7 +30,7 @@ const Login = () => {
     const [linkCitation, setLinkCitation] = useState('')
     const [ytid, setYtid] = useState('')
 
-    const [showConfetti, setShowConfetti] = useState(false);
+    const [showConfetti, setShowConfetti] = useState(false)
 
     const [bodyPost, setBodyPost] = useState('# Corpo da Publicação')
 
@@ -220,4 +217,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default DashCreat

@@ -4,14 +4,14 @@ import postService from '../../../services/post.service';
 import imgService from '../../../services/img.service';
 import ModalDetails from './ModalDetails';
 
-export function DeletePostModal(param) {
+const DeletePostModal = (param) => {
     const [modalOpen, setModalOpen] = useState(false)
 
     function handleOpenModal() {setModalOpen(true)}
     function handleCloseModal() {setModalOpen(false)}
 
     async function handleDelete() {
-        await Promise.all([postService.deletePost(param.id), imgService.deleteImage(param.id)])
+        await Promise.all([postService.deletePost(param.id), imgService.deleteImage(param.url)])
     }
 
     return (
@@ -31,3 +31,5 @@ export function DeletePostModal(param) {
         </div>
     )
 }
+
+export default DeletePostModal;

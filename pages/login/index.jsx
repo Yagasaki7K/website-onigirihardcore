@@ -1,21 +1,20 @@
-import LoginDetails from "../../src/components/LoginDetails"
-import SignUpModal from "../../src/components/Modals/SignUpModal"
-import SignInModal from "../../src/components/Modals/SignInModal"
+import { useEffect } from "react";
+import Authentication from "../../src/components/Login/Authentication";
+import { useRouter } from 'next/router';
 
-const Authentication = () => {
-    //....
+export default function Login() {
+    const router = useRouter()
+    useEffect(() => {
+        const isAuthenticated = sessionStorage.getItem('GoogleAccess')
+
+        if (isAuthenticated) {
+            router.push('/')
+        } 
+    },[])
 
     return (
-        <LoginDetails>
-            <div className="container">
-                <div>
-                    <img src="logotipo-white.png" alt="Logo" />  {/*Tag img not work..*/}
-                    <SignUpModal/>
-                    <SignInModal/>
-                </div>
-            </div>
-        </LoginDetails>
+        <>
+            <Authentication/>
+        </>
     )
 }
-
-export default Authentication
