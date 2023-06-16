@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import Custom404 from './404'
+import Custom404 from './_error'
 
 import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
@@ -52,14 +52,13 @@ const Post = () => {
 
     return (
         <>
-            <Header />
-
-            <SlugDetails>
-                {
-                    // eslint-disable-next-line react/prop-types
-                    Post && Post.map((post, index) => (
-                        post.slug === slug ? (
-                            <div key={index}>
+            {
+                // eslint-disable-next-line react/prop-types
+                Post && Post.map((post, index) => (
+                    post.slug === slug ? (
+                        <div key={index}>
+                            <Header />
+                            <SlugDetails>
                                 <Head>
                                     {/* Meta tags relacionadas ao SEO */}
                                     <title>{post.title}</title>
@@ -113,14 +112,14 @@ const Post = () => {
                                             <iframe width="550" height="480" src={'https://www.youtube.com/embed/' + post?.ytid} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : null
                                     }
                                 </section>
-                            </div>
-                        ) : (
-                            <><Custom404/></>
-                        )
-                    ))
-                }
-            </SlugDetails>
-            <Footer />
+                            </SlugDetails>
+                            <Footer />
+                        </div>
+                    ) : (
+                        <><Custom404/></>
+                    )
+                ))
+            }
         </>
     )
 }
