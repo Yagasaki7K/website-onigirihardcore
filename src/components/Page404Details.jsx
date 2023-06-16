@@ -9,6 +9,14 @@ const Page404Details = styled.div`
             color: ${colors.whitelight};
         }
 
+        button {
+            display: flex;
+            margin-top: 40px;
+            margin-left: 600px;
+            margin-right: 600px;
+            background-color: ${colors.blue};
+        }
+
     }
 `;
 export default Page404Details;

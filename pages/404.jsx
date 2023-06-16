@@ -1,4 +1,5 @@
 import Page404Details from "../src/components/Page404Details";
+import Link from "next/link";
 
 export default function Custom404() {
     return (
@@ -10,6 +11,9 @@ export default function Custom404() {
                     <br />
                     Nenhuma página foi encontrada.
                 </span>
+                <Link href="/">
+                    <button>Voltar para página inicial</button>
+                </Link>
             </div>
         </Page404Details>
     );
