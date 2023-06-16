@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
+import Custom404 from './404'
 
 import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
@@ -114,7 +115,7 @@ const Post = () => {
                                 </section>
                             </div>
                         ) : (
-                            null
+                            <><Custom404/></>
                         )
                     ))
                 }

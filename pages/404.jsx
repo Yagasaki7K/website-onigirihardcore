@@ -1,7 +1,25 @@
+import { useState, useEffect } from "react";
 import Page404Details from "../src/components/Page404Details";
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Custom404() {
+    const router = useRouter();
+    const [count, setCount] = useState(5);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCount((prevCount) => {
+                if (prevCount === 1) {
+                    router.push("/");
+                    clearInterval(interval);
+                }
+                return prevCount - 1;
+            });
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <Page404Details>
             <div className="error_description">
@@ -11,9 +29,9 @@ export default function Custom404() {
                     <br />
                     Nenhuma página foi encontrada.
                 </span>
-                <Link href="/">
-                    <button>Voltar para página inicial</button>
-                </Link>
+                <p>
+                    Redirecionando para a página inicial em {count} segundos...
+                </p>
             </div>
         </Page404Details>
     );
