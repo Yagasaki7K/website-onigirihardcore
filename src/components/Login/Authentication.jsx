@@ -7,8 +7,7 @@ const Authentication = () => {
         <LoginDetails>
             <div className="container">
                 <div>
-                    <img src="logotipo-white.png" alt="Logo" />{" "}
-                    {/*Tag img not work..*/}
+                    <img src="/logotipo-white.png" alt="Logo" />
                     <SignUpModal />
                     <SignInModal />
                 </div>

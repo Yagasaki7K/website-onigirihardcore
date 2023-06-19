@@ -23,22 +23,21 @@ const LoginDetails = styled.div`
 
         color: ${colors.white};
 
-        img {
-            width: 22rem;
-            margin-bottom: 3rem;
-        }
-
         div {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            height: 23rem;
             width: 25rem;
             padding: 3rem;
             border-radius: 15px;
             background: ${colors.blackdark};
             color: ${colors.black};
+
+            img {
+                width: 22rem;
+                margin-bottom: 3rem;
+            }
 
             input {
                 margin-bottom: 1rem;
@@ -53,14 +52,12 @@ const LoginDetails = styled.div`
                     outline: none;
                 }
             }
-            div{
-        
-                button {
+
+            button {
                 color: ${colors.white};
                 background: ${colors.blue};
                 border-radius: 5px;
                 border: none;
-                margin-top: 1rem;
                 margin-bottom: -1rem;
                 padding: 0.5rem 1.5rem;
                 font-size: 1rem;
@@ -68,15 +65,14 @@ const LoginDetails = styled.div`
                 text-transform: uppercase;
                 cursor: pointer;
 
-                    :hover {
-                        opacity: 0.8;
-                        transition: 1s;
-                    }
+                :hover {
+                    opacity: 0.8;
+                    transition: 1s;
                 }
             }
         }
     }
-    
+
 `
 
 export default LoginDetails

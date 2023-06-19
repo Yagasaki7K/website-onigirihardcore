@@ -6,8 +6,9 @@ import DashboardDetails from "../DashboardDetails"
 import SideMenu from '../Login/SideMenu'
 import { EditPostModal } from "../Modals/EditPostModal"
 import { DeletePostModal } from "../Modals/DeletePostModal"
+import { useRouter } from "next/router"
 
-const DashPost = () => {
+const DashboardEdit = () => {
     const [Posts, setPosts] = useState([])
 
     const getPosts = async () => {
@@ -16,13 +17,20 @@ const DashPost = () => {
     }
 
     useEffect(() => {
+        // Authentication from Google
+        const router = useRouter()
+        const isAuthenticated = sessionStorage.getItem("GoogleAccessAuth");
+
+        if (!isAuthenticated) {
+            router.push("/login");
+        }
+
         getPosts()
     }, [])
 
-    
     return (
         <DashboardDetails>
-            <SideMenu/>
+            <SideMenu />
             <div className="content">
                 <div className="publi" id="publi">
                     <h1>Modificar Publicações</h1>
@@ -43,7 +51,7 @@ const DashPost = () => {
                                         <td>{post.categories}</td>
                                         <td>{post.lessDate}</td>
                                         <td><EditPostModal id={post.id} /></td>
-                                        <td><DeletePostModal id={post.id} url={post.imageUrl}/></td>
+                                        <td><DeletePostModal id={post.id} url={post.imageUrl} /></td>
                                     </tr>
                                 ))
                             }
@@ -55,4 +63,4 @@ const DashPost = () => {
     )
 }
 
-export default DashPost
+export default DashboardEdit

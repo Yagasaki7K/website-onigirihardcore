@@ -1,20 +1,22 @@
 import { useState } from "react";
 import Confetti from "react-confetti";
-import DashboardDetails from "../DashboardDetails";
-import postService from "../../../services/post.service";
-import { storage } from "../../../client";
+import DashboardDetails from "../../src/components/DashboardDetails";
+import postService from "../../services/post.service";
+import { storage } from "../../client";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import dynamic from "next/dynamic";
 import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
-import SideMenu from "../../components/Login/SideMenu";
+import SideMenu from "../../src/components/Login/SideMenu";
+import { useRouter } from "next/router";
+import { useEffect } from "react/cjs/react.production.min";
 
 const MarkdownEditor = dynamic(
     () => import("@uiw/react-md-editor").then((mod) => mod.default),
     { ssr: false }
 );
 
-const DashCreat = () => {
+const DashboardCreate = () => {
     const [date, setDate] = useState('')
     const [lessDate, setLessDate] = useState('')
     const [moreDate, setMoreDate] = useState('')
@@ -33,6 +35,16 @@ const DashCreat = () => {
     const [showConfetti, setShowConfetti] = useState(false)
 
     const [bodyPost, setBodyPost] = useState('# Corpo da Publicação')
+
+    useEffect(() => {
+        // Authentication from Google
+        const router = useRouter()
+        const isAuthenticated = sessionStorage.getItem("GoogleAccessAuth");
+
+        if (!isAuthenticated) {
+            router.push("/login");
+        }
+    }, [])
 
     async function sendData() {
         const NewPosts = {
@@ -146,7 +158,7 @@ const DashCreat = () => {
     return (
         <DashboardDetails>
             {showConfetti && <Confetti gravity={0.5} height={1300} />}
-            <SideMenu/>
+            <SideMenu />
             <div className="content">
                 <div className="publi" id="publi">
                     <h1>Criar Publicações</h1>
@@ -169,7 +181,7 @@ const DashCreat = () => {
                             <div className="item">
                                 <label htmlFor="description">Descrição da Publicação*: </label>
                                 <textarea name="description" id="description" maxLength={126}
-                                        placeholder="Descrição da Publicação (Max.126)" required />
+                                    placeholder="Descrição da Publicação (Max.126)" required />
                             </div>
 
                             <div className="item">
@@ -217,4 +229,4 @@ const DashCreat = () => {
     )
 }
 
-export default DashCreat
+export default DashboardCreate
