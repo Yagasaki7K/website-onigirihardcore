@@ -1,23 +1,23 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import PropTypes from "prop-types";
+import Authentication from "../../../src/components/Login/Authentication";
 
-const UserDash = ({ children }) => {
+const UserDash = () => {
     const router = useRouter();
 
     useEffect(() => {
-        const isAdmin = true;
+        const isAuthenticated = sessionStorage.getItem("GoogleAccessAuth");
 
-        if (isAdmin) {
+        if (!isAuthenticated) {
             router.push("/login");
         }
     }, []);
 
-    return <>{children}</>;
-};
-
-UserDash.propTypes = {
-    children: PropTypes.node.isRequired,
+    return <>
+        <>
+            <Authentication />
+        </>
+    </>;
 };
 
 export default UserDash;
