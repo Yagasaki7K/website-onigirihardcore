@@ -9,7 +9,7 @@ import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
 import SideMenu from "../../src/components/Login/SideMenu";
 import { useRouter } from "next/router";
-import { useEffect } from "react/cjs/react.production.min";
+import { useEffect } from "react";
 
 const MarkdownEditor = dynamic(
     () => import("@uiw/react-md-editor").then((mod) => mod.default),

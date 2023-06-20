@@ -1,11 +1,11 @@
-import "@uiw/react-markdown-preview/markdown.css"
-import "@uiw/react-md-editor/markdown-editor.css"
-import { useEffect, useState } from 'react'
-import postService from '../../../services/post.service'
-import DashboardDetails from "../DashboardDetails"
-import SideMenu from '../Login/SideMenu'
-import { EditPostModal } from "../Modals/EditPostModal"
-import { DeletePostModal } from "../Modals/DeletePostModal"
+import "@uiw/react-markdown-preview/markdown.css";
+import "@uiw/react-md-editor/markdown-editor.css";
+import { useEffect, useState } from "react";
+import postService from "../../services/post.service";
+import DashboardDetails from "../../src/components/DashboardDetails";
+import SideMenu from "../../src/components/Login/SideMenu";
+import EditPostModal from "../../src/components/Modals/EditPostModal";
+import DeletePostModal from "../../src/components/Modals/DeletePostModal";
 import { useRouter } from "next/router"
 
 const DashboardEdit = () => {
