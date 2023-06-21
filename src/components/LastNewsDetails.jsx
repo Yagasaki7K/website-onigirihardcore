@@ -55,34 +55,37 @@ const TecnologiesDetails = styled.div`
             display: flex;
             margin-left: -1rem;
 
-        @media (max-width: 1024px) {
-            display: inline-block;
-            margin-left: 2%;
-            width: 25%;
-        }
+            @media (max-width: 1024px) {
+                display: inline-block;
+                margin-left: 2%;
+                width: 25%;
+            }
 
-          @media (max-width: 900px) {
-            display: inline-block;
-            margin-left: 2%;
-            width: 40%;
-          }
-
+            @media (max-width: 900px) {
+                display: inline-block;
+                margin-left: 2%;
+                width: 40%;
+            }
 
             @media (max-width: 768px) {
                 display: inline-block;
                 margin-left: 5%;
                 width: 45%;
-             }
+            }
 
             @media (max-width: 500px) {
                 display: inline-block;
                 padding: 2px;
             }
 
-
             a {
                 text-decoration: none;
                 color: ${colors.white};
+
+                :hover {
+                    color: ${colors.blue};
+                    transition: 1s;
+                }
 
                 img {
                     margin-top: 1rem;
@@ -95,11 +98,6 @@ const TecnologiesDetails = styled.div`
                     @media (max-width: 1366px) {
                         width: 17rem;
                     }
-                }
-
-                :hover {
-                    transform: scale(1.05);
-                    transition: 1s;
                 }
 
                 .title {
