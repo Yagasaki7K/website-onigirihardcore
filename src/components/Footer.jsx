@@ -3,7 +3,6 @@ import FooterDetails from './FooterDetails';
 export default function Footer() {
     return (
         <FooterDetails>
-
             <div className="imgfooter">
                 <a href="/">
                     <img src="/logotipo-white.png" alt="footer" />

@@ -6,7 +6,7 @@ const FooterDetails = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 1rem 0 2rem 0;
+        margin: -4rem 0 1rem 0;
 
         img {
             width: 30rem;
@@ -34,7 +34,6 @@ const FooterDetails = styled.div`
            display: block;
            padding: 10px;
            text-align: center;
-
        }
 
        a {

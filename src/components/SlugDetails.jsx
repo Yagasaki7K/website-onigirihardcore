@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { colors } from './variables'
 
 const SlugDetails = styled.div`
+    background: ${colors.blackdark};
 
     img {
         width: 100%;
@@ -51,7 +52,7 @@ const SlugDetails = styled.div`
         }
 
         margin-bottom: 5rem;
-        background: ${colors.whitelight};
+        padding-bottom: 1rem;
 
         h1 {
             margin-top: -1rem;
@@ -90,13 +91,11 @@ const SlugDetails = styled.div`
         }
 
         @media (max-width: 500px) {
-                font-size: 1.6em;
-                line-height: 30px;
-                width: 90%;
-            }
-
-
+            font-size: 1.6em;
+            line-height: 30px;
+            width: 90%;
         }
+    }
 
         .citation {
             font-weight: 100;

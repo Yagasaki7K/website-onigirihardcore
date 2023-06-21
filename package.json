@@ -3,13 +3,14 @@
   "version": "1.2.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "yagasaki": "yarn upgrade-interactive --latest"
   },
   "dependencies": {
+    "@uiw/react-markdown-preview": "^4.1.13",
     "@uiw/react-md-editor": "^3.23.3",
     "babel-loader": "^9.1.2",
     "babel-plugin-transform-remove-imports": "^1.7.0",

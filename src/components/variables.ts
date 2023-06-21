@@ -1,7 +1,7 @@
 export const colors = {
     black: "#1a1a1a",
     blackAlt: "#15171b",
-    blackdark: "#1d1e26",
+    blackdark: "#0d1117",
     blacklight: "#2f2f2f",
     blue: "#00acff",
     bluedark: "#0078b2",

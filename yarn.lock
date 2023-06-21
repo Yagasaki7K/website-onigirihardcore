@@ -2032,6 +2032,24 @@
   resolved "https://registry.npmjs.org/@uiw/copy-to-clipboard/-/copy-to-clipboard-1.0.14.tgz"
   integrity sha512-6szYjEU4xMkIqi4LPJLQIHBBBxazNxH0/slF1Ph4xtDtyeiJkIiNgr/PQxJX/REyWWLWllWTiCN491tnLWCOdA==
 
+"@uiw/react-markdown-preview@^4.1.13":
+  version "4.1.13"
+  resolved "https://registry.yarnpkg.com/@uiw/react-markdown-preview/-/react-markdown-preview-4.1.13.tgz#4882dda5d767b54aae9455e3159339c6989b36df"
+  integrity sha512-fmIGvBpK6HJyDFf7EokjZSIS0713Bq5KwhOsZ8IkbCMYDcDThFlmMkTTqyzGjL3phrkP9ED5O63WSILzefqe6A==
+  dependencies:
+    "@babel/runtime" "^7.17.2"
+    "@uiw/copy-to-clipboard" "~1.0.12"
+    react-markdown "~8.0.0"
+    rehype-attr "~2.1.0"
+    rehype-autolink-headings "~6.1.1"
+    rehype-ignore "^1.0.1"
+    rehype-prism-plus "~1.5.0"
+    rehype-raw "^6.1.1"
+    rehype-rewrite "~3.0.6"
+    rehype-slug "~5.1.0"
+    remark-gfm "~3.0.1"
+    unist-util-visit "^4.1.0"
+
 "@uiw/react-markdown-preview@^4.1.5":
   version "4.1.13"
   resolved "https://registry.npmjs.org/@uiw/react-markdown-preview/-/react-markdown-preview-4.1.13.tgz"

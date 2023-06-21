@@ -9,8 +9,7 @@ import { NextSeo } from 'next-seo';
 import Head from 'next/head'
 import Image from 'next/image'
 
-// Test using Localhost || Hidde getStaticPaths and getStaticProps and props inside on Post
-// import data from '../server/index.json'
+import MarkdownPreview from "@uiw/react-markdown-preview";
 
 // eslint-disable-next-line react/prop-types
 const Post = () => {
@@ -77,7 +76,9 @@ const Post = () => {
 
                                     {/* <p className="block__content">{post.createdAtExtended} | {post.author}</p> */}
                                     <h1 className="title__content">{post.title}</h1>
-                                    <p className="block__content" style={{ whiteSpace: "pre-wrap" }}>{post.bodyPost}</p>
+                                    <p className="block__content" style={{ whiteSpace: "pre-wrap" }}>
+                                        <MarkdownPreview source={post.bodyPost} />
+                                    </p>
                                     {/* <p className="block__content" style={{ whiteSpace: "pre-wrap" }}>{post.body}</p> */}
 
                                     {
