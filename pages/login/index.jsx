@@ -9,9 +9,8 @@ const Login = () => {
         const isAuthenticated = sessionStorage.getItem("GoogleAccessAuth");
 
         if (isAuthenticated) {
-            router.push("/dashboard/create");
+            router.push("/dashboard");
         }
-
     }, []);
 
     return (
@@ -21,4 +20,4 @@ const Login = () => {
     );
 };
 
-export default Login
+export default Login;

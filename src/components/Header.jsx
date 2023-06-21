@@ -7,7 +7,7 @@ const Header = () => {
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            const data = sessionStorage.getItem('GoogleAccess');
+            const data = sessionStorage.getItem('GoogleAccessAuth');
             setValue(data);
         }
     }, [])
@@ -64,7 +64,7 @@ const Header = () => {
                         {
                             value !== null ? (
                                 <li>
-                                    <Link href='/user_dash/creat'>
+                                    <Link href='/dashboard'>
                                         Dashbord
                                     </Link>
                                 </li> 

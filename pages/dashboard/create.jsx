@@ -8,9 +8,6 @@ import dynamic from "next/dynamic";
 import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
 import SideMenu from "../../src/components/Login/SideMenu";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
-
 const MarkdownEditor = dynamic(
     () => import("@uiw/react-md-editor").then((mod) => mod.default),
     { ssr: false }
@@ -35,16 +32,6 @@ const DashboardCreate = () => {
     const [showConfetti, setShowConfetti] = useState(false)
 
     const [bodyPost, setBodyPost] = useState('# Corpo da Publicação')
-
-    useEffect(() => {
-        // Authentication from Google
-        const router = useRouter()
-        const isAuthenticated = sessionStorage.getItem("GoogleAccessAuth");
-
-        if (!isAuthenticated) {
-            router.push("/login");
-        }
-    }, [])
 
     async function sendData() {
         const NewPosts = {

@@ -6,9 +6,10 @@ import DashboardDetails from "../../src/components/DashboardDetails";
 import SideMenu from "../../src/components/Login/SideMenu";
 import EditPostModal from "../../src/components/Modals/EditPostModal";
 import DeletePostModal from "../../src/components/Modals/DeletePostModal";
-import { useRouter } from "next/router"
+import { useRouter } from "next/router";
 
 const DashboardEdit = () => {
+    const router = useRouter()
     const [Posts, setPosts] = useState([])
 
     const getPosts = async () => {
@@ -18,7 +19,6 @@ const DashboardEdit = () => {
 
     useEffect(() => {
         // Authentication from Google
-        const router = useRouter()
         const isAuthenticated = sessionStorage.getItem("GoogleAccessAuth");
 
         if (!isAuthenticated) {

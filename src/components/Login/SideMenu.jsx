@@ -12,12 +12,12 @@ const SideMenu = () => {
 
             <div className="menu">
                 <ul>
-                    <Link href="/user_dash/creat">
+                    <Link href="/dashboard/create">
                         <li>
                             <i className="uil uil-file-edit-alt" /> Criar Publicações
                         </li>
                     </Link>
-                    <Link href="/user_dash/posts">
+                    <Link href="/dashboard/edit">
                         <li>
                             <i className="uil uil-file-edit-alt" /> Editar Publicações
                         </li>
