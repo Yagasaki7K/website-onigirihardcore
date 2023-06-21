@@ -63,6 +63,10 @@ const SlugDetails = styled.div`
             text-shadow: 1px 1px 2px rgb(0 0 0 / 30%);
         }
 
+        a {
+            color: ${colors.blue};
+        }
+
         .date {
             margin-bottom: 0rem;
             margin-left: 48rem;
