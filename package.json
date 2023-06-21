@@ -12,6 +12,8 @@
   "dependencies": {
     "@uiw/react-markdown-preview": "^4.1.13",
     "@uiw/react-md-editor": "^3.23.3",
+    "babel-loader": "^9.1.2",
+    "babel-plugin-transform-remove-imports": "^1.7.0",
     "dotenv": "^16.3.1",
     "firebase": "^9.22.2",
     "hltv-api": "^3.0.3",
