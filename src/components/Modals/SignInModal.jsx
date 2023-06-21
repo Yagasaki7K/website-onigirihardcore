@@ -1,32 +1,38 @@
-import { useState } from 'react';
-import Modal from 'react-modal';
-import ModalDetails from './ModalDetails';
-import authService from '../../../services/auth.service'
+import { useState } from "react";
+import { useRouter } from "next/router";
+import Modal from "react-modal";
+import ModalDetails from "./ModalDetails";
+import authService from "../../../services/auth.service";
 
 const SignInModal = () => {
-    const [modalOpen, setModalOpen] = useState(false)
+    const router = useRouter();
+    const [modalOpen, setModalOpen] = useState(false);
 
     //const [loginEmail, setLoginEmail] = useState('')
     //const [loginPassword, setLoginPassword] = useState('')
 
-    function handleOpenModal() {setModalOpen(true)}
+    function handleOpenModal() {
+        setModalOpen(true);
+    }
 
-    function handleCloseModal() {setModalOpen(false)}
+    function handleCloseModal() {
+        setModalOpen(false);
+    }
 
     function collectData() {
-        const formEmail = document.getElementById("email").value
-        console.log(formEmail)
+        const formEmail = document.getElementById("email").value;
+        console.log(formEmail);
 
-        const formPasswd = document.getElementById("password").value
-        console.log(formPasswd)
+        const formPasswd = document.getElementById("password").value;
+        console.log(formPasswd);
     }
 
     function sendData() {
-        return null
+        return null;
     }
 
     function sendGoogleReq() {
-        authService.signInGoogle()
+        authService.signInGoogle(router);
     }
     return (
         <div>
