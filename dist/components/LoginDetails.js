@@ -1,0 +1,14 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _variables = require("./variables");
+var _templateObject;
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+var LoginDetails = _styledComponents["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    background: url(https://images.unsplash.com/photo-1569701813229-33284b643e3c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=914&q=80);\n    background-size: cover;\n    background-position: center;\n    background-repeat: no-repeat;\n    height: 100vh;\n    display: flex;\n    overflow-y: hidden;\n\n    .container {\n        height: 100vh;\n        width: 100vw;\n        margin-top: 15rem;\n        margin-left: 47rem;\n\n        @media (max-width: 1366px) {\n            margin-top: 9rem;\n            margin-left: 30rem;\n        }\n\n        color: ", ";\n\n        img {\n            width: 22rem;\n            margin-bottom: 3rem;\n        }\n\n        form {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            flex-direction: column;\n            height: 23rem;\n            width: 25rem;\n            padding: 3rem;\n            border-radius: 15px;\n            background: ", "};\n            color: ", ";\n\n            input {\n                margin-bottom: 1rem;\n                padding: 0.5rem;\n                font-family: 'Poppins', sans-serif;\n                font-size: 1rem;\n                border-radius: 5px;\n                border: none;\n                background: ", ";\n\n                :focus {\n                    outline: none;\n                }\n            }\n\n            button {\n                color: ", ";\n                background: ", ";\n                border-radius: 5px;\n                border: none;\n                margin-top: 1rem;\n                margin-bottom: -1rem;\n                padding: 0.5rem 1.5rem;\n                font-size: 1rem;\n                font-family: 'Poppins', sans-serif;\n                text-transform: uppercase;\n                cursor: pointer;\n\n                :hover {\n                    opacity: 0.8;\n                    transition: 1s;\n                }\n            }\n        }\n"])), _variables.colors.white, _variables.colors.blackdark, _variables.colors.black, _variables.colors.graylight, _variables.colors.white, _variables.colors.blue);
+var _default = LoginDetails;
+exports["default"] = _default;

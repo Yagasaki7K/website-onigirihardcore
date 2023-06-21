@@ -1,3 +1,4 @@
+import React from 'react'
 import HLTV from 'hltv-api'
 import Link from 'next/link'
 import Header from '../src/components/Header'

@@ -6,12 +6,17 @@ import Footer from '../src/components/Footer'
 import SlugDetails from '../src/components/SlugDetails'
 import postService from '../services/post.service'
 import { NextSeo } from 'next-seo';
-import Head from 'next/head'
 import Image from 'next/image'
 
-import MarkdownPreview from "@uiw/react-markdown-preview";
+import dynamic from 'next/dynamic'
 
 // eslint-disable-next-line react/prop-types
+
+const MarkdownPreview = dynamic(
+    () => import("@uiw/react-markdown-preview").then((mod) => mod.default),
+    { ssr: false }
+);
+
 const Post = () => {
     const router = useRouter()
     const { slug } = router.query
@@ -37,12 +42,6 @@ const Post = () => {
                     Post && Post.map((post, index) => (
                         post.slug === slug ? (
                             <div key={index}>
-                                <Head>
-                                    <meta
-                                        name="twitter:image"
-                                        content={post.imageUrl}
-                                    />
-                                </Head>
                                 <NextSeo
                                     title={post.title}
                                     description={post?.description}
@@ -74,12 +73,10 @@ const Post = () => {
                                 <section key={post.id}>
                                     <p className="block__content">{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null} | {post.author}</p>
 
-                                    {/* <p className="block__content">{post.createdAtExtended} | {post.author}</p> */}
                                     <h1 className="title__content">{post.title}</h1>
                                     <p className="block__content" style={{ whiteSpace: "pre-wrap" }}>
                                         <MarkdownPreview source={post.bodyPost} />
                                     </p>
-                                    {/* <p className="block__content" style={{ whiteSpace: "pre-wrap" }}>{post.body}</p> */}
 
                                     {
                                         post.citation != '' ? (
@@ -88,8 +85,6 @@ const Post = () => {
                                             </a>
                                         ) : null
                                     }
-
-                                    {/* <p className="block__content" style={{ whiteSpace: "pre-wrap" }}>{post.body2}</p> */}
 
                                     {
                                         post.ytid ?

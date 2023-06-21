@@ -107,21 +107,21 @@ const Login = () => {
             </DashboardDetails>
         )
     }
-        return (
-            <LoginDetails>
-                <div className="container">
+    return (
+        <LoginDetails>
+            <div className="container">
 
-                    <form onSubmit={(e) => e.preventDefault()}>
-                        <img src="../logotipo-white.png" alt="Logo" />
-                        <input type="text" placeholder="Login" id="Login" required />
+                <form onSubmit={(e) => e.preventDefault()}>
+                    <img src="../logotipo-white.png" alt="Logo" />
+                    <input type="text" placeholder="Login" id="Login" required />
 
-                        <input type="password" placeholder="Password" id="Password" required />
+                    <input type="password" placeholder="Password" id="Password" required />
 
-                        <button onClick={LoginAcess}>Acessar</button>
-                    </form>
-                </div>
-            </LoginDetails>
-        )
+                    <button onClick={LoginAcess}>Acessar</button>
+                </form>
+            </div>
+        </LoginDetails>
+    )
 
 }
 

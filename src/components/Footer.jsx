@@ -1,3 +1,4 @@
+import React from 'react';
 import FooterDetails from './FooterDetails';
 
 export default function Footer() {
