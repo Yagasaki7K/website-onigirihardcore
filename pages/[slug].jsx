@@ -74,9 +74,7 @@ const Post = () => {
                                     <p className="block__content">{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null} | {post.author}</p>
 
                                     <h1 className="title__content">{post.title}</h1>
-                                    <p className="block__content" style={{ whiteSpace: "pre-wrap" }}>
-                                        <MarkdownPreview source={post.bodyPost} />
-                                    </p>
+                                    <MarkdownPreview source={post.bodyPost} />
 
                                     {
                                         post.citation != '' ? (
