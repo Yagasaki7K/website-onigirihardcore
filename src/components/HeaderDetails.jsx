@@ -128,7 +128,7 @@ const HeaderDetails = styled.div`
                 }
 
                 :hover {
-                    border-bottom: 4px solid ${colors.white};
+                    border-bottom: 2px solid ${colors.white};
                 }
             }
         }
