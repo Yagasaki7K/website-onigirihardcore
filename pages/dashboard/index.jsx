@@ -1,14 +1,29 @@
+import { useEffect } from "react";
 import authService from "../../services/auth.service";
+import { useRouter } from "next/router";
 
 function Dashboard() {
+    const router = useRouter();
 
-    authService.queryByAdmin("ug4AueY54Kh6mU7wQRnU1jp0HN92")
+    useEffect(() => {
+        const isAuthenticated = sessionStorage.getItem("GoogleAccessAuth");
+
+        if (!isAuthenticated) {
+            router.push("/login");
+        } else {
+            const jsonObject = JSON.parse(isAuthenticated);
+            authService.queryByAdmin(jsonObject.UId).then((result) =>{
+                console.log(result)
+            })
+            
+        }
+    }, []);
 
     return (
         <>
-            <p>oi</p>
+            <p>TESTE</p>
         </>
-    )
+    );
 }
 
 export default Dashboard;

@@ -11,8 +11,8 @@ class authService {
         );
         result.forEach((doc) => {
             doc.id === "admin"
-                ? console.log("Usuario pertence a permissão Admin")
-                : null;
+                ? true
+                : false;
         });
     };
 
