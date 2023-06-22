@@ -16,6 +16,16 @@ const SlugDetails = styled.div`
         }
     }
 
+    blockquote {
+        margin: 1rem;
+        p {
+            font-style: italic;
+            color: #6281af;
+            border-left: 2px solid #6281af;
+            padding-left: 1rem;
+        }
+    }
+
     section {
         margin-left: 28rem;
         width: 71%;
