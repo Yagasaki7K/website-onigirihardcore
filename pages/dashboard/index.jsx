@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 function Dashboard() {
     const router = useRouter();
 
-    const { pahtname } = router;
+    const { pathname } = router;
 
     useEffect(() => {
         const isAuthenticated = sessionStorage.getItem("GoogleAccessAuth");
@@ -19,7 +19,7 @@ function Dashboard() {
                 result !== true ? router.push("/") : null;
             });
         }
-    }, [pahtname]);
+    }, [pathname]);
 
     return null;
 }

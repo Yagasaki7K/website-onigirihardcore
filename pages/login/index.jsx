@@ -9,7 +9,7 @@ const Login = () => {
         const isAuthenticated = sessionStorage.getItem("GoogleAccessAuth");
 
         if (isAuthenticated) {
-            router.push("/dashboard");
+            router.push("/dashboard/create");
         }
     }, []);
 
