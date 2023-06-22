@@ -5,25 +5,23 @@ import { useRouter } from "next/router";
 function Dashboard() {
     const router = useRouter();
 
+    const { pahtname } = router;
+
     useEffect(() => {
         const isAuthenticated = sessionStorage.getItem("GoogleAccessAuth");
+        const jsonObject = JSON.parse(isAuthenticated);
+        const uid = JSON.stringify(jsonObject.UId).replace(/"/g, "");
 
         if (!isAuthenticated) {
             router.push("/login");
         } else {
-            const jsonObject = JSON.parse(isAuthenticated);
-            authService.queryByAdmin(jsonObject.UId).then((result) =>{
-                console.log(result)
-            })
-            
+            authService.queryByUsersInAccessOne(uid).then((result) => {
+                result !== true ? router.push("/") : null;
+            });
         }
-    }, []);
+    }, [pahtname]);
 
-    return (
-        <>
-            <p>TESTE</p>
-        </>
-    );
+    return null;
 }
 
 export default Dashboard;

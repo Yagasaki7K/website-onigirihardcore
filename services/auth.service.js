@@ -5,15 +5,20 @@ import { auth, database } from "../client";
 const permissionsCollectionRef = collection(database, "permissions");
 
 class authService {
-    queryByAdmin = async (uid) => {
-        const result = await getDocs(
-            query(permissionsCollectionRef, where("user_uid", "==", uid))
+    queryByUsersInAccessOne = async (uid) => {
+        const selectedUsers = await getDocs(
+            query(permissionsCollectionRef, where("acesso1", "==", true))
         );
-        result.forEach((doc) => {
-            doc.id === "admin"
-                ? true
-                : false;
-        });
+
+        const users = selectedUsers.docs.map((doc) => doc.id);
+
+        for (let index = 0; index < users.length; index++) {
+            if (users[index] === uid) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     };
 
     signInGoogle = async (router) => {
