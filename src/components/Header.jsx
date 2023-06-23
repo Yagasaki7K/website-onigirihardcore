@@ -64,7 +64,7 @@ const Header = () => {
                         {
                             value !== null ? (
                                 <li>
-                                    <Link href='/dashboard'>
+                                    <Link href='/dashboard/create'>
                                         Dashbord
                                     </Link>
                                 </li> 

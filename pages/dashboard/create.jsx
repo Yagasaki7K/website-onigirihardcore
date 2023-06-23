@@ -1,19 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/dist/client/router";
 import Confetti from "react-confetti";
 import DashboardDetails from "../../src/components/DashboardDetails";
 import postService from "../../services/post.service";
+import authService from "../../services/auth.service";
 import { storage } from "../../client";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import dynamic from "next/dynamic";
 import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
 import SideMenu from "../../src/components/Login/SideMenu";
+
 const MarkdownEditor = dynamic(
     () => import("@uiw/react-md-editor").then((mod) => mod.default),
     { ssr: false }
 );
 
 const DashboardCreate = () => {
+    const router = useRouter()
+
     const [date, setDate] = useState('')
     const [lessDate, setLessDate] = useState('')
     const [moreDate, setMoreDate] = useState('')
@@ -32,6 +37,20 @@ const DashboardCreate = () => {
     const [showConfetti, setShowConfetti] = useState(false)
 
     const [bodyPost, setBodyPost] = useState('# Corpo da Publicação')
+
+    useEffect(() => {
+        const isAuthenticated = sessionStorage.getItem("GoogleAccessAuth");
+        const jsonObject = JSON.parse(isAuthenticated);
+        const uid = JSON.stringify(jsonObject.UId).replace(/"/g, "");
+
+        if (!isAuthenticated) {
+            router.push("/login");
+        } else {
+            authService.queryByUsersInAccessOne(uid).then((result) => {
+                result !== true ? router.push("/") :null;
+            });
+        }
+    }, []);
 
     async function sendData() {
         const NewPosts = {
