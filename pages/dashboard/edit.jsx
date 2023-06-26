@@ -11,6 +11,7 @@ import { useRouter } from "next/router";
 
 const DashboardEdit = () => {
     const router = useRouter();
+    const [render, setRender] = useState(false);
     const [Posts, setPosts] = useState([]);
 
     const getPosts = async () => {
@@ -27,55 +28,60 @@ const DashboardEdit = () => {
             router.push("/login");
         } else {
             authService.queryByUsersInAccessOne(uid).then((result) => {
-                result !== true ? router.push("/") : getPosts();
+                result !== true ? router.push("/") : setRender(true);
+                getPosts();
             });
         }
     }, []);
 
-    return (
-        <DashboardDetails>
-            <SideMenu />
-            <div className="content">
-                <div className="publi" id="publi">
-                    <h1>Modificar Publicações</h1>
-                    <div className="container">
-                        <table>
-                            <tr>
-                                <th>Título</th>
-                                <th>Autor</th>
-                                <th>Categoria</th>
-                                <th>Data de Modificação</th>
-                                <th>Ações</th>
-                            </tr>
-                            {Posts.map((post) => (
-                                <tr key={post}>
-                                    <a
-                                        href={"/" + post.slug}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        <td>{post.title}</td>
-                                    </a>
-                                    <td>{post.author}</td>
-                                    <td>{post.categories}</td>
-                                    <td>{post.lessDate}</td>
-                                    <td>
-                                        <EditPostModal id={post.id} />
-                                    </td>
-                                    <td>
-                                        <DeletePostModal
-                                            id={post.id}
-                                            url={post.imageUrl}
-                                        />
-                                    </td>
+    if (render === true) {
+        return (
+            <DashboardDetails>
+                <SideMenu />
+                <div className="content">
+                    <div className="publi" id="publi">
+                        <h1>Modificar Publicações</h1>
+                        <div className="container">
+                            <table>
+                                <tr>
+                                    <th>Título</th>
+                                    <th>Autor</th>
+                                    <th>Categoria</th>
+                                    <th>Data de Modificação</th>
+                                    <th>Ações</th>
                                 </tr>
-                            ))}
-                        </table>
+                                {Posts.map((post) => (
+                                    <tr key={post}>
+                                        <a
+                                            href={"/" + post.slug}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            <td>{post.title}</td>
+                                        </a>
+                                        <td>{post.author}</td>
+                                        <td>{post.categories}</td>
+                                        <td>{post.lessDate}</td>
+                                        <td>
+                                            <EditPostModal id={post.id} />
+                                        </td>
+                                        <td>
+                                            <DeletePostModal
+                                                id={post.id}
+                                                url={post.imageUrl}
+                                            />
+                                        </td>
+                                    </tr>
+                                ))}
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </DashboardDetails>
-    );
+            </DashboardDetails>
+        );
+    } else {
+        return null;
+    }
 };
 
 export default DashboardEdit;
