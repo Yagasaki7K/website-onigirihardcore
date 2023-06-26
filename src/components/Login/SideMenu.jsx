@@ -1,9 +1,9 @@
-import React from 'react'
-import Link from 'next/link'
-import SideMenuDetails from './SideMenuDetails'
+import React from "react";
+import Link from "next/link";
+import SideMenuDetails from "./SideMenuDetails";
+import authService from "../../../services/auth.service";
 
 const SideMenu = () => {
-    
     return (
         <SideMenuDetails>
             <Link href="/">
@@ -14,23 +14,25 @@ const SideMenu = () => {
                 <ul>
                     <Link href="/dashboard/create">
                         <li>
-                            <i className="uil uil-file-edit-alt" /> Criar Publicações
+                            <i className="uil uil-file-edit-alt" /> Criar
+                            Publicações
                         </li>
                     </Link>
                     <Link href="/dashboard/edit">
                         <li>
-                            <i className="uil uil-file-edit-alt" /> Editar Publicações
+                            <i className="uil uil-file-edit-alt" /> Editar
+                            Publicações
                         </li>
                     </Link>
                     <Link href="/">
                         <li>
-                            <i className="uil uil-sign-out-alt" /> Sair
+                            <i className="uil uil-sign-out-alt" onClick={() => authService.signOutGoogle()} /> Sair
                         </li>
                     </Link>
                 </ul>
             </div>
         </SideMenuDetails>
-    )
-}
+    );
+};
 
-export default SideMenu
+export default SideMenu;

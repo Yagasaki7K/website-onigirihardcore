@@ -39,18 +39,23 @@ const DashboardCreate = () => {
 
     const [bodyPost, setBodyPost] = useState("# Corpo da Publicação");
 
-    useEffect(() => {
-        const isAuthenticated = sessionStorage.getItem("GoogleAccessAuth");
-        const jsonObject = JSON.parse(isAuthenticated);
-        const uid = JSON.stringify(jsonObject.UId).replace(/"/g, "");
+    async function checkAuth() {
+        return await authService.stateAuthentication();
+    }
 
-        if (!isAuthenticated) {
-            router.push("/login");
-        } else {
-            authService.queryByUsersInAccessOne(uid).then((result) => {
-                result !== true ? false : setRender(true);
+    useEffect(() => {
+        checkAuth()
+            .then((result) => {
+                console.log(result)
+                authService.queryByUsersInAccessOne(result.id)
+                    .then((result) => {
+                        console.log(result)
+                        result !== true ? setRender(false) : setRender(true); 
+                    });
+            })
+            .catch(() =>{
+                router.push("/login")
             });
-        }
     }, []);
 
     async function sendData() {

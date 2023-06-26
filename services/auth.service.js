@@ -1,4 +1,9 @@
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {
+    GoogleAuthProvider,
+    signInWithPopup,
+    signOut,
+    onAuthStateChanged,
+} from "firebase/auth";
 import { query, where, collection, getDocs } from "firebase/firestore";
 import { auth, database } from "../client";
 
@@ -23,18 +28,26 @@ class authService {
 
     signInGoogle = async (router) => {
         const provider = new GoogleAuthProvider();
-        return await signInWithPopup(auth, provider).then((result) => {
-            const userInfo = {
-                Name: result.user.displayName,
-                Email: result.user.email,
-                Photo: result.user.photoURL,
-                UId: result.user.uid,
-            };
-            sessionStorage.setItem(
-                "GoogleAccessAuth",
-                JSON.stringify(userInfo)
-            );
+        return await signInWithPopup(auth, provider).then(() => {
             router.push("/");
+        });
+    };
+
+    singOutGoogle = async () => {
+        await signOut(auth);
+    };
+
+    stateAuthentication = () => {
+        return new Promise((resolve) => {
+            const unsubscribe = onAuthStateChanged(auth, (user) => {
+                const infos = {
+                    id: user.uid,
+                    name: user.displayName,
+                    photo: user.photoURL,
+                };
+                resolve(infos);
+            });
+            unsubscribe();
         });
     };
 }

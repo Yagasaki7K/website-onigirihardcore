@@ -11,27 +11,32 @@ import { useRouter } from "next/router";
 
 const DashboardEdit = () => {
     const router = useRouter();
-    const [render, setRender] = useState(false);
+    const [render, setRender] = useState();
     const [Posts, setPosts] = useState([]);
 
-    const getPosts = async () => {
+    async function checkAuth() {
+        return await authService.stateAuthentication();
+    }
+
+    async function getPosts() {
         const data = await postService.getAllPosts();
         setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    };
+    }
 
     useEffect(() => {
-        const isAuthenticated = sessionStorage.getItem("GoogleAccessAuth");
-        const jsonObject = JSON.parse(isAuthenticated);
-        const uid = JSON.stringify(jsonObject.UId).replace(/"/g, "");
-
-        if (!isAuthenticated) {
-            router.push("/login");
-        } else {
-            authService.queryByUsersInAccessOne(uid).then((result) => {
-                result !== true ? router.push("/") : setRender(true);
-                getPosts();
+        checkAuth()
+            .then((result) => {
+                console.log(result);
+                authService
+                    .queryByUsersInAccessOne(result.id)
+                    .then((result) => {
+                        result !== true ? setRender(false) : setRender(true);
+                        getPosts();
+                    });
+            })
+            .catch(() => {
+                router.push("/login");
             });
-        }
     }, []);
 
     if (render === true) {
@@ -43,36 +48,40 @@ const DashboardEdit = () => {
                         <h1>Modificar Publicações</h1>
                         <div className="container">
                             <table>
-                                <tr>
-                                    <th>Título</th>
-                                    <th>Autor</th>
-                                    <th>Categoria</th>
-                                    <th>Data de Modificação</th>
-                                    <th>Ações</th>
-                                </tr>
-                                {Posts.map((post) => (
-                                    <tr key={post}>
-                                        <a
-                                            href={"/" + post.slug}
-                                            target="_blank"
-                                            rel="noreferrer"
-                                        >
-                                            <td>{post.title}</td>
-                                        </a>
-                                        <td>{post.author}</td>
-                                        <td>{post.categories}</td>
-                                        <td>{post.lessDate}</td>
-                                        <td>
-                                            <EditPostModal id={post.id} />
-                                        </td>
-                                        <td>
-                                            <DeletePostModal
-                                                id={post.id}
-                                                url={post.imageUrl}
-                                            />
-                                        </td>
+                                <tbody>
+                                    <tr>
+                                        <th>Título</th>
+                                        <th>Autor</th>
+                                        <th>Categoria</th>
+                                        <th>Data de Modificação</th>
+                                        <th>Ações</th>
                                     </tr>
-                                ))}
+                                    {Posts.map((post) => (
+                                        <tr key={post.id}>
+                                            <td>
+                                                <a
+                                                    href={"/" + post.slug}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    {post.title}
+                                                </a>
+                                            </td>
+                                            <td>{post.author}</td>
+                                            <td>{post.categories}</td>
+                                            <td>{post.lessDate}</td>
+                                            <td>
+                                                <EditPostModal id={post.id} />
+                                            </td>
+                                            <td>
+                                                <DeletePostModal
+                                                    id={post.id}
+                                                    url={post.imageUrl}
+                                                />
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
                             </table>
                         </div>
                     </div>
