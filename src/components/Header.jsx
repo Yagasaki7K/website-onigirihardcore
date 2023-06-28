@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import HeaderDetails from "./HeaderDetails";
+import authService from "../../services/auth.service";
 
 const Header = () => {
     const [value, setValue] = useState(false);
