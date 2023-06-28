@@ -28,11 +28,11 @@ const SideMenu = () => {
                             Publicações
                         </li>
                     </Link>
-                    <Link href="/" onClick={SignOut}>
+                    <div href="/" onClick={SignOut}>
                         <li>
                             <i className="uil uil-sign-out-alt" /> Sair
                         </li>
-                    </Link>
+                    </div>
                 </ul>
             </div>
         </SideMenuDetails>

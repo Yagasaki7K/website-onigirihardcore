@@ -33,7 +33,7 @@ class authService {
         });
     };
 
-    singOutGoogle = async () => {
+    signOutGoogle = async () => {
         return await signOut(auth)
     };
 
