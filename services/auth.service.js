@@ -34,18 +34,22 @@ class authService {
     };
 
     signOutGoogle = async () => {
-        return await signOut(auth)
+        return await signOut(auth);
     };
 
     stateAuthentication = () => {
         return new Promise((resolve) => {
             const unsubscribe = onAuthStateChanged(auth, (user) => {
-                const infos = {
-                    id: user.uid,
-                    name: user.displayName,
-                    photo: user.photoURL,
-                };
-                resolve(infos);
+                if (!user) {
+                    resolve(null);
+                } else {
+                    const infos = {
+                        id: user.uid,
+                        name: user.displayName,
+                        photo: user.photoURL,
+                    };
+                    resolve(infos);
+                }
             });
             unsubscribe();
         });

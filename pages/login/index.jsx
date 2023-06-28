@@ -1,16 +1,19 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Authentication from "../../src/components/Login/Authentication";
+import authService from "../../services/auth.service";
 
 const Login = () => {
     const router = useRouter();
 
-    useEffect(() => {
-        const isAuthenticated = sessionStorage.getItem("GoogleAccessAuth");
+    async function checkAuth() {
+        return await authService.stateAuthentication();
+    }
 
-        if (isAuthenticated) {
-            router.push("/dashboard/create");
-        }
+    useEffect(() => {
+        checkAuth().then(() => {
+            router.push("/");
+        });
     }, []);
 
     return (

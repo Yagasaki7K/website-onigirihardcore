@@ -1,22 +1,33 @@
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import HeaderDetails from './HeaderDetails';
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import HeaderDetails from "./HeaderDetails";
 
 const Header = () => {
-    const [value, setValue] = useState(null)
+    const [value, setValue] = useState(false);
+
+    async function checkAuth() {
+        return await authService.stateAuthentication();
+    }
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const data = sessionStorage.getItem('GoogleAccessAuth');
-            setValue(data);
-        }
-    }, [])
+        checkAuth()
+            .then(() => {
+                setValue(true);
+            })
+            .catch(() => {
+                setValue(false);
+            });
+    }, []);
 
     return (
         <HeaderDetails>
             <div className="header">
                 <Link href="/" className="logotipo">
-                    <img src="/logotipo-white.png" className="logotipo" alt="logo" />
+                    <img
+                        src="/logotipo-white.png"
+                        className="logotipo"
+                        alt="logo"
+                    />
                 </Link>
                 <Link href="/">
                     <img src="/anuncio.png" className="advice" alt="Anuncio" />
@@ -33,7 +44,11 @@ const Header = () => {
                             <Link href="/noticias">Notícias</Link>
                         </li>
                         <li>
-                            <Link href="https://kalify.vercel.app" target="_blank" rel="noreferrer">
+                            <Link
+                                href="https://kalify.vercel.app"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
                                 Kalify Inc
                             </Link>
                         </li>
@@ -46,41 +61,45 @@ const Header = () => {
                             <Link href="/noticias">Notícias</Link>
                         </li>
                         <li>
-                            <Link href="/#animes">Animes {`&`} HQ{`'`}s</Link>
+                            <Link href="/#animes">
+                                Animes {`&`} HQ{`'`}s
+                            </Link>
                         </li>
                         <li>
                             <Link href="/csgo">CSGO ~ HLTV News</Link>
                         </li>
                         <li>
-                            <Link href="https://onigiri-hardcore.blogspot.com/" target="_blank" rel="noreferrer">
+                            <Link
+                                href="https://onigiri-hardcore.blogspot.com/"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
                                 OH: Arquivos
                             </Link>
                         </li>
                         <li>
-                            <Link href="https://kalify.vercel.app" target="_blank" rel="noreferrer">
+                            <Link
+                                href="https://kalify.vercel.app"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
                                 Kalify Inc
                             </Link>
                         </li>
-                        {
-                            value !== null ? (
-                                <li>
-                                    <Link href='/dashboard/create'>
-                                        Dashbord
-                                    </Link>
-                                </li> 
-                            ) : (
-                                <li>
-                                    <Link href='/login'>
-                                        Acesso
-                                    </Link>
-                                </li>
-                            )
-                        }
+                        {value === false ? (
+                            <li>
+                                <Link href="/dashboard/create">Dashbord</Link>
+                            </li>
+                        ) : (
+                            <li>
+                                <Link href="/login">Acesso</Link>
+                            </li>
+                        )}
                     </span>
                 </ul>
             </div>
         </HeaderDetails>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;
