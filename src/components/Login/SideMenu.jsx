@@ -4,6 +4,10 @@ import SideMenuDetails from "./SideMenuDetails";
 import authService from "../../../services/auth.service";
 
 const SideMenu = () => {
+    function SignOut() {
+        return authService.signOutGoogle();
+    }
+
     return (
         <SideMenuDetails>
             <Link href="/">
@@ -24,9 +28,9 @@ const SideMenu = () => {
                             Publicações
                         </li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/" onClick={SignOut}>
                         <li>
-                            <i className="uil uil-sign-out-alt" onClick={() => authService.signOutGoogle()} /> Sair
+                            <i className="uil uil-sign-out-alt" /> Sair
                         </li>
                     </Link>
                 </ul>

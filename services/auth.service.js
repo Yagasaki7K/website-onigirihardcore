@@ -34,7 +34,7 @@ class authService {
     };
 
     singOutGoogle = async () => {
-        await signOut(auth);
+        return await signOut(auth)
     };
 
     stateAuthentication = () => {
