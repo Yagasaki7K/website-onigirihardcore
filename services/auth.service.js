@@ -38,22 +38,23 @@ class authService {
     };
 
     stateAuthentication = () => {
-        return new Promise((resolve) => {
-            const unsubscribe = onAuthStateChanged(auth, (user) => {
-                if (!user) {
-                    resolve(null);
-                } else {
-                    const infos = {
-                        id: user.uid,
-                        name: user.displayName,
-                        photo: user.photoURL,
-                    };
-                    resolve(infos);
-                }
-            });
+        return new Promise((resolve, reject) => {
+          const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user) {
+              const infos = {
+                id: user.uid,
+                name: user.displayName,
+                photo: user.photoURL,
+              };
+              resolve(infos);
+            } else {
+              reject("Nenhum usuário logado no Onigiri");
+            }
             unsubscribe();
+          });
         });
     };
+      
 }
 
 export default new authService();

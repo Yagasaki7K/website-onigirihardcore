@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import postService from "../../services/post.service";
 import authService from "../../services/auth.service";
 import DashboardDetails from "../../src/components/DashboardDetails";
-import SideMenu from "../../src/components/Login/SideMenu";
+import SideMenu from "../../src/components/Dashboard/SideMenu";
 import EditPostModal from "../../src/components/Modals/EditPostModal";
 import DeletePostModal from "../../src/components/Modals/DeletePostModal";
 import { useRouter } from "next/router";

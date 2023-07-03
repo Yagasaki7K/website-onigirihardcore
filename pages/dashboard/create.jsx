@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/dist/client/router";
+import SideMenu from "../../src/components/Dashboard/SideMenu";
 import Confetti from "react-confetti";
 import DashboardDetails from "../../src/components/DashboardDetails";
 import postService from "../../services/post.service";
@@ -9,7 +10,7 @@ import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import dynamic from "next/dynamic";
 import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
-import SideMenu from "../../src/components/Login/SideMenu";
+
 
 const MarkdownEditor = dynamic(
     () => import("@uiw/react-md-editor").then((mod) => mod.default),

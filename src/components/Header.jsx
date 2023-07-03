@@ -4,21 +4,24 @@ import HeaderDetails from "./HeaderDetails";
 import authService from "../../services/auth.service";
 
 const Header = () => {
-    const [value, setValue] = useState(false);
+    const [value, setValue] = useState(true);
 
     async function checkAuth() {
-        return await authService.stateAuthentication();
+        return await authService.stateAuthentication().catch(()=>{setValue(false)});
     }
 
     useEffect(() => {
         checkAuth()
-            .then(() => {
-                setValue(true);
-            })
-            .catch(() => {
-                setValue(false);
-            });
-    }, []);
+          .then(() => {
+            setValue(true);
+          })
+          .catch((error) => {
+            setValue(false);
+            console.log(value)
+            console.error(error); 
+          });
+      }, []);
+
 
     return (
         <HeaderDetails>
@@ -87,7 +90,7 @@ const Header = () => {
                                 Kalify Inc
                             </Link>
                         </li>
-                        {value === false ? (
+                        {value === true ? (
                             <li>
                                 <Link href="/dashboard/create">Dashbord</Link>
                             </li>
