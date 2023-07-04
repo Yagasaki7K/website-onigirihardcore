@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import HeaderDetails from "./HeaderDetails";
 import authService from "../../services/auth.service";
 
@@ -9,20 +9,7 @@ const Header = () => {
     async function checkAuth() {
         return await authService.stateAuthentication().catch(()=>{setValue(false)});
     }
-
-    useEffect(() => {
-        checkAuth()
-          .then(() => {
-            setValue(true);
-          })
-          .catch((error) => {
-            setValue(false);
-            console.log(value)
-            console.error(error); 
-          });
-      }, []);
-
-
+    checkAuth();
     return (
         <HeaderDetails>
             <div className="header">

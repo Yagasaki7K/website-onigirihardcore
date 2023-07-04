@@ -28,7 +28,13 @@ const SideMenu = () => {
                             Publicações
                         </li>
                     </Link>
-                    <div href="/" onClick={SignOut}>
+                    <div
+                        href="/"
+                        onClick={() => {
+                            SignOut();
+                            location.reload();
+                        }}
+                    >
                         <li>
                             <i className="uil uil-sign-out-alt" /> Sair
                         </li>
