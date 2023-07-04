@@ -1,15 +1,8 @@
 import Link from "next/link";
-import { useState } from "react";
 import HeaderDetails from "./HeaderDetails";
-import authService from "../../services/auth.service";
 
 const Header = () => {
-    const [value, setValue] = useState(true);
 
-    async function checkAuth() {
-        return await authService.stateAuthentication().catch(() => { setValue(false) });
-    }
-    checkAuth();
     return (
         <HeaderDetails>
             <div className="header">
@@ -77,15 +70,6 @@ const Header = () => {
                                 Kalify Inc
                             </Link>
                         </li>
-                        {value === true ? (
-                            <li>
-                                <Link href="/dashboard/create">Dashbord</Link>
-                            </li>
-                        ) : (
-                            <li>
-                                <Link href="/login">Acesso</Link>
-                            </li>
-                        )}
                     </span>
                 </ul>
             </div>
