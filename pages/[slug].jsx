@@ -11,7 +11,6 @@ import Image from 'next/image'
 import dynamic from 'next/dynamic'
 
 // eslint-disable-next-line react/prop-types
-
 const MarkdownPreview = dynamic(
     () => import("@uiw/react-markdown-preview").then((mod) => mod.default),
     { ssr: false }
@@ -43,7 +42,7 @@ const Post = () => {
                         post.slug === slug ? (
                             <div key={index}>
                                 <NextSeo
-                                    title={post.title}
+                                    title={`Onigiri Hardcore | ` + post.title}
                                     description={post?.description}
                                     canonical={`https://onigirihardcore.com.br/${slug}`}
                                     openGraph={{
