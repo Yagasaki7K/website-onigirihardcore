@@ -3,6 +3,8 @@ import { colors } from './variables'
 
 const SlugDetails = styled.div`
     background: ${colors.blackdark};
+    font-family: Inter, Poppins, sans-serif;
+    font-size: 1.1rem;
 
     img {
         width: 100%;

@@ -73,7 +73,8 @@ const Post = () => {
                                     <p className="block__content">{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null} | {post.author}</p>
 
                                     <h1 className="title__content">{post.title}</h1>
-                                    <MarkdownPreview source={post.bodyPost} />
+
+                                    <div className="image__content"><MarkdownPreview source={post.bodyPost} /></div>
 
                                     {post.citation != '' ? (
                                         <a href={post.linkCitation} className="citation" target="_blank" rel="noreferrer">
