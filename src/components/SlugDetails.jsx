@@ -136,6 +136,7 @@ const SlugDetails = styled.div`
             width: 60rem;
             margin-left: 0rem;
             height: 38rem;
+            border: none;
 
             @media (max-width: 500px) {
                 width: 100%;
