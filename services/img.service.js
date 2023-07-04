@@ -1,12 +1,14 @@
-import { ref, deleteObject } from "firebase/storage";
+import { deleteObject, ref} from "firebase/storage";
 import { storage } from "../client";
 
 class imgService {
-    deleteImage = async (nameFile) => {
-        const filesImagesRef = ref(storage, `images/${nameFile}`);
-        return await deleteObject(filesImagesRef);
+    deleteImage = async (urlFile) => {
+        const url = await urlFile
+            .replaceAll('%2F', '/')
+                .replaceAll('%20', ' ')
+                    .split('/');
+        return deleteObject (ref(storage, `${url[7]}/${url[8]}`));
     };
 }
+
 export default new imgService();
-
-

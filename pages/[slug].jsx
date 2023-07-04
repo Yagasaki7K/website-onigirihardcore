@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import Custom404 from './_error'
 
 import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
@@ -65,8 +66,7 @@ const Post = () => {
                                         handle: '@OnigiriHardcore',
                                         site: '@OnigiriHardcore',
                                         cardType: 'summary_large_image',
-                                    }}
-                                />
+                                    }} />
 
                                 {post.imageUrl && (<Image src={post.imageUrl} alt={post?.name} width={1300} height={480} />)}
 
@@ -76,27 +76,26 @@ const Post = () => {
                                     <h1 className="title__content">{post.title}</h1>
                                     <MarkdownPreview source={post.bodyPost} />
 
-                                    {
-                                        post.citation != '' ? (
-                                            <a href={post.linkCitation} className="citation" target="_blank" rel="noreferrer">
-                                                <p className="block__content">“{post.citation}”</p>
-                                            </a>
-                                        ) : null
-                                    }
+                                    {post.citation != '' ? (
+                                        <a href={post.linkCitation} className="citation" target="_blank" rel="noreferrer">
+                                            <p className="block__content">“{post.citation}”</p>
+                                        </a>
+                                    ) : null}
 
-                                    {
-                                        post.ytid ?
-                                            <iframe width="550" height="480" src={'https://www.youtube.com/embed/' + post?.ytid} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : null
-                                    }
+                                    {post.ytid ?
+                                        <iframe width="550" height="480" src={'https://www.youtube.com/embed/' + post?.ytid} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : null}
                                 </section>
+                                <Footer />
                             </div>
+
                         ) : (
-                            null
+                            <>
+                                <Custom404 />
+                            </>
                         )
                     ))
                 }
             </SlugDetails>
-            <Footer />
         </>
     )
 }

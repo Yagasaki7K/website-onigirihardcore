@@ -9,7 +9,7 @@ import {
     query,
     updateDoc,
 } from "firebase/firestore";
-import database from "../client";
+import { database }  from "../client";
 
 const postCollectionRef = collection(database, "posts");
 

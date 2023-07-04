@@ -13,45 +13,29 @@ const LoginDetails = styled.div`
     .container {
         height: 100vh;
         width: 100vw;
-        margin-top: 15rem;
+        margin-top: 20rem;
         margin-left: 47rem;
 
         @media (max-width: 1366px) {
-            margin-top: 9rem;
+            margin-top: 13rem;
             margin-left: 30rem;
         }
 
         color: ${colors.white};
 
-        img {
-            width: 22rem;
-            margin-bottom: 3rem;
-        }
-
-        form {
+        div {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            height: 23rem;
             width: 25rem;
-            padding: 3rem;
+            padding: 2rem;
             border-radius: 15px;
-            background: ${colors.blackdark}};
+            background: ${colors.blackdark};
             color: ${colors.black};
 
-            input {
-                margin-bottom: 1rem;
-                padding: 0.5rem;
-                font-family: 'Poppins', sans-serif;
-                font-size: 1rem;
-                border-radius: 5px;
-                border: none;
-                background: ${colors.graylight};
-
-                :focus {
-                    outline: none;
-                }
+            img {
+                width: 22rem;
             }
 
             button {
@@ -59,20 +43,30 @@ const LoginDetails = styled.div`
                 background: ${colors.blue};
                 border-radius: 5px;
                 border: none;
-                margin-top: 1rem;
-                margin-bottom: -1rem;
-                padding: 0.5rem 1.5rem;
+                padding: 0.7rem;
                 font-size: 1rem;
                 font-family: 'Poppins', sans-serif;
                 text-transform: uppercase;
                 cursor: pointer;
+
+                img {
+                    width: 1rem;
+                    margin-right: 0.5rem;
+                }
 
                 :hover {
                     opacity: 0.8;
                     transition: 1s;
                 }
             }
+
+            .btn-access {
+                display: flex;
+                margin-bottom: -1rem;
+            }
         }
+    }
+
 `
 
 export default LoginDetails
