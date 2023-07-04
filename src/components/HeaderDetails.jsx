@@ -51,10 +51,14 @@ const HeaderDetails = styled.div`
             height: 5rem;
             border-radius: 15px;
             background: transparent;
+            
         }
 
         ul{
             display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
             list-style: none;
             padding: 0;
             margin: 0;
@@ -92,12 +96,14 @@ const HeaderDetails = styled.div`
 
             @media (max-width: 600px) {
                 margin-left: 0;
+                margin-top: 1rem;
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
 
                 width: 100%;
                 border-radius: 15px;
+                background: transparent;
             }
 
             li {

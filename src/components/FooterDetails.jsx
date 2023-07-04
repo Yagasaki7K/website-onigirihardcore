@@ -6,17 +6,21 @@ const FooterDetails = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: -4rem 0 1rem 0;
+        margin: .5rem 0;
 
         img {
-            width: 30rem;
+            height: 4rem;
+            margin-top: -4rem;
+            width: 100%;
 
             @media (max-width: 500px) {
                 width: 20rem;
+                margin-top: 0rem;
             }
 
             @media (max-width: 320px) {
                 width: 18rem;
+                margin-top: 0rem;
             }
         }
     }
