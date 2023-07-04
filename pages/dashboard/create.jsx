@@ -51,12 +51,11 @@ const DashboardCreate = () => {
     useEffect(() => {
         checkAuth()
             .then((result) => {
-                console.log(result)
                 authService.queryByUsersInAccessOne(result.id)
                     .then((result) => {
-                        result === true ? setRender(true) : setRender(false);
-
-                        if (render === false) {
+                        if (result === true) {
+                            setRender(true)
+                        } else {
                             SignOut();
                             router.push("/login")
                         }
