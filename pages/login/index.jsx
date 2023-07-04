@@ -5,7 +5,7 @@ import SignUpModal from "../../src/components/Modals/SignUpModal";
 import SignInModal from "../../src/components/Modals/SignInModal";
 import authService from "../../services/auth.service";
 
-const Login = () => {
+export default function Login() {
     const router = useRouter();
 
     async function checkAuth() {
@@ -30,5 +30,3 @@ const Login = () => {
         </LoginDetails>
     );
 };
-
-export default Login;
