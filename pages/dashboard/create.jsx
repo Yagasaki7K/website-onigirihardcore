@@ -44,17 +44,25 @@ const DashboardCreate = () => {
         return await authService.stateAuthentication();
     }
 
+    function SignOut() {
+        return authService.signOutGoogle();
+    }
+
     useEffect(() => {
         checkAuth()
             .then((result) => {
                 console.log(result)
                 authService.queryByUsersInAccessOne(result.id)
                     .then((result) => {
-                        console.log(result)
-                        result !== true ? setRender(false) : setRender(true); 
+                        result === true ? setRender(true) : setRender(false);
+
+                        if (render === false) {
+                            SignOut();
+                            router.push("/login")
+                        }
                     });
             })
-            .catch(() =>{
+            .catch(() => {
                 router.push("/login")
             });
     }, []);
@@ -125,9 +133,8 @@ const DashboardCreate = () => {
         ];
 
         const resultDate = `${day}/${month}/${year}`;
-        const resultMoreDate = `${day} de ${
-            monthNames[date.getMonth()]
-        } de ${year}`;
+        const resultMoreDate = `${day} de ${monthNames[date.getMonth()]
+            } de ${year}`;
         setLessDate(resultDate);
         setMoreDate(resultMoreDate);
 

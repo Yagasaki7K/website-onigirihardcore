@@ -12,7 +12,7 @@ const permissionsCollectionRef = collection(database, "permissions");
 class authService {
     queryByUsersInAccessOne = async (uid) => {
         const selectedUsers = await getDocs(
-            query(permissionsCollectionRef, where("acesso1", "==", true))
+            query(permissionsCollectionRef, where("acesso", "==", true))
         );
 
         const users = selectedUsers.docs.map((doc) => doc.id);
@@ -29,7 +29,7 @@ class authService {
     signInGoogle = async (router) => {
         const provider = new GoogleAuthProvider();
         return await signInWithPopup(auth, provider).then(() => {
-            router.push("/");
+            router.push("/dashboard/create");
         });
     };
 
@@ -48,7 +48,7 @@ class authService {
               };
               resolve(infos);
             } else {
-              reject("Nenhum usuário logado no Onigiri");
+              reject("Este usuário não está autenticado!");
             }
             unsubscribe();
           });
