@@ -22,12 +22,12 @@ const SideMenu = () => {
                             Publicações
                         </li>
                     </Link>
-                    <Link href="/dashboard/edit">
+                    {/* <Link href="/dashboard/edit">
                         <li>
                             <i className="uil uil-file-edit-alt" /> Editar
                             Publicações
                         </li>
-                    </Link>
+                    </Link> */}
                     <div
                         href="/"
                         onClick={() => {

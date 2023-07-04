@@ -10,6 +10,11 @@ import DeletePostModal from "../../src/components/Modals/DeletePostModal";
 import { useRouter } from "next/router";
 
 const DashboardEdit = () => {
+
+    function SignOut() {
+        return authService.signOutGoogle();
+    }
+
     const router = useRouter();
     const [render, setRender] = useState();
     const [Posts, setPosts] = useState([]);
