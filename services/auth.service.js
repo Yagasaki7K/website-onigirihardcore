@@ -16,12 +16,12 @@ class authService {
         );
 
         const users = selectedUsers.docs.map((doc) => doc.id);
+        console.log(uid);
 
         for (let index = 0; index < users.length; index++) {
             if (users[index] === uid) {
+                console.log(users[index]);
                 return true;
-            } else {
-                return false;
             }
         }
     };
@@ -39,22 +39,21 @@ class authService {
 
     stateAuthentication = () => {
         return new Promise((resolve, reject) => {
-          const unsubscribe = onAuthStateChanged(auth, (user) => {
-            if (user) {
-              const infos = {
-                id: user.uid,
-                name: user.displayName,
-                photo: user.photoURL,
-              };
-              resolve(infos);
-            } else {
-              reject("Este usuário não está autenticado!");
-            }
-            unsubscribe();
-          });
+            const unsubscribe = onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    const infos = {
+                        id: user.uid,
+                        name: user.displayName,
+                        photo: user.photoURL,
+                    };
+                    resolve(infos);
+                } else {
+                    reject("Este usuário não está autenticado!");
+                }
+                unsubscribe();
+            });
         });
     };
-      
 }
 
 export default new authService();

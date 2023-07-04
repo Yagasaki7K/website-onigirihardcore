@@ -26,12 +26,16 @@ const DashboardEdit = () => {
     useEffect(() => {
         checkAuth()
             .then((result) => {
-                console.log(result);
                 authService
                     .queryByUsersInAccessOne(result.id)
                     .then((result) => {
-                        result !== true ? setRender(false) : setRender(true);
-                        getPosts();
+                        if (result === true) {
+                            setRender(true)
+                            getPosts();
+                        } else {
+                            SignOut();
+                            router.push("/login")
+                        }
                     });
             })
             .catch(() => {
