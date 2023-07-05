@@ -16,11 +16,9 @@ class authService {
         );
 
         const users = selectedUsers.docs.map((doc) => doc.id);
-        console.log(uid);
 
         for (let index = 0; index < users.length; index++) {
             if (users[index] === uid) {
-                console.log(users[index]);
                 return true;
             }
         }
