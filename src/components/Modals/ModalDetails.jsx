@@ -10,6 +10,7 @@ const ModalDetails = styled.div`
         }
     }
 
+    background-color: #252525;
 `
 
 export default ModalDetails
