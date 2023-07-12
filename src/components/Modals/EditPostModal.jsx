@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Modal from "react-modal";
 import ModalDetails from "./ModalDetails";
-import postService from "../../../services/post.service";
+//import postService from "../../../services/post.service";
 import dynamic from "next/dynamic";
 import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
@@ -11,8 +11,7 @@ const MarkdownEditor = dynamic(
     { ssr: false }
 );
 
-
-export default function EditPostModal(param) {
+export default function EditPostModal() {
     const [fields, setFields] = useState({
         date: "",
         lessDate: "",
@@ -68,15 +67,15 @@ export default function EditPostModal(param) {
                                     </div>
 
                                     <div className="item-markdown">
-                                    <label htmlFor="body">
-                                        Conteúdo da Publicação*:{" "}
-                                    </label>
-                                    <MarkdownEditor
-                                        height={300}
-                                        value={fields.bodyPost}
-                                        onChange={setFields.bodyPost}
-                                    />
-                                </div>
+                                        <label htmlFor="body">
+                                            Conteúdo da Publicação*:{" "}
+                                        </label>
+                                        <MarkdownEditor
+                                            height={300}
+                                            value={fields.bodyPost}
+                                            onChange={setFields.bodyPost}
+                                        />
+                                    </div>
 
                                     <div className="item">
                                         <label htmlFor="password">
