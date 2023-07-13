@@ -9,48 +9,67 @@ import EditPostModal from "../../src/components/Modals/EditPostModal";
 import DeletePostModal from "../../src/components/Modals/DeletePostModal";
 import { useRouter } from "next/router";
 
-const DashboardEdit = () => {
-
-    function SignOut() {
-        return authService.signOutGoogle();
-    }
-
-    const router = useRouter();
-    const [render, setRender] = useState();
-    const [Posts, setPosts] = useState([]);
-
-    async function checkAuth() {
-        return await authService.stateAuthentication();
-    }
-
-    async function getPosts() {
+    export async function getServerSideProps() {
         const data = await postService.getAllPosts();
-        setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+        const posts = data.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+            date: doc.data().date instanceof Date ? doc.data().date.toString() : null,
+        }));
+
+        return {
+            props: {
+                posts,
+            },
+        };
     }
 
-    useEffect(() => {
-        checkAuth()
-            .then((result) => {
-                authService
-                    .queryByUsersInAccessOne(result.id)
-                    .then((result) => {
-                        if (result === true) {
-                            setRender(true)
-                            getPosts();
-                        } else {
-                            SignOut();
-                            router.push("/login")
-                        }
-                    });
-            })
-            .catch(() => {
-                router.push("/login");
-            });
-    }, []);
+    export default function DashboardEdit({ posts }) {
+        function SignOut() {
+            return authService.signOutGoogle();
+        }
+        const router = useRouter();
+        const [render, setRender] = useState();
 
-    if (render === true) {
-        return (
-            <DashboardDetails>
+        async function checkAuth() {
+            return await authService.stateAuthentication();
+        }
+
+        useEffect(() => {
+            checkAuth()
+                .then((result) => {
+                    authService
+                        .queryByUsersInAccessOne(result.id)
+                        .then((result) => {
+                            if (result === true) {
+                                setRender(true);
+                                //getPosts();
+                            } else {
+                                SignOut();
+                                router.push("/login");
+                            }
+                        });
+                })
+                .catch(() => {
+                    router.push("/login");
+                });
+        }, []);
+
+        if (render === true) {
+            return(
+            <>
+                {posts.map((post) =>(
+                    <div key={post.id}>
+                        <h1>{post.id}</h1>
+                    </div>
+                ))}
+            </>);
+        } else {
+            return null;
+        }
+    }
+
+/*            <DashboardDetails>
                 <SideMenu />
                 <div className="content">
                     <div className="publi" id="publi">
@@ -95,11 +114,4 @@ const DashboardEdit = () => {
                         </div>
                     </div>
                 </div>
-            </DashboardDetails>
-        );
-    } else {
-        return null;
-    }
-};
-
-export default DashboardEdit;
+            </DashboardDetails>*/
