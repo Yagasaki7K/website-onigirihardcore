@@ -9,67 +9,54 @@ import EditPostModal from "../../src/components/Modals/EditPostModal";
 import DeletePostModal from "../../src/components/Modals/DeletePostModal";
 import { useRouter } from "next/router";
 
-    export async function getServerSideProps() {
-        const data = await postService.getAllPosts();
-        const posts = data.docs.map((doc) => ({
-            ...doc.data(),
-            id: doc.id,
-            date: doc.data().date instanceof Date ? doc.data().date.toString() : null,
-        }));
+export async function getServerSideProps() {
+    const data = await postService.getAllPosts();
+    const posts = data.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+        date: doc.data().date instanceof Date ? doc.data().date.toString() : null,
+    }));
 
-        return {
-            props: {
-                posts,
-            },
-        };
+    return {
+        props: {
+            posts,
+        },
+    };
+}
+
+export default function DashboardEdit({ posts }) {
+    function SignOut() {
+        return authService.signOutGoogle();
+    }
+    const router = useRouter();
+    const [render, setRender] = useState();
+
+    async function checkAuth() {
+        return await authService.stateAuthentication();
     }
 
-    export default function DashboardEdit({ posts }) {
-        function SignOut() {
-            return authService.signOutGoogle();
-        }
-        const router = useRouter();
-        const [render, setRender] = useState();
+    useEffect(() => {
+        checkAuth()
+            .then((result) => {
+                authService
+                    .queryByUsersInAccessOne(result.id)
+                    .then((result) => {
+                        if (result === true) {
+                            setRender(true);
+                        } else {
+                            SignOut();
+                            router.push("/login");
+                        }
+                    });
+            })
+            .catch(() => {
+                router.push("/login");
+            });
+    }, []);
 
-        async function checkAuth() {
-            return await authService.stateAuthentication();
-        }
-
-        useEffect(() => {
-            checkAuth()
-                .then((result) => {
-                    authService
-                        .queryByUsersInAccessOne(result.id)
-                        .then((result) => {
-                            if (result === true) {
-                                setRender(true);
-                                //getPosts();
-                            } else {
-                                SignOut();
-                                router.push("/login");
-                            }
-                        });
-                })
-                .catch(() => {
-                    router.push("/login");
-                });
-        }, []);
-
-        if (render === true) {
-            return(
-            <>
-                {posts.map((post) =>(
-                    <div key={post.id}>
-                        <h1>{post.id}</h1>
-                    </div>
-                ))}
-            </>);
-        } else {
-            return null;
-        }
-    }
-
-/*            <DashboardDetails>
+    if (render === true) {
+        return (
+            <DashboardDetails>
                 <SideMenu />
                 <div className="content">
                     <div className="publi" id="publi">
@@ -84,27 +71,27 @@ import { useRouter } from "next/router";
                                         <th>Data de Modificação</th>
                                         <th>Ações</th>
                                     </tr>
-                                    {Posts.map((post) => (
-                                        <tr key={post.id}>
+                                    {posts.map((fields) => (
+                                        <tr key={fields.id}>
                                             <td>
                                                 <a
-                                                    href={"/" + post.slug}
+                                                    href={"/" + fields.slug}
                                                     target="_blank"
                                                     rel="noreferrer"
                                                 >
-                                                    {post.title}
+                                                    {fields.title}
                                                 </a>
                                             </td>
-                                            <td>{post.author}</td>
-                                            <td>{post.categories}</td>
-                                            <td>{post.lessDate}</td>
+                                            <td>{fields.author}</td>
+                                            <td>{fields.categories}</td>
+                                            <td>{fields.lessDate}</td>
                                             <td>
-                                                <EditPostModal id={post.id} />
+                                                <EditPostModal id={fields.id} />
                                             </td>
                                             <td>
                                                 <DeletePostModal
-                                                    id={post.id}
-                                                    url={post.imageUrl}
+                                                    id={fields.id}
+                                                    url={fields.imageUrl}
                                                 />
                                             </td>
                                         </tr>
@@ -114,4 +101,9 @@ import { useRouter } from "next/router";
                         </div>
                     </div>
                 </div>
-            </DashboardDetails>*/
+            </DashboardDetails>
+        );
+    } else {
+        return null;
+    }
+}
