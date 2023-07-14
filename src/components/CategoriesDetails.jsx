@@ -6,17 +6,12 @@ const CategoriesDetails = styled.div`
     justify-content: center;
     padding: 30px 20rem;
 
-    @media (max-width: 1024px) {
-        display: inline-block;
-        padding: 10px;
-        font-size: 1em;
-    }
-
     @media (max-width: 768px) {
         display: inline-block;
         padding: 10px;
         font-size: 1em;
     }
+
     @media (max-width: 500px) {
         display: inline-block;
         padding: 20px;
@@ -38,7 +33,6 @@ const CategoriesDetails = styled.div`
         padding: 5px 10px;
         margin-bottom: -2px;
         font-weight: bold;
-
     }
 
     .movies {
@@ -50,11 +44,22 @@ const CategoriesDetails = styled.div`
         font-weight: bold;
     }
 
+    @media (max-width: 1024px) {
+        .firstCategories {
+            margin-left: 2rem;
+        }
+    }
+
     .firstCategories, .secondCategories, .thirdCategories {
         margin-right: 30px;
+
         .header {
             border-bottom: 2px solid ${colors.blue};
             width: 22rem;
+
+            @media (max-width: 1024px) {
+                width: 18rem;
+            }
         }
 
         img {
@@ -65,14 +70,13 @@ const CategoriesDetails = styled.div`
             transition: 0.5s all ease-in-out;
 
             @media (max-width: 1024px) {
-                width: 100%;
+                width: 18rem;
+                height: 18rem;
             }
 
             :hover {
                 transform: scale(1.025);
             }
-
-
         }
 
         a {
@@ -86,9 +90,10 @@ const CategoriesDetails = styled.div`
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 text-overflow: ellipsis;
+
                 @media (max-width: 1024px) {
-                width: 90%;
-            }
+                    width: 19rem;
+                }
 
                 @media (max-width: 320px) {
                   padding: 0;
@@ -114,12 +119,8 @@ const CategoriesDetails = styled.div`
                 overflow: hidden;
                 text-overflow: ellipsis;
 
-                @media (max-width: 1024px) {
-                    max-width: 90%;
-                }
-
                 @media (max-width: 320px) {
-                            max-width: 20rem;
+                    max-width: 20rem;
                }
             }
         }
@@ -131,14 +132,9 @@ const CategoriesDetails = styled.div`
                 img {
                     width: 4.063rem;
                     height: 4.063rem;
-
                 }
 
                 .post-side {
-                    @media (max-width: 1024px) {
-                            width: 100%;
-                        }
-
                     h3 {
                         margin-left: 5rem;
                         margin-top: -4.5rem;
@@ -155,7 +151,7 @@ const CategoriesDetails = styled.div`
                         text-overflow: ellipsis;
 
                         @media (max-width: 1024px) {
-                            width: 80%;
+                            width: 13rem;
                         }
 
                         @media (max-width: 320px) {
@@ -182,10 +178,9 @@ const CategoriesDetails = styled.div`
                         margin-left: 0px;
                         border: 1px solid ${colors.graylight};
 
-                    @media (max-width: 1024px) {
-                        width: 100%;
-                    }
-
+                        @media (max-width: 1024px) {
+                            width: 18rem;
+                        }
                     }
                 }
             }

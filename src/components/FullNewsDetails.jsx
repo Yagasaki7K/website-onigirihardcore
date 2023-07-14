@@ -14,7 +14,7 @@ const FullNewsDetails = styled.div`
             margin: 0;
             font-size: 0.8em;
 
-            h1{
+            h1 {
                 text-align: center;
             }
         }

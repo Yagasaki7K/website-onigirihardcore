@@ -66,12 +66,10 @@ const Slide = () => {
                         <div className="keen-slider__slide" key={post?.id}>
                             <a href={post?.slug}>
                                 <img src={post.imageUrl} alt={post?.name} />
-                                {/* <img src={post?.image} alt={post?.title}/> */}
                             </a>
                             <div className="slider-description">
                                 <div className="slide-tag">
                                     <Head>
-                                        {/* Meta tags relacionadas ao SEO */}
                                         <title>{post.title}</title>
                                         <meta name="description" content={post?.description} key="desc" />
                                         <meta property="og:title" content={post?.title} />
@@ -81,14 +79,11 @@ const Slide = () => {
                                     </Head>
 
                                     <span className="latest">HOT NEWS 🔥</span>
-                                    <span className="tag">{post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null}</span>
-                                    {/* <span className="tag">{posts?.category.title}</span> */}
+                                    <span className="tag">{post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Ciência & Tecnologia' : null || post.categories === 'Animes' ? 'Animes & HQs' : null}</span>
                                     <span className="date">{post?.lessDate}</span>
-                                    {/* <span className="date">{post?.createdAt}</span> */}
                                     <span> - </span>
                                     <span className="author">
                                         <a href="#">{post.author}</a>
-                                        {/* <a href="https://yagasaki.vercel.app/" target="_blank" rel="noreferrer">Anderson Marlon</a> */}
                                     </span>
                                 </div>
 

@@ -1,40 +1,44 @@
 import styled from 'styled-components'
 import { colors } from './variables'
 
-const TecnologiesDetails = styled.div`
-        display: flex;
-        justify-content: center;
-        margin: -2rem 0 5rem 7rem;
+const LastNewsDetails = styled.div`
+    .container {
+        margin: -2rem 0rem 5rem 27.5rem;
         padding: 30px 0;
 
+        @media (max-width: 1440px) {
+            margin: -2rem 0rem 5rem 13rem;
+            display: inline-block;
+            padding: 0px;
+        }
+
         @media (max-width: 1366px) {
+            margin: -2rem 0rem 5rem 5rem;
             display: inline-block;
             padding: 0px;
         }
 
         @media (max-width: 768px) {
-              display: block;
-              padding: 0px;
+            display: block;
+            padding: 0px;
        }
 
         @media (max-width: 500px) {
-              display: inline-block;
-              padding: 0px;
+            display: inline-block;
+            padding: 0px;
        }
-
-       .tecnologies {
-        margin-left: -8rem;
-
-        @media (max-width: 1366px) {
-            margin-left: -2rem;
-        }
 
         .header {
             border-bottom: 2px solid ${colors.blue};
             width: 63rem;
+            margin-bottom: 1rem;
 
             @media (max-width: 1366px) {
                 width: 71rem;
+            }
+
+            @media (max-width: 1024px) {
+                width: 55rem
             }
 
             @media (max-width: 768px) {
@@ -42,7 +46,7 @@ const TecnologiesDetails = styled.div`
              }
 
             p {
-                width: 9.5rem;
+                width: 10rem;
                 background: ${colors.blue};
                 color: ${colors.white};
                 padding: 5px 10px;
@@ -50,80 +54,79 @@ const TecnologiesDetails = styled.div`
                 font-weight: bold;
             }
         }
-
-        .content, .secondContent, .thirdContent {
+        .content {
             display: flex;
-            margin-left: -1rem;
+            
+            .leftContent {
+                margin-top: 2rem;
 
-            @media (max-width: 1024px) {
-                display: inline-block;
-                margin-left: 2%;
-                width: 25%;
-            }
+                @media (max-width: 1366px) {
+                    margin-left: 5rem;
+                }
 
-            @media (max-width: 900px) {
-                display: inline-block;
-                margin-left: 2%;
-                width: 40%;
-            }
-
-            @media (max-width: 768px) {
-                display: inline-block;
-                margin-left: 5%;
-                width: 45%;
-            }
-
-            @media (max-width: 500px) {
-                display: inline-block;
-                padding: 2px;
-            }
-
-            a {
-                text-decoration: none;
-                color: ${colors.white};
-
-                :hover {
-                    color: ${colors.blue};
-                    transition: 1s;
+                @media (max-width: 1024px) {
+                    margin-left: -3rem;
                 }
 
                 img {
-                    margin-top: 1rem;
-                    margin-left: 1rem;
-                    width: 15rem;
-                    height: 12rem;
-                    padding: 0;
-                    object-fit: cover;
+                    width: 290px;
+                    height: 150px;
+                    margin: 0rem 1rem 1rem 4rem;
+                }
 
-                    @media (max-width: 1366px) {
-                        width: 17rem;
+                hr {
+                    position: absolute;
+                    width: 60rem;
+
+                    @media (max-width: 1024px) {
+                        width: 55rem;
+                        margin-left: 3rem;
+                    }
+                }
+            }
+
+            .rightContent {
+                margin-top: 0.5rem;
+                margin-left: 2rem;
+
+                a {
+                    :hover {
+                        color: ${colors.blue};
                     }
                 }
 
-                .title {
-                    margin-left: 1.5rem;
-                    margin-top: -7rem;
+                h1 {
+                    font-size: 1.5rem;
+                    width: 30rem;
+                    margin-bottom: 0rem;
+                }
 
-                    h1 {
-                        width: 14rem;
-                        margin-top: -2rem;
-                        font-size: 1.2rem;
-                        margin-bottom: 0rem;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 3;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                    }
-
-                    i {
-                        font-style: normal;
+                .categories {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 0.5rem;
+                    
+                    span {
+                        margin-right: 1rem;
+                        background: ${colors.blue};
+                        padding: 0.2rem 0.5rem;
+                        font-weight: bold;
                         font-size: 0.8rem;
+                        color: ${colors.white};
                     }
+                }
+
+                p {
+                    width: 30rem;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
         }
     }
-    `
+`
 
-export default TecnologiesDetails
+export default LastNewsDetails

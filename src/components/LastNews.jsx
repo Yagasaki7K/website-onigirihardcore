@@ -1,9 +1,10 @@
+import React, { useEffect, useState } from 'react'
 import LastNewsDetails from './LastNewsDetails'
-// import post from '../../server/index.json'
-import { useEffect, useState } from 'react'
 import postService from '../../services/post.service'
 
+
 const LastNews = () => {
+
     const [Posts, setPosts] = useState([])
 
     useEffect(() => {
@@ -17,65 +18,39 @@ const LastNews = () => {
 
     return (
         <LastNewsDetails>
-            <div className="tecnologies" id="news">
+            <div className="container">
                 <div className="header">
                     <p>Últimas Notícias</p>
                 </div>
+                {
+                    Posts && Posts.slice(0, 10).map((post, index) => (
+                        <div className="content" key={index}>
+                            <div className="leftContent">
+                                <a href={post.slug}>
+                                    <img src={post.imageUrl} alt={post?.name} />
+                                </a>
 
-                <div className="content">
-                    {
-                        Posts.slice(0, 4).map((post, index) => (
-                            <a href={post.slug} key={index}>
-                                <img src={post.imageUrl} alt={post?.name} />
-                                {/* <img src={post.image} alt={post.title} title={post.title} /> */}
-
-                                <div className="title">
+                                <hr />
+                            </div>
+                            <div className="rightContent">
+                                <a href={post.slug}>
                                     <h1>{post.title}</h1>
-                                    {/* <h1>{post.smalltitle}</h1> */}
+                                </a>
+
+                                <div className="categories">
+                                    <span>
+                                        {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Ciência & Tecnologia' : null || post.categories === 'Animes' ? 'Animes & HQs' : null}
+                                    </span>
                                     <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                    {/* <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i> */}
                                 </div>
-                            </a>
-                        ))
-                    }
-                </div>
+                                <p>{post.description}</p>
 
-                <div className="content">
-                    {
-                        Posts.slice(4, 8).map((post, index) => (
-                            <a href={post.slug} key={index}>
-                                <img src={post.imageUrl} alt={post?.name} />
-                                {/* <img src={post.image} alt={post.title} title={post.title} /> */}
+                            </div>
 
-                                <div className="title">
-                                    <h1>{post.title}</h1>
-                                    {/* <h1>{post.smalltitle}</h1> */}
-                                    <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                    {/* <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i> */}
-                                </div>
-                            </a>
-                        ))
-                    }
-                </div>
 
-                <div className="content">
-                    {
-                        Posts.slice(8, 12).map((post, index) => (
-                            <a href={post.slug} key={index}>
-                                <img src={post.imageUrl} alt={post?.name} />
-                                {/* <img src={post.imageUrl} alt={post.title} title={post.title} /> */}
-
-                                <div className="title">
-                                    <h1>{post.title}</h1>
-                                    {/* <h1>{post.smalltitle}</h1> */}
-                                    <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                    {/* <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i> */}
-                                </div>
-                            </a>
-                        ))
-                    }
-                </div>
-
+                        </div>
+                    ))
+                }
             </div>
         </LastNewsDetails>
     )

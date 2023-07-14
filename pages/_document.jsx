@@ -65,6 +65,7 @@ export default class MyDocument extends Document {
                     <meta name="keywords" content="anime, noticia, filme, serie, entretenimento, onigiri, hardcore, nerd, geek" />
                     <meta name="author" content="Anderson 'Yagasaki' Marlon" />
                     <meta name="robots" content="index, follow" />
+                    <link rel="shortcut icon" href="/logo.png" />
                     <meta property="og:locale" content="pt_BR" />
 
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />

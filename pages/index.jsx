@@ -3,6 +3,7 @@ import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
 import Slide from '../src/components/Slide'
 import Categories from '../src/components/Categories'
+import Technologies from '../src/components/Technologies'
 import LastNews from '../src/components/LastNews'
 import { NextSeo } from 'next-seo'
 
@@ -37,6 +38,7 @@ export default function Home() {
             <Header />
             <Slide />
             <Categories data={posts} />
+            <Technologies />
             <LastNews />
             <Footer />
         </>
