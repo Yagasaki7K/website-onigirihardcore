@@ -150,6 +150,9 @@ const LastNewsDetails = styled.div`
                 }
 
                 i {
+                    font-style: normal;
+                    font-size: 0.9rem;
+
                     @media (max-width: 768px) {
                         font-size: 0.8rem;
                     }
