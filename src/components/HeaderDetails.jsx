@@ -27,6 +27,10 @@ const HeaderDetails = styled.div`
             }
         }
 
+        @media (max-width: 768px) {
+            padding: 1rem 7rem;
+        }
+
         .logotipo {
             width: 32rem;
             margin-top: 0.5rem;
@@ -51,10 +55,9 @@ const HeaderDetails = styled.div`
             height: 5rem;
             border-radius: 15px;
             background: transparent;
-            
         }
 
-        ul{
+        ul {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -80,17 +83,16 @@ const HeaderDetails = styled.div`
             }
 
             @media (max-width: 768px) {
-                margin-left: 3rem;
+                margin-left: 1rem;
+                margin-top: 0.5rem;
                 height: 2rem;
 
-                #item-menu {
-                    display: none;
+                a {
+                    margin-right: 1rem;
                 }
 
                 .burguer {
-                    display: flex;
-                    margin-top: -1.2rem;
-                    margin-left: -1.2rem;
+                    display: none;
                 }
             }
 

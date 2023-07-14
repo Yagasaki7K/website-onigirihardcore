@@ -42,8 +42,10 @@ const LastNewsDetails = styled.div`
             }
 
             @media (max-width: 768px) {
-              margin-left: 5%;
-             }
+                width: 40rem;
+                margin-left: -1rem;
+                margin-bottom: -0.5rem;
+            }
 
             p {
                 width: 10rem;
@@ -54,6 +56,7 @@ const LastNewsDetails = styled.div`
                 font-weight: bold;
             }
         }
+        
         .content {
             display: flex;
             
@@ -72,6 +75,12 @@ const LastNewsDetails = styled.div`
                     width: 290px;
                     height: 150px;
                     margin: 0rem 1rem 1rem 4rem;
+
+                    @media (max-width: 768px) {
+                        width: 200px;
+                        height: 100px;
+                        margin: 0rem 1rem 1rem 2rem;
+                    }
                 }
 
                 hr {
@@ -81,6 +90,11 @@ const LastNewsDetails = styled.div`
                     @media (max-width: 1024px) {
                         width: 55rem;
                         margin-left: 3rem;
+                    }
+
+                    @media (max-width: 768px) {
+                        width: 40rem;
+                        margin-left: 2rem;
                     }
                 }
             }
@@ -99,6 +113,11 @@ const LastNewsDetails = styled.div`
                     font-size: 1.5rem;
                     width: 30rem;
                     margin-bottom: 0rem;
+
+                    @media (max-width: 768px) {
+                        width: 25rem;
+                        font-size: 1rem;
+                    }
                 }
 
                 .categories {
@@ -123,6 +142,17 @@ const LastNewsDetails = styled.div`
                     -webkit-box-orient: vertical;
                     overflow: hidden;
                     text-overflow: ellipsis;
+
+                    @media (max-width: 768px) {
+                        width: 25rem;
+                        font-size: 0.8rem;
+                    }
+                }
+
+                i {
+                    @media (max-width: 768px) {
+                        font-size: 0.8rem;
+                    }
                 }
             }
         }

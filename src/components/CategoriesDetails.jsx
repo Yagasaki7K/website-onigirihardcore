@@ -7,7 +7,6 @@ const CategoriesDetails = styled.div`
     padding: 30px 20rem;
 
     @media (max-width: 768px) {
-        display: inline-block;
         padding: 10px;
         font-size: 1em;
     }
@@ -50,8 +49,18 @@ const CategoriesDetails = styled.div`
         }
     }
 
+    @media (max-width: 768px) {
+        .firstCategories {
+            margin-left: 1.5rem;
+        }
+    }
+
     .firstCategories, .secondCategories, .thirdCategories {
         margin-right: 30px;
+
+        @media (max-width: 768px) {
+            margin-right: 20px;
+        }
 
         .header {
             border-bottom: 2px solid ${colors.blue};
@@ -59,6 +68,10 @@ const CategoriesDetails = styled.div`
 
             @media (max-width: 1024px) {
                 width: 18rem;
+            }
+
+            @media (max-width: 768px) {
+                width: 14rem;
             }
         }
 
@@ -72,6 +85,11 @@ const CategoriesDetails = styled.div`
             @media (max-width: 1024px) {
                 width: 18rem;
                 height: 18rem;
+            }
+
+            @media (max-width: 768px) {
+                width: 14rem;
+                height: 14rem;
             }
 
             :hover {
@@ -93,6 +111,10 @@ const CategoriesDetails = styled.div`
 
                 @media (max-width: 1024px) {
                     width: 19rem;
+                }
+
+                @media (max-width: 768px) {
+                    width: 15rem;
                 }
 
                 @media (max-width: 320px) {
@@ -118,6 +140,10 @@ const CategoriesDetails = styled.div`
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 text-overflow: ellipsis;
+
+                @media (max-width: 768px) {
+                    max-width: 15.5rem;
+                }
 
                 @media (max-width: 320px) {
                     max-width: 20rem;
@@ -154,6 +180,10 @@ const CategoriesDetails = styled.div`
                             width: 13rem;
                         }
 
+                        @media (max-width: 768px) {
+                            width: 10rem;
+                        }
+
                         @media (max-width: 320px) {
                             max-width: 15rem;
                             max-height: 5rem;
@@ -180,6 +210,10 @@ const CategoriesDetails = styled.div`
 
                         @media (max-width: 1024px) {
                             width: 18rem;
+                        }
+
+                        @media (max-width: 768px) {
+                            width: 14.5rem;
                         }
                     }
                 }

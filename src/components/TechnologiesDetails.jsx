@@ -13,13 +13,13 @@ const TecnologiesDetails = styled.div`
         }
 
         @media (max-width: 768px) {
-              display: block;
-              padding: 0px;
+            display: block;
+            padding: 0px;
        }
 
         @media (max-width: 500px) {
-              display: inline-block;
-              padding: 0px;
+            display: inline-block;
+            padding: 0px;
        }
 
        .tecnologies {
@@ -33,6 +33,10 @@ const TecnologiesDetails = styled.div`
             margin-left: -2rem;
         }
 
+        @media (max-width: 768px) {
+            margin-left: -6rem;
+        }
+
         .header {
             border-bottom: 2px solid ${colors.blue};
             width: 63rem;
@@ -42,12 +46,13 @@ const TecnologiesDetails = styled.div`
             }
 
             @media (max-width: 1024px) {
-                width: 55rem
+                width: 55rem;
             }
 
             @media (max-width: 768px) {
-              margin-left: 5%;
-             }
+                width: 45rem;
+                margin-top: 3rem;
+            }
 
             p {
                 width: 12rem;
@@ -76,9 +81,9 @@ const TecnologiesDetails = styled.div`
             }
 
             @media (max-width: 768px) {
-                display: inline-block;
-                margin-left: 5%;
-                width: 45%;
+                margin-left: -0.3rem;
+                margin-right: 0rem;
+                width: 15rem;
             }
 
             @media (max-width: 500px) {
@@ -105,6 +110,10 @@ const TecnologiesDetails = styled.div`
 
                     @media (max-width: 1366px) {
                         width: 17rem;
+                    }
+
+                    @media (max-width: 768px) {
+                        width: 14.5rem;
                     }
                 }
 
