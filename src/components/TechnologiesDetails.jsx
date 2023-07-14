@@ -23,46 +23,46 @@ const TecnologiesDetails = styled.div`
        }
 
        .tecnologies {
-        margin-left: -8rem;
-
-        @media (max-width: 1366px) {
-            margin-left: -2rem;
-        }
-
-        @media (max-width: 1024px) {
-            margin-left: -2rem;
-        }
-
-        @media (max-width: 768px) {
-            margin-left: -6rem;
-        }
-
-        .header {
-            border-bottom: 2px solid ${colors.blue};
-            width: 63rem;
+            margin-left: -8rem;
 
             @media (max-width: 1366px) {
-                width: 71rem;
+                margin-left: -2rem;
             }
 
             @media (max-width: 1024px) {
-                width: 55rem;
+                margin-left: -2rem;
             }
 
             @media (max-width: 768px) {
-                width: 45rem;
-                margin-top: 3rem;
+                margin-left: -6rem;
             }
 
-            p {
-                width: 12rem;
-                background: ${colors.blue};
-                color: ${colors.white};
-                padding: 5px 10px;
-                margin-bottom: -2px;
-                font-weight: bold;
+            .header {
+                border-bottom: 2px solid ${colors.blue};
+                width: 63rem;
+
+                @media (max-width: 1366px) {
+                    width: 71rem;
+                }
+
+                @media (max-width: 1024px) {
+                    width: 55rem;
+                }
+
+                @media (max-width: 768px) {
+                    width: 45rem;
+                    margin-top: 3rem;
+                }
+
+                p {
+                    width: 12rem;
+                    background: ${colors.blue};
+                    color: ${colors.white};
+                    padding: 5px 10px;
+                    margin-bottom: -2px;
+                    font-weight: bold;
+                }
             }
-        }
 
         .content, .secondContent, .thirdContent {
             display: flex;
@@ -107,6 +107,7 @@ const TecnologiesDetails = styled.div`
                     height: 12rem;
                     padding: 0;
                     object-fit: cover;
+                    filter: brightness(60%);
 
                     @media (max-width: 1366px) {
                         width: 17rem;
@@ -118,12 +119,13 @@ const TecnologiesDetails = styled.div`
                 }
 
                 .title {
+                    position: absolute;
                     margin-left: 1.5rem;
                     margin-top: -7rem;
 
                     h1 {
                         width: 14rem;
-                        margin-top: -2rem;
+                        margin-top: 0rem;
                         font-size: 1.2rem;
                         margin-bottom: 0rem;
                         display: -webkit-box;
