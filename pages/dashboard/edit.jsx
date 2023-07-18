@@ -7,6 +7,7 @@ import DashboardDetails from "../../src/components/DashboardDetails";
 import SideMenu from "../../src/components/Dashboard/SideMenu";
 import EditPostModal from "../../src/components/Modals/EditPostModal";
 import DeletePostModal from "../../src/components/Modals/DeletePostModal";
+import PropTypes from 'prop-types';
 import { useRouter } from "next/router";
 
 export async function getServerSideProps() {
@@ -24,6 +25,10 @@ export async function getServerSideProps() {
     };
 }
 
+DashboardEdit.propTypes = {
+    posts: PropTypes.array.isRequired,
+  };
+  
 export default function DashboardEdit({ posts }) {
     function SignOut() {
         return authService.signOutGoogle();
