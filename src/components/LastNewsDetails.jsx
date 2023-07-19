@@ -3,7 +3,7 @@ import { colors } from './variables'
 
 const LastNewsDetails = styled.div`
     .container {
-        margin: -2rem 0rem 5rem 27.5rem;
+        margin: -5rem 0rem 5rem 27.5rem;
         padding: 30px 0;
 
         @media (max-width: 1440px) {
@@ -113,6 +113,11 @@ const LastNewsDetails = styled.div`
                     font-size: 1.5rem;
                     width: 30rem;
                     margin-bottom: 0rem;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
 
                     @media (max-width: 768px) {
                         width: 25rem;
