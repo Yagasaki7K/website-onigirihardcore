@@ -7,12 +7,15 @@ import SlugDetails from '../src/components/SlugDetails'
 import postService from '../services/post.service'
 import { NextSeo } from 'next-seo';
 import Image from 'next/image'
-
 import dynamic from 'next/dynamic'
 
 // eslint-disable-next-line react/prop-types
 const MarkdownPreview = dynamic(
     () => import("@uiw/react-markdown-preview").then((mod) => mod.default),
+    { ssr: false }
+);
+
+const analyticsFirebase = dynamic(() => import('../client'),
     { ssr: false }
 );
 
@@ -24,6 +27,10 @@ const Post = () => {
 
     useEffect(() => {
         getPost()
+
+        const analytics = analyticsFirebase;
+        analytics.logEvent('acesso_pagina', { page: '/' + slug });
+
     }, [])
 
     const getPost = async () => {

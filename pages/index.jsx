@@ -6,8 +6,18 @@ import Categories from '../src/components/Categories'
 import Technologies from '../src/components/Technologies'
 import LastNews from '../src/components/LastNews'
 import { NextSeo } from 'next-seo'
+import { useEffect } from 'react'
+import dynamic from 'next/dynamic'
+
+const analyticsFirebase = dynamic(() => import('../client'),
+    { ssr: false }
+);
 
 export default function Home() {
+    useEffect(() => {
+        const analytics = analyticsFirebase;
+        analytics.logEvent('acesso_pagina', { page: '/' });
+    }, [])
     return (
         <>
             <NextSeo
