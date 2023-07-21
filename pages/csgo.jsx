@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import HLTV from 'hltv-api'
 import Link from 'next/link'
 import Header from '../src/components/Header'
 import "keen-slider/keen-slider.min.css"
 import CSGODetails from '../src/components/CSGODetails'
 import { NextSeo } from 'next-seo'
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 
 export async function getStaticProps() {
     const news = await HLTV.getNews()
@@ -22,15 +22,15 @@ export async function getStaticProps() {
     }
 }
 
-const analyticsFirebase = dynamic(() => import('../client'),
-    { ssr: false }
-);
+// const analyticsFirebase = dynamic(() => import('../client'),
+//     { ssr: false }
+// );
 
 const csgo = ({ data }) => {
-    useEffect(() => {
-        const analytics = analyticsFirebase;
-        analytics.logEvent('acesso_pagina', { page: '/csgo' });
-    }, [])
+    // useEffect(() => {
+    //     const analytics = analyticsFirebase;
+    //     analytics.logEvent('acesso_pagina', { page: '/csgo' });
+    // }, [])
     return (
         <>
             <NextSeo

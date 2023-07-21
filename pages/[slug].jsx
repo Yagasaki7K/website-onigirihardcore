@@ -15,9 +15,9 @@ const MarkdownPreview = dynamic(
     { ssr: false }
 );
 
-const analyticsFirebase = dynamic(() => import('../client'),
-    { ssr: false }
-);
+// const analyticsFirebase = dynamic(() => import('../client'),
+//     { ssr: false }
+// );
 
 const Post = () => {
     const router = useRouter()
@@ -28,8 +28,8 @@ const Post = () => {
     useEffect(() => {
         getPost()
 
-        const analytics = analyticsFirebase;
-        analytics.logEvent('acesso_pagina', { page: '/' + slug });
+        // const analytics = analyticsFirebase;
+        // analytics.logEvent('acesso_pagina', { page: '/' + slug });
 
     }, [])
 

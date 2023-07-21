@@ -118,7 +118,7 @@ const SlugDetails = styled.div`
                 display: flex;
                 justify-content: center;
                 margin: 0 auto;
-                width: 50%;
+                width: 75%;
                 height: 100%;
             }
         }
