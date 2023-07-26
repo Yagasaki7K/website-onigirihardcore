@@ -27,7 +27,7 @@ export async function getServerSideProps() {
 
 DashboardEdit.propTypes = {
     posts: PropTypes.array.isRequired,
-  };
+};
   
 export default function DashboardEdit({ posts }) {
     function SignOut() {
