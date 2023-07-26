@@ -64,7 +64,7 @@ const Categories = () => {
                         lastAnime && lastAnime.map(post => (
                             post.categories === 'Animes' ? (
                                 <div className="post" key={post.id}>
-                                    <a href={post.slug} >
+                                    <a href={post.slug}>
                                         <img src={post.imageUrl} alt={post?.name} />
                                         {/* <img src={post.image} alt={post.title} /> */}
 

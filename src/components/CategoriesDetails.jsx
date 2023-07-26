@@ -125,7 +125,6 @@ const CategoriesDetails = styled.div`
         }
 
         span {
-
             i {
                 font-style: normal;
                 color: ${colors.graydark};
@@ -192,10 +191,6 @@ const CategoriesDetails = styled.div`
 
                     color: ${colors.text};
                     text-decoration: none;
-
-                    :hover {
-                        color: ${colors.blue};
-                    }
 
                     i {
                         margin-left: 5rem;
