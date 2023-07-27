@@ -69,14 +69,35 @@ const SlugDetails = styled.div`
         h1 {
             margin-top: -1rem;
             color: ${colors.blue};
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 700;
             line-height: 35px;
             text-shadow: 1px 1px 2px rgb(0 0 0 / 30%);
         }
 
+        h2 {
+            color: ${colors.blue};
+        }
+
         a {
             color: ${colors.blue};
+        }
+
+        .anchor {
+            fill: white;
+            margin-right: 0.2rem;
+        }
+
+        p {
+            margin-bottom: 2.2rem;
+        }
+
+        ul {
+            margin-top: -1rem;
+        }
+
+        li {
+            margin-left: -1rem;
         }
 
         .date {
