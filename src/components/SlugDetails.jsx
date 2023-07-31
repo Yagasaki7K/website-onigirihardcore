@@ -69,7 +69,7 @@ const SlugDetails = styled.div`
         h1 {
             margin-top: -1rem;
             color: ${colors.blue};
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
             line-height: 35px;
             text-shadow: 1px 1px 2px rgb(0 0 0 / 30%);
@@ -89,7 +89,7 @@ const SlugDetails = styled.div`
         }
 
         p {
-            margin-bottom: 2.2rem;
+            margin-bottom: 1.8rem;
         }
 
         ul {
@@ -122,9 +122,9 @@ const SlugDetails = styled.div`
             }
 
             @media (max-width: 768px) {
-                    font-size: 1.6em;
-                    line-height: 30px;
-                    width: 100%;
+                font-size: 1.6em;
+                line-height: 30px;
+                width: 100%;
             }
 
             @media (max-width: 500px) {
