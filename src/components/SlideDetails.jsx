@@ -88,15 +88,15 @@ const SlideDetails = styled.div`
                     }
 
                     .animes {
-                        background: #ffb02e;
+                        background: #bd93f9;
                     }
 
                     .movies {
-                        background: #71a703;
+                        background: #6272a4;
                     }
 
                     .games {
-                        background: #0D2FFF;
+                        background: #faa74e;
                     }
 
                     .date {
