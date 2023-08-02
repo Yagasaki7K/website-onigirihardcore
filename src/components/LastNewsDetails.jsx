@@ -132,11 +132,26 @@ const LastNewsDetails = styled.div`
                     
                     span {
                         margin-right: 1rem;
-                        background: ${colors.blue};
                         padding: 0.2rem 0.5rem;
                         font-weight: bold;
                         font-size: 0.8rem;
                         color: ${colors.white};
+                    }
+
+                    .tecnologies {
+                        background: ${colors.blue};
+                    }
+
+                    .animes {
+                        background: #ffb02e;
+                    }
+
+                    .movies {
+                        background: #71a703;
+                    }
+
+                    .games {
+                        background: #0D2FFF;
                     }
                 }
 

@@ -79,7 +79,7 @@ const Slide = () => {
                                     </Head>
 
                                     <span className="latest">HOT NEWS 🔥</span>
-                                    <span className="tag">{post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Ciência & Tecnologia' : null || post.categories === 'Animes' ? 'Animes & HQs' : null}</span>
+                                    <span className="tag">{post.categories === 'Movies' ? <span className="movies">Filmes & Séries</span> : null || post.categories === 'Games' ? <span className="games">Video Games</span> : null || post.categories === 'Technologies' ? <span className="tecnologies">Ciência & Tecnologia</span> : null || post.categories === 'Animes' ? <span className="animes">Animes & HQs</span> : null}</span>
                                     <span className="date">{post?.lessDate}</span>
                                     <span> - </span>
                                     <span className="author">

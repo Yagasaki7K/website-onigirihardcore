@@ -74,9 +74,29 @@ const SlideDetails = styled.div`
 
                     .tag {
                         padding: 2.6px 10px;
-                        background: ${colors.blue};
                         font-size: 0.9rem;
                         font-weight: bold;
+                    }
+
+                    .tecnologies, .animes, .movies, .games {
+                        padding: 2.6px 10px;
+                        margin: 0 -10px;
+                    }
+
+                    .tecnologies {
+                        background: ${colors.blue};
+                    }
+
+                    .animes {
+                        background: #ffb02e;
+                    }
+
+                    .movies {
+                        background: #71a703;
+                    }
+
+                    .games {
+                        background: #0D2FFF;
                     }
 
                     .date {
