@@ -64,7 +64,7 @@ const FullNews = () => {
                                 <img src={post.imageUrl} alt={post?.name} />
                                 {/* <img src={item.image} width="320" /> */}
                                 <div className="title">
-                                    <i className="uil uil-clock-nine">&nbsp;{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null}</i>
+                                    <i className="uil uil-clock-nine">&nbsp;{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null || post.categories === 'Development' ? '4Devs' : null}</i>
                                     <h2>{post.title}</h2>
                                 </div>
                             </a>
