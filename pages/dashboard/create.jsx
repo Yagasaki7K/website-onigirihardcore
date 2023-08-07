@@ -229,6 +229,7 @@ const DashboardCreate = () => {
                                         <option>Games</option>
                                         <option>Movies</option>
                                         <option>Technologies</option>
+                                        <option>Development</option>
                                     </select>
                                 </div>
 

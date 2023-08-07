@@ -143,7 +143,7 @@ const LastNewsDetails = styled.div`
                     }
 
                     .animes {
-                        background: #bd93f9;
+                        background: #ff6ca4;
                     }
 
                     .movies {
@@ -152,6 +152,10 @@ const LastNewsDetails = styled.div`
 
                     .games {
                         background: #faa74e;
+                    }
+
+                    .development {
+                        background: #bd93f9;
                     }
                 }
 

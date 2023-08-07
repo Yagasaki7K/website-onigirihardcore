@@ -43,11 +43,6 @@ const FullNewsDetails = styled.div`
                 text-align: center;
             }
 
-            :hover {
-                transition: 1s;
-                background: ${colors.blacklight};
-            }
-
             img {
                 width: 300px;
                 height: 150px;

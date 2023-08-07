@@ -4,19 +4,19 @@ import Header from '../src/components/Header'
 import FullNewsDetails from '../src/components/FullNewsDetails'
 import postService from '../services/post.service'
 import { NextSeo } from 'next-seo';
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 
-const analyticsFirebase = dynamic(() => import('../client'),
-    { ssr: false }
-);
+// const analyticsFirebase = dynamic(() => import('../client'),
+//     { ssr: false }
+// );
 
 const FullNews = () => {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
         getPosts()
-        const analytics = analyticsFirebase;
-        analytics.logEvent('acesso_pagina', { page: '/noticias' });
+        // const analytics = analyticsFirebase;
+        // analytics.logEvent('acesso_pagina', { page: '/noticias' });
     }, [])
 
     const getPosts = async () => {

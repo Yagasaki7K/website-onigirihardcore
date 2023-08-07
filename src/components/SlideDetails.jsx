@@ -78,7 +78,7 @@ const SlideDetails = styled.div`
                         font-weight: bold;
                     }
 
-                    .tecnologies, .animes, .movies, .games {
+                    .tecnologies, .animes, .movies, .games, .development {
                         padding: 2.6px 10px;
                         margin: 0 -10px;
                     }
@@ -88,7 +88,7 @@ const SlideDetails = styled.div`
                     }
 
                     .animes {
-                        background: #bd93f9;
+                        background: #ff6ca4;
                     }
 
                     .movies {
@@ -97,6 +97,10 @@ const SlideDetails = styled.div`
 
                     .games {
                         background: #faa74e;
+                    }
+
+                    .development {
+                        background: #bd93f9;
                     }
 
                     .date {
