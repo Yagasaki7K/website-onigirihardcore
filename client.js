@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
@@ -20,4 +23,3 @@ const app = initializeApp(firebaseConfig);
 export const database = getFirestore(app);
 export const storage = getStorage(app);
 export const auth = getAuth();
-// export const analyticsFirebase = analytics

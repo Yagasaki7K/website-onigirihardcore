@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react'
 import LastNewsDetails from './LastNewsDetails'
 import postService from '../../services/post.service'
 
-
 const LastNews = () => {
-
     const [Posts, setPosts] = useState([])
 
     useEffect(() => {
