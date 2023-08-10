@@ -12,8 +12,12 @@ const APIPage = () => {
         try {
             const data = await postService.getAllPosts();
             const sortedPosts = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-                .sort((a, b) => b.moreDate - a.moreDate); // Sort by moreDate in descending order
+                .sort((a, b) => b.moreDate - a.moreDate);
             setPosts(sortedPosts);
+
+            const size = data.docs.length;
+            console.log(size)
+
         } catch (error) {
             console.error('Error fetching posts:', error);
         }
