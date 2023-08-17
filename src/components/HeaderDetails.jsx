@@ -32,8 +32,7 @@ const HeaderDetails = styled.div`
         }
 
         .logotipo {
-            width: 32rem;
-            margin-top: 0.5rem;
+            width: 36rem;
 
             @media (max-width: 414px) {
                 width: 20rem;

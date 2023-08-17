@@ -9,8 +9,8 @@ const FooterDetails = styled.div`
         margin: .5rem 0;
 
         img {
-            height: 4rem;
-            margin-top: -2rem;
+            height: 7rem;
+            margin-top: -4rem;
             width: 100%;
 
             @media (max-width: 768px) {
