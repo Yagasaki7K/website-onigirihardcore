@@ -75,6 +75,7 @@ const LastNewsDetails = styled.div`
                     width: 290px;
                     height: 150px;
                     margin: 0rem 1rem 1rem 4rem;
+                    object-fit: cover;
 
                     @media (max-width: 768px) {
                         width: 200px;
