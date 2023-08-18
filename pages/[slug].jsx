@@ -89,7 +89,7 @@ const Post = () => {
                                     ) : null}
 
 
-                                    <p>Mantenha-se atualizado sobre todas as novidades do <a href="/">Onigiri Hardcore</a> e siga-nos também no <a href="https://twitter.com/OnigiriHardcore" target='_blank' rel="noreferrer">Twitter</a> para não perder nenhum destaque da semana!</p>
+                                    <p>Mantenha-se atualizado sobre todas as novidades do <a href="/">Onigiri Hardcore</a> e siga-nos também no <a href="https://twitter.com/KalifyInc" target='_blank' rel="noreferrer">Twitter</a> para não perder nenhum destaque da semana!</p>
 
                                     {post.ytid ?
                                         <iframe width="550" height="480" src={'https://www.youtube.com/embed/' + post?.ytid} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : null}
