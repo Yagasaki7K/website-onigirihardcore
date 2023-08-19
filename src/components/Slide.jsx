@@ -7,20 +7,21 @@ import SlideDetails from './SlideDetails'
 import { useKeenSlider } from 'keen-slider/react'
 import postService from '../../services/post.service.js'
 import Head from 'next/head'
+import { SkeletonSlide } from './Skeleton/SkeletonSlide'
 
-const Slide = () => {
 
+export const Slide = () => {
     const [Posts, setPosts] = useState([])
-    const [isLoading, setIsLoading] = useState(true)
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        getPosts()
+        getPosts();
     }, [])
 
     const getPosts = async () => {
         const data = await postService.getAllPosts()
         setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-        setIsLoading(false)
+        setLoading(false);
     }
 
     const slidePosts = Posts.sort().slice(0, 5)
@@ -59,13 +60,15 @@ const Slide = () => {
     )
 
     return (
-        isLoading ? <p>Loading...</p> :
-            <SlideDetails>
+        <SlideDetails>
+            {loading ? (
+                <SkeletonSlide/>
+            ) : (
                 <div ref={refCallback} className="keen-slider">
                     {slidePosts && slidePosts.map(post => (
                         <div className="keen-slider__slide" key={post?.id}>
                             <a href={post?.slug}>
-                                <img src={post.imageUrl} alt={post?.name} />
+                                <img src={post.imageUrl} alt={post?.name} loading='lazy' />
                             </a>
                             <div className="slider-description">
                                 <div className="slide-tag">
@@ -97,8 +100,7 @@ const Slide = () => {
                         </div>
                     ))}
                 </div>
-            </SlideDetails>
+            )}
+        </SlideDetails>
     )
 }
-
-export default Slide

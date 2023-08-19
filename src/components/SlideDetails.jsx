@@ -2,6 +2,19 @@ import styled from 'styled-components'
 import { colors } from './variables'
 
 const SlideDetails = styled.div`
+
+    .keen-slider-skeleton{
+        width: 100%;
+        height: 40rem; 
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #ffffff1a;
+       
+    }
+
     .keen-slider {
         width: 100%;
         height: 40rem;

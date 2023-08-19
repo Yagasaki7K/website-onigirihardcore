@@ -4,12 +4,6 @@ import FooterDetails from './FooterDetails';
 export default function Footer() {
     return (
         <FooterDetails>
-            <div className="imgfooter">
-                <a href="/">
-                    <img src="/logotipo.png" alt="footer" />
-                </a>
-            </div>
-
             <div className="footer">
                 <p>
                     <a href="/login">©</a> 2015 - {new Date().getFullYear()} <a href="/">Onigiri Hardcore</a> by&nbsp;

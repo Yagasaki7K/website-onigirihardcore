@@ -3,7 +3,7 @@ import TechnologiesDetails from './TechnologiesDetails'
 import { useEffect, useState } from 'react'
 import postService from '../../services/post.service'
 
-const Technologies = () => {
+export const Technologies = () => {
     const [Posts, setPosts] = useState([])
 
     useEffect(() => {
@@ -25,7 +25,7 @@ const Technologies = () => {
 
                 <div className="content">
                     {
-                        technologies.slice(0, 4).map((post, index) => (
+                        technologies.slice(0, 12).map((post, index) => (
                             <a href={post.slug} key={index}>
                                 <img src={post.imageUrl} alt={post?.name} />
 
@@ -37,40 +37,7 @@ const Technologies = () => {
                         ))
                     }
                 </div>
-
-                <div className="content">
-                    {
-                        technologies.slice(4, 8).map((post, index) => (
-                            <a href={post.slug} key={index}>
-                                <img src={post.imageUrl} alt={post?.name} />
-
-                                <div className="title">
-                                    <h1>{post.title}</h1>
-                                    <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                </div>
-                            </a>
-                        ))
-                    }
-                </div>
-
-                <div className="content">
-                    {
-                        technologies.slice(8, 12).map((post, index) => (
-                            <a href={post.slug} key={index}>
-                                <img src={post.imageUrl} alt={post?.name} />
-
-                                <div className="title">
-                                    <h1>{post.title}</h1>
-                                    <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                </div>
-                            </a>
-                        ))
-                    }
-                </div>
-
             </div>
         </TechnologiesDetails>
     )
 }
-
-export default Technologies
