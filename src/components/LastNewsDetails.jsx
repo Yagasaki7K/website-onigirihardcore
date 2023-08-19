@@ -2,50 +2,16 @@ import styled from 'styled-components'
 import { colors } from './variables'
 
 const LastNewsDetails = styled.div`
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+
     .container {
-        margin: -5rem 0rem 5rem 27.5rem;
-        padding: 30px 0;
-
-        @media (max-width: 1440px) {
-            margin: -2rem 0rem 5rem 13rem;
-            display: inline-block;
-            padding: 0px;
-        }
-
-        @media (max-width: 1366px) {
-            margin: -2rem 0rem 5rem 5rem;
-            display: inline-block;
-            padding: 0px;
-        }
-
-        @media (max-width: 768px) {
-            display: block;
-            padding: 0px;
-       }
-
-        @media (max-width: 500px) {
-            display: inline-block;
-            padding: 0px;
-       }
-
+        width: 100%;
+    
         .header {
             border-bottom: 2px solid ${colors.blue};
-            width: 63rem;
-            margin-bottom: 1rem;
-
-            @media (max-width: 1366px) {
-                width: 71rem;
-            }
-
-            @media (max-width: 1024px) {
-                width: 55rem
-            }
-
-            @media (max-width: 768px) {
-                width: 40rem;
-                margin-left: -1rem;
-                margin-bottom: -0.5rem;
-            }
+            width: 100%;
 
             p {
                 width: 10rem;
@@ -58,51 +24,36 @@ const LastNewsDetails = styled.div`
         }
         
         .content {
+            width: 100%;
+
             display: flex;
+            align-items: center;
+            gap: 30px;
+            
+            padding: 20px 0px;
+
+            border-bottom: 2px solid white;
             
             .leftContent {
-                margin-top: 2rem;
-
-                @media (max-width: 1366px) {
-                    margin-left: 5rem;
-                }
-
-                @media (max-width: 1024px) {
-                    margin-left: -3rem;
-                }
 
                 img {
                     width: 290px;
                     height: 150px;
-                    margin: 0rem 1rem 1rem 4rem;
                     object-fit: cover;
 
-                    @media (max-width: 768px) {
+                    @media (max-width: 835px) {
                         width: 200px;
                         height: 100px;
-                        margin: 0rem 1rem 1rem 2rem;
-                    }
-                }
-
-                hr {
-                    position: absolute;
-                    width: 60rem;
-
-                    @media (max-width: 1024px) {
-                        width: 55rem;
-                        margin-left: 3rem;
                     }
 
-                    @media (max-width: 768px) {
-                        width: 40rem;
-                        margin-left: 2rem;
+                    @media (max-width: 470px){
+                        width: 150px;
+                        height: 100px;
                     }
                 }
             }
 
             .rightContent {
-                margin-top: 0.5rem;
-                margin-left: 2rem;
 
                 a {
                     :hover {
@@ -120,23 +71,32 @@ const LastNewsDetails = styled.div`
                     overflow: hidden;
                     text-overflow: ellipsis;
 
-                    @media (max-width: 768px) {
+                    @media (max-width: 835px) {
                         width: 25rem;
                         font-size: 1rem;
+                    }
+
+                    @media (max-width: 670px){
+                        width: 100%;
+                        font-size: 0.85rem;
                     }
                 }
 
                 .categories {
                     display: flex;
+                    gap: 10px;
                     align-items: center;
                     margin-top: 0.5rem;
                     
                     span {
-                        margin-right: 1rem;
                         padding: 0.2rem 0.5rem;
                         font-weight: bold;
                         font-size: 0.8rem;
                         color: ${colors.white};
+
+                        @media (max-width: 530px){
+                            font-size: 0.6rem;
+                        }
                     }
 
                     .tecnologies {
@@ -161,25 +121,20 @@ const LastNewsDetails = styled.div`
                 }
 
                 p {
-                    width: 30rem;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 2;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
+                    width: 100%;
 
-                    @media (max-width: 768px) {
-                        width: 25rem;
-                        font-size: 0.8rem;
-                    }
                 }
 
                 i {
                     font-style: normal;
                     font-size: 0.9rem;
 
-                    @media (max-width: 768px) {
+                    @media (max-width: 835px) {
                         font-size: 0.8rem;
+                    }
+
+                    @media (max-width: 500px){
+                        font-size: 0.6rem;
                     }
                 }
             }

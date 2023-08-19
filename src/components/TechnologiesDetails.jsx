@@ -4,55 +4,20 @@ import { colors } from './variables'
 const TecnologiesDetails = styled.div`
         display: flex;
         justify-content: center;
-        margin: -2rem 0 5rem 7rem;
-        padding: 30px 0;
+        align-items: center;
 
-        @media (max-width: 1366px) {
-            display: inline-block;
-            padding: 0px;
-        }
-
-        @media (max-width: 768px) {
-            display: block;
-            padding: 0px;
-       }
-
-        @media (max-width: 500px) {
-            display: inline-block;
-            padding: 0px;
-       }
+        width: 100%;
+        max-width: 1200px;
 
        .tecnologies {
-            margin-left: -8rem;
-
-            @media (max-width: 1366px) {
-                margin-left: -2rem;
-            }
-
-            @media (max-width: 1024px) {
-                margin-left: -2rem;
-            }
-
-            @media (max-width: 768px) {
-                margin-left: -6rem;
-            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
 
             .header {
                 border-bottom: 2px solid ${colors.blue};
-                width: 63rem;
-
-                @media (max-width: 1366px) {
-                    width: 71rem;
-                }
-
-                @media (max-width: 1024px) {
-                    width: 55rem;
-                }
-
-                @media (max-width: 768px) {
-                    width: 45rem;
-                    margin-top: 3rem;
-                }
+                width: 100%;
 
                 p {
                     width: 12rem;
@@ -65,35 +30,20 @@ const TecnologiesDetails = styled.div`
             }
 
         .content, .secondContent, .thirdContent {
+            width: 100%;
+            padding: 20px 0px;
+
             display: flex;
-            margin-left: -1rem;
-
-            @media (max-width: 1024px) {
-                display: inline-block;
-                margin-left: -1rem;
-                width: 35%;
-            }
-
-            @media (max-width: 900px) {
-                display: inline-block;
-                margin-left: 2%;
-                width: 40%;
-            }
-
-            @media (max-width: 768px) {
-                margin-left: -0.3rem;
-                margin-right: 0rem;
-                width: 15rem;
-            }
-
-            @media (max-width: 500px) {
-                display: inline-block;
-                padding: 2px;
-            }
-
+            align-items: center;
+            flex-wrap: wrap;
+            row-gap: 20px;
+            column-gap: 10px;
+            
             a {
                 text-decoration: none;
                 color: ${colors.white};
+                flex-grow: 1;
+                flex-basis: 260px;
 
                 :hover {
                     color: ${colors.blue};
@@ -101,20 +51,14 @@ const TecnologiesDetails = styled.div`
                 }
 
                 img {
-                    margin-top: 1rem;
-                    margin-left: 1rem;
-                    width: 15rem;
+                    width: 100%;
                     height: 12rem;
                     padding: 0;
                     object-fit: cover;
                     filter: brightness(60%);
 
-                    @media (max-width: 1366px) {
-                        width: 17rem;
-                    }
-
-                    @media (max-width: 768px) {
-                        width: 14.5rem;
+                    @media screen and(max-width: 909px){
+                        width: 30rem;
                     }
                 }
 

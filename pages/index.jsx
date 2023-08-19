@@ -1,12 +1,17 @@
 import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
-import Slide from '../src/components/Slide'
-import Categories from '../src/components/Categories'
-import Technologies from '../src/components/Technologies'
-import LastNews from '../src/components/LastNews'
+import { Slide } from '../src/components/Slide'
+import { Categories } from '../src/components/Categories'
+import { Technologies } from '../src/components/Technologies'
+import { LastNews } from '../src/components/LastNews'
 import { NextSeo } from 'next-seo'
+import { ContentDetails } from '../src/components/ContentDetails'
+
+import { useEffect, useState } from 'react'
+import { SkeletonSlide } from '../src/components/Skeleton/SkeletonSlide'
 
 export default function Home() {
+
     return (
         <>
             <NextSeo
@@ -35,10 +40,12 @@ export default function Home() {
                 }}
             />
             <Header />
-            <Slide />
-            <Categories />
-            <Technologies />
-            <LastNews />
+            <Slide /> 
+            <ContentDetails>
+                <Categories />
+                <Technologies />
+                <LastNews />
+            </ContentDetails>
             <Footer />
         </>
     )

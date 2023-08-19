@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import LastNewsDetails from './LastNewsDetails'
 import postService from '../../services/post.service'
 
-const LastNews = () => {
+export const LastNews = () => {
     const [Posts, setPosts] = useState([])
 
     useEffect(() => {
@@ -27,8 +27,6 @@ const LastNews = () => {
                                 <a href={post.slug}>
                                     <img src={post.imageUrl} alt={post?.name} />
                                 </a>
-
-                                <hr />
                             </div>
                             <div className="rightContent">
                                 <a href={post.slug}>
@@ -51,5 +49,3 @@ const LastNews = () => {
         </LastNewsDetails>
     )
 }
-
-export default LastNews
