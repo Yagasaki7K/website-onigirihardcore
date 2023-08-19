@@ -6,7 +6,7 @@ const FooterDetails = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: .5rem 0;
+        margin: 2.5rem 0;
 
         img {
             margin-top: -4rem;
