@@ -7,9 +7,6 @@ import { LastNews } from '../src/components/LastNews'
 import { NextSeo } from 'next-seo'
 import { ContentDetails } from '../src/components/ContentDetails'
 
-import { useEffect, useState } from 'react'
-import { SkeletonSlide } from '../src/components/Skeleton/SkeletonSlide'
-
 export default function Home() {
 
     return (
@@ -40,7 +37,7 @@ export default function Home() {
                 }}
             />
             <Header />
-            <Slide /> 
+            <Slide />
             <ContentDetails>
                 <Categories />
                 <Technologies />

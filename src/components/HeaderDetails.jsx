@@ -2,19 +2,16 @@ import styled from 'styled-components'
 import { colors } from './variables'
 
 export const HeaderDetails = styled.div`
-
     .header {
         display: flex;
         justify-content: center;
         align-items: center;
-
-        gap: 30px;
         background: ${colors.blackAlt};
 
-        padding: 20px 20px;
+        padding: 10px;
 
         .logotipo img{
-            width: 95%;
+            width: 60%;
         }
 
         @media (max-width: 1200px) {
@@ -24,6 +21,7 @@ export const HeaderDetails = styled.div`
         }
 
     }
+
     .navigation {
         background: ${colors.blue};
         display: flex;
@@ -117,6 +115,7 @@ export const HeaderDetails = styled.div`
         }
     }
 `
+
 export const HeaderMobile = styled.div`
     width: 100%;
     height: 50px;

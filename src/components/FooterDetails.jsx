@@ -9,9 +9,9 @@ const FooterDetails = styled.div`
         margin: .5rem 0;
 
         img {
-            height: 7rem;
             margin-top: -4rem;
-            width: 100%;
+            width: 35rem;
+            height: 6rem;
 
             @media (max-width: 768px) {
                 margin-bottom: 1rem;
@@ -27,6 +27,7 @@ const FooterDetails = styled.div`
                 margin-top: 0rem;
             }
         }
+        
     }
 
     .footer {

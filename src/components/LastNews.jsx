@@ -21,7 +21,7 @@ export const LastNews = () => {
                     <p>Últimas Notícias</p>
                 </div>
                 {
-                    Posts && Posts.slice(0, 10).map((post, index) => (
+                    Posts && Posts.slice(0, 15).map((post, index) => (
                         <div className="content" key={index}>
                             <div className="leftContent">
                                 <a href={post.slug}>

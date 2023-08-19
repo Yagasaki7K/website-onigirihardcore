@@ -54,7 +54,8 @@ const LastNewsDetails = styled.div`
             }
 
             .rightContent {
-
+                width: 70%;
+                
                 a {
                     :hover {
                         color: ${colors.blue};
@@ -63,7 +64,6 @@ const LastNewsDetails = styled.div`
 
                 h1 {
                     font-size: 1.5rem;
-                    width: 30rem;
                     margin-bottom: 0rem;
                     display: -webkit-box;
                     -webkit-line-clamp: 2;
@@ -122,7 +122,6 @@ const LastNewsDetails = styled.div`
 
                 p {
                     width: 100%;
-
                 }
 
                 i {

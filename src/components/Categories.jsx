@@ -43,13 +43,11 @@ export const Categories = () => {
                         post.categories === 'Animes' ? (
                             <a className='categories-content' href={post.slug} key={post.id}>
                                 <img src={post.imageUrl} alt={post?.name} />
-                                {/* <img src={post.image} alt={post.title} /> */}
-                                <h1>{post.title.length > 35 ? post.title.slice(0, 35) + "..." : post.title}</h1>
+                                <h1>{post.title.length > 35 ? post.title.slice(0, 55) + "..." : post.title}</h1>
                                 {/* <h1>{post.smalltitle}</h1> */}
 
                                 <span>
                                     <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                    {/* <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i> */}
                                     <p>{post.description}</p>
                                 </span>
                             </a>
@@ -66,13 +64,10 @@ export const Categories = () => {
                                 <div className="post" key={post.id}>
                                     <a href={post.slug}>
                                         <img src={post.imageUrl} alt={post?.name} />
-                                        {/* <img src={post.image} alt={post.title} /> */}
 
                                         <div className="post-side">
                                             <h3>{post.title}</h3>
-                                            {/* <h3>{post.smalltitle}</h3> */}
                                             <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                            {/* <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i> */}
                                         </div>
                                     </a>
                                 </div>
@@ -94,13 +89,11 @@ export const Categories = () => {
                         post.categories === 'Games' ? (
                             <a className='categories-content' href={post.slug} key={post.id}>
                                 <img src={post.imageUrl} alt={post?.name} />
-                                {/* <img src={post.image} alt={post.title} /> */}
-                                <h1>{post.title.length > 35 ? post.title.slice(0, 35) + "..." : post.title}</h1>
+                                <h1>{post.title.length > 35 ? post.title.slice(0, 55) + "..." : post.title}</h1>
                                 {/* <h1>{post.smalltitle}</h1> */}
 
                                 <span>
                                     <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                    {/* <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i> */}
                                     <p>{post.description}</p>
                                 </span>
                             </a>
@@ -120,9 +113,7 @@ export const Categories = () => {
 
                                         <div className="post-side">
                                             <h3>{post.title}</h3>
-                                            {/* <h3>{post.smalltitle}</h3> */}
                                             <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                            {/* <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i> */}
                                         </div>
                                     </a>
                                 </div>
@@ -144,12 +135,10 @@ export const Categories = () => {
                         post.categories === 'Movies' ? (
                             <a className='categories-content' href={post.slug} key={post.id}>
                                 <img src={post.imageUrl} alt={post.title} />
-                                <h1>{post.title.length > 35 ? post.title.slice(0, 35) + "..." : post.title}</h1>
-                                {/* <h1>{post.smalltitle}</h1> */}
+                                <h1>{post.title.length > 35 ? post.title.slice(0, 55) + "..." : post.title}</h1>
 
                                 <span>
                                     <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                    {/* <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i> */}
                                     <p>{post.description}</p>
                                 </span>
                             </a>
@@ -169,9 +158,7 @@ export const Categories = () => {
 
                                         <div className="post-side">
                                             <h3>{post.title}</h3>
-                                            {/* <h3>{post.smalltitle}</h3> */}
                                             <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                            {/* <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i> */}
                                         </div>
                                     </a>
                                 </div>
