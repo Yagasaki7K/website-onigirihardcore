@@ -112,10 +112,10 @@ const CategoriesDetails = styled.div`
             width: 100%;
             .post {
                 display: flex;
-                padding: 5px 0px 10px 0px;
+                padding: 20px 0px 10px 0px;
                 border-bottom: 2px solid white;
 
-                a{
+                a {
                     width: 100%;
                     display: flex;
                     gap: 15px;

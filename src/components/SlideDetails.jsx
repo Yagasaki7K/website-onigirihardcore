@@ -3,7 +3,7 @@ import { colors } from './variables'
 
 const SlideDetails = styled.div`
 
-    .keen-slider-skeleton{
+    .keen-slider-skeleton {
         width: 100%;
         height: 40rem; 
 
@@ -40,6 +40,7 @@ const SlideDetails = styled.div`
 
         .keen-slider__slide {
             width: 100%;
+
             .slider-description {
                 position: absolute;
                 top: 45%;
@@ -76,6 +77,7 @@ const SlideDetails = styled.div`
                     @media (max-width: 500px) {
                          font-size: 0.8em;
                          width: 300px;
+                         margin-top: 50px;
                      }
 
                     .latest {
@@ -94,6 +96,25 @@ const SlideDetails = styled.div`
                     .tecnologies, .animes, .movies, .games, .development {
                         padding: 2.6px 10px;
                         margin: 0 -10px;
+                    }
+
+                    @media (max-width: 768px) {
+                        .latest {
+                            padding: 2.5px 8px;
+                            background: ${colors.orange};
+                            font-size: 0.8rem;
+                            font-weight: bold;
+                        }
+
+                        .tag {
+                            padding: 2px 8px;
+                            font-size: 0.8rem;
+                            font-weight: bold;
+                        }
+
+                        .date, .author {
+                            display: none;
+                        }
                     }
 
                     .tecnologies {
@@ -151,6 +172,7 @@ const SlideDetails = styled.div`
 
                     @media (max-width: 500px) {
                         font-size: 1.8em;
+                        line-height: 40px;
                    }
 
                    @media (max-width: 320px) {

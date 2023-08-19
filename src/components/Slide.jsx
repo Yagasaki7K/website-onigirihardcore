@@ -6,7 +6,6 @@ import SlideDetails from './SlideDetails'
 
 import { useKeenSlider } from 'keen-slider/react'
 import postService from '../../services/post.service.js'
-import Head from 'next/head'
 import { SkeletonSlide } from './Skeleton/SkeletonSlide'
 
 
@@ -62,7 +61,7 @@ export const Slide = () => {
     return (
         <SlideDetails>
             {loading ? (
-                <SkeletonSlide/>
+                <SkeletonSlide />
             ) : (
                 <div ref={refCallback} className="keen-slider">
                     {slidePosts && slidePosts.map(post => (
@@ -72,15 +71,6 @@ export const Slide = () => {
                             </a>
                             <div className="slider-description">
                                 <div className="slide-tag">
-                                    <Head>
-                                        <title>{post.title}</title>
-                                        <meta name="description" content={post?.description} key="desc" />
-                                        <meta property="og:title" content={post?.title} />
-                                        <meta property="og:description" content={post?.description} />
-                                        <meta property="og:image" content={post.imageUrl} />
-                                        <meta name="author" content={post.author} />
-                                    </Head>
-
                                     <span className="latest">HOT NEWS 🔥</span>
 
                                     <span className="tag">{post.categories === 'Movies' ? <span className="movies">Filmes & Séries</span> : null || post.categories === 'Games' ? <span className="games">Video Games</span> : null || post.categories === 'Technologies' ? <span className="tecnologies">Ciência & Tecnologia</span> : null || post.categories === 'Animes' ? <span className="animes">Animes & HQs</span> : null || post.categories === 'Development' ? <span className="development">4Devs</span> : null}</span>

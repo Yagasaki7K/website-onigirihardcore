@@ -118,7 +118,7 @@ export const HeaderDetails = styled.div`
 
 export const HeaderMobile = styled.div`
     width: 100%;
-    height: 50px;
+    height: 70px;
 
     font-size: 1.5rem;
     
@@ -138,12 +138,12 @@ export const HeaderMobile = styled.div`
         justify-content: center;
 
         img{
-            height: 40px;
+            height: 55px;
         }
     }
 
 
-    .menu{
+    .menu {
         width: 50px;
         height: 50px;
 
@@ -152,12 +152,12 @@ export const HeaderMobile = styled.div`
         justify-content: center;
     }
 
-    .active{
+    .active {
         background-color: #15171b;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
 
-    .drawner{
+    .drawner {
         width: 100%;
         position: absolute;
 
@@ -169,7 +169,7 @@ export const HeaderMobile = styled.div`
         background: #15171b;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
-        .close-icon{
+        .close-icon {
             position: absolute;
 
             right: 15px;
@@ -178,7 +178,7 @@ export const HeaderMobile = styled.div`
             font-size: 1rem;
         }
 
-        .content-drawner{
+        .content-drawner {
             width: 100%;
             padding: 10px 20px 20px 20px;
 
@@ -195,7 +195,7 @@ export const HeaderMobile = styled.div`
                 font-weight: 700;
             }
             
-            .navigation-drawner{
+            .navigation-drawner {
                 width: 100%;
 
                 display: flex;
