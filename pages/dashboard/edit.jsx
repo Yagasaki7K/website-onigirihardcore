@@ -7,25 +7,37 @@ import DashboardDetails from "../../src/components/DashboardDetails";
 import SideMenu from "../../src/components/Dashboard/SideMenu";
 import EditPostModal from "../../src/components/Modals/EditPostModal";
 import DeletePostModal from "../../src/components/Modals/DeletePostModal";
+import PropTypes from 'prop-types';
 import { useRouter } from "next/router";
 
-const DashboardEdit = () => {
+export async function getServerSideProps() {
+    const data = await postService.getAllPosts();
+    const posts = data.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+        date: doc.data().date instanceof Date ? doc.data().date.toString() : null,
+    }));
 
+    return {
+        props: {
+            posts,
+        },
+    };
+}
+
+DashboardEdit.propTypes = {
+    posts: PropTypes.array.isRequired,
+};
+  
+export default function DashboardEdit({ posts }) {
     function SignOut() {
         return authService.signOutGoogle();
     }
-
     const router = useRouter();
     const [render, setRender] = useState();
-    const [Posts, setPosts] = useState([]);
 
     async function checkAuth() {
         return await authService.stateAuthentication();
-    }
-
-    async function getPosts() {
-        const data = await postService.getAllPosts();
-        setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     }
 
     useEffect(() => {
@@ -35,11 +47,10 @@ const DashboardEdit = () => {
                     .queryByUsersInAccessOne(result.id)
                     .then((result) => {
                         if (result === true) {
-                            setRender(true)
-                            getPosts();
+                            setRender(true);
                         } else {
                             SignOut();
-                            router.push("/login")
+                            router.push("/login");
                         }
                     });
             })
@@ -65,27 +76,27 @@ const DashboardEdit = () => {
                                         <th>Data de Modificação</th>
                                         <th>Ações</th>
                                     </tr>
-                                    {Posts.map((post) => (
-                                        <tr key={post.id}>
+                                    {posts.map((fields) => (
+                                        <tr key={fields.id}>
                                             <td>
                                                 <a
-                                                    href={"/" + post.slug}
+                                                    href={"/" + fields.slug}
                                                     target="_blank"
                                                     rel="noreferrer"
                                                 >
-                                                    {post.title}
+                                                    {fields.title}
                                                 </a>
                                             </td>
-                                            <td>{post.author}</td>
-                                            <td>{post.categories}</td>
-                                            <td>{post.lessDate}</td>
+                                            <td>{fields.author}</td>
+                                            <td>{fields.categories}</td>
+                                            <td>{fields.lessDate}</td>
                                             <td>
-                                                <EditPostModal id={post.id} />
+                                                <EditPostModal id={fields.id} />
                                             </td>
                                             <td>
                                                 <DeletePostModal
-                                                    id={post.id}
-                                                    url={post.imageUrl}
+                                                    id={fields.id}
+                                                    url={fields.imageUrl}
                                                 />
                                             </td>
                                         </tr>
@@ -100,6 +111,4 @@ const DashboardEdit = () => {
     } else {
         return null;
     }
-};
-
-export default DashboardEdit;
+}
