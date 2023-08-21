@@ -6,21 +6,21 @@ import SlideDetails from './SlideDetails'
 
 import { useKeenSlider } from 'keen-slider/react'
 import postService from '../../services/post.service.js'
-import Head from 'next/head'
+import { SkeletonSlide } from './Skeleton/SkeletonSlide'
 
-const Slide = () => {
 
+export const Slide = () => {
     const [Posts, setPosts] = useState([])
-    const [isLoading, setIsLoading] = useState(true)
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        getPosts()
+        getPosts();
     }, [])
 
     const getPosts = async () => {
         const data = await postService.getAllPosts()
         setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-        setIsLoading(false)
+        setLoading(false);
     }
 
     const slidePosts = Posts.sort().slice(0, 5)
@@ -59,36 +59,28 @@ const Slide = () => {
     )
 
     return (
-        isLoading ? <p>Loading...</p> :
-            <SlideDetails>
+        <SlideDetails>
+            {loading ? (
+                <SkeletonSlide />
+            ) : (
                 <div ref={refCallback} className="keen-slider">
                     {slidePosts && slidePosts.map(post => (
                         <div className="keen-slider__slide" key={post?.id}>
                             <a href={post?.slug}>
-                                <img src={post.imageUrl} alt={post?.name} />
-                                {/* <img src={post?.image} alt={post?.title}/> */}
+                                <img src={post.imageUrl} alt={post?.name} loading='lazy' />
                             </a>
                             <div className="slider-description">
                                 <div className="slide-tag">
-                                    <Head>
-                                        {/* Meta tags relacionadas ao SEO */}
-                                        <title>{post.title}</title>
-                                        <meta name="description" content={post?.description} key="desc" />
-                                        <meta property="og:title" content={post?.title} />
-                                        <meta property="og:description" content={post?.description} />
-                                        <meta property="og:image" content={post.imageUrl} />
-                                        <meta name="author" content={post.author} />
-                                    </Head>
-
                                     <span className="latest">HOT NEWS 🔥</span>
-                                    <span className="tag">{post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null}</span>
-                                    {/* <span className="tag">{posts?.category.title}</span> */}
+
+                                    <span className="tag">{post.categories === 'Movies' ? <span className="movies">Filmes & Séries</span> : null || post.categories === 'Games' ? <span className="games">Video Games</span> : null || post.categories === 'Technologies' ? <span className="tecnologies">Ciência & Tecnologia</span> : null || post.categories === 'Animes' ? <span className="animes">Animes & HQs</span> : null || post.categories === 'Development' ? <span className="development">4Devs</span> : null}</span>
+
                                     <span className="date">{post?.lessDate}</span>
-                                    {/* <span className="date">{post?.createdAt}</span> */}
                                     <span> - </span>
                                     <span className="author">
-                                        <a href="#">{post.author}</a>
-                                        {/* <a href="https://yagasaki.vercel.app/" target="_blank" rel="noreferrer">Anderson Marlon</a> */}
+                                        {
+                                            post.author === "Anderson 'Yagasaki' Marlon" ? <a href='https://yagasaki.dev/about' target='_blank' rel="noreferrer">Anderson &apos;Yagasaki&apos; Marlon</a> : null
+                                        }
                                     </span>
                                 </div>
 
@@ -98,8 +90,7 @@ const Slide = () => {
                         </div>
                     ))}
                 </div>
-            </SlideDetails>
+            )}
+        </SlideDetails>
     )
 }
-
-export default Slide

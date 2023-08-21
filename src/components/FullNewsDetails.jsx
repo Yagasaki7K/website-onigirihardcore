@@ -14,7 +14,7 @@ const FullNewsDetails = styled.div`
             margin: 0;
             font-size: 0.8em;
 
-            h1{
+            h1 {
                 text-align: center;
             }
         }
@@ -41,11 +41,6 @@ const FullNewsDetails = styled.div`
             @media (max-width: 500px) {
                 padding: 0;
                 text-align: center;
-            }
-
-            :hover {
-                transition: 1s;
-                background: ${colors.blacklight};
             }
 
             img {

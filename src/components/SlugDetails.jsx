@@ -75,8 +75,29 @@ const SlugDetails = styled.div`
             text-shadow: 1px 1px 2px rgb(0 0 0 / 30%);
         }
 
+        h2 {
+            color: ${colors.blue};
+        }
+
         a {
             color: ${colors.blue};
+        }
+
+        .anchor {
+            fill: white;
+            margin-right: 0.2rem;
+        }
+
+        p {
+            margin-bottom: 1.8rem;
+        }
+
+        ul {
+            margin-top: -1rem;
+        }
+
+        li {
+            margin-left: -1rem;
         }
 
         .date {
@@ -96,22 +117,32 @@ const SlugDetails = styled.div`
         .title__content {
             width: 60rem;
 
-        @media (max-width: 1366px) {
-            width: 100%;
-        }
+            @media (max-width: 1366px) {
+                width: 100%;
+            }
 
-        @media (max-width: 768px) {
+            @media (max-width: 768px) {
                 font-size: 1.6em;
                 line-height: 30px;
                 width: 100%;
+            }
+
+            @media (max-width: 500px) {
+                font-size: 1.6em;
+                line-height: 30px;
+                width: 90%;
+            }
         }
 
-        @media (max-width: 500px) {
-            font-size: 1.6em;
-            line-height: 30px;
-            width: 90%;
+        .image__content {
+            img {
+                display: flex;
+                justify-content: center;
+                margin: 0 auto;
+                width: 80%;
+                height: 100%;
+            }
         }
-    }
 
         .citation {
             font-weight: 100;

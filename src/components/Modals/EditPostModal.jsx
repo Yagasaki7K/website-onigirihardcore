@@ -10,7 +10,7 @@ const MarkdownEditor = dynamic(
     { ssr: false }
 );
 
-export default function EditPostModal(props) {
+export default function EditPostModal() {
     const [fields, setFields] = useState({
         date: "",
         lessDate: "",

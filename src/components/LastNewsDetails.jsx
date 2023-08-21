@@ -1,48 +1,20 @@
 import styled from 'styled-components'
 import { colors } from './variables'
 
-const TecnologiesDetails = styled.div`
-        display: flex;
-        justify-content: center;
-        margin: -2rem 0 5rem 7rem;
-        padding: 30px 0;
+const LastNewsDetails = styled.div`
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
 
-        @media (max-width: 1366px) {
-            display: inline-block;
-            padding: 0px;
-        }
-
-        @media (max-width: 768px) {
-              display: block;
-              padding: 0px;
-       }
-
-        @media (max-width: 500px) {
-              display: inline-block;
-              padding: 0px;
-       }
-
-       .tecnologies {
-        margin-left: -8rem;
-
-        @media (max-width: 1366px) {
-            margin-left: -2rem;
-        }
-
+    .container {
+        width: 100%;
+    
         .header {
             border-bottom: 2px solid ${colors.blue};
-            width: 63rem;
-
-            @media (max-width: 1366px) {
-                width: 71rem;
-            }
-
-            @media (max-width: 768px) {
-              margin-left: 5%;
-             }
+            width: 100%;
 
             p {
-                width: 9.5rem;
+                width: 10rem;
                 background: ${colors.blue};
                 color: ${colors.white};
                 padding: 5px 10px;
@@ -50,80 +22,123 @@ const TecnologiesDetails = styled.div`
                 font-weight: bold;
             }
         }
+        
+        .content {
+            width: 100%;
 
-        .content, .secondContent, .thirdContent {
             display: flex;
-            margin-left: -1rem;
+            align-items: center;
+            gap: 30px;
+            
+            padding: 20px 0px;
 
-            @media (max-width: 1024px) {
-                display: inline-block;
-                margin-left: 2%;
-                width: 25%;
-            }
-
-            @media (max-width: 900px) {
-                display: inline-block;
-                margin-left: 2%;
-                width: 40%;
-            }
-
-            @media (max-width: 768px) {
-                display: inline-block;
-                margin-left: 5%;
-                width: 45%;
-            }
-
-            @media (max-width: 500px) {
-                display: inline-block;
-                padding: 2px;
-            }
-
-            a {
-                text-decoration: none;
-                color: ${colors.white};
-
-                :hover {
-                    color: ${colors.blue};
-                    transition: 1s;
-                }
+            border-bottom: 2px solid white;
+            
+            .leftContent {
 
                 img {
-                    margin-top: 1rem;
-                    margin-left: 1rem;
-                    width: 15rem;
-                    height: 12rem;
-                    padding: 0;
+                    width: 290px;
+                    height: 150px;
                     object-fit: cover;
 
-                    @media (max-width: 1366px) {
-                        width: 17rem;
+                    @media (max-width: 835px) {
+                        width: 200px;
+                        height: 100px;
+                    }
+
+                    @media (max-width: 470px){
+                        width: 150px;
+                        height: 100px;
+                    }
+                }
+            }
+
+            .rightContent {
+                width: 70%;
+                
+                a {
+                    :hover {
+                        color: ${colors.blue};
                     }
                 }
 
-                .title {
-                    margin-left: 1.5rem;
-                    margin-top: -7rem;
+                h1 {
+                    font-size: 1.5rem;
+                    margin-bottom: 0rem;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
 
-                    h1 {
-                        width: 14rem;
-                        margin-top: -2rem;
-                        font-size: 1.2rem;
-                        margin-bottom: 0rem;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 3;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
+                    @media (max-width: 835px) {
+                        width: 25rem;
+                        font-size: 1rem;
                     }
 
-                    i {
-                        font-style: normal;
+                    @media (max-width: 670px){
+                        width: 100%;
+                        font-size: 0.85rem;
+                    }
+                }
+
+                .categories {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    margin-top: 0.5rem;
+                    
+                    span {
+                        padding: 0.2rem 0.5rem;
+                        font-weight: bold;
                         font-size: 0.8rem;
+                        color: ${colors.white};
+
+                        @media (max-width: 530px){
+                            font-size: 0.6rem;
+                        }
+                    }
+
+                    .tecnologies {
+                        background: ${colors.blue};
+                    }
+
+                    .animes {
+                        background: #ff6ca4;
+                    }
+
+                    .movies {
+                        background: #6272a4;
+                    }
+
+                    .games {
+                        background: #faa74e;
+                    }
+
+                    .development {
+                        background: #bd93f9;
+                    }
+                }
+
+                p {
+                    width: 100%;
+                }
+
+                i {
+                    font-style: normal;
+                    font-size: 0.9rem;
+
+                    @media (max-width: 835px) {
+                        font-size: 0.8rem;
+                    }
+
+                    @media (max-width: 500px){
+                        font-size: 0.6rem;
                     }
                 }
             }
         }
     }
-    `
+`
 
-export default TecnologiesDetails
+export default LastNewsDetails

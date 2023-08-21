@@ -3,15 +3,20 @@ import Footer from '../src/components/Footer'
 import Header from '../src/components/Header'
 import FullNewsDetails from '../src/components/FullNewsDetails'
 import postService from '../services/post.service'
-import { NextSeo } from 'next-seo'
+import { NextSeo } from 'next-seo';
+// import dynamic from 'next/dynamic'
 
-// import post from '../server/index.json'
+// const analyticsFirebase = dynamic(() => import('../client'),
+//     { ssr: false }
+// );
 
 const FullNews = () => {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
         getPosts()
+        // const analytics = analyticsFirebase;
+        // analytics.logEvent('acesso_pagina', { page: '/noticias' });
     }, [])
 
     const getPosts = async () => {
@@ -59,7 +64,7 @@ const FullNews = () => {
                                 <img src={post.imageUrl} alt={post?.name} />
                                 {/* <img src={item.image} width="320" /> */}
                                 <div className="title">
-                                    <i className="uil uil-clock-nine">&nbsp;{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null}</i>
+                                    <i className="uil uil-clock-nine">&nbsp;{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null || post.categories === 'Development' ? '4Devs' : null}</i>
                                     <h2>{post.title}</h2>
                                 </div>
                             </a>

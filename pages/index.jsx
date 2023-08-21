@@ -1,12 +1,14 @@
-import posts from '../server/index.json'
 import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
-import Slide from '../src/components/Slide'
-import Categories from '../src/components/Categories'
-import LastNews from '../src/components/LastNews'
+import { Slide } from '../src/components/Slide'
+import { Categories } from '../src/components/Categories'
+import { Technologies } from '../src/components/Technologies'
+import { LastNews } from '../src/components/LastNews'
 import { NextSeo } from 'next-seo'
+import { ContentDetails } from '../src/components/ContentDetails'
 
 export default function Home() {
+
     return (
         <>
             <NextSeo
@@ -36,8 +38,11 @@ export default function Home() {
             />
             <Header />
             <Slide />
-            <Categories data={posts} />
-            <LastNews />
+            <ContentDetails>
+                <Categories />
+                <Technologies />
+                <LastNews />
+            </ContentDetails>
             <Footer />
         </>
     )

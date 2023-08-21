@@ -6,7 +6,7 @@ import postService from '../../services/post.service';
 
 import CategoriesDetails from './CategoriesDetails';
 
-const Categories = () => {
+export const Categories = () => {
 
     const [Posts, setPosts] = useState([])
 
@@ -41,15 +41,13 @@ const Categories = () => {
                 {
                     firstAnime && firstAnime.map(post => (
                         post.categories === 'Animes' ? (
-                            <a href={post.slug} key={post.id}>
+                            <a className='categories-content' href={post.slug} key={post.id}>
                                 <img src={post.imageUrl} alt={post?.name} />
-                                {/* <img src={post.image} alt={post.title} /> */}
-                                <h1>{post.title}</h1>
+                                <h1>{post.title.length > 35 ? post.title.slice(0, 55) + "..." : post.title}</h1>
                                 {/* <h1>{post.smalltitle}</h1> */}
 
                                 <span>
                                     <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                    {/* <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i> */}
                                     <p>{post.description}</p>
                                 </span>
                             </a>
@@ -64,16 +62,12 @@ const Categories = () => {
                         lastAnime && lastAnime.map(post => (
                             post.categories === 'Animes' ? (
                                 <div className="post" key={post.id}>
-                                    <a href={post.slug} >
+                                    <a href={post.slug}>
                                         <img src={post.imageUrl} alt={post?.name} />
-                                        {/* <img src={post.image} alt={post.title} /> */}
 
                                         <div className="post-side">
                                             <h3>{post.title}</h3>
-                                            {/* <h3>{post.smalltitle}</h3> */}
                                             <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                            {/* <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i> */}
-                                            <hr />
                                         </div>
                                     </a>
                                 </div>
@@ -93,15 +87,13 @@ const Categories = () => {
                 {
                     firstGames && firstGames.map(post => (
                         post.categories === 'Games' ? (
-                            <a href={post.slug} key={post.id}>
+                            <a className='categories-content' href={post.slug} key={post.id}>
                                 <img src={post.imageUrl} alt={post?.name} />
-                                {/* <img src={post.image} alt={post.title} /> */}
-                                <h1>{post.title}</h1>
+                                <h1>{post.title.length > 35 ? post.title.slice(0, 55) + "..." : post.title}</h1>
                                 {/* <h1>{post.smalltitle}</h1> */}
 
                                 <span>
                                     <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                    {/* <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i> */}
                                     <p>{post.description}</p>
                                 </span>
                             </a>
@@ -121,10 +113,7 @@ const Categories = () => {
 
                                         <div className="post-side">
                                             <h3>{post.title}</h3>
-                                            {/* <h3>{post.smalltitle}</h3> */}
                                             <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                            {/* <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i> */}
-                                            <hr />
                                         </div>
                                     </a>
                                 </div>
@@ -144,14 +133,12 @@ const Categories = () => {
                 {
                     firstMovies && firstMovies.map(post => (
                         post.categories === 'Movies' ? (
-                            <a href={post.slug} key={post.id}>
+                            <a className='categories-content' href={post.slug} key={post.id}>
                                 <img src={post.imageUrl} alt={post.title} />
-                                <h1>{post.title}</h1>
-                                {/* <h1>{post.smalltitle}</h1> */}
+                                <h1>{post.title.length > 35 ? post.title.slice(0, 55) + "..." : post.title}</h1>
 
                                 <span>
                                     <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                    {/* <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i> */}
                                     <p>{post.description}</p>
                                 </span>
                             </a>
@@ -171,10 +158,7 @@ const Categories = () => {
 
                                         <div className="post-side">
                                             <h3>{post.title}</h3>
-                                            {/* <h3>{post.smalltitle}</h3> */}
                                             <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                            {/* <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i> */}
-                                            <hr />
                                         </div>
                                     </a>
                                 </div>
@@ -189,4 +173,3 @@ const Categories = () => {
     )
 }
 
-export default Categories

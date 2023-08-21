@@ -1,24 +1,17 @@
 import styled from 'styled-components'
 import { colors } from './variables'
 
-const HeaderDetails = styled.div`
-
+export const HeaderDetails = styled.div`
     .header {
         display: flex;
-        padding: 1rem 15rem;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
         background: ${colors.blackAlt};
 
-        @media (max-width: 1600px) {
-            padding: 1rem 6rem;
-        }
+        padding: 10px;
 
-        @media (max-width: 1440px) {
-            padding: 1rem 4rem;
-        }
-
-        @media (max-width: 1366px) {
-            padding: 1rem 3rem;
+        .logotipo img{
+            width: 60%;
         }
 
         @media (max-width: 1200px) {
@@ -27,18 +20,6 @@ const HeaderDetails = styled.div`
             }
         }
 
-        .logotipo {
-            width: 32rem;
-            margin-top: 0.5rem;
-
-            @media (max-width: 414px) {
-                width: 20rem;
-            }
-        }
-
-        @media (max-width: 500px) {
-            justify-content: center;
-       }
     }
 
     .navigation {
@@ -51,10 +32,9 @@ const HeaderDetails = styled.div`
             height: 5rem;
             border-radius: 15px;
             background: transparent;
-            
         }
 
-        ul{
+        ul {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -73,6 +53,7 @@ const HeaderDetails = styled.div`
 
             #item-menu {
                 display: flex;
+                gap: 30px;
             }
 
             .burguer {
@@ -80,17 +61,16 @@ const HeaderDetails = styled.div`
             }
 
             @media (max-width: 768px) {
-                margin-left: 3rem;
+                margin-left: 1rem;
+                margin-top: 0.5rem;
                 height: 2rem;
 
-                #item-menu {
-                    display: none;
+                a {
+                    margin-right: 1rem;
                 }
 
                 .burguer {
-                    display: flex;
-                    margin-top: -1.2rem;
-                    margin-left: -1.2rem;
+                    display: none;
                 }
             }
 
@@ -110,14 +90,9 @@ const HeaderDetails = styled.div`
                 display: flex;
                 padding: 0.7rem 1rem;
 
-                @media (max-width: 768px) {
-                    margin-left: 0.625rem;
+                @media (max-width: 855px) {
                     padding: 0.7rem 0;
-                }
-
-                @media (max-width: 600px) {
-                    margin-left: 2rem;
-                    padding: 0.7rem 0;
+                    font-size: 0.75rem;
                 }
 
                 margin: 0;
@@ -141,4 +116,98 @@ const HeaderDetails = styled.div`
     }
 `
 
-export default HeaderDetails
+export const HeaderMobile = styled.div`
+    width: 100%;
+    height: 70px;
+
+    font-size: 1.5rem;
+    
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+    z-index: 100;
+
+    background-color: #15171b;
+
+    .logo-drawner{
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            height: 55px;
+        }
+    }
+
+
+    .menu {
+        width: 50px;
+        height: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .active {
+        background-color: #15171b;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .drawner {
+        width: 100%;
+        position: absolute;
+
+        left: 0;
+        top: 50px;
+        z-index: 999;
+
+    
+        background: #15171b;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        .close-icon {
+            position: absolute;
+
+            right: 15px;
+            top: 10px;
+
+            font-size: 1rem;
+        }
+
+        .content-drawner {
+            width: 100%;
+            padding: 10px 20px 20px 20px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            position: relative;
+
+            p{
+                font-size: 1rem;
+
+                color: white;
+                font-weight: 700;
+            }
+            
+            .navigation-drawner {
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+
+                font-size: 1rem;
+
+                color: white;
+            }
+        }
+    }
+`
+

@@ -1,9 +1,8 @@
+import React, { useEffect, useState } from 'react'
 import LastNewsDetails from './LastNewsDetails'
-// import post from '../../server/index.json'
-import { useEffect, useState } from 'react'
 import postService from '../../services/post.service'
 
-const LastNews = () => {
+export const LastNews = () => {
     const [Posts, setPosts] = useState([])
 
     useEffect(() => {
@@ -17,68 +16,36 @@ const LastNews = () => {
 
     return (
         <LastNewsDetails>
-            <div className="tecnologies" id="news">
+            <div className="container">
                 <div className="header">
                     <p>Últimas Notícias</p>
                 </div>
-
-                <div className="content">
-                    {
-                        Posts.slice(0, 4).map((post, index) => (
-                            <a href={post.slug} key={index}>
-                                <img src={post.imageUrl} alt={post?.name} />
-                                {/* <img src={post.image} alt={post.title} title={post.title} /> */}
-
-                                <div className="title">
+                {
+                    Posts && Posts.slice(0, 15).map((post, index) => (
+                        <div className="content" key={index}>
+                            <div className="leftContent">
+                                <a href={post.slug}>
+                                    <img src={post.imageUrl} alt={post?.name} />
+                                </a>
+                            </div>
+                            <div className="rightContent">
+                                <a href={post.slug}>
                                     <h1>{post.title}</h1>
-                                    {/* <h1>{post.smalltitle}</h1> */}
+                                </a>
+
+                                <div className="categories">
+                                    {post.categories === 'Movies' ? <span className="movies">Filmes & Séries</span> : null || post.categories === 'Games' ? <span className="games">Video Games</span> : null || post.categories === 'Technologies' ? <span className="tecnologies">Ciência & Tecnologia</span> : null || post.categories === 'Animes' ? <span className="animes">Animes & HQs</span> : null || post.categories === 'Development' ? <span className="development">4Devs</span> : null}
                                     <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                    {/* <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i> */}
                                 </div>
-                            </a>
-                        ))
-                    }
-                </div>
+                                <p>{post.description}</p>
 
-                <div className="content">
-                    {
-                        Posts.slice(4, 8).map((post, index) => (
-                            <a href={post.slug} key={index}>
-                                <img src={post.imageUrl} alt={post?.name} />
-                                {/* <img src={post.image} alt={post.title} title={post.title} /> */}
+                            </div>
 
-                                <div className="title">
-                                    <h1>{post.title}</h1>
-                                    {/* <h1>{post.smalltitle}</h1> */}
-                                    <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                    {/* <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i> */}
-                                </div>
-                            </a>
-                        ))
-                    }
-                </div>
 
-                <div className="content">
-                    {
-                        Posts.slice(8, 12).map((post, index) => (
-                            <a href={post.slug} key={index}>
-                                <img src={post.imageUrl} alt={post?.name} />
-                                {/* <img src={post.imageUrl} alt={post.title} title={post.title} /> */}
-
-                                <div className="title">
-                                    <h1>{post.title}</h1>
-                                    {/* <h1>{post.smalltitle}</h1> */}
-                                    <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                    {/* <i className="uil uil-clock-nine">&nbsp;{post.createdAt}</i> */}
-                                </div>
-                            </a>
-                        ))
-                    }
-                </div>
-
+                        </div>
+                    ))
+                }
             </div>
         </LastNewsDetails>
     )
 }
-
-export default LastNews

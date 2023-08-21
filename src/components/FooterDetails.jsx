@@ -6,12 +6,16 @@ const FooterDetails = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: .5rem 0;
+        margin: 2.5rem 0;
 
         img {
-            height: 4rem;
             margin-top: -4rem;
-            width: 100%;
+            width: 35rem;
+            height: 6rem;
+
+            @media (max-width: 768px) {
+                margin-bottom: 1rem;
+            }
 
             @media (max-width: 500px) {
                 width: 20rem;
@@ -23,6 +27,7 @@ const FooterDetails = styled.div`
                 margin-top: 0rem;
             }
         }
+        
     }
 
     .footer {
@@ -33,14 +38,22 @@ const FooterDetails = styled.div`
         padding: .5rem 0;
         justify-content: center;
 
-        @media (max-width: 500px) {
-           font-size: 0.9em ;
-           display: block;
-           padding: 10px;
-           text-align: center;
-       }
+        @media (max-width: 768px) {
+            font-size: 0.9rem;
+            text-align: center;
 
-       a {
+            p {
+                max-width: 40rem;
+            }
+        }
+
+        @media (max-width: 500px) {
+            display: block;
+            padding: 10px;
+            text-align: center;
+        }
+
+        a {
             text-decoration: none;
             color: ${colors.white};
         }
