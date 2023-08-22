@@ -122,6 +122,12 @@ const LastNewsDetails = styled.div`
 
                 p {
                     width: 100%;
+
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2; /** número de linhas que você quer exibir */
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
 
                 i {

@@ -217,7 +217,7 @@ const DashboardCreate = () => {
                                     <label htmlFor="description">
                                         Descrição da Publicação*:{" "}
                                     </label>
-                                    <textarea name="description" id="description" maxLength={256} placeholder="Descrição da Publicação (Max.126)" required />
+                                    <textarea name="description" id="description" maxLength={195} placeholder="Descrição da Publicação (Max.126)" required />
                                 </div>
 
                                 <div className="item">
