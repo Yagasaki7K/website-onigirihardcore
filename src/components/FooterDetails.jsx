@@ -15,7 +15,7 @@ const FooterDetails = styled.div`
 
             @media (max-width: 768px) {
                 margin-bottom: 1rem;
-                height: 3rem;
+                height: 4rem;
             }
 
             @media (max-width: 500px) {
