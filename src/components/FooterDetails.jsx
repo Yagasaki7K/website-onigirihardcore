@@ -28,7 +28,6 @@ const FooterDetails = styled.div`
                 margin-top: 0rem;
             }
         }
-        
     }
 
     .footer {
