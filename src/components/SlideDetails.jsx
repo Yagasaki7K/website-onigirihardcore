@@ -189,7 +189,7 @@ const SlideDetails = styled.div`
                     padding-left: 10px;
                     max-width: 50rem;
                     display: -webkit-box;
-                    -webkit-line-clamp: 3;
+                    -webkit-line-clamp: 2;
                     -webkit-box-orient: vertical;
                     overflow: hidden;
                     text-overflow: ellipsis;

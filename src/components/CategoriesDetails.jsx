@@ -70,7 +70,9 @@ const CategoriesDetails = styled.div`
                 width: 100%;
                 color: ${colors.blue};
                 display: -webkit-box;
+                -webkit-line-clamp: 3; /** número de linhas que você quer exibir */
                 -webkit-box-orient: vertical;
+                overflow: hidden;
                 text-overflow: ellipsis;
 
                 margin: 0;

@@ -23,7 +23,7 @@ export default function Login() {
             <div className="container">
                 <div>
                     <Link href="/">
-                        <img src="/logotipo-white.png" alt="Logo" />
+                        <img src="/logotipo.png" alt="Logo" />
                     </Link>
                     <SignInModal />
                 </div>

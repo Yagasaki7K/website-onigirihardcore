@@ -11,7 +11,7 @@ import {
 } from "firebase/firestore";
 import { database }  from "../client";
 
-const postCollectionRef = collection(database, "posts-dev");
+const postCollectionRef = collection(database, "posts");
 
 class postService {
     addPost = async (post) => {
@@ -19,12 +19,12 @@ class postService {
     };
 
     updatePost = async (id, updateData) => {
-        const postDoc = doc(database, "posts-dev", id);
+        const postDoc = doc(database, "posts", id);
         return await updateDoc(postDoc, updateData);
     };
 
     deletePost = async (id) => {
-        const postDoc = doc(database, "posts-dev", id);
+        const postDoc = doc(database, "posts", id);
         return await deleteDoc(postDoc);
     };
 
@@ -36,7 +36,7 @@ class postService {
     };
 
     getPost = async (id) => {
-        const postDoc = doc(database, "posts-dev", id);
+        const postDoc = doc(database, "posts", id);
         return await getDoc(postDoc);
     };
 }

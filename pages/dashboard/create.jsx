@@ -170,7 +170,7 @@ const DashboardCreate = () => {
 
         setImage(file.name);
 
-        const storageRef = ref(storage, `/images-dev/${file.name}`);
+        const storageRef = ref(storage, `/images/${file.name}`);
         const uploadTask = uploadBytesResumable(storageRef, file);
 
         uploadTask.on(
@@ -217,7 +217,7 @@ const DashboardCreate = () => {
                                     <label htmlFor="description">
                                         Descrição da Publicação*:{" "}
                                     </label>
-                                    <textarea name="description" id="description" maxLength={126} placeholder="Descrição da Publicação (Max.126)" required />
+                                    <textarea name="description" id="description" maxLength={195} placeholder="Descrição da Publicação (Max.126)" required />
                                 </div>
 
                                 <div className="item">

@@ -11,7 +11,7 @@ const SideMenu = () => {
     return (
         <SideMenuDetails>
             <Link href="/">
-                <img src="/logotipo-white.png" alt="logo" />
+                <img src="/logotipo.png" alt="logo" />
             </Link>
 
             <div className="menu">
