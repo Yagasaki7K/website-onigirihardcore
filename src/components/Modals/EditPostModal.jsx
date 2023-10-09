@@ -51,14 +51,14 @@ export default function EditPostModal(param) {
                             <div className="form-group">
                                 <form>
                                     <div className="item">
-                                        <label htmlFor="author">Autor*: </label>
+                                        <label htmlFor="author">Autor*:{" "}</label>
                                         <select id="author" defaultValue={documentPost.author}>
                                             <option value={"Anderson 'Yagasaki' Marlon"}> Anderson Marlon </option>
                                         </select>
                                     </div>
 
                                     <div className="item">
-                                        <label htmlFor="title"> Titulo{" "}</label>
+                                        <label htmlFor="title">Titulo*:{" "}</label>
                                         <input type="text" name="text"id="title" defaultValue={documentPost.title} />
                                     </div>
 
@@ -80,12 +80,7 @@ export default function EditPostModal(param) {
 
                                     <div className="item-markdown">
                                         <label htmlFor="body">Conteúdo da Publicação*:{" "}</label>
-                                        <MarkdownEditor height={300} />
-                                    </div>
-
-                                    <div className="item">
-                                        <label htmlFor="password"> Link Youtube:{" "}</label>
-                                        <input type="text" name="text" id="ytid" defaultValue={documentPost.ytid} />
+                                        <MarkdownEditor height={300} value={documentPost.bodyPost} onChange={setDocumentPost.bodyPost}/>
                                     </div>
 
                                     <div className="item">
@@ -97,8 +92,13 @@ export default function EditPostModal(param) {
                                         <label htmlFor="linkcitation">Link da Citação:{" "}</label>
                                         <input name="linkcitation" id="linkcitation" defaultValue={documentPost.linkCitation} placeholder="https://twitter.com/Yagasaki7K/example" />
                                     </div>
+
+                                    <div className="item">
+                                        <label htmlFor="password">Link Youtube:{" "}</label>
+                                        <input type="text" name="text" id="ytid" defaultValue={documentPost.ytid} />
+                                    </div>
+                                    <button onClick={updatePost} className="sendbtn">Atualizar</button>
                                     <button onClick={handleCloseModal} className="closebtn">Fechar</button>
-                                    <button onClick={updatePost}>Atualizar</button>
                                 </form>
                             </div>
                         </div>

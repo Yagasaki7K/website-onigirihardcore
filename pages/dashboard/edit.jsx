@@ -76,7 +76,7 @@ export default function DashboardEdit({ posts }) {
                                         <th>Data de Modificação</th>
                                         <th>Ações</th>
                                     </tr>
-                                    {posts.map((fields) => (
+                                    {posts.slice(0, 15).map((fields) => (
                                         <tr key={fields.id}>
                                             <td>
                                                 <a
