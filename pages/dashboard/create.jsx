@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/dist/client/router";
 import SideMenu from "../../src/components/Dashboard/SideMenu";
-import Confetti from "react-confetti";
+
+// import Confetti from "react-confetti";
+import toast from 'react-toastify'
+
 import DashboardDetails from "../../src/components/DashboardDetails";
 import postService from "../../services/post.service";
 import authService from "../../services/auth.service";
@@ -36,7 +39,7 @@ const DashboardCreate = () => {
     const [linkCitation, setLinkCitation] = useState("");
     const [ytid, setYtid] = useState("");
 
-    const [showConfetti, setShowConfetti] = useState(false);
+    // const [showConfetti, setShowConfetti] = useState(false);
 
     const [bodyPost, setBodyPost] = useState("# Corpo da Publicação");
 
@@ -85,11 +88,29 @@ const DashboardCreate = () => {
         };
 
         if (!author || !title || !description || !url || !categories) {
-            alert("Por favor, preencha todos os campos");
+            toast.error(`Por favor, preencha todos os dados!`, {
+                position: "top-right",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
         } else {
             await postService.addPost(NewPosts);
             location.href = "#publi";
-            setShowConfetti(true);
+            // setShowConfetti(true);
+
+            toast.success(`Registro efetuado com sucesso!`, {
+                position: "top-right",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
 
             setTimeout(() => {
                 location.assign(`/${slug}`);
@@ -193,7 +214,7 @@ const DashboardCreate = () => {
     if (render === true) {
         return (
             <DashboardDetails>
-                {showConfetti && <Confetti gravity={0.5} height={1300} />}
+                {/* {showConfetti && <Confetti gravity={0.5} height={1300} />} */}
                 <SideMenu />
                 <div className="content">
                     <div className="publi" id="publi">
