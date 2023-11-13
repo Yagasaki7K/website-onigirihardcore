@@ -88,28 +88,30 @@ const DashboardCreate = () => {
         };
 
         if (!author || !title || !description || !url || !categories) {
-            toast.error(`Por favor, preencha todos os dados!`, {
+            toast.error('🦄 Por favor, preencha todos os dados!', {
                 position: "top-right",
-                autoClose: 4000,
+                autoClose: 2000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
+                theme: "dark",
             });
         } else {
             await postService.addPost(NewPosts);
             location.href = "#publi";
             // setShowConfetti(true);
 
-            toast.success(`Registro efetuado com sucesso!`, {
+            toast.success('🦄 Registro efetuado com sucesso!', {
                 position: "top-right",
-                autoClose: 4000,
+                autoClose: 2000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
+                theme: "dark",
             });
 
             setTimeout(() => {
