@@ -89,11 +89,14 @@ const SlugDetails = styled.div`
         }
 
         p {
+            margin-bottom: 1.8rem;
+        }
+
+        .keepUpdate {
             text-align: center;
             flex-direction: column;
             font-weight: 600;
             font-style: italic;
-            margin-bottom: 1.8rem;
         }
 
         ul {

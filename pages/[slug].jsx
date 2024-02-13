@@ -23,7 +23,15 @@ const Post = () => {
 
     useEffect(() => {
         getPost()
+        dontCopy()
+    }, [])
 
+    const getPost = async () => {
+        const data = await postService.getAllPosts()
+        setPost(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+    }
+
+    const dontCopy = () => {
         const preventRightClick = (e) => {
             e.preventDefault();
         };
@@ -47,11 +55,6 @@ const Post = () => {
             document.removeEventListener('keydown', preventCopyPaste);
             document.body.style.userSelect = '';
         };
-    }, [])
-
-    const getPost = async () => {
-        const data = await postService.getAllPosts()
-        setPost(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
     }
 
     return (
@@ -106,7 +109,7 @@ const Post = () => {
                                         </a>
                                     ) : null}
 
-                                    <p>Mantenha-se atualizado sobre todas as novidades do <a href="/">Onigiri Hardcore</a> e siga-nos também no <a href="https://twitter.com/OHNewsOficial" target='_blank' rel="noreferrer">Twitter</a> para não perder nenhum destaque da semana!</p>
+                                    <p className="keepUpdate">Mantenha-se atualizado sobre todas as novidades do <a href="/">Onigiri Hardcore</a> e siga-nos também no <a href="https://twitter.com/OHNewsOficial" target='_blank' rel="noreferrer">Twitter</a> para não perder nenhum destaque da semana!</p>
 
                                     {post.ytid ?
                                         <iframe width="550" height="480" src={'https://www.youtube.com/embed/' + post?.ytid} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : null}
