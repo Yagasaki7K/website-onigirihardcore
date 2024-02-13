@@ -62,27 +62,15 @@ const Header = () => {
                                         <Link href="/#animes">
                                             Animes {`&`} HQ{`'`}s
                                         </Link>
-                                        <Link href="/csgo">CSGO ~ HLTV News</Link>
-                                        <Link
-                                            href="https://onigiri-hardcore.blogspot.com/"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                        >
-                                            OH: Arquivos
-                                        </Link>
-                                        <Link
-                                            href="https://kalify.vercel.app"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                        >
-                                            Kalify Inc
-                                        </Link>
+                                        {/* <Link href="/csgo">CSGO ~ HLTV News</Link> */}
+                                        <Link href="https://onigiri-hardcore.blogspot.com/" target="_blank" rel="noreferrer">OH: Arquivos</Link>
+                                        <Link href="https://kalify.vercel.app" target="_blank" rel="noreferrer">Kalify Inc</Link>
                                     </div>
                                 </div>
                             </motion.div>
                         )}
                     </AnimatePresence>
-                </HeaderMobile>
+                </HeaderMobile >
             ) : (
                 <HeaderDetails>
                     <div className="header">
@@ -108,13 +96,7 @@ const Header = () => {
                                     <Link href="/noticias">Notícias</Link>
                                 </li>
                                 <li>
-                                    <Link
-                                        href="https://kalify.vercel.app"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        Kalify Inc
-                                    </Link>
+                                    <Link href="https://kalify.vercel.app" target="_blank" rel="noreferrer">Kalify Inc</Link>
                                 </li>
                             </div>
                             <span id="item-menu">
@@ -129,33 +111,17 @@ const Header = () => {
                                         Animes {`&`} HQ{`'`}s
                                     </Link>
                                 </li>
+                                {/* <li>
+                        <Link href="/csgo">CSGO ~ HLTV News</Link>
+                    </li> */}
                                 <li>
-                                    <Link href="/csgo">CSGO ~ HLTV News</Link>
+                                    <Link href="https://onigiri-hardcore.blogspot.com/" target="_blank" rdedl="noreferrer">OH: Arquivos</Link>
                                 </li>
                                 <li>
-                                    <Link
-                                        href="https://onigiri-hardcore.blogspot.com/"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        OH: Arquivos
-                                    </Link>
+                                    <Link href="https://kalify.vercel.app" target="_blank" rel="noreferrer">Kalify Inc</Link>
                                 </li>
                                 <li>
-                                    <Link
-                                        href="https://kalify.vercel.app"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        Kalify Inc
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="https://twitter.com/OHNewsOficial"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
+                                    <Link href="https://twitter.com/OHNewsOficial" target="_blank" rel="noreferrer">
                                         <i className="uil uil-twitter" /> Twitter
                                     </Link>
                                 </li>

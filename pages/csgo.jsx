@@ -1,84 +1,105 @@
-import React from 'react'
-import HLTV from 'hltv-api'
-import Link from 'next/link'
-import Header from '../src/components/Header'
-import "keen-slider/keen-slider.min.css"
-import CSGODetails from '../src/components/CSGODetails'
-import { NextSeo } from 'next-seo'
-// import dynamic from 'next/dynamic'
+// import React from 'react'
+// import HLTV from 'hltv-api'
+// import Link from 'next/link'
+// import Header from '../src/components/Header'
+// import "keen-slider/keen-slider.min.css"
+// import CSGODetails from '../src/components/CSGODetails'
+// import { NextSeo } from 'next-seo'
+// // import dynamic from 'next/dynamic'
 
-export async function getStaticProps() {
-    const news = await HLTV.getNews()
-    const data = news.map((post) => ({
-        title: post.title,
-        description: post.description,
-        link: post.link
-    }))
+// export async function getStaticProps() {
+//     const news = await HLTV.getNews()
+//     const data = news.map((post) => ({
+//         title: post.title,
+//         description: post.description,
+//         link: post.link
+//     }))
 
-    return {
-        props: {
-            data
-        }
-    }
-}
+//     return {
+//         props: {
+//             data
+//         }
+//     }
+// }
 
-// const analyticsFirebase = dynamic(() => import('../client'),
-//     { ssr: false }
-// );
+// // const analyticsFirebase = dynamic(() => import('../client'),
+// //     { ssr: false }
+// // );
 
-const csgo = ({ data }) => {
-    // useEffect(() => {
-    //     const analytics = analyticsFirebase;
-    //     analytics.logEvent('acesso_pagina', { page: '/csgo' });
-    // }, [])
+// const csgo = ({ data }) => {
+//     // useEffect(() => {
+//     //     const analytics = analyticsFirebase;
+//     //     analytics.logEvent('acesso_pagina', { page: '/csgo' });
+//     // }, [])
+//     return (
+//         <>
+//             <NextSeo
+//                 title='Onigiri Hardcore | Portal de Notícias e Entretenimento'
+//                 description='Um site nerd com conteúdos nerds'
+//                 canonical={`https://onigirihardcore.com.br/`}
+//                 openGraph={{
+//                     url: 'https://onigirihardcore.com.br/',
+//                     title: 'Onigiri Hardcore | Portal de Notícias e Entretenimento',
+//                     description: 'Um site nerd com conteúdos nerds',
+//                     images: [
+//                         {
+//                             url: 'https://i.imgur.com/VoOogmx.png',
+//                             width: 460,
+//                             height: 460,
+//                             alt: 'Onigiri Hardcore | Portal de Notícias e Entretenimento',
+//                             type: 'image/jpeg' || 'image/png',
+//                         }
+//                     ],
+//                     siteName: 'Onigiri Hardcore',
+//                 }}
+//                 twitter={{
+//                     handle: '@OnigiriHardcore',
+//                     site: '@OnigiriHardcore',
+//                     cardType: 'summary_large_image',
+//                 }}
+//             />
+//             <Header />
+//             <CSGODetails>
+//                 <div className="news">
+//                     <h1>Últimas notícias (via HLTV)</h1>
+
+//                     <div className="content">
+//                         {
+//                             data && data.map((post, index) => (
+//                                 <div className="news" key={index}>
+//                                     <Link href={post.link} noreferrer>
+//                                         <h2>{post.title}</h2>
+//                                         <p>{post.description}</p>
+//                                     </Link>
+//                                 </div>
+//                             )
+//                             )
+//                         }
+//                     </div>
+//                 </div>
+//             </CSGODetails>
+//         </>
+//     )
+// }
+
+// export default csgo
+
+import React, { useEffect } from 'react'
+
+const csgo = () => {
+
+    useEffect(() => {
+        const redirectToHome = () => {
+            if (typeof window !== 'undefined') {
+                window.location.href = "/";
+            }
+        };
+
+        redirectToHome();
+    }, []);
+
     return (
-        <>
-            <NextSeo
-                title='Onigiri Hardcore | Portal de Notícias e Entretenimento'
-                description='Um site nerd com conteúdos nerds'
-                canonical={`https://onigirihardcore.com.br/`}
-                openGraph={{
-                    url: 'https://onigirihardcore.com.br/',
-                    title: 'Onigiri Hardcore | Portal de Notícias e Entretenimento',
-                    description: 'Um site nerd com conteúdos nerds',
-                    images: [
-                        {
-                            url: 'https://i.imgur.com/VoOogmx.png',
-                            width: 460,
-                            height: 460,
-                            alt: 'Onigiri Hardcore | Portal de Notícias e Entretenimento',
-                            type: 'image/jpeg' || 'image/png',
-                        }
-                    ],
-                    siteName: 'Onigiri Hardcore',
-                }}
-                twitter={{
-                    handle: '@OnigiriHardcore',
-                    site: '@OnigiriHardcore',
-                    cardType: 'summary_large_image',
-                }}
-            />
-            <Header />
-            <CSGODetails>
-                <div className="news">
-                    <h1>Últimas notícias (via HLTV)</h1>
-
-                    <div className="content">
-                        {
-                            data && data.map((post, index) => (
-                                <div className="news" key={index}>
-                                    <Link href={post.link} noreferrer>
-                                        <h2>{post.title}</h2>
-                                        <p>{post.description}</p>
-                                    </Link>
-                                </div>
-                            )
-                            )
-                        }
-                    </div>
-                </div>
-            </CSGODetails>
-        </>
+        <div>csgo</div>
     )
 }
 
