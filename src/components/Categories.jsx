@@ -153,7 +153,7 @@ export const Categories = () => {
                         lastMovies && lastMovies.map(post => (
                             post.categories === 'Movies' ? (
                                 <div className="post" key={post.id}>
-                                    <a href={post.slug} >
+                                    <a href={post.slug}>
                                         <img src={post.imageUrl} alt={post.title} />
 
                                         <div className="post-side">

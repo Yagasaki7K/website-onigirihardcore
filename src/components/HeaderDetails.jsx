@@ -19,7 +19,6 @@ export const HeaderDetails = styled.div`
                 display: none;
             }
         }
-
     }
 
     .navigation {
@@ -54,6 +53,14 @@ export const HeaderDetails = styled.div`
             #item-menu {
                 display: flex;
                 gap: 30px;
+
+                li {
+                    border-bottom: 3px solid transparent;
+                }
+
+                li:hover {
+                    border-bottom: 3px solid ${colors.white};
+                }
             }
 
             .burguer {
@@ -99,17 +106,12 @@ export const HeaderDetails = styled.div`
                 font-size: 1rem;
                 font-weight: 400;
                 cursor: pointer;
-                transition: 0.3s;
                 text-transform: uppercase;
                 font-family: 'Poppins', sans-serif;
 
                 Link {
                     color: ${colors.white};
                     text-decoration: none;
-                }
-
-                :hover {
-                    border-bottom: 2px solid ${colors.white};
                 }
             }
         }
@@ -121,14 +123,14 @@ export const HeaderMobile = styled.div`
     height: 70px;
 
     font-size: 1.5rem;
-    
+
     display: flex;
     align-items: center;
 
     position: fixed;
     z-index: 100;
 
-    background-color: #15171b;
+    background: #15171b;
 
     .logo-drawner{
         width: 100%;
@@ -165,7 +167,7 @@ export const HeaderMobile = styled.div`
         top: 50px;
         z-index: 999;
 
-    
+
         background: #15171b;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
@@ -194,7 +196,7 @@ export const HeaderMobile = styled.div`
                 color: white;
                 font-weight: 700;
             }
-            
+
             .navigation-drawner {
                 width: 100%;
 

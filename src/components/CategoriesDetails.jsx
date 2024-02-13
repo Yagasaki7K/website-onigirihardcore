@@ -14,7 +14,7 @@ const CategoriesDetails = styled.div`
     @media (max-width: 655px){
         flex-direction: column;
     }
-    
+
     .animes, .games {
         width: 9.2rem;
         background: ${colors.blue};
@@ -56,7 +56,7 @@ const CategoriesDetails = styled.div`
 
             :hover {
                 transform: scale(1.025);
-            }  
+            }
         }
 
         .categories-content {
@@ -112,6 +112,7 @@ const CategoriesDetails = styled.div`
 
         .posts {
             width: 100%;
+
             .post {
                 display: flex;
                 padding: 20px 0px 10px 0px;
@@ -121,6 +122,10 @@ const CategoriesDetails = styled.div`
                     width: 100%;
                     display: flex;
                     gap: 15px;
+
+                    :hover {
+                        color: ${colors.blue};
+                    }
                 }
 
                 img {
@@ -156,6 +161,7 @@ const CategoriesDetails = styled.div`
 
                     i {
                         font-style: normal;
+                        margin-top: -5px;
                         color: ${colors.graydark};
                     }
                 }

@@ -3,7 +3,7 @@ import { useRouter } from "next/dist/client/router";
 import SideMenu from "../../src/components/Dashboard/SideMenu";
 
 // import Confetti from "react-confetti";
-import toast from 'react-toastify'
+import { toast } from 'sonner'
 
 import DashboardDetails from "../../src/components/DashboardDetails";
 import postService from "../../services/post.service";
@@ -88,31 +88,12 @@ const DashboardCreate = () => {
         };
 
         if (!author || !title || !description || !url || !categories) {
-            toast.error('🦄 Por favor, preencha todos os dados!', {
-                position: "top-right",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-            });
+            toast.error('🦄 Por favor, preencha todos os dados!');
         } else {
             await postService.addPost(NewPosts);
             location.href = "#publi";
             // setShowConfetti(true);
-
-            toast.success('🦄 Registro efetuado com sucesso!', {
-                position: "top-right",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-            });
+            toast.success('🦄 Registro efetuado com sucesso!');
 
             setTimeout(() => {
                 location.assign(`/${slug}`);

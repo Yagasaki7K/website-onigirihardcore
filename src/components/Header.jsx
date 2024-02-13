@@ -150,6 +150,15 @@ const Header = () => {
                                         Kalify Inc
                                     </Link>
                                 </li>
+                                <li>
+                                    <Link
+                                        href="https://twitter.com/OHNewsOficial"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <i className="uil uil-twitter" /> Twitter
+                                    </Link>
+                                </li>
                             </span>
                         </ul>
                     </div>

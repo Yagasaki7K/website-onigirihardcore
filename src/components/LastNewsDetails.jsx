@@ -8,7 +8,15 @@ const LastNewsDetails = styled.div`
 
     .container {
         width: 100%;
-    
+
+        :hover {
+            h1 {
+                color: ${colors.blue};
+            }
+
+            cursor: pointer;
+        }
+
         .header {
             border-bottom: 2px solid ${colors.blue};
             width: 100%;
@@ -22,24 +30,25 @@ const LastNewsDetails = styled.div`
                 font-weight: bold;
             }
         }
-        
+
         .content {
             width: 100%;
 
             display: flex;
             align-items: center;
             gap: 30px;
-            
+
             padding: 20px 0px;
 
             border-bottom: 2px solid white;
-            
-            .leftContent {
 
+            .leftContent {
                 img {
                     width: 290px;
                     height: 150px;
+                    overflow: hidden;
                     object-fit: cover;
+                    position: relative;
 
                     @media (max-width: 835px) {
                         width: 200px;
@@ -55,12 +64,6 @@ const LastNewsDetails = styled.div`
 
             .rightContent {
                 width: 70%;
-                
-                a {
-                    :hover {
-                        color: ${colors.blue};
-                    }
-                }
 
                 h1 {
                     font-size: 1.5rem;
@@ -87,7 +90,7 @@ const LastNewsDetails = styled.div`
                     gap: 10px;
                     align-items: center;
                     margin-top: 0.5rem;
-                    
+
                     span {
                         padding: 0.2rem 0.5rem;
                         font-weight: bold;

@@ -31,14 +31,13 @@ export const LastNews = () => {
                             <div className="rightContent">
                                 <a href={post.slug}>
                                     <h1>{post.title}</h1>
+
+                                    <div className="categories">
+                                        {post.categories === 'Movies' ? <span className="movies">Filmes & Séries</span> : null || post.categories === 'Games' ? <span className="games">Video Games</span> : null || post.categories === 'Technologies' ? <span className="tecnologies">Ciência & Tecnologia</span> : null || post.categories === 'Animes' ? <span className="animes">Animes & HQs</span> : null || post.categories === 'Development' ? <span className="development">4Devs</span> : null}
+                                        <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
+                                    </div>
+                                    <p>{post.description}</p>
                                 </a>
-
-                                <div className="categories">
-                                    {post.categories === 'Movies' ? <span className="movies">Filmes & Séries</span> : null || post.categories === 'Games' ? <span className="games">Video Games</span> : null || post.categories === 'Technologies' ? <span className="tecnologies">Ciência & Tecnologia</span> : null || post.categories === 'Animes' ? <span className="animes">Animes & HQs</span> : null || post.categories === 'Development' ? <span className="development">4Devs</span> : null}
-                                    <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                </div>
-                                <p>{post.description}</p>
-
                             </div>
 
 
