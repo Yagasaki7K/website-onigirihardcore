@@ -112,8 +112,8 @@ const Header = () => {
                                     </Link>
                                 </li>
                                 {/* <li>
-                        <Link href="/csgo">CSGO ~ HLTV News</Link>
-                    </li> */}
+                                    <Link href="/csgo">CSGO ~ HLTV News</Link>
+                                </li> */}
                                 <li>
                                     <Link href="https://onigiri-hardcore.blogspot.com/" target="_blank" rdedl="noreferrer">OH: Arquivos</Link>
                                 </li>
@@ -122,7 +122,7 @@ const Header = () => {
                                 </li>
                                 <li>
                                     <Link href="https://twitter.com/OHNewsOficial" target="_blank" rel="noreferrer">
-                                        <i className="uil uil-twitter" /> Twitter
+                                        <i className="uil uil-twitter" /> @OHNewsOficial
                                     </Link>
                                 </li>
                             </span>
