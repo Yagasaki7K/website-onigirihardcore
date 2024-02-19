@@ -4,6 +4,7 @@ const SlugDetails = styled.div`
     background: var(--background);
     font-family: Inter, Poppins, sans-serif;
     font-size: 1.1rem;
+    color: var(--font);
 
     img {
         width: 100%;
@@ -84,7 +85,7 @@ const SlugDetails = styled.div`
         }
 
         .anchor {
-            fill: var(--white);;
+            fill: var(--blue);
             margin-right: 0.2rem;
         }
 

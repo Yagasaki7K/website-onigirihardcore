@@ -39,8 +39,6 @@ export const LastNews = () => {
                                     <p>{post.description}</p>
                                 </a>
                             </div>
-
-
                         </div>
                     ))
                 }

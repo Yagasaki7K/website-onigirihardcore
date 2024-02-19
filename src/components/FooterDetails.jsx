@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 const FooterDetails = styled.div`
+    background: var(--background);
+
     .imgfooter {
         display: flex;
         justify-content: center;
@@ -32,7 +34,7 @@ const FooterDetails = styled.div`
     .footer {
         width: 100%;
         background: var(--background-alt);
-        color: var(--white);
+        color: var(--font);
         display: flex;
         padding: .5rem 0;
         justify-content: center;
@@ -54,7 +56,7 @@ const FooterDetails = styled.div`
 
         a {
             text-decoration: none;
-            color: var(--white);
+            color: var(--font);
         }
     }
 

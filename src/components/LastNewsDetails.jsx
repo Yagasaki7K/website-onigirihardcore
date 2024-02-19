@@ -39,7 +39,7 @@ const LastNewsDetails = styled.div`
 
             padding: 20px 0px;
 
-            border-bottom: 2px solid var(--white);
+            border-bottom: 2px solid var(--gray);
 
             .leftContent {
                 img {
@@ -72,6 +72,12 @@ const LastNewsDetails = styled.div`
                     -webkit-box-orient: vertical;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    color: var(--font);
+
+                    &:hover {
+                        color: var(--blue);
+                        transition: 0.5s;
+                    }
 
                     @media (max-width: 835px) {
                         width: 25rem;
@@ -130,11 +136,13 @@ const LastNewsDetails = styled.div`
                     -webkit-box-orient: vertical;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    color: var(--font)
                 }
 
                 i {
                     font-style: normal;
                     font-size: 0.9rem;
+                    color: var(--font);
 
                     @media (max-width: 835px) {
                         font-size: 0.8rem;

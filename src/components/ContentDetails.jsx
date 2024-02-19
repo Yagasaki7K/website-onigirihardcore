@@ -11,4 +11,5 @@ export const ContentDetails = styled.div`
     justify-content: center;
     align-items: center;
     gap: 50px;
+    background: var(--background);
 `

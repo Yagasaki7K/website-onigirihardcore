@@ -17,7 +17,7 @@ const CategoriesDetails = styled.div`
     .animes, .games {
         width: 9.2rem;
         background: var(--blue);
-        color: var(--font);
+        color: var(--white);
         padding: 5px 10px;
         margin-bottom: -2px;
         font-weight: bold;
@@ -26,7 +26,7 @@ const CategoriesDetails = styled.div`
     .movies {
         width: 10rem;
         background: var(--blue);
-        color: var(--font);
+        color: var(--white);
         padding: 5px 10px;
         margin-bottom: -2px;
         font-weight: bold;
