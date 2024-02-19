@@ -33,6 +33,7 @@ html,
 body {
     padding: 0;
     margin: 0;
+    background: var(--background);
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     color: #d3cfc9;
