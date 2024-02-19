@@ -11,7 +11,6 @@ const SlideDetails = styled.div`
         justify-content: center;
 
         background-color: #ffffff1a;
-
     }
 
     .keen-slider {
@@ -153,7 +152,6 @@ const SlideDetails = styled.div`
                         font-size: 0.8em;
                         transform: scale(0.8);
                     }
-
                 }
 
                 h1 {

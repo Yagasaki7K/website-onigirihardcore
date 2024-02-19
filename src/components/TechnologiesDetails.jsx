@@ -35,7 +35,7 @@ const TecnologiesDetails = styled.div`
             display: flex;
             align-items: center;
             flex-wrap: wrap;
-            row-gap: 20px;
+            row-gap: 5px;
             column-gap: 10px;
 
             a {
