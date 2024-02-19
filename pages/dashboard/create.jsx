@@ -248,7 +248,7 @@ const DashboardCreate = () => {
                                     <label htmlFor="body">
                                         Conteúdo da Publicação*:{" "}
                                     </label>
-                                    <MarkdownEditor height={300} value={bodyPost} onChange={setBodyPost} />
+                                    <MarkdownEditor height={300} value={bodyPost} onChange={setBodyPost} className="markdown-editor" />
                                 </div>
 
                                 <div className="item">

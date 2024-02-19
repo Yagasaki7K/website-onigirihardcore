@@ -58,6 +58,14 @@ const DashboardDetails = styled.div`
                     border: none;
                     background: transparent;
                 }
+
+                .markdown-editor {
+                    background: var(--background);
+
+                    * {
+                        background: transparent;
+                    }
+                }
             }
 
             button {
