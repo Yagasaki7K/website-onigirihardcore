@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { colors } from './variables'
 
 const TecnologiesDetails = styled.div`
         display: flex;
@@ -16,13 +15,13 @@ const TecnologiesDetails = styled.div`
             width: 100%;
 
             .header {
-                border-bottom: 2px solid ${colors.blue};
+                border-bottom: 2px solid var(--blue);
                 width: 100%;
 
                 p {
                     width: 12rem;
-                    background: ${colors.blue};
-                    color: ${colors.white};
+                    background: var(--blue);
+                    color: var(--white);
                     padding: 5px 10px;
                     margin-bottom: -2px;
                     font-weight: bold;
@@ -38,15 +37,15 @@ const TecnologiesDetails = styled.div`
             flex-wrap: wrap;
             row-gap: 20px;
             column-gap: 10px;
-            
+
             a {
                 text-decoration: none;
-                color: ${colors.white};
+                color: var(--white);
                 flex-grow: 1;
                 flex-basis: 260px;
 
                 :hover {
-                    color: ${colors.blue};
+                    color: var(--blue);
                     transition: 1s;
                 }
 

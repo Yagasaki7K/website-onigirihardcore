@@ -1,42 +1,76 @@
 import styled from 'styled-components';
-import { colors } from '../variables';
 
 const ModalDetails = styled.div`
     display: flex;
-    background: ${colors.blackdark};
+    background: var(--background);
+
+    .modal-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: var(--background);
+
+        .deleteBtn, .cancelBtn {
+            margin-top: 1rem;
+            padding: 0.5rem;
+            border: 1px solid var(--white);
+            border-radius: 5px;
+            background: var(--background);
+            color: var(--white);
+            cursor: pointer;
+            margin-right: 1rem;
+            font-size: 0.8rem;
+        }
+
+        .deleteBtn {
+            background: var(--red);
+            color: #fff;
+        }
+
+        .cancelBtn {
+            background: var(--background-alt);
+            color: #fff;
+        }
+    }
+
     .content {
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
         width: 100%;
         padding: 0 20px;
         margin-bottom: 1rem;
-        background: ${colors.blackdark};
+        background: var(--background);
         font-family: 'Poppins', sans-serif;
+
         h1 {
-            color: ${colors.white};
+            color: var(--white);
         }
+
         .publi {
             display: flex;
             flex-direction: column;
+
             .item {
                 display: flex;
                 flex-direction: column;
-                width: 50%;
                 margin-top: 1rem;
                 input, textarea, select, option {
-                    background: ${colors.blackdark};
-                    border: 1px solid ${colors.white};
-                    color: ${colors.white};
+                    background: var(--background);
+                    border: 1px solid var(--white);
+                    color: var(--white);
                     padding: 0.5rem;
                     border-radius: 5px;
                     margin-top: 10px;
                     font-family: 'Poppins', sans-serif;
                 }
             }
+
             .item-markdown {
                 display: flex;
                 flex-direction: column;
-                width: 50%;
                 margin-top: 1rem;
                 label {
                     margin-bottom: 1rem;
@@ -48,70 +82,91 @@ const ModalDetails = styled.div`
                     background: transparent;
                 }
             }
+
             button {
                 margin-top: 1rem;
                 padding: 0.5rem;
-                border: 1px solid ${colors.white};
+                border: 1px solid var(--white);
                 border-radius: 5px;
-                background: ${colors.blackdark};
-                color: ${colors.white};
+                background: var(--background);
+                color: var(--white);
                 cursor: pointer;
                 margin-right: 1rem;
                 font-size: 0.8rem;
+
                 &:hover {
-                    background: ${colors.white};
-                    color: ${colors.blackdark};
+                    background: var(--white);
+                    color: var(--background);
                     transition: 1s;
                 }
             }
+
             .sendbtn {
-                background: ${colors.green};
+                background: var(--green);
                 border: none;
                 padding: 0.8rem;
             }
+
             .closebtn {
-                background: ${colors.yellow};
+                background: var(--blue);
                 border: none;
                 padding: 0.8rem;
+                color: var(--font-black);
+            }
+
+            .editbtn {
+                background: var(--yellow);
+                border: none;
+                padding: 0.8rem;
+                color: var(--font-black);
             }
         }
+
         .stats {
             display: none;
         }
+
         .container {
             display: flex;
             flex-direction: column;
             width: 100%;
+
             table {
                 width: 100%;
                 border-collapse: collapse;
                 margin-top: 1rem;
+
                 tr {
                     th, td {
-                        color: ${colors.white};
+                        color: var(--white);
                         padding: 0.5rem;
                         text-align: center;
+
                         button {
                             margin-right: 1rem;
                             margin-left: -4.5rem;
                         }
+
                         .editar {
-                            background: ${colors.yellow};
-                            color: ${colors.white};
+                            background: var(--yellow);
+                            color: var(--white);
                             border: none;
                             padding: 10px;
                             margin-right: -1rem;
                         }
+
                         .deletar {
-                            background: ${colors.red};
-                            color: ${colors.white};
+                            background: var(--red);
+                            color: var(--white);
                             border: none;
                             padding: 10px;
                             margin-left: -5rem;
+
                             @media (max-width: 1366px) {
                                 margin-left: -3rem;
                             }
                         }
+
                         &:nth-child(1) {
                             width: 20%;
                             @media (max-width: 768px) {

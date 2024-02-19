@@ -99,14 +99,12 @@ export default function EditPostModal() {
                                             value="."
                                         />
                                     </div>
-                                    <button
-                                        onClick={handleCloseModal}
-                                        className="closebtn"
-                                    >
-                                        Fechar
-                                    </button>
-                                    <button onClick={updatePost}>
+                                    <button onClick={updatePost} className="editbtn">
                                         Atualizar
+                                    </button>
+
+                                    <button onClick={handleCloseModal} className="closebtn">
+                                        Fechar
                                     </button>
                                 </form>
                             </div>

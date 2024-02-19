@@ -1,8 +1,7 @@
 import styled from 'styled-components'
-import { colors } from './variables'
 
 const SlugDetails = styled.div`
-    background: ${colors.blackdark};
+    background: var(--background);
     font-family: Inter, Poppins, sans-serif;
     font-size: 1.1rem;
 
@@ -20,10 +19,11 @@ const SlugDetails = styled.div`
 
     blockquote {
         margin: 1rem;
+
         p {
             font-style: italic;
-            color: #6281af;
-            border-left: 2px solid #6281af;
+            color: var(--blue-alt);
+            border-left: 2px solid var(--blue-alt);
             padding-left: 1rem;
         }
     }
@@ -68,7 +68,7 @@ const SlugDetails = styled.div`
 
         h1 {
             margin-top: -1rem;
-            color: ${colors.blue};
+            color: var(--blue);
             font-size: 2rem;
             font-weight: 700;
             line-height: 35px;
@@ -76,15 +76,15 @@ const SlugDetails = styled.div`
         }
 
         h2 {
-            color: ${colors.blue};
+            color: var(--blue);
         }
 
         a {
-            color: ${colors.blue};
+            color: var(--blue);
         }
 
         .anchor {
-            fill: white;
+            fill: var(--white);;
             margin-right: 0.2rem;
         }
 
@@ -154,12 +154,12 @@ const SlugDetails = styled.div`
         .citation {
             font-weight: 100;
             font-style: italic;
-            color: ${colors.blue};
+            color: var(--blue);
 
             a {
                 p {
                     font-size: 1.5rem;
-                    border-left: 2px solid ${colors.blue};
+                    border-left: 2px solid var(--blue);
                     padding-left: 1rem;
                     width: 100%;
                 }

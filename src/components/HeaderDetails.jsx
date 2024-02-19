@@ -1,12 +1,11 @@
 import styled from 'styled-components'
-import { colors } from './variables'
 
 export const HeaderDetails = styled.div`
     .header {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: ${colors.blackAlt};
+        background: var(--background);
 
         padding: 10px;
 
@@ -22,7 +21,7 @@ export const HeaderDetails = styled.div`
     }
 
     .navigation {
-        background: ${colors.blue};
+        background: var(--blue);
         display: flex;
         height: 3rem;
         width: 100%;
@@ -41,14 +40,14 @@ export const HeaderDetails = styled.div`
             list-style: none;
             padding: 0;
             margin: 0;
-            color: ${colors.white};
+            color: var(--white);
             margin-left: 15rem;
 
             @media (max-width: 1366px) {
                 margin-left: 3rem;
             }
 
-            background: ${colors.blue};
+            background: var(--blue);
 
             #item-menu {
                 display: flex;
@@ -59,7 +58,7 @@ export const HeaderDetails = styled.div`
                 }
 
                 li:hover {
-                    border-bottom: 3px solid ${colors.white};
+                    border-bottom: 3px solid var(--white);
                 }
             }
 
@@ -110,7 +109,7 @@ export const HeaderDetails = styled.div`
                 font-family: 'Poppins', sans-serif;
 
                 Link {
-                    color: ${colors.white};
+                    color: var(--white);
                     text-decoration: none;
                 }
             }
@@ -130,7 +129,7 @@ export const HeaderMobile = styled.div`
     position: fixed;
     z-index: 100;
 
-    background: #15171b;
+    background: var(--background);
 
     .logo-drawner{
         width: 100%;
@@ -155,7 +154,7 @@ export const HeaderMobile = styled.div`
     }
 
     .active {
-        background-color: #15171b;
+        background-color: var(--background);
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
 
@@ -168,7 +167,7 @@ export const HeaderMobile = styled.div`
         z-index: 999;
 
 
-        background: #15171b;
+        background: var(--background);
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
         .close-icon {
@@ -193,7 +192,7 @@ export const HeaderMobile = styled.div`
             p{
                 font-size: 1rem;
 
-                color: white;
+                color: var(--white);
                 font-weight: 700;
             }
 
@@ -207,7 +206,7 @@ export const HeaderMobile = styled.div`
 
                 font-size: 1rem;
 
-                color: white;
+                color: var(--white);
             }
         }
     }

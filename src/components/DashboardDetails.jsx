@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { colors } from './variables';
 
 const DashboardDetails = styled.div`
     display: flex;
-    background: ${colors.blackdark};
+    background: var(--background);
 
     .content {
         display: flex;
@@ -11,11 +10,11 @@ const DashboardDetails = styled.div`
         width: 100%;
         padding: 0 20px;
         margin-bottom: 1rem;
-        background: ${colors.blackdark};
+        background: var(--background);
         font-family: 'Poppins', sans-serif;
 
         h1 {
-            color: ${colors.white};
+            color: var(--white);
         }
 
         .publi {
@@ -29,9 +28,9 @@ const DashboardDetails = styled.div`
                 margin-top: 1rem;
 
                 input, textarea, select, option {
-                    background: ${colors.blackdark};
-                    border: 1px solid ${colors.white};
-                    color: ${colors.white};
+                    background: var(--background);
+                    border: 1px solid var(--white);
+                    color: var(--white);
                     padding: 0.5rem;
                     border-radius: 5px;
                     margin-top: 10px;
@@ -64,31 +63,33 @@ const DashboardDetails = styled.div`
             button {
                 margin-top: 1rem;
                 padding: 0.5rem;
-                border: 1px solid ${colors.white};
+                border: 1px solid var(--white);
                 border-radius: 5px;
-                background: ${colors.blackdark};
-                color: ${colors.white};
+                background: var(--background-alt);
+                color: var(--white);
                 cursor: pointer;
                 margin-right: 1rem;
                 font-size: 0.8rem;
 
                 &:hover {
-                    background: ${colors.white};
-                    color: ${colors.blackdark};
+                    background: var(--white);
+                    color: var(--background-alt);
                     transition: 1s;
                 }
             }
 
             .sendbtn {
-                background: ${colors.green};
+                background: var(--green);
                 border: none;
                 padding: 0.8rem;
+                color: var(--font-black);
             }
 
             .clrbtn {
-                background: ${colors.yellow};
+                background: var(--yellow);
                 border: none;
                 padding: 0.8rem;
+                color: var(--font-black);
             }
         }
 
@@ -109,7 +110,7 @@ const DashboardDetails = styled.div`
                 tr {
 
                     th, td {
-                        color: ${colors.white};
+                        color: var(--white);
                         padding: 0.5rem;
                         text-align: center;
 
@@ -119,16 +120,16 @@ const DashboardDetails = styled.div`
                         }
 
                         .editar {
-                            background: ${colors.yellow};
-                            color: ${colors.white};
+                            background: var(--yellow);
+                            color: var(--white);
                             border: none;
                             padding: 10px;
                             margin-right: -1rem;
                         }
 
                         .deletar {
-                            background: ${colors.red};
-                            color: ${colors.white};
+                            background: var(--red);
+                            color: var(--white);
                             border: none;
                             padding: 10px;
                             margin-left: -5rem;

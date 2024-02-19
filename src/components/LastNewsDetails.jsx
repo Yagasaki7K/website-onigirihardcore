@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { colors } from './variables'
 
 const LastNewsDetails = styled.div`
     width: 100%;
@@ -11,20 +10,20 @@ const LastNewsDetails = styled.div`
 
         :hover {
             h1 {
-                color: ${colors.blue};
+                color: var(--blue);
             }
 
             cursor: pointer;
         }
 
         .header {
-            border-bottom: 2px solid ${colors.blue};
+            border-bottom: 2px solid var(--blue);
             width: 100%;
 
             p {
                 width: 10rem;
-                background: ${colors.blue};
-                color: ${colors.white};
+                background: var(--blue);
+                color: var(--white);
                 padding: 5px 10px;
                 margin-bottom: -2px;
                 font-weight: bold;
@@ -40,7 +39,7 @@ const LastNewsDetails = styled.div`
 
             padding: 20px 0px;
 
-            border-bottom: 2px solid white;
+            border-bottom: 2px solid var(--white);
 
             .leftContent {
                 img {
@@ -95,7 +94,7 @@ const LastNewsDetails = styled.div`
                         padding: 0.2rem 0.5rem;
                         font-weight: bold;
                         font-size: 0.8rem;
-                        color: ${colors.white};
+                        color: var(--white);
 
                         @media (max-width: 530px){
                             font-size: 0.6rem;
@@ -103,23 +102,23 @@ const LastNewsDetails = styled.div`
                     }
 
                     .tecnologies {
-                        background: ${colors.blue};
+                        background: var(--blue);
                     }
 
                     .animes {
-                        background: #ff6ca4;
+                        background: var(--red);
                     }
 
                     .movies {
-                        background: #6272a4;
+                        background: var(--green);
                     }
 
                     .games {
-                        background: #faa74e;
+                        background: var(--orange);
                     }
 
                     .development {
-                        background: #bd93f9;
+                        background: var(--purple);
                     }
                 }
 

@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { colors } from './variables'
 
 const CategoriesDetails = styled.div`
 
@@ -17,8 +16,8 @@ const CategoriesDetails = styled.div`
 
     .animes, .games {
         width: 9.2rem;
-        background: ${colors.blue};
-        color: ${colors.text};
+        background: var(--blue);
+        color: var(--font);
         padding: 5px 10px;
         margin-bottom: -2px;
         font-weight: bold;
@@ -26,8 +25,8 @@ const CategoriesDetails = styled.div`
 
     .movies {
         width: 10rem;
-        background: ${colors.blue};
-        color: ${colors.text};
+        background: var(--blue);
+        color: var(--font);
         padding: 5px 10px;
         margin-bottom: -2px;
         font-weight: bold;
@@ -42,7 +41,7 @@ const CategoriesDetails = styled.div`
         gap: 5px;
 
         .header {
-            border-bottom: 2px solid ${colors.blue};
+            border-bottom: 2px solid var(--blue);
             width: 100%;
 
             margin-bottom: 10px;
@@ -68,7 +67,7 @@ const CategoriesDetails = styled.div`
 
             h1 {
                 width: 100%;
-                color: ${colors.blue};
+                color: var(--blue);
                 display: -webkit-box;
                 -webkit-line-clamp: 3; /** número de linhas que você quer exibir */
                 -webkit-box-orient: vertical;
@@ -95,13 +94,13 @@ const CategoriesDetails = styled.div`
         span {
             i {
                 font-style: normal;
-                color: ${colors.graydark};
+                color: var(--gray-alt);
             }
 
             p {
                 width: 100%;
                 max-height: 5rem;
-                color: ${colors.graydark};
+                color: var(--gray-alt);
                 display: -webkit-box;
                 -webkit-line-clamp: 3; /** número de linhas que você quer exibir */
                 -webkit-box-orient: vertical;
@@ -124,7 +123,7 @@ const CategoriesDetails = styled.div`
                     gap: 15px;
 
                     :hover {
-                        color: ${colors.blue};
+                        color: var(--blue);
                     }
                 }
 
@@ -156,13 +155,13 @@ const CategoriesDetails = styled.div`
                         margin: 0;
                     }
 
-                    color: ${colors.text};
+                    color: var(--font);
                     text-decoration: none;
 
                     i {
                         font-style: normal;
                         margin-top: -5px;
-                        color: ${colors.graydark};
+                        color: var(--gray-alt);
                     }
                 }
             }

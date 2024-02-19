@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const SideMenuDetails = styled.div`
     padding: 1rem;
-    background: #15171b;
-    color: #fff;
+    background: var(--background-alt);
+    color: var(--white);
     width: 18rem;
     margin-right: 1rem;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
@@ -18,29 +18,31 @@ const SideMenuDetails = styled.div`
             font-size: 1.5rem;
             margin-right: 1rem;
         }
+
         li {
             font-size: 1.2rem;
-            border-top: 1px solid #e5e5e5;
+            border-top: 1px solid var(--gray);
             padding: 1rem 0.5rem;
-            :hover {
+
+            &:hover {
                 transition: 1s;
-                padding: 1rem 1rem;
-                background: #00acff;
-                color: #fff;
+                background: var(--blue);
+                color: var(--white);
                 cursor: pointer;
             }
         }
     }
+
     .active {
         font-size: 1.2rem;
-        background: #00acff;
-        border-top: 1px solid #e5e5e5;
+        background: var(--blue);
+        border-top: 1px solid var(--gray);
         padding: 1rem 0.5rem;
         :hover {
             transition: 1s;
             padding: 1rem 1rem;
             background: transparent;
-            color: #fff;
+            color: var(--white);
             cursor: pointer;
         }
     }

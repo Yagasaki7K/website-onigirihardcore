@@ -1,18 +1,17 @@
 import styled from 'styled-components'
-import { colors } from './variables'
 
 const SlideDetails = styled.div`
 
     .keen-slider-skeleton {
         width: 100%;
-        height: 40rem; 
+        height: 40rem;
 
         display: flex;
         align-items: center;
         justify-content: center;
 
         background-color: #ffffff1a;
-       
+
     }
 
     .keen-slider {
@@ -72,7 +71,7 @@ const SlideDetails = styled.div`
                 }
 
                 .slide-tag {
-                    color: ${colors.gray};
+                    color: var(--white);
 
                     @media (max-width: 500px) {
                          font-size: 0.8em;
@@ -82,7 +81,7 @@ const SlideDetails = styled.div`
 
                     .latest {
                         padding: 2.5px 10px;
-                        background: ${colors.orange};
+                        background: var(--orange);
                         font-size: 0.9rem;
                         font-weight: bold;
                     }
@@ -101,7 +100,7 @@ const SlideDetails = styled.div`
                     @media (max-width: 768px) {
                         .latest {
                             padding: 2.5px 8px;
-                            background: ${colors.orange};
+                            background: var(--orange);
                             font-size: 0.8rem;
                             font-weight: bold;
                         }
@@ -118,23 +117,23 @@ const SlideDetails = styled.div`
                     }
 
                     .tecnologies {
-                        background: ${colors.blue};
+                        background: var(--blue);
                     }
 
                     .animes {
-                        background: #ff6ca4;
+                        background: var(--red);
                     }
 
                     .movies {
-                        background: #6272a4;
+                        background: var(--green);
                     }
 
                     .games {
-                        background: #faa74e;
+                        background: var(--yellow);
                     }
 
                     .development {
-                        background: #bd93f9;
+                        background: var(--purple);
                     }
 
                     .date {
@@ -146,7 +145,7 @@ const SlideDetails = styled.div`
                         text-decoration: underline;
 
                         a {
-                            color: ${colors.white};
+                            color: var(--white);
                         }
                     }
 
@@ -159,7 +158,7 @@ const SlideDetails = styled.div`
 
                 h1 {
                     margin-top: 10px;
-                    color: ${colors.white};
+                    color: var(--white);
                     font-size: 3rem;
                     font-weight: 700;
                     line-height: 50px;
@@ -167,7 +166,7 @@ const SlideDetails = styled.div`
 
                     a {
                         text-decoration: none;
-                        color: ${colors.white};
+                        color: var(--white);
                     }
 
                     @media (max-width: 500px) {
@@ -184,8 +183,8 @@ const SlideDetails = styled.div`
                 p {
                     font-size: 1.2rem;
                     line-height: 1.5rem;
-                    color: ${colors.white};
-                    border-left: 5px solid ${colors.blue};
+                    color: var(--white);
+                    border-left: 5px solid var(--blue);
                     padding-left: 10px;
                     max-width: 50rem;
                     display: -webkit-box;
@@ -201,7 +200,7 @@ const SlideDetails = styled.div`
 
                     a {
                         text-decoration: none;
-                        color: ${colors.white};
+                        color: var(--white);
                     }
                 }
             }
@@ -215,8 +214,8 @@ const SlideDetails = styled.div`
         align-items: center;
         text-align:center;
         height: 3rem;
-        color: ${colors.white};
-        border-bottom: 1px solid ${colors.white};
+        color: var(--white);
+        border-bottom: 1px solid var(--white);
 
         a {
             text-decoration: none;
