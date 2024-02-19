@@ -3,7 +3,7 @@ import { HeaderDetails, HeaderMobile } from "./HeaderDetails";
 
 import { useState, useEffect, useRef } from 'react';
 
-import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
+//import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
 
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -36,7 +36,7 @@ const Header = () => {
         <>
             {width <= 600 ? (
                 <HeaderMobile ref={drawnerRef}>
-                    <MenuOutlined className={open ? `menu active` : `menu`} onClick={() => setOpen(!open)} />
+                    {/*<MenuOutlined className={open ? `menu active` : `menu`} onClick={() => setOpen(!open)} />*/}
                     <div className="logo-drawner">
                         <img
                             src="/logotipo.png"
@@ -54,7 +54,7 @@ const Header = () => {
                                 transition={{ duration: 0.3 }}
                             >
                                 <div className="content-drawner">
-                                    <CloseOutlined className="close-icon" onClick={() => setOpen(false)} />
+                                    {/*<CloseOutlined className="close-icon" onClick={() => setOpen(false)} />*/}
                                     <p>Navegar</p>
                                     <div className="navigation-drawner">
                                         <Link href="/">Início</Link>

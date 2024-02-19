@@ -10,22 +10,20 @@
     "yagasaki": "yarn upgrade-interactive --latest"
   },
   "dependencies": {
-    "@ant-design/icons": "^5.2.6",
-    "@emotion/react": "^11.11.1",
+    "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.14.19",
-    "@uiw/react-markdown-preview": "^5.0.3",
-    "@uiw/react-md-editor": "^4.0.1",
-    "antd": "^5.12.1",
+    "@mui/material": "^5.15.10",
+    "@uiw/react-markdown-preview": "^5.0.7",
+    "@uiw/react-md-editor": "^4.0.3",
     "babel-loader": "^9.1.3",
     "babel-plugin-transform-remove-imports": "^1.7.1",
-    "dotenv": "^16.3.1",
-    "firebase": "^10.7.0",
-    "framer-motion": "^10.16.12",
+    "dotenv": "^16.4.4",
+    "firebase": "^10.8.0",
+    "framer-motion": "^11.0.5",
     "hltv-api": "^3.0.3",
     "keen-slider": "^6.8.6",
-    "moment": "^2.29.4",
-    "next": "14.0.3",
+    "moment": "^2.30.1",
+    "next": "14.1.0",
     "next-remove-imports": "^1.0.12",
     "next-seo": "^6.4.0",
     "next-transpile-modules": "^10.0.1",
@@ -36,11 +34,11 @@
     "react-modal": "^3.16.1",
     "react-ticker": "^1.3.2",
     "sonner": "^1.4.0",
-    "styled-components": "^6.1.1"
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
-    "eslint": "^8.55.0",
-    "eslint-config-next": "14.0.3",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.1.0",
     "eslint-plugin-react": "^7.33.2"
   }
 }
