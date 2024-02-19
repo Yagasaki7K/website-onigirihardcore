@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { colors } from './variables'
 
 const LoginDetails = styled.div`
     background: url(https://images.unsplash.com/photo-1569701813229-33284b643e3c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=914&q=80);
@@ -21,7 +20,7 @@ const LoginDetails = styled.div`
             margin-left: 30rem;
         }
 
-        color: ${colors.white};
+        color: var(--white);
 
         div {
             display: flex;
@@ -31,16 +30,16 @@ const LoginDetails = styled.div`
             width: 25rem;
             padding: 2rem;
             border-radius: 15px;
-            background: ${colors.blackdark};
-            color: ${colors.black};
+            background: var(--background);
+            color: var(--font);
 
             img {
                 width: 22rem;
             }
 
             button {
-                color: ${colors.white};
-                background: ${colors.blue};
+                color: var(--white);
+                background: var(--blue);
                 border-radius: 5px;
                 border: none;
                 padding: 0.7rem;
