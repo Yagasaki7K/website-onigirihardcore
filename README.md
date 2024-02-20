@@ -13,8 +13,8 @@
   </a>
   <img alt="License" src="https://img.shields.io/badge/license-MIT-00acff">
   <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/Yagasaki7K/website-onigirihardcore?color=00acff" />
-  <a href="https://github.com/Yagasaki7K/website-onigirihardcore/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/Yagasaki7K/website-onigirihardcore?color=00acff&logo=github">
+  <a href="https://twitter.com/yagasaki7k">
+    <img src="https://img.shields.io/twitter/follow/medusajs.svg?label=Contact%20me%20at%20@Yagasaki7K" alt="Contact me at @Yagasaki7K" />
   </a>
 </p>
 
