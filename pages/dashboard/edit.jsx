@@ -5,7 +5,6 @@ import postService from "../../services/post.service";
 import authService from "../../services/auth.service";
 import DashboardDetails from "../../src/components/DashboardDetails";
 import SideMenu from "../../src/components/Dashboard/SideMenu";
-import EditPostModal from "../../src/components/Modals/EditPostModal";
 import DeletePostModal from "../../src/components/Modals/DeletePostModal";
 import PropTypes from 'prop-types';
 import { useRouter } from "next/router";
@@ -91,7 +90,7 @@ export default function DashboardEdit({ posts }) {
                                             <td>{fields.categories}</td>
                                             <td>{fields.lessDate}</td>
                                             <td>
-                                                <EditPostModal id={fields.id} />
+                                                Editar
                                             </td>
                                             <td>
                                                 <DeletePostModal
