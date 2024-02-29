@@ -48,6 +48,11 @@ const LoginDetails = styled.div`
                 text-transform: uppercase;
                 cursor: pointer;
 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
                 img {
                     width: 1rem;
                     margin-right: 0.5rem;
