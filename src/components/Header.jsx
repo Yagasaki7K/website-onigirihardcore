@@ -3,8 +3,6 @@ import { HeaderDetails, HeaderMobile } from "./HeaderDetails";
 
 import { useState, useEffect, useRef } from 'react';
 
-//import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
-
 import { AnimatePresence, motion } from "framer-motion";
 
 const Header = () => {
@@ -28,7 +26,7 @@ const Header = () => {
         window.addEventListener('resize', handleResize);
 
         return () => {
-            window.removeEventListener('resize', handleResize); // Remover o event listener no desmontagem
+            window.removeEventListener('resize', handleResize);
         };
     }, [])
 

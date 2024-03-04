@@ -2,6 +2,7 @@ import TechnologiesDetails from './TechnologiesDetails'
 // import post from '../../server/index.json'
 import { useEffect, useState } from 'react'
 import postService from '../../services/post.service'
+import Image from 'next/image'
 
 export const Technologies = () => {
     const [Posts, setPosts] = useState([])
@@ -27,7 +28,7 @@ export const Technologies = () => {
                     {
                         technologies.slice(0, 12).map((post, index) => (
                             <a href={post.slug} key={index}>
-                                <img src={post.imageUrl} alt={post?.name} />
+                                <Image src={post.imageUrl} alt={post?.name} width={150} height={150} />
 
                                 <div className="title">
                                     <h1>{post.title}</h1>

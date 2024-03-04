@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import LastNewsDetails from './LastNewsDetails'
 import postService from '../../services/post.service'
+import Image from 'next/image'
 
 export const LastNews = () => {
     const [Posts, setPosts] = useState([])
@@ -25,7 +26,7 @@ export const LastNews = () => {
                         <div className="content" key={index}>
                             <div className="leftContent">
                                 <a href={post.slug}>
-                                    <img src={post.imageUrl} alt={post?.name} />
+                                    <Image src={post.imageUrl} alt={post?.name} width={150} height={150} />
                                 </a>
                             </div>
                             <div className="rightContent">

@@ -94,7 +94,7 @@ const Post = () => {
                                     <meta name="twitter:image:alt" content={'Onigiri Hardcore | ' + post.title} />
                                 </Head>
 
-                                {post.imageUrl && (<Image src={post.imageUrl} alt={post.name} width={1300} height={480} />)}
+                                {post.imageUrl && (<Image src={post.imageUrl} alt={post.name} width={1024} height={768} />)}
 
                                 <section key={post.id}>
                                     <p className="block__content">{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Ciência & Tecnologia' : null || post.categories === 'Development' ? '4Devs' : null || post.categories === 'Animes' ? 'Animes & HQs' : null} | {post.author}</p>
