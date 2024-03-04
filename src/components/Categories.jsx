@@ -43,7 +43,7 @@ export const Categories = () => {
                     firstAnime && firstAnime.map(post => (
                         post.categories === 'Animes' ? (
                             <a className='categories-content' href={post.slug} key={post.id}>
-                                <Image src={post.imageUrl} alt={post?.name} width={500} height={500} />
+                                <Image src={post.imageUrl} alt={post?.name} width={500} height={500} loading='lazy' />
                                 <h1>{post.title.length > 35 ? post.title.slice(0, 55) + "..." : post.title}</h1>
                                 {/* <h1>{post.smalltitle}</h1> */}
 
@@ -64,7 +64,7 @@ export const Categories = () => {
                             post.categories === 'Animes' ? (
                                 <div className="post" key={post.id}>
                                     <a href={post.slug}>
-                                        <Image src={post.imageUrl} alt={post?.name} width={150} height={150} />
+                                        <Image src={post.imageUrl} alt={post?.name} width={150} height={150} loading='lazy' />
 
                                         <div className="post-side">
                                             <h3>{post.title}</h3>
@@ -89,7 +89,7 @@ export const Categories = () => {
                     firstGames && firstGames.map(post => (
                         post.categories === 'Games' ? (
                             <a className='categories-content' href={post.slug} key={post.id}>
-                                <Image src={post.imageUrl} alt={post?.name} width={500} height={500} />
+                                <Image src={post.imageUrl} alt={post?.name} width={500} height={500} loading='lazy' />
                                 <h1>{post.title.length > 35 ? post.title.slice(0, 55) + "..." : post.title}</h1>
                                 {/* <h1>{post.smalltitle}</h1> */}
 
@@ -110,7 +110,7 @@ export const Categories = () => {
                             post.categories === 'Games' ? (
                                 <div className="post" key={post.id}>
                                     <a href={post.slug} >
-                                        <Image src={post.imageUrl} alt={post?.name} width={150} height={150} />
+                                        <Image src={post.imageUrl} alt={post?.name} width={150} height={150} loading='lazy' />
 
                                         <div className="post-side">
                                             <h3>{post.title}</h3>
@@ -135,7 +135,7 @@ export const Categories = () => {
                     firstMovies && firstMovies.map(post => (
                         post.categories === 'Movies' ? (
                             <a className='categories-content' href={post.slug} key={post.id}>
-                                <Image src={post.imageUrl} alt={post?.name} width={500} height={500} />
+                                <Image src={post.imageUrl} alt={post?.name} width={500} height={500} loading='lazy' />
                                 <h1>{post.title.length > 35 ? post.title.slice(0, 55) + "..." : post.title}</h1>
 
                                 <span>
@@ -155,7 +155,7 @@ export const Categories = () => {
                             post.categories === 'Movies' ? (
                                 <div className="post" key={post.id}>
                                     <a href={post.slug}>
-                                        <Image src={post.imageUrl} alt={post?.name} width={150} height={150} />
+                                        <Image src={post.imageUrl} alt={post?.name} width={150} height={150} loading='lazy' />
 
                                         <div className="post-side">
                                             <h3>{post.title}</h3>

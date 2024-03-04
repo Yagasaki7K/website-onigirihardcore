@@ -28,7 +28,7 @@ export const Technologies = () => {
                     {
                         technologies.slice(0, 12).map((post, index) => (
                             <a href={post.slug} key={index}>
-                                <Image src={post.imageUrl} alt={post?.name} width={150} height={150} />
+                                <Image src={post.imageUrl} alt={post?.name} width={150} height={150} loading='lazy' />
 
                                 <div className="title">
                                     <h1>{post.title}</h1>

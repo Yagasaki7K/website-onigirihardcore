@@ -7,6 +7,7 @@ import SlideDetails from './SlideDetails'
 import { useKeenSlider } from 'keen-slider/react'
 import postService from '../../services/post.service.js'
 import { SkeletonSlide } from './Skeleton/SkeletonSlide'
+import Image from 'next/image.js'
 
 
 export const Slide = () => {
@@ -67,7 +68,7 @@ export const Slide = () => {
                     {slidePosts && slidePosts.map(post => (
                         <div className="keen-slider__slide" key={post?.id}>
                             <a href={post?.slug}>
-                                <img src={post.imageUrl} alt={post?.name} loading='lazy' />
+                                <Image src={post.imageUrl} alt={post?.name} width={1024} height={500} loading='lazy' />
                             </a>
                             <div className="slider-description">
                                 <div className="slide-tag">

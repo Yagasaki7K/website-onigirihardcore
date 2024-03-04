@@ -26,7 +26,7 @@ export const LastNews = () => {
                         <div className="content" key={index}>
                             <div className="leftContent">
                                 <a href={post.slug}>
-                                    <Image src={post.imageUrl} alt={post?.name} width={150} height={150} />
+                                    <Image src={post.imageUrl} alt={post?.name} width={150} height={150} loading='lazy' />
                                 </a>
                             </div>
                             <div className="rightContent">
