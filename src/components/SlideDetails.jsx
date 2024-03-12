@@ -31,9 +31,17 @@ const SlideDetails = styled.div`
 
         img {
             width: 100%;
-            height: 100%;
+            height: 40rem;
             object-fit: cover;
             filter: brightness(50%);
+
+            @media (max-width: 1366px) {
+                height: 30rem;
+            }
+
+            @media (max-width: 500px) {
+                width: 28rem;
+            }
         }
 
         .keen-slider__slide {
