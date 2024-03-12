@@ -1,7 +1,6 @@
-import { styled } from "styled-components";
+import styled from 'styled-components'
 
-
-export const ContentDetails = styled.div`
+const ContentDetails = styled.div`
     width: 100%;
 
     padding: 20px 20px 50px 20px;
@@ -13,3 +12,5 @@ export const ContentDetails = styled.div`
     gap: 50px;
     background: var(--background);
 `
+
+export default ContentDetails
