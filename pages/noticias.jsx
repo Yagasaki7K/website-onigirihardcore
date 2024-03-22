@@ -1,91 +1,77 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Header from '../src/components/Header'
+import Footer from '../src/components/Footer'
+import LastNewsDetails from '../src/components/LastNewsDetails'
+import postService from '../services/post.service'
+import Image from 'next/image'
+import Head from 'next/head'
+import ContentDetails from '../src/components/ContentDetails'
 
-const noticias = () => {
+const Noticias = () => {
+    const [Posts, setPosts] = useState([])
+    const [search, setSearch] = useState('')
+
+    function handleSearch(event) {
+        const query = event.target.value;
+
+        setSearch(query);
+    }
+
+    const filteredPets = search !== "" ? Posts.filter((post) => post.title.toLowerCase().includes(search.toLocaleLowerCase()) || post.categories.toLowerCase().includes(search.toLocaleLowerCase()) || post.bodyPost.toLowerCase().includes(search.toLocaleLowerCase())) : Posts;
+
+    useEffect(() => {
+        getPosts()
+    }, [])
+
+    const getPosts = async () => {
+        const data = await postService.getAllPosts()
+        setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+    }
+
     return (
-        <div>noticias</div>
+        <>
+            <Head>
+                <title>Notícias | Onigiri Hardcore</title>
+            </Head>
+
+            <Header />
+            <ContentDetails>
+                <LastNewsDetails>
+                    <div className="container">
+
+                        <input type="text" placeholder='O que vamos descobrir hoje?' onChange={handleSearch} />
+
+                        <div className="header">
+                            <p>Lista de Notícias</p>
+                        </div>
+                        {
+                            filteredPets && filteredPets.map((post, index) => (
+                                <div className="content" key={index}>
+                                    <div className="leftContent">
+                                        <a href={post.slug}>
+                                            <Image src={post.imageUrl} alt={post?.name} width={150} height={150} loading='lazy' />
+                                        </a>
+                                    </div>
+                                    <div className="rightContent">
+                                        <a href={post.slug}>
+                                            <h1>{post.title}</h1>
+
+                                            <div className="categories">
+                                                {post.categories === 'Movies' ? <span className="movies">Filmes & Séries</span> : null || post.categories === 'Games' ? <span className="games">Video Games</span> : null || post.categories === 'Technologies' ? <span className="tecnologies">Ciência & Tecnologia</span> : null || post.categories === 'Animes' ? <span className="animes">Animes & HQs</span> : null || post.categories === 'Development' ? <span className="development">4Devs</span> : null}
+                                                <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
+                                            </div>
+                                            <p>{post.description}</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </LastNewsDetails>
+            </ContentDetails>
+            <Footer />
+        </>
     )
 }
 
-export default noticias
-
-// import { useEffect, useState } from 'react'
-// import Footer from '../src/components/Footer'
-// import Header from '../src/components/Header'
-// import FullNewsDetails from '../src/components/FullNewsDetails'
-// import postService from '../services/post.service'
-// import { NextSeo } from 'next-seo';
-// // import dynamic from 'next/dynamic'
-
-// // const analyticsFirebase = dynamic(() => import('../client'),
-// //     { ssr: false }
-// // );
-
-// const FullNews = () => {
-//     const [posts, setPosts] = useState([])
-
-//     useEffect(() => {
-//         getPosts()
-//         // const analytics = analyticsFirebase;
-//         // analytics.logEvent('acesso_pagina', { page: '/noticias' });
-//     }, [])
-
-//     const getPosts = async () => {
-//         const data = await postService.getAllPosts();
-//         const posts = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-//         posts.sort((a, b) => b.id - a.id);
-//         setPosts(posts);
-//     }
-
-//     return (
-//         <>
-//             <NextSeo
-//                 title='Onigiri Hardcore | Portal de Notícias e Entretenimento'
-//                 description='Um site nerd com conteúdos nerds'
-//                 canonical={`https://onigirihardcore.com.br/`}
-//                 openGraph={{
-//                     url: 'https://onigirihardcore.com.br/',
-//                     title: 'Onigiri Hardcore | Portal de Notícias e Entretenimento',
-//                     description: 'Um site nerd com conteúdos nerds',
-//                     images: [
-//                         {
-//                             url: 'https://i.imgur.com/VoOogmx.png',
-//                             width: 460,
-//                             height: 460,
-//                             alt: 'Onigiri Hardcore | Portal de Notícias e Entretenimento',
-//                             type: 'image/jpeg' || 'image/png',
-//                         }
-//                     ],
-//                     siteName: 'Onigiri Hardcore',
-//                 }}
-//                 twitter={{
-//                     handle: '@OnigiriHardcore',
-//                     site: '@OnigiriHardcore',
-//                     cardType: 'summary_large_image',
-//                 }}
-//             />
-//             <Header />
-//             <FullNewsDetails>
-//                 <div className="fullnews">
-//                     <h1>ARQUIVOS DO ONIGIRI HARDCORE</h1>
-//                     {posts && posts.map((post, index) => {
-//                         return (
-
-//                             <a href={post.slug} key={index}>
-//                                 <img src={post.imageUrl} alt={post?.name} />
-//                                 {/* <img src={item.image} width="320" /> */}
-//                                 <div className="title">
-//                                     <i className="uil uil-clock-nine">&nbsp;{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Tecnologias' : null || post.categories === 'Animes' ? 'Animes & HQs' : null || post.categories === 'Development' ? '4Devs' : null}</i>
-//                                     <h2>{post.title}</h2>
-//                                 </div>
-//                             </a>
-//                         )
-//                     })
-//                     }
-//                 </div>
-//             </FullNewsDetails>
-//             <Footer />
-//         </>
-//     )
-// }
-
-// export default FullNews
+export default Noticias

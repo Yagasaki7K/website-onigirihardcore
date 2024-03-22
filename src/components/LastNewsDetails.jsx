@@ -8,12 +8,23 @@ const LastNewsDetails = styled.div`
     .container {
         width: 100%;
 
-        :hover {
-            h1 {
-                color: var(--blue);
-            }
+        input {
+            width: 100%;
+            padding: 1.2rem;
+            border: 2px solid var(--blue);
+            font-size: 1.2rem;
+            border-radius: 5px;
+            margin-top: 20px;
+            background: var(--background);
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+            color: var(--font);
+            cursor: text;
+            margin-bottom: 2rem;
 
-            cursor: pointer;
+            @media (max-width: 835px) {
+                font-size: 1rem;
+            }
         }
 
         .header {
@@ -40,6 +51,14 @@ const LastNewsDetails = styled.div`
             padding: 20px 0px;
 
             border-bottom: 2px solid var(--gray);
+
+            &:hover {
+                h1 {
+                    color: var(--blue);
+                }
+
+                cursor: pointer;
+            }
 
             .leftContent {
                 img {
