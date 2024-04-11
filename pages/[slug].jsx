@@ -8,6 +8,7 @@ import postService from '../services/post.service'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
+import { NextSeo } from 'next-seo'
 
 // eslint-disable-next-line react/prop-types
 const MarkdownPreview = dynamic(
@@ -67,34 +68,36 @@ const Post = () => {
                     Post && Post.map((post, index) => (
                         post.slug === slug ? (
                             <div key={index}>
+                                <NextSeo
+                                    title={post.title}
+                                    description={post.description}
+                                    canonical={`https://yagasaki.dev/`}
+                                    openGraph={{
+                                        url: 'https://yagasaki.dev/',
+                                        title: post.title,
+                                        description: post.description,
+                                        images: [
+                                            {
+                                                url: post.imageUrl,
+                                                width: 460,
+                                                height: 460,
+                                                alt: post.title,
+                                                type: 'image/jpeg' || 'image/png',
+                                            }
+                                        ],
+                                        siteName: 'Onigiri Hardcore',
+                                    }}
+                                    twitter={{
+                                        handle: '@Yagasaki7K',
+                                        site: '@Yagasaki7K',
+                                        cardType: 'summary_large_image',
+                                    }}
+                                />
                                 <Head>
                                     <title>{post.title + ' | Onigiri Hardcore'}</title>
-                                    <meta name="description" content={post.description} />
-                                    <meta
-                                        name="keywords"
-                                        content="anime, tecnologia, desenvolvimento, mangá, séries, filmes, cultura pop, otaku, programação, inovação, entretenimento, ficção, notícias, lançamentos, noticias, ciência, hq, dev, video, games, xbox, psp, psn, ps4, playstation, sony, series, x, twitter, noticias, pop, nerd, geek"
-                                    />
-
-                                    <meta property="og:title" content={'Onigiri Hardcore | ' + post.title} />
-                                    <meta property="og:description" content={post.description} />
-                                    <meta
-                                        property="og:keywords"
-                                        content="anime, tecnologia, desenvolvimento, mangá, séries, filmes, cultura pop, otaku, programação, inovação, entretenimento, ficção, notícias, lançamentos, noticias, ciência, hq, dev, video, games, xbox, psp, psn, ps4, playstation, sony, series, x, twitter, noticias, pop, nerd, geek"
-                                    />
-                                    <meta property="og:type" content="website" />
-                                    <meta
-                                        property="og:image"
-                                        content={post.imageUrl}
-                                    />
-                                    <meta property="og:site_name" content={'Onigiri Hardcore | ' + post.title} />
-
-                                    <meta name="twitter:card" content="summary_large_image" />
-                                    <meta name="twitter:title" content={'Onigiri Hardcore | ' + post.title} />
-                                    <meta name="twitter:description" content={post.description} />
-                                    <meta name="twitter:image:alt" content={'Onigiri Hardcore | ' + post.title} />
                                 </Head>
 
-                                {post.imageUrl && (<Image src={post.imageUrl} alt={post.name} width={1024} height={768} />)}
+                                {post.imageUrl && (<Image src={post.imageUrl} alt={post.title} width={1024} height={768} />)}
 
                                 <section key={post.id}>
                                     <p className="block__content">{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Ciência & Tecnologia' : null || post.categories === 'Development' ? '4Devs' : null || post.categories === 'Animes' ? 'Animes & HQs' : null} | {post.author}</p>
