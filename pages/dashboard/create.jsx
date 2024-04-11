@@ -194,6 +194,7 @@ const DashboardCreate = () => {
             }
         );
     }
+
     if (render === true) {
         return (
             <DashboardDetails>
@@ -213,21 +214,17 @@ const DashboardCreate = () => {
                                 </div>
 
                                 <div className="item">
-                                    <label htmlFor="title">Título da Publicação*:{" "}</label>
+                                    <label htmlFor="title">Título da Publicação*: </label>
                                     <input type="text" name="title" id="title" placeholder="Título da Publicação" required />
                                 </div>
 
                                 <div className="item">
-                                    <label htmlFor="description">
-                                        Descrição da Publicação*:{" "}
-                                    </label>
+                                    <label htmlFor="description">Descrição da Publicação*: </label>
                                     <textarea name="description" id="description" maxLength={195} placeholder="Descrição da Publicação (Max.126)" required />
                                 </div>
 
                                 <div className="item">
-                                    <label htmlFor="categories">
-                                        Categoria da Publicação*:{" "}
-                                    </label>
+                                    <label htmlFor="categories">Categoria da Publicação*: </label>
                                     <select id="categories">
                                         <option>Animes</option>
                                         <option>Games</option>
@@ -238,37 +235,27 @@ const DashboardCreate = () => {
                                 </div>
 
                                 <div className="item">
-                                    <label htmlFor="image">
-                                        Imagem da Publicação*:{" "}
-                                    </label>
+                                    <label htmlFor="image">Imagem da Publicação*: </label>
                                     <input type="file" name="image" id="image" onChange={getImage} required />
                                 </div>
 
                                 <div className="item-markdown">
-                                    <label htmlFor="body">
-                                        Conteúdo da Publicação*:{" "}
-                                    </label>
+                                    <label htmlFor="body">Conteúdo da Publicação*: </label>
                                     <MarkdownEditor height={300} value={bodyPost} onChange={setBodyPost} className="markdown-editor" />
                                 </div>
 
                                 <div className="item">
-                                    <label htmlFor="citation">
-                                        Citação de Twitter:{" "}
-                                    </label>
+                                    <label htmlFor="citation">Citação de Twitter: </label>
                                     <textarea name="citation" id="citation" placeholder="Uma citação que foi encontrada no Twitter ou em outra fonte" />
                                 </div>
 
                                 <div className="item">
-                                    <label htmlFor="linkcitation">
-                                        Link da Citação:{" "}
-                                    </label>
+                                    <label htmlFor="linkcitation">Link da Citação: </label>
                                     <input name="linkcitation" id="linkcitation" placeholder="https://twitter.com/Yagasaki7K/example" />
                                 </div>
 
                                 <div className="item">
-                                    <label htmlFor="ytid">
-                                        ID do Youtube:{" "}
-                                    </label>
+                                    <label htmlFor="ytid">ID do Youtube: </label>
                                     <input name="ytid" id="ytid" placeholder="RfiKg_Sfg-o" />
                                 </div>
 
