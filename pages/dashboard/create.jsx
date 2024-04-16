@@ -94,10 +94,6 @@ const DashboardCreate = () => {
             location.href = "#publi";
             // setShowConfetti(true);
             toast.success('Publicação criada com sucesso! > https://onigirihardcore.com.br/' + slug);
-
-            setTimeout(() => {
-                location.assign(`/${slug}`);
-            }, 3000);
         }
     }
 
