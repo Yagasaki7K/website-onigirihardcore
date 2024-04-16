@@ -182,7 +182,10 @@ const DashboardCreate = () => {
                 );
                 console.log(percent);
                 toast.warning(percent + "%");
-                toast.success('Image uploaded!')
+
+                if (percent === 100) {
+                    toast.success('Image uploaded!')
+                }
             },
             (error) => console.log(error),
             () => {
