@@ -13,6 +13,7 @@ import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import dynamic from "next/dynamic";
 import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
+import Head from "next/head";
 
 
 const MarkdownEditor = dynamic(
@@ -180,7 +181,8 @@ const DashboardCreate = () => {
                     (snapshot.bytesTransferred / snapshot.totalBytes) * 100
                 );
                 console.log(percent);
-                /* show upload percentage? */
+                toast.warning(percent + "%");
+                toast.success('Image uploaded!')
             },
             (error) => console.log(error),
             () => {
@@ -194,6 +196,9 @@ const DashboardCreate = () => {
     if (render === true) {
         return (
             <DashboardDetails>
+                <Head>
+                    <title>Onigiri Hardcore | Dashboard</title>
+                </Head>
                 {/* {showConfetti && <Confetti gravity={0.5} height={1300} />} */}
                 <SideMenu />
                 <div className="content">
