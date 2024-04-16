@@ -93,7 +93,7 @@ const DashboardCreate = () => {
             await postService.addPost(NewPosts);
             location.href = "#publi";
             // setShowConfetti(true);
-            toast.success('🦄 Registro efetuado com sucesso!');
+            toast.success('Publicação criada com sucesso! > https://onigirihardcore.com.br/' + slug);
 
             setTimeout(() => {
                 location.assign(`/${slug}`);
