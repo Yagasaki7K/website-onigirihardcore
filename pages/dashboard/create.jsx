@@ -52,6 +52,15 @@ const DashboardCreate = () => {
         return authService.signOutGoogle();
     }
 
+    function copyToClipboard(title, slug) {
+        let copyText = title + '\nhttps://onigirihardcore.com.br/' + slug;
+
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+
+        navigator.clipboard.writeText(copyText);
+    }
+
     useEffect(() => {
         checkAuth()
             .then((result) => {
@@ -91,10 +100,7 @@ const DashboardCreate = () => {
         if (!author || !title || !description || !url || !categories) {
             toast.error('🦄 Por favor, preencha todos os dados!');
         } else {
-            let copyText = title + '\nhttps://onigirihardcore.com.br/' + slug;
-
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
+            copyToClipboard(title, slug);
 
             await postService.addPost(NewPosts);
             location.href = "#publi";
