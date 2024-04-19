@@ -53,7 +53,7 @@ const DashboardCreate = () => {
     }
 
     function copyToClipboard(title, slug) {
-        let copyText = title + '\nhttps://onigirihardcore.com.br/' + slug;
+        let copyText = title + '\n\nhttps://onigirihardcore.com.br/' + slug;
 
         navigator.clipboard.writeText(copyText);
     }
