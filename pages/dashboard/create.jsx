@@ -91,18 +91,14 @@ const DashboardCreate = () => {
         if (!author || !title || !description || !url || !categories) {
             toast.error('🦄 Por favor, preencha todos os dados!');
         } else {
+            let copyText = title + '\nhttps://onigirihardcore.com.br/' + slug;
+
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+
             await postService.addPost(NewPosts);
             location.href = "#publi";
-
-            if (title && slug) {
-                let copyText = title + '\nhttps://onigirihardcore.com.br/' + slug;
-
-                /* Select the text field */
-                copyText.select();
-                copyText.setSelectionRange(0, 99999);
-
-                toast.success('Publicação criada com sucesso! Link copiado no seu clipboard!');
-            }
+            toast.success('Publicação criada com sucesso! Link copiado no seu clipboard!');
 
             setTimeout(() => {
                 window.location.reload();
