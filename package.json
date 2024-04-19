@@ -7,7 +7,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "yagasaki": "npx browserslist@latest --update-db && yarn upgrade-interactive --latest",
+        "yagasaki": "npx update-browserslist-db@latest && yarn upgrade-interactive --latest",
         "commit": "yarn yagasaki && yarn run build && read -p 'Descriptions Commit: ' message && git add . && echo -n \"$message - \" && node getTime.js | xargs -I {} git commit -m \"$message - {}\" && git push"
     },
     "dependencies": {

@@ -94,13 +94,15 @@ const DashboardCreate = () => {
             await postService.addPost(NewPosts);
             location.href = "#publi";
 
-            let copyText = title + '\nhttps://onigirihardcore.com.br/' + slug;
+            if (title && slug) {
+                let copyText = title + '\nhttps://onigirihardcore.com.br/' + slug;
 
-            /* Select the text field */
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
+                /* Select the text field */
+                copyText.select();
+                copyText.setSelectionRange(0, 99999);
 
-            toast.success('Publicação criada com sucesso! Link copiado no seu clipboard!');
+                toast.success('Publicação criada com sucesso! Link copiado no seu clipboard!');
+            }
 
             setTimeout(() => {
                 window.location.reload();
