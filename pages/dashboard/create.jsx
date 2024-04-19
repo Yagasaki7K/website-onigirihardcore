@@ -55,9 +55,6 @@ const DashboardCreate = () => {
     function copyToClipboard(title, slug) {
         let copyText = title + '\nhttps://onigirihardcore.com.br/' + slug;
 
-        copyText.select();
-        copyText.setSelectionRange(0, 99999);
-
         navigator.clipboard.writeText(copyText);
     }
 
