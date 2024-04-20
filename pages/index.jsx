@@ -14,15 +14,36 @@ import 'keen-slider/keen-slider.min.css'
 import Slide from '../src/components/Slide'
 import postService from '../services/post.service'
 
-export async function getStaticProps() {
+let cachedData = null;
+
+async function fetchPostData() {
     const data = await postService.getAllPosts();
-    const postData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id, date: String(doc.data().date) }));
+    return data.docs.map((doc) => ({ ...doc.data(), id: doc.id, date: String(doc.data().date) }));
+}
+
+export async function getStaticProps() {
+    if (cachedData) {
+        return {
+            props: {
+                postData: cachedData,
+            },
+            revalidate: 60,
+        };
+    }
+
+    // Se não, recuperamos os dados do Firebase
+    const postData = await fetchPostData();
+
+    // Atualizamos o cache local apenas se houver novos itens
+    if (!cachedData || postData.length !== cachedData.length) {
+        cachedData = postData;
+    }
 
     return {
         props: {
-            postData,
+            postData: cachedData,
         },
-        revalidate: 60, // Add revalidation time if needed
+        revalidate: 60,
     };
 }
 

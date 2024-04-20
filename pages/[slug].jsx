@@ -17,25 +17,43 @@ const MarkdownPreview = dynamic(
     { ssr: false }
 );
 
-export async function getStaticPaths() {
-    const data = await postService.getAllPosts();
-    const paths = data.docs.map((doc) => ({ params: { slug: doc.data().slug } }));
+let cachedData = null;
 
+async function fetchPostData() {
+    const data = await postService.getAllPosts();
+    return data.docs.map((doc) => ({ ...doc.data(), id: doc.id, date: String(doc.data().date) }));
+}
+
+export async function getStaticPaths() {
     return {
-        paths,
-        fallback: false,
+        paths: [],
+        fallback: true,
     };
 }
 
 export async function getStaticProps() {
-    const data = await postService.getAllPosts();
-    const postData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id, date: String(doc.data().date) }));
+    if (cachedData) {
+        return {
+            props: {
+                postData: cachedData,
+            },
+            revalidate: 60,
+        };
+    }
+
+    // Se não, recuperamos os dados do Firebase
+    const postData = await fetchPostData();
+
+    // Atualizamos o cache local apenas se houver novos itens
+    if (!cachedData || postData.length !== cachedData.length) {
+        cachedData = postData;
+    }
 
     return {
         props: {
-            postData,
+            postData: cachedData,
         },
-        revalidate: 60, // Add revalidation time if needed
+        revalidate: 60,
     };
 }
 
