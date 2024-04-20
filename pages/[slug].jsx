@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+/* eslint-disable react/prop-types */
+import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
 import Header from '../src/components/Header'
@@ -16,21 +17,35 @@ const MarkdownPreview = dynamic(
     { ssr: false }
 );
 
-const Post = () => {
+export async function getStaticPaths() {
+    const data = await postService.getAllPosts();
+    const paths = data.docs.map((doc) => ({ params: { slug: doc.data().slug } }));
+
+    return {
+        paths,
+        fallback: false,
+    };
+}
+
+export async function getStaticProps() {
+    const data = await postService.getAllPosts();
+    const postData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id, date: String(doc.data().date) }));
+
+    return {
+        props: {
+            postData,
+        },
+        revalidate: 60, // Add revalidation time if needed
+    };
+}
+
+const Post = ({ postData }) => {
     const router = useRouter()
     const { slug } = router.query
 
-    const [Post, setPost] = useState([])
-
     useEffect(() => {
-        getPost()
         dontCopy()
     }, [])
-
-    const getPost = async () => {
-        const data = await postService.getAllPosts()
-        setPost(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-    }
 
     const dontCopy = () => {
         const preventRightClick = (e) => {
@@ -65,7 +80,7 @@ const Post = () => {
             <SlugDetails>
                 {
                     // eslint-disable-next-line react/prop-types
-                    Post && Post.map((post, index) => (
+                    postData && postData.map((post, index) => (
                         post.slug === slug ? (
                             <div key={index}>
                                 <NextSeo
@@ -129,4 +144,5 @@ const Post = () => {
         </>
     )
 }
+
 export default Post

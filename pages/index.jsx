@@ -1,10 +1,9 @@
-import { useEffect, useState } from 'react'
+/* eslint-disable react/prop-types */
 import { NextSeo } from 'next-seo'
 import Image from 'next/image'
 
 import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
-import postService from '../services/post.service'
 
 import TechnologiesDetails from '../src/components/TechnologiesDetails'
 import ContentDetails from '../src/components/ContentDetails'
@@ -13,32 +12,35 @@ import LastNewsDetails from '../src/components/LastNewsDetails'
 
 import 'keen-slider/keen-slider.min.css'
 import Slide from '../src/components/Slide'
+import postService from '../services/post.service'
 
-export default function Home() {
-    const [Posts, setPosts] = useState([])
+export async function getStaticProps() {
+    const data = await postService.getAllPosts();
+    const postData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id, date: String(doc.data().date) }));
 
-    useEffect(() => {
-        getPosts()
-    }, [])
+    return {
+        props: {
+            postData,
+        },
+        revalidate: 60, // Add revalidation time if needed
+    };
+}
 
-    const getPosts = async () => {
-        const data = await postService.getAllPosts()
-        setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-    }
+export default function Home({ postData }) {
 
-    let animeContent = Posts.filter(posts => posts.categories === 'Animes')
+    let animeContent = postData.filter(posts => posts.categories === 'Animes')
     let firstAnime = animeContent.slice(0, 1)
     let lastAnime = animeContent.slice(1, 4)
 
-    let gamesContent = Posts.filter(posts => posts.categories === 'Games')
+    let gamesContent = postData.filter(posts => posts.categories === 'Games')
     let firstGames = gamesContent.slice(0, 1)
     let lastGames = gamesContent.slice(1, 4)
 
-    let moviesContent = Posts.filter(posts => posts.categories === 'Movies')
+    let moviesContent = postData.filter(posts => posts.categories === 'Movies')
     let firstMovies = moviesContent.slice(0, 1)
     let lastMovies = moviesContent.slice(1, 4)
 
-    let technologies = Posts.filter(posts => posts.categories === 'Technologies')
+    let technologies = postData.filter(posts => posts.categories === 'Technologies')
 
     return (
         <>
@@ -241,7 +243,7 @@ export default function Home() {
                             <p>Últimas Notícias</p>
                         </div>
                         {
-                            Posts && Posts.slice(0, 15).map((post, index) => (
+                            postData && postData.slice(0, 15).map((post, index) => (
                                 <div className="content" key={index}>
                                     <div className="leftContent">
                                         <a href={post.slug}>
