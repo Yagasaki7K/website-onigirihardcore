@@ -101,7 +101,7 @@ const DashboardCreate = () => {
 
             await postService.addPost(NewPosts);
             location.href = "#publi";
-            toast.success('Publicação criada com sucesso! Link copiado no seu clipboard!');
+            toast.success('Publicação criada com sucesso!\nLink copiado no seu clipboard!');
 
             setTimeout(() => {
                 window.location.reload();

@@ -90,14 +90,14 @@ const DashboardDetails = styled.div`
                 background: var(--green);
                 border: none;
                 padding: 0.8rem;
-                color: var(--font-black);
+                color: var(--white);
             }
 
             .clrbtn {
                 background: var(--yellow);
                 border: none;
                 padding: 0.8rem;
-                color: var(--font-black);
+                color: var(--white);
             }
         }
 
