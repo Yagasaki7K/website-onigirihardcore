@@ -60,9 +60,8 @@ const Header = () => {
                                         <Link href="/#animes">
                                             Animes {`&`} HQ{`'`}s
                                         </Link>
-                                        {/* <Link href="/csgo">CSGO ~ HLTV News</Link> */}
                                         <Link href="https://onigiri-hardcore.blogspot.com/" target="_blank" rel="noreferrer">OH: Arquivos</Link>
-                                        <Link href="https://kalify.vercel.app" target="_blank" rel="noreferrer">Kalify Inc</Link>
+                                        <Link href="https://github.com/Yagasaki7K/website-onigirihardcore/raw/main/onigirihardcore.apk" target="_blank" rel="noreferrer"><i className="uil uil-android"></i> Download App</Link>
                                     </div>
                                 </div>
                             </motion.div>
@@ -109,14 +108,11 @@ const Header = () => {
                                         Animes {`&`} HQ{`'`}s
                                     </Link>
                                 </li>
-                                {/* <li>
-                                    <Link href="/csgo">CSGO ~ HLTV News</Link>
-                                </li> */}
                                 <li>
                                     <Link href="https://onigiri-hardcore.blogspot.com/" target="_blank" rdedl="noreferrer">OH: Arquivos</Link>
                                 </li>
                                 <li>
-                                    <Link href="https://kalify.vercel.app" target="_blank" rel="noreferrer">Kalify Inc</Link>
+                                    <Link href="https://github.com/Yagasaki7K/website-onigirihardcore/raw/main/onigirihardcore.apk" target="_blank" rel="noreferrer"><i className="uil uil-android"></i> Download App</Link>
                                 </li>
                                 <li>
                                     <Link href="https://twitter.com/OHNewsOficial" target="_blank" rel="noreferrer">
