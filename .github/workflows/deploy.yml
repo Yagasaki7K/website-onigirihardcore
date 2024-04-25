@@ -2,7 +2,9 @@ name: Deploy on Weekend
 
 on:
   schedule:
-    - cron: '0 20 * * 5-7'
+    - cron: '0 20 * * 5'
+    - cron: '0 20 * * 6'
+    - cron: '0 20 * * 0'
 
 jobs:
   deploy:
