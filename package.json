@@ -1,45 +1,45 @@
 {
-    "name": "onigirihardcore",
-    "version": "1.2.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev --turbo",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint",
-        "yagasaki": "npx update-browserslist-db@latest && yarn upgrade-interactive --latest",
-        "commit": "yarn yagasaki && yarn run build && read -p 'Descriptions Commit: ' message && git add . && echo -n \"$message - \" && node getTime.js | xargs -I {} git commit -m \"$message - {}\" && git push"
-    },
-    "dependencies": {
-        "@emotion/react": "^11.11.4",
-        "@emotion/styled": "^11.11.5",
-        "@mui/material": "^5.15.15",
-        "@uiw/react-markdown-preview": "^5.1.1",
-        "@uiw/react-md-editor": "^4.0.4",
-        "babel-loader": "^9.1.3",
-        "babel-plugin-transform-remove-imports": "^1.7.1",
-        "dotenv": "^16.4.5",
-        "firebase": "^10.11.0",
-        "framer-motion": "^11.1.7",
-        "hltv-api": "^3.0.3",
-        "keen-slider": "^6.8.6",
-        "moment": "^2.30.1",
-        "next": "14.2.3",
-        "next-remove-imports": "^1.0.12",
-        "next-seo": "^6.5.0",
-        "next-transpile-modules": "^10.0.1",
-        "prop-types": "^15.8.1",
-        "react": "18.2.0",
-        "react-confetti": "^6.1.0",
-        "react-dom": "18.2.0",
-        "react-modal": "^3.16.1",
-        "react-ticker": "^1.3.2",
-        "sonner": "^1.4.41",
-        "styled-components": "^6.1.8"
-    },
-    "devDependencies": {
-        "eslint": "^9.1.1",
-        "eslint-config-next": "14.2.3",
-        "eslint-plugin-react": "^7.34.1"
-    }
+  "name": "onigirihardcore",
+  "version": "1.2.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbo",
+    "vercel": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "yagasaki": "bun update",
+    "commit": "bun yagasaki && bun run vercel && read -p 'Descriptions Commit: ' message && git add . && echo -n \"$message - \" && node getTime.js | xargs -I {} git commit -m \"$message - {}\" && git push"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.15",
+    "@uiw/react-markdown-preview": "^5.1.1",
+    "@uiw/react-md-editor": "^4.0.4",
+    "babel-loader": "^9.1.3",
+    "babel-plugin-transform-remove-imports": "^1.7.1",
+    "dotenv": "^16.4.5",
+    "firebase": "^10.11.0",
+    "framer-motion": "^11.1.7",
+    "hltv-api": "^3.0.3",
+    "keen-slider": "^6.8.6",
+    "moment": "^2.30.1",
+    "next": "14.2.3",
+    "next-remove-imports": "^1.0.12",
+    "next-seo": "^6.5.0",
+    "next-transpile-modules": "^10.0.1",
+    "prop-types": "^15.8.1",
+    "react": "18.2.0",
+    "react-confetti": "^6.1.0",
+    "react-dom": "18.2.0",
+    "react-modal": "^3.16.1",
+    "react-ticker": "^1.3.2",
+    "sonner": "^1.4.41",
+    "styled-components": "^6.1.8"
+  },
+  "devDependencies": {
+    "eslint": "^9.1.1",
+    "eslint-config-next": "14.2.3",
+    "eslint-plugin-react": "^7.34.1"
+  }
 }

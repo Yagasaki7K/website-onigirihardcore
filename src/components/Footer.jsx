@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import FooterDetails from './FooterDetails';
+import { useRouter } from 'next/router';
 
 export default function Footer() {
+    const router = useRouter();
+    const uwuUrl = router.asPath;
+    const [uwu, setUwu] = useState(false);
+
+    useEffect(() => {
+        if (uwuUrl !== undefined && uwuUrl !== null) {
+            if (uwuUrl.includes('uwu=true')) {
+                setUwu(true);
+            } else {
+                setUwu(false);
+            }
+        }
+    }, [uwuUrl]);
+
     return (
         <FooterDetails>
             <div className="imgfooter">
                 <a href="/">
-                    <img src="/logotipo.png" alt="logo" />
+                    {
+                        uwu ? (
+                            <img src="/uwu.png" className="uwu" alt="logo" />
+                        ) : (
+                            <img src="/logotipo.png" alt="logo" />
+                        )
+                    }
                 </a>
             </div>
 

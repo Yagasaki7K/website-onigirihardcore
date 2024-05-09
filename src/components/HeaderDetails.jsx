@@ -6,11 +6,14 @@ export const HeaderDetails = styled.div`
         justify-content: center;
         align-items: center;
         background: var(--background);
+        padding: 1rem 5rem;
 
-        padding: 10px;
+        .logotipo {
+            width: 70%;
+        }
 
-        .logotipo img{
-            width: 60%;
+        .uwu {
+            width: 70%;
         }
 
         @media (max-width: 1200px) {
@@ -138,11 +141,10 @@ export const HeaderMobile = styled.div`
         align-items: center;
         justify-content: center;
 
-        img{
+        img {
             height: 55px;
         }
     }
-
 
     .menu {
         width: 50px;
@@ -189,7 +191,7 @@ export const HeaderMobile = styled.div`
 
             position: relative;
 
-            p{
+            p {
                 font-size: 1rem;
 
                 color: var(--white);

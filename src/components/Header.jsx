@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { HeaderDetails, HeaderMobile } from "./HeaderDetails";
 
 import { useState, useEffect, useRef } from 'react';
@@ -30,17 +31,41 @@ const Header = () => {
         };
     }, [])
 
+    const router = useRouter();
+    const uwuUrl = router.asPath;
+    const [uwu, setUwu] = useState(false);
+
+    useEffect(() => {
+        if (uwuUrl !== undefined && uwuUrl !== null) {
+            if (uwuUrl.includes('uwu=true')) {
+                setUwu(true);
+            } else {
+                setUwu(false);
+            }
+        }
+    }, [uwuUrl]);
+
     return (
         <>
             {width <= 600 ? (
                 <HeaderMobile ref={drawnerRef}>
                     {/*<MenuOutlined className={open ? `menu active` : `menu`} onClick={() => setOpen(!open)} />*/}
                     <div className="logo-drawner">
-                        <img
-                            src="/logotipo.png"
-                            className="logotipo"
-                            alt="logo"
-                        />
+                        {
+                            uwu ? (
+                                <img
+                                    src="/uwu.png"
+                                    className="logotipo"
+                                    alt="logo"
+                                />
+                            ) : (
+                                <img
+                                    src="/logotipo.png"
+                                    className="logotipo"
+                                    alt="logo"
+                                />
+                            )
+                        }
                     </div>
                     <AnimatePresence>
                         {open && (
@@ -71,12 +96,14 @@ const Header = () => {
             ) : (
                 <HeaderDetails>
                     <div className="header">
-                        <Link href="/" className="logotipo">
-                            <img
-                                src="/logotipo.png"
-                                className="logotipo"
-                                alt="logo"
-                            />
+                        <Link href="/">
+                            {
+                                uwu ? (
+                                    <img src="/uwu.png" className="uwu" alt="logo" />
+                                ) : (
+                                    <img src="/logotipo.png" className="logotipo" alt="logo" />
+                                )
+                            }
                         </Link>
                         <Link href="/">
                             <img src="/anuncio.png" className="advice" alt="Anuncio" />

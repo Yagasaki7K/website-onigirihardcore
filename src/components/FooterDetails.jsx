@@ -29,6 +29,11 @@ const FooterDetails = styled.div`
                 margin-top: 0rem;
             }
         }
+
+        .uwu {
+            width: 35rem;
+            height: 7.5rem;
+        }
     }
 
     .footer {
