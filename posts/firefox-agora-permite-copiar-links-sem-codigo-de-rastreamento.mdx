@@ -1,0 +1,51 @@
+---
+date: '2024-05-16:17:50:00'
+title: Firefox agora permite copiar links sem código de rastreamento
+description: 'O Google Chrome e o Microsoft Edge têm mais usuários, mas o Mozilla Firefox ainda existe. Na versão mais recente para desktops, a 126, o navegador ganhou funcionalidades pequenas, mas importantes. Entre elas está uma opção que copia links na barra de endereços sem que parâmetros de rastreamento venham juntos.'
+image: https://t.ctcdn.com.br/02xeCsp4UgjbIOKWlVLGgsSwTF0=/1024x576/smart/i722888.png
+categories: 'Technologies'
+ytid: ''
+author: "Anderson \"Yagasaki\" Marlon"
+---
+
+O Google Chrome e o Microsoft Edge têm mais usuários, mas o Mozilla Firefox ainda existe. Na versão mais recente para desktops, a 126, o navegador ganhou funcionalidades pequenas, mas importantes. Entre elas está uma opção que copia links na barra de endereços sem que parâmetros de rastreamento venham juntos.
+
+Esses parâmetros podem ajudar o site a identificar a origem de um acesso, informando se ele veio de uma newsletter por e-mail ou de uma rede social, por exemplo. Eles também podem passar dados valiosos para campanhas de marketing, testes de desempenho, estratégias de conteúdo, entre outras aplicações.
+
+## Botão contra links “poluídos”
+Há quem se preocupe com a perspectiva de essas URLs rastreáveis prejudicarem a sua privacidade de alguma forma. Mas o incômodo mais imediato reside no fato de que os parâmetros podem transformar endereços relativamente curtos em URLs gigantes.
+
+Para que você possa copiar apenas o endereço útil da página, o Firefox 126 introduziu um botão para isso. Basta selecionar a URL, clicar nela com o botão direito do mouse e escolher “Copiar sem rastreamento de sites”.
+
+Em meu teste usei a URL abaixo, com códigos de rastreamento:
+
+```
+https://www.mozilla.org/pt-BR/firefox/126.0/whatsnew/?oldversion=125.0.3&utm_medium=firefox-desktop&utm_source=update&utm_campaign=126
+```
+
+Com o novo recurso, ela foi copiada assim, sem rastreamento:
+
+```
+https://www.mozilla.org/pt-BR/firefox/126.0/whatsnew/
+```
+
+Nos testes que eu fiz para esta publicação, o botão funcionou perfeitamente. No início, temi que o navegador fosse ignorar instruções seguidas de cerquilha (#), mas isso não ocorreu. Seria um erro, pois esse parâmetro serve para levar a um trecho específico da página.
+
+A nova função está disponível para as versões do Mozilla Firefox no Windows, macOS e Linux.
+
+![](https://pbs.twimg.com/media/GNpecGWXMAEjtxp?format=jpg&name=large)
+
+## Outras novidades do Firefox 126
+As demais características do Firefox 126 consistem em pequenos incrementos. Entre eles estão:
+
+- suporte a compactação de conteúdo via Zstandard (ou zstd), uma alternativa aos padrões Brotli e GZIP que é utilizada pelo Facebook, por exemplo;
+- suporte a aceleração de hardware via AV1 em Macs com chip Apple M3;
+- suporte à tecnologia Nvidia RTX Video HDR, que converte automaticamente vídeos SDR em HDR10 (requer GPU série RTX 2000 ou superior);
+- suporte à tecnologia Nvidia RTX Video Super Resolution, capaz de ampliar a resolução de um vídeo, ou seja, de fazer upscaling (requer GPU série RTX 2000 ou superior).
+
+A incorporação das tecnologias da Nvidia chegou com certo atraso, afinal, elas existem no Chrome e no Edge pelo menos desde o começo do ano. Bom, melhor tarde do que mais tarde.
+
+## Como baixar o Mozilla Firefox
+Se você já usa o Firefox para desktop, precisa apenas aguardar pela atualização automática, que já está sendo liberada.
+
+Para uma instalação nova, o [Firefox pode ser baixado no site oficial](https://www.mozilla.org/pt-BR/firefox/new/).

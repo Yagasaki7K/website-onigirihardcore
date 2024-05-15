@@ -11,7 +11,7 @@ import matter from 'gray-matter';
 import formatDate from '../src/utils/formatDate';
 import calculateReadingTime from '../src/utils/calculateReadingTime';
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     // Get files from the posts dir
     const files = fs.readdirSync(path.join('posts'))
 

@@ -17,7 +17,7 @@ import LastNewsDetails from '../src/components/LastNewsDetails'
 import 'keen-slider/keen-slider.min.css'
 import Slide from '../src/components/Slide'
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     // Get files from the posts dir
     const files = fs.readdirSync(path.join('posts'))
 
