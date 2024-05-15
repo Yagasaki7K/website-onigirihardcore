@@ -120,6 +120,16 @@ const SlugDetails = styled.div`
             text-align: justify;
             font-size: 1.1rem;
             line-height: 1.5rem;
+
+            .uil-share {
+                cursor: pointer;
+                color: var(--green);
+                transition: 1s;
+
+                &:hover {
+                    color: var(--blue);
+                }
+            }
         }
 
         .title__content {

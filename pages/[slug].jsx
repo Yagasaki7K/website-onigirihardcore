@@ -1,29 +1,70 @@
 'use client'
-import React, { useEffect/*, useState*/ } from 'react'
-//import { useRouter } from 'next/router'
-import PropTypes from 'prop-types'
+import React, { useEffect, useState } from 'react'
 
+import fs from 'fs';
+import path from 'path';
 import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
 import SlugDetails from '../src/components/SlugDetails'
-import postService from '../services/post.service'
-import Image from 'next/image'
-import dynamic from 'next/dynamic'
+import { toast } from 'sonner'
 import Head from 'next/head'
 import { NextSeo } from 'next-seo'
+import { marked } from 'marked';
+import matter from 'gray-matter';
+import formatDate from '../src/utils/formatDate';
 
-// eslint-disable-next-line react/prop-types
-const MarkdownPreview = dynamic(
-    () => import("@uiw/react-markdown-preview").then((mod) => mod.default),
-    { ssr: false }
-);
+export const getStaticPaths = async () => {
+    const files = fs.readdirSync(path.join('posts'));
 
-const Post = (/*{ currentPost }*/) => {
-    const post = null /*currentPost[0]*/
+    const paths = files.map((filename) => {
+        const slug = filename.replace('.mdx', '');
+        return {
+            params: {
+                slug: slug,
+            },
+        };
+    });
 
+    return {
+        paths,
+        fallback: false,
+    };
+}
+
+export const getStaticProps = async ({ params }) => {
+    if (!params || !params.slug) {
+        return {
+            notFound: true,
+        };
+    }
+
+    const { slug } = params;
+    const filePath = path.join('posts', `${slug}.mdx`);
+    const markdownWithMeta = fs.readFileSync(filePath, 'utf-8');
+    const { data: frontmatter, content } = matter(markdownWithMeta);
+    const renderedContent = await marked(content);
+
+    return {
+        props: {
+            frontmatter,
+            slug,
+            content: renderedContent,
+        },
+    };
+}
+
+const Post = ({ frontmatter, slug, content }) => {
+    const [htmlContent, setHtmlContent] = useState(null);
     useEffect(() => {
         dontCopy()
-    }, [])
+
+        const fetchContent = async () => {
+            const markedContent = content;
+            setHtmlContent(markedContent);
+        };
+
+        fetchContent();
+    }, [content])
 
     const dontCopy = () => {
         const preventRightClick = (e) => {
@@ -51,24 +92,31 @@ const Post = (/*{ currentPost }*/) => {
         };
     }
 
+    function copyToClipboard() {
+        let copyText = frontmatter.title + '\n\nhttps://onigirihardcore.com.br/' + slug;
+
+        toast.success('Link copiado no seu clipboard!');
+        navigator.clipboard.writeText(copyText);
+    }
+
     return (
         <>
-            <Header/>
+            <Header />
             <SlugDetails>
                 <NextSeo
-                    title={post.title}
-                    description={post.description}
-                    canonical={`https://yagasaki.dev/`}
+                    title={frontmatter.title}
+                    description={frontmatter.description}
+                    canonical={`https://onigirihardcore.com.br/` + slug}
                     openGraph={{
-                        url: 'https://yagasaki.dev/',
-                        title: post.title,
-                        description: post.description,
+                        url: 'https://onigirihardcore.com.br/' + slug,
+                        title: frontmatter.title,
+                        description: frontmatter.description,
                         images: [
                             {
-                                url: post.imageUrl,
+                                url: frontmatter.image,
                                 width: 460,
                                 height: 460,
-                                alt: post.title,
+                                alt: frontmatter.title,
                                 type: 'image/jpeg' || 'image/png',
                             }
                         ],
@@ -82,30 +130,24 @@ const Post = (/*{ currentPost }*/) => {
                 />
 
                 <Head>
-                    <title>{post.title + ' | Onigiri Hardcore'}</title>
+                    <title>{frontmatter.title + ' | Onigiri Hardcore'}</title>
                 </Head>
 
-                {post.imageUrl && (<Image src={post.imageUrl} alt={post.title} width={1024} height={768} />)}
+                {frontmatter.image && (<img src={frontmatter.image} alt={frontmatter.title} width={1024} height={768} />)}
 
-                <section key={post.id}>
-                    <p className="block__content">{post.moreDate} | {post.categories === 'Movies' ? 'Filmes & Séries' : null || post.categories === 'Games' ? 'Video Games' : null || post.categories === 'Technologies' ? 'Ciência & Tecnologia' : null || post.categories === 'Development' ? '4Devs' : null || post.categories === 'Animes' ? 'Animes & HQs' : null} | {post.author}</p>
+                <section key={frontmatter.id}>
+                    <p className="block__content">{formatDate(frontmatter.date)} | {frontmatter.categories === 'Movies' ? 'Filmes & Séries' : null || frontmatter.categories === 'Games' ? 'Video Games' : null || frontmatter.categories === 'Technologies' ? 'Ciência & Tecnologia' : null || frontmatter.categories === 'Development' ? '4Devs' : null || frontmatter.categories === 'Animes' ? 'Animes & HQs' : null} | {frontmatter.author} | <i onClick={copyToClipboard} className="uil uil-share"></i></p>
 
-                    <h1 className="title__content">{post.title}</h1>
+                    <h1 className="title__content">{frontmatter.title}</h1>
 
-                    <div className="image__content"><MarkdownPreview source={post.bodyPost} /></div>
-
-                    {post.citation != '' ? (
-                        <a href={post.linkCitation} className="citation" target="_blank" rel="noreferrer">
-                            <p className="block__content">“{post.citation}”</p>
-                        </a>
-                    ) : null}
+                    <div className="image__content"><div dangerouslySetInnerHTML={({ __html: htmlContent || '' })} /></div>
 
                     <p className="keepUpdate">Mantenha-se atualizado sobre todas as novidades do <a href="/">Onigiri Hardcore</a> e siga-nos também no <a href="https://twitter.com/OHNewsOficial" target='_blank' rel="noreferrer">Twitter</a> para não perder nenhum destaque da semana!</p>
 
-                    {post.ytid ?
-                        <iframe width="550" height="480" src={'https://www.youtube.com/embed/' + post?.ytid} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : null}
+                    {frontmatter.ytid ?
+                        <iframe width="550" height="480" src={'https://www.youtube.com/embed/' + frontmatter.ytid} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : null}
                 </section>
-                <Footer/>
+                <Footer />
             </SlugDetails>
         </>
     )
@@ -122,16 +164,16 @@ const Post = (/*{ currentPost }*/) => {
         date: doc.data().date instanceof Date ? doc.data().date.toString() : null,
     }))
 
-    const currentPost = posts.filter(post => post.slug === slug)
+    const currentPost = posts.filter(post => frontmatter.slug === slug)
 
     return {
         props: {
-            currentPost 
+            currentPost
         }
     }
 }
 
-Post.propTypes = {
+frontmatter.propTypes = {
     currentPost: PropTypes.object.isRequired,
 }*/
 

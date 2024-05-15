@@ -85,7 +85,6 @@ const Header = () => {
                                         <Link href="/#animes">
                                             Animes {`&`} HQ{`'`}s
                                         </Link>
-                                        <Link href="https://onigiri-hardcore.blogspot.com/" target="_blank" rel="noreferrer">OH: Arquivos</Link>
                                         <Link href="https://github.com/Yagasaki7K/website-onigirihardcore/raw/main/onigirihardcore.apk" target="_blank" rel="noreferrer"><i className="uil uil-android"></i> Download App</Link>
                                     </div>
                                 </div>
@@ -134,9 +133,6 @@ const Header = () => {
                                     <Link href="/#animes">
                                         Animes {`&`} HQ{`'`}s
                                     </Link>
-                                </li>
-                                <li>
-                                    <Link href="https://onigiri-hardcore.blogspot.com/" target="_blank" rdedl="noreferrer">OH: Arquivos</Link>
                                 </li>
                                 <li>
                                     <Link href="https://github.com/Yagasaki7K/website-onigirihardcore/raw/main/onigirihardcore.apk" target="_blank" rel="noreferrer"><i className="uil uil-android"></i> Download App</Link>

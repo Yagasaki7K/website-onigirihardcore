@@ -1,6 +1,10 @@
 /* eslint-disable react/prop-types */
 import { NextSeo } from 'next-seo'
-import Image from 'next/image'
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter'
+import calculateReadingTime from '../src/utils/calculateReadingTime';
+import formatDate from '../src/utils/formatDate'
 
 import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
@@ -12,56 +16,60 @@ import LastNewsDetails from '../src/components/LastNewsDetails'
 
 import 'keen-slider/keen-slider.min.css'
 import Slide from '../src/components/Slide'
-import postService from '../services/post.service'
-
-let cachedData = null;
-
-async function fetchPostData() {
-    const data = await postService.getAllPosts();
-    return data.docs.map((doc) => ({ ...doc.data(), id: doc.id, date: String(doc.data().date) }));
-}
 
 export async function getStaticProps() {
-    if (cachedData) {
+    // Get files from the posts dir
+    const files = fs.readdirSync(path.join('posts'))
+
+    // Get slug and frontmatter from posts
+    const posts = files.map((filename) => {
+        // Create slug
+        let slug = '';
+        slug = filename.replace('.mdx', '');
+
+        const markdownWithMeta = fs.readFileSync(
+            path.join('posts', filename),
+            'utf-8'
+        )
+
+        const { data: frontmatter, content: markdownContent } = matter(markdownWithMeta)
+        const readingTime = calculateReadingTime(markdownContent);
+
         return {
-            props: {
-                postData: cachedData,
-            },
-            revalidate: 60,
-        };
-    }
-
-    // Se não, recuperamos os dados do Firebase
-    const postData = await fetchPostData();
-
-    // Atualizamos o cache local apenas se houver novos itens
-    if (!cachedData || postData.length !== cachedData.length) {
-        cachedData = postData;
-    }
+            slug,
+            frontmatter,
+            readingTime,
+        }
+    })
 
     return {
         props: {
-            postData: cachedData,
+            postData: posts.sort((a, b) => {
+                if (a.frontmatter.date && b.frontmatter.date) {
+                    return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime();
+                } else {
+                    console.error('Erro: Uma das datas está ausente nos posts.');
+                    return 0;
+                }
+            }),
         },
-        revalidate: 60,
-    };
+    }
 }
 
 export default function Home({ postData }) {
-
-    let animeContent = postData.filter(posts => posts.categories === 'Animes')
+    let animeContent = postData.filter(posts => posts.frontmatter.categories === 'Animes')
     let firstAnime = animeContent.slice(0, 1)
     let lastAnime = animeContent.slice(1, 4)
 
-    let gamesContent = postData.filter(posts => posts.categories === 'Games')
+    let gamesContent = postData.filter(posts => posts.frontmatter.categories === 'Games')
     let firstGames = gamesContent.slice(0, 1)
     let lastGames = gamesContent.slice(1, 4)
 
-    let moviesContent = postData.filter(posts => posts.categories === 'Movies')
+    let moviesContent = postData.filter(posts => posts.frontmatter.categories === 'Movies')
     let firstMovies = moviesContent.slice(0, 1)
     let lastMovies = moviesContent.slice(1, 4)
 
-    let technologies = postData.filter(posts => posts.categories === 'Technologies')
+    let technologies = postData.filter(posts => posts.frontmatter.categories === 'Technologies')
 
     return (
         <>
@@ -93,7 +101,7 @@ export default function Home({ postData }) {
 
             <Header />
 
-            <Slide />
+            <Slide posts={postData} />
 
             <ContentDetails>
                 <CategoriesDetails>
@@ -104,41 +112,35 @@ export default function Home({ postData }) {
 
                         {
                             firstAnime && firstAnime.map(post => (
-                                post.categories === 'Animes' ? (
-                                    <a className='categories-content' href={post.slug} key={post.id}>
-                                        <Image src={post.imageUrl} alt={post?.name} width={500} height={500} loading='lazy' />
-                                        <h1>{post.title.length > 35 ? post.title.slice(0, 55) + "..." : post.title}</h1>
-                                        {/* <h1>{post.smalltitle}</h1> */}
+                                <a className='categories-content' href={post.slug} key={post.id}>
+                                    <img src={post.frontmatter.image} alt={post.frontmatter.title} width={500} height={500} loading='lazy' />
+                                    <h1>{post.frontmatter.title.length > 35 ? post.frontmatter.title.slice(0, 55) + "..." : post.frontmatter.title}</h1>
+                                    {/* <h1>{post.smalltitle}</h1> */}
 
-                                        <span>
-                                            <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                            <p>{post.description}</p>
-                                        </span>
-                                    </a>
-                                ) : (
-                                    null
-                                )
-                            ))
+                                    <span>
+                                        <i className="uil uil-clock-nine">&nbsp;{formatDate(post.frontmatter.date)}</i>
+                                        <p>{post.frontmatter.description}</p>
+                                    </span>
+                                </a>
+                            )
+                            )
                         }
 
                         <div className="posts">
                             {
                                 lastAnime && lastAnime.map(post => (
-                                    post.categories === 'Animes' ? (
-                                        <div className="post" key={post.id}>
-                                            <a href={post.slug}>
-                                                <Image src={post.imageUrl} alt={post?.name} width={150} height={150} loading='lazy' />
+                                    <div className="post" key={post.id}>
+                                        <a href={post.slug}>
+                                            <img src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} loading='lazy' />
 
-                                                <div className="post-side">
-                                                    <h3>{post.title}</h3>
-                                                    <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    ) : (
-                                        null
-                                    )
-                                ))
+                                            <div className="post-side">
+                                                <h3>{post.frontmatter.title}</h3>
+                                                <i className="uil uil-clock-nine">&nbsp;{formatDate(post.frontmatter.date)}</i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                )
+                                )
                             }
                         </div>
                     </div>
@@ -150,41 +152,34 @@ export default function Home({ postData }) {
 
                         {
                             firstGames && firstGames.map(post => (
-                                post.categories === 'Games' ? (
-                                    <a className='categories-content' href={post.slug} key={post.id}>
-                                        <Image src={post.imageUrl} alt={post?.name} width={500} height={500} loading='lazy' />
-                                        <h1>{post.title.length > 35 ? post.title.slice(0, 55) + "..." : post.title}</h1>
-                                        {/* <h1>{post.smalltitle}</h1> */}
+                                <a className='categories-content' href={post.slug} key={post.id}>
+                                    <img src={post.frontmatter.image} alt={post.frontmatter.title} width={500} height={500} loading='lazy' />
+                                    <h1>{post.frontmatter.title.length > 35 ? post.frontmatter.title.slice(0, 55) + "..." : post.frontmatter.title}</h1>
+                                    {/* <h1>{post.smalltitle}</h1> */}
 
-                                        <span>
-                                            <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                            <p>{post.description}</p>
-                                        </span>
-                                    </a>
-                                ) : (
-                                    null
-                                )
+                                    <span>
+                                        <i className="uil uil-clock-nine">&nbsp;{formatDate(post.frontmatter.date)}</i>
+                                        <p>{post.frontmatter.description}</p>
+                                    </span>
+                                </a>
                             ))
                         }
 
                         <div className="posts">
                             {
                                 lastGames && lastGames.map(post => (
-                                    post.categories === 'Games' ? (
-                                        <div className="post" key={post.id}>
-                                            <a href={post.slug} >
-                                                <Image src={post.imageUrl} alt={post?.name} width={150} height={150} loading='lazy' />
+                                    <div className="post" key={post.id}>
+                                        <a href={post.slug} >
+                                            <img src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} loading='lazy' />
 
-                                                <div className="post-side">
-                                                    <h3>{post.title}</h3>
-                                                    <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    ) : (
-                                        null
-                                    )
-                                ))
+                                            <div className="post-side">
+                                                <h3>{post.frontmatter.title}</h3>
+                                                <i className="uil uil-clock-nine">&nbsp;{formatDate(post.frontmatter.date)}</i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                )
+                                )
                             }
                         </div>
                     </div>
@@ -196,40 +191,34 @@ export default function Home({ postData }) {
 
                         {
                             firstMovies && firstMovies.map(post => (
-                                post.categories === 'Movies' ? (
-                                    <a className='categories-content' href={post.slug} key={post.id}>
-                                        <Image src={post.imageUrl} alt={post?.name} width={500} height={500} loading='lazy' />
-                                        <h1>{post.title.length > 35 ? post.title.slice(0, 55) + "..." : post.title}</h1>
+                                <a className='categories-content' href={post.slug} key={post.id}>
+                                    <img src={post.frontmatter.image} alt={post.frontmatter.title} width={500} height={500} loading='lazy' />
+                                    <h1>{post.frontmatter.title.length > 35 ? post.frontmatter.title.slice(0, 55) + "..." : post.frontmatter.title}</h1>
 
-                                        <span>
-                                            <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                            <p>{post.description}</p>
-                                        </span>
-                                    </a>
-                                ) : (
-                                    null
-                                )
-                            ))
+                                    <span>
+                                        <i className="uil uil-clock-nine">&nbsp;{formatDate(post.frontmatter.date)}</i>
+                                        <p>{post.frontmatter.description}</p>
+                                    </span>
+                                </a>
+                            )
+                            )
                         }
 
                         <div className="posts">
                             {
                                 lastMovies && lastMovies.map(post => (
-                                    post.categories === 'Movies' ? (
-                                        <div className="post" key={post.id}>
-                                            <a href={post.slug}>
-                                                <Image src={post.imageUrl} alt={post?.name} width={150} height={150} loading='lazy' />
+                                    <div className="post" key={post.id}>
+                                        <a href={post.slug}>
+                                            <img src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} loading='lazy' />
 
-                                                <div className="post-side">
-                                                    <h3>{post.title}</h3>
-                                                    <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    ) : (
-                                        null
-                                    )
-                                ))
+                                            <div className="post-side">
+                                                <h3>{post.frontmatter.title}</h3>
+                                                <i className="uil uil-clock-nine">&nbsp;{formatDate(post.frontmatter.date)}</i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                )
+                                )
                             }
                         </div>
                     </div>
@@ -245,11 +234,11 @@ export default function Home({ postData }) {
                             {
                                 technologies.slice(0, 12).map((post, index) => (
                                     <a href={post.slug} key={index}>
-                                        <Image src={post.imageUrl} alt={post?.name} width={150} height={150} loading='lazy' />
+                                        <img src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} loading='lazy' />
 
                                         <div className="title">
-                                            <h1>{post.title}</h1>
-                                            <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
+                                            <h1>{post.frontmatter.title}</h1>
+                                            <i className="uil uil-clock-nine">&nbsp;{formatDate(post.frontmatter.date)}</i>
                                         </div>
                                     </a>
                                 ))
@@ -268,18 +257,18 @@ export default function Home({ postData }) {
                                 <div className="content" key={index}>
                                     <div className="leftContent">
                                         <a href={post.slug}>
-                                            <Image src={post.imageUrl} alt={post?.name} width={150} height={150} loading='lazy' />
+                                            <img src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} loading='lazy' />
                                         </a>
                                     </div>
                                     <div className="rightContent">
                                         <a href={post.slug}>
-                                            <h1>{post.title}</h1>
+                                            <h1>{post.frontmatter.title}</h1>
 
                                             <div className="categories">
-                                                {post.categories === 'Movies' ? <span className="movies">Filmes & Séries</span> : null || post.categories === 'Games' ? <span className="games">Video Games</span> : null || post.categories === 'Technologies' ? <span className="tecnologies">Ciência & Tecnologia</span> : null || post.categories === 'Animes' ? <span className="animes">Animes & HQs</span> : null || post.categories === 'Development' ? <span className="development">4Devs</span> : null}
-                                                <i className="uil uil-clock-nine">&nbsp;{post.lessDate}</i>
+                                                {post.frontmatter.categories === 'Movies' ? <span className="movies">Filmes & Séries</span> : null || post.frontmatter.categories === 'Games' ? <span className="games">Video Games</span> : null || post.frontmatter.categories === 'Technologies' ? <span className="tecnologies">Ciência & Tecnologia</span> : null || post.frontmatter.categories === 'Animes' ? <span className="animes">Animes & HQs</span> : null || post.frontmatter.categories === 'Development' ? <span className="development">4Devs</span> : null}
+                                                <i className="uil uil-clock-nine">&nbsp;{formatDate(post.frontmatter.date)}</i>
                                             </div>
-                                            <p>{post.description}</p>
+                                            <p>{post.frontmatter.description}</p>
                                         </a>
                                     </div>
                                 </div>
