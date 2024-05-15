@@ -153,28 +153,4 @@ const Post = ({ frontmatter, slug, content }) => {
     )
 }
 
-/*export async function getServerSideProps({ params }) {
-    const { slug } = params
-
-    const data = await postService.getAllPosts()
-
-    const posts = data.docs.map((doc) => ({
-        ...doc.data(),
-        id: doc.id,
-        date: doc.data().date instanceof Date ? doc.data().date.toString() : null,
-    }))
-
-    const currentPost = posts.filter(post => frontmatter.slug === slug)
-
-    return {
-        props: {
-            currentPost
-        }
-    }
-}
-
-frontmatter.propTypes = {
-    currentPost: PropTypes.object.isRequired,
-}*/
-
 export default Post

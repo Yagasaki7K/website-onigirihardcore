@@ -17,7 +17,7 @@ import LastNewsDetails from '../src/components/LastNewsDetails'
 import 'keen-slider/keen-slider.min.css'
 import Slide from '../src/components/Slide'
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     // Get files from the posts dir
     const files = fs.readdirSync(path.join('posts'))
 
@@ -115,7 +115,6 @@ export default function Home({ postData }) {
                                 <a className='categories-content' href={post.slug} key={post.id}>
                                     <img src={post.frontmatter.image} alt={post.frontmatter.title} width={500} height={500} loading='lazy' />
                                     <h1>{post.frontmatter.title.length > 35 ? post.frontmatter.title.slice(0, 55) + "..." : post.frontmatter.title}</h1>
-                                    {/* <h1>{post.smalltitle}</h1> */}
 
                                     <span>
                                         <i className="uil uil-clock-nine">&nbsp;{formatDate(post.frontmatter.date)}</i>
@@ -155,7 +154,6 @@ export default function Home({ postData }) {
                                 <a className='categories-content' href={post.slug} key={post.id}>
                                     <img src={post.frontmatter.image} alt={post.frontmatter.title} width={500} height={500} loading='lazy' />
                                     <h1>{post.frontmatter.title.length > 35 ? post.frontmatter.title.slice(0, 55) + "..." : post.frontmatter.title}</h1>
-                                    {/* <h1>{post.smalltitle}</h1> */}
 
                                     <span>
                                         <i className="uil uil-clock-nine">&nbsp;{formatDate(post.frontmatter.date)}</i>

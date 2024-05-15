@@ -9,7 +9,7 @@ export const HeaderDetails = styled.div`
         padding: 1rem 5rem;
 
         .logotipo {
-            width: 70%;
+            width: 50%;
         }
 
         .uwu {
@@ -134,7 +134,7 @@ export const HeaderMobile = styled.div`
 
     background: var(--background);
 
-    .logo-drawner{
+    .logo-drawner {
         width: 100%;
 
         display: flex;
