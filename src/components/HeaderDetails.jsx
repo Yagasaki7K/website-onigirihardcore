@@ -6,26 +6,21 @@ export const HeaderDetails = styled.div`
         justify-content: center;
         align-items: center;
         background: var(--background);
-        padding: 1rem 5rem;
+        padding: 1rem 0rem;
 
-        .logotipo {
-            width: 50%;
+        img {
+            width: 40rem;
         }
 
         .uwu {
             width: 70%;
-        }
-
-        @media (max-width: 1200px) {
-            .advice {
-                display: none;
-            }
         }
     }
 
     .navigation {
         background: var(--blue);
         display: flex;
+        justify-content: center;
         height: 3rem;
         width: 100%;
 
@@ -44,7 +39,6 @@ export const HeaderDetails = styled.div`
             padding: 0;
             margin: 0;
             color: var(--white);
-            margin-left: 15rem;
 
             @media (max-width: 1366px) {
                 margin-left: 3rem;

@@ -104,9 +104,6 @@ const Header = () => {
                                 )
                             }
                         </Link>
-                        <Link href="/">
-                            <img src="/anuncio.png" className="advice" alt="Anuncio" />
-                        </Link>
                     </div>
 
                     <div className="navigation">
