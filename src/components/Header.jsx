@@ -132,6 +132,11 @@ const Header = () => {
                                     </Link>
                                 </li>
                                 <li>
+                                    <Link href="/#news">
+                                        Ciência {`&`} Tecnologia
+                                    </Link>
+                                </li>
+                                <li>
                                     <Link href="https://github.com/Yagasaki7K/website-onigirihardcore/raw/main/onigirihardcore.apk" target="_blank" rel="noreferrer"><i className="uil uil-android"></i> Download App</Link>
                                 </li>
                                 <li>
