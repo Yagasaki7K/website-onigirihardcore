@@ -8,12 +8,12 @@ export const HeaderDetails = styled.div`
         background: var(--background);
         padding: 1rem 0rem;
 
-        img {
+        img, .uwu {
             width: 40rem;
-        }
 
-        .uwu {
-            width: 70%;
+            @media (max-width: 1024px) {
+                width: 30rem;
+            }
         }
     }
 
