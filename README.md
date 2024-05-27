@@ -52,9 +52,15 @@ This project was made using the follow technologies:
 
 * ReactJS
 * NextJS
-* Javascript
-* JSON
 * Styled Components
+* DayJS
+* Gray Matter
+* Framer Motion
+* Marked
+* Million
+* Next-SEO
+* Redis
+* Sonner
 
 # 🚀 Features
 
