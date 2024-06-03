@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-undef
-import million from 'million/compiler';
+import MillionLint from '@million/lint';
 
 const nextConfig = {
     reactStrictMode: true,
@@ -8,12 +7,13 @@ const nextConfig = {
             rules: {
                 '*.svg': {
                     loaders: ['@svgr/webpack'],
-                    as: '*.js',
-                },
-            },
-        },
+                    as: '*.js'
+                }
+            }
+        }
     }
-}
+};
 
-// eslint-disable-next-line no-undef
-export default million.next(nextConfig);
+export default MillionLint.next()(MillionLint.next({
+    rsc: true
+})(nextConfig));
