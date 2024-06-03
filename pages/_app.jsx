@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import '../styles/globals.css'
 import { Toaster } from 'sonner'
+import { Analytics } from '@vercel/analytics/react';
 
 // eslint-disable-next-line react/prop-types
 function MyApp({ Component, pageProps }) {
@@ -14,6 +15,7 @@ function MyApp({ Component, pageProps }) {
     return (
         <>
             <Component {...pageProps} />
+            <Analytics />
             <Toaster richColors position="top-right" />
         </>
     )
