@@ -1,0 +1,48 @@
+---
+date: '2024-06-10:12:43:00'
+title: Engenheiro cria versão física do clássico player Winamp
+description: 'O outrora popular Winamp tem tantos fãs que um deles resolveu criar uma versão física do reprodutor de mídia. Chamado de Linamp, o dispositivo tem um visual que imita a skin (interface) clássica do player. No comando de tudo está um Raspberry Pi 4 rodando o DietPi, distribuição Linux baseada no Debian.'
+image: https://files.tecnoblog.net/wp-content/uploads/2024/06/linamp-capa-1060x596.jpg
+categories: 'Technologies'
+ytid: ''
+author: "Anderson \"Yagasaki\" Marlon"
+---
+
+O outrora popular Winamp tem tantos fãs que um deles resolveu criar uma versão física do reprodutor de mídia. Chamado de Linamp, o dispositivo tem um visual que imita a skin (interface) clássica do player. No comando de tudo está um Raspberry Pi 4 rodando o DietPi, distribuição Linux baseada no Debian.
+
+Que fique claro desde já que o Linamp reproduz música, ou seja, não é um “enfeite”. O dispositivo foi montado pelo engenheiro de software Rodrigo Méndez para ser o mais fiel possível ao aplicativo, inclusive nas funcionalidades. MP3, M4A e FLAC estão entre os formatos de áudio compatíveis.
+
+Para a experiência ser completa, Méndez se preocupou inicialmente com a parte estética. Ele se inspirou nos módulos de um antigo aparelho de som Aiwa para construir um gabinete metálico em formato horizontal.
+
+Depois, o desenvolvedor projetou uma moldura frontal em impressora 3D que imita o contorno da interface clássica do Winamp.
+
+Também estava no plano criar botões físicos para o Linamp em impressora 3D, mas Méndez não encontrou telas que deixassem espaço suficiente para eles na parte frontal.
+
+Então, o desenvolvedor decidiu fazer toda a interface do player de modo digital. Para isso, ele recorreu a uma tela IPS LCD larga, com 7,9 polegadas de tamanho, e sensibilidade a toques.
+
+![](https://files.tecnoblog.net/wp-content/uploads/2024/06/linamp-traseira-700x525.jpg)
+
+## Por dentro, um Raspberry Pi 4
+Faltava cuidar da parte interna do equipamento. Para isso, Rodrigo Méndez ligou um Raspberry Pi 4 complementado com um cartão SD de 32 GB à tela.
+
+Como você já sabe, a placa roda o sistema operacional DietPi, uma distribuição Linux minimalista que, como tal, é ideal para soluções embarcadas ou projetos individuais.
+
+O player que é exibido na tela consiste em um “aplicativo Qt 6 personalizado escrito em C++ com Qt Widgets”. Foi um trabalho complexo, mas, no fim das contas, o engenheiro conseguiu criar um software cuja interface realmente remete ao Winamp.
+
+Além de reproduzir áudio, o software exibe barras de equalização (parte que foi especialmente desafiadora), suporta playlists, executa faixas de modo aleatório ou sequencial, entre outras ações.
+
+![](https://files.tecnoblog.net/wp-content/uploads/2024/06/linamp-interna-700x525.jpg)
+
+## O Linamp em ação
+O Linamp ainda precisa de alguns aprimoramentos, mas já é funcional. O vídeo abaixo mostra o equipamento em ação:
+
+<iframe width="700" height="394" src="https://www.youtube.com/embed/5nUYHROVOmo" title="Linamp UI demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Para completar, a parte traseira do Linamp traz conexões USB, Ethernet e 3,5 mm, o que significa que é possível conectá-lo a caixas de som ou fones de ouvido (até porque o equipamento não tem alto-falantes dedicados).
+
+Nas etapas seguintes, o equipamento vai funcionar com Bluetooth e ser integrado ao Spotify, promete Rodrigo Méndez. Os detalhes estão na [página do projeto](https://hackaday.io/project/196407-linamp).
+
+## Winamp clássico vai virar software de código aberto
+Vale relembrar que o Winamp clássico vai ser transformado em software de código aberto em 24 de setembro de 2024. Quando isso acontecer, o reprodutor terá seu nome alterado para FreeLLama.
+
+A marca Winamp continuará existindo, mas para fazer referência a um agregador online de músicas e podcasts.
