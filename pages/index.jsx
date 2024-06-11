@@ -251,7 +251,7 @@ export default function Home({ postData }) {
                             <p>Últimas Notícias</p>
                         </div>
                         {
-                            postData && postData.slice(0, 15).map((post, index) => (
+                            postData && postData.slice(0, 20).map((post, index) => (
                                 <div className="content" key={index}>
                                     <div className="leftContent">
                                         <a href={post.slug}>

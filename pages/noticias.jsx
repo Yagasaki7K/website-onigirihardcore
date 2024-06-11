@@ -75,7 +75,7 @@ const Noticias = ({ postData }) => {
                         <input type="text" placeholder='O que vamos descobrir hoje?' onChange={handleSearch} />
 
                         <div className="header">
-                            <p>Lista de Notícias</p>
+                            <p>&nbsp;&nbsp;&nbsp;Notícias ({filteredPosts.length})</p>
                         </div>
                         {
                             filteredPosts && filteredPosts.map((post, index) => (
