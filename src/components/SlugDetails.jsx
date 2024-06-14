@@ -132,6 +132,15 @@ const SlugDetails = styled.div`
             }
         }
 
+        blockquote {
+            background: var(--background-alt);
+            padding: 1rem;
+            font-size: 1rem;
+            border-radius: 15px;
+            font-style: italic;
+            font-family: 'Cascadia Code', sans-serif;
+        }
+
         .title__content {
             width: 60rem;
 
