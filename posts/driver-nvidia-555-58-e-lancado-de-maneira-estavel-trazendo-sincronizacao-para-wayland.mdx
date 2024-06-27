@@ -1,0 +1,43 @@
+---
+date: '2024-06-27:14:09:00'
+title: Driver NVIDIA 555.58 é lançado de maneira estável trazendo sincronização para Wayland
+description: 'O momento finalmente chegou. A próxima grande atualização estável do driver proprietário NVIDIA para Linux, versão 555.58, traz sincronização explícita para Wayland.'
+image: https://img.odcdn.com.br/wp-content/uploads/2023/05/Nvidia-01.jpg
+categories: 'Technologies'
+ytid: ''
+author: "Anderson \"Yagasaki\" Marlon"
+---
+
+O momento finalmente chegou. A próxima grande atualização estável do driver proprietário NVIDIA para Linux, versão 555.58, traz sincronização explícita para Wayland.
+
+Após as versões Beta iniciais 555.42.02 e 555.52.04, a NVIDIA mencionou algumas "correções de bugs menores e melhorias" desde a última Beta. Com este lançamento, você deve estar realmente pronto para usar o Wayland em GPUs NVIDIA.
+
+Todas as mudanças estão abaixo:
+
+## Destaques da Segunda Versão Beta R555, 555.52.04
+- Corrigido um erro de segmentação ao executar aplicativos multi-threaded NvFBC.
+- Temporariamente desabilitada a extensão GLX_EXT_buffer_age no Xwayland para contornar um bug que poderia causar corrupção.
+- Corrigido um bug que poderia causar corrupção quando a extensão GLX_EXT_buffer_age era usada no X.org com renderização PRIME offloading.
+- Corrigido um bug que poderia causar a falha do servidor X quando aplicativos gráficos solicitavam drawables em buffer único enquanto certos recursos (como o Vulkan sharpening) estavam habilitados.
+- Corrigido um bug que poderia levar a um pânico no kernel, devido a uma falha ao liberar um spinlock em algumas condições.
+- Corrigida uma condição de corrida que poderia levar a falhas quando erros Xid ocorrem simultaneamente em várias GPUs.
+
+## Destaques da Versão Beta R555, 555.42.02
+- O firmware GSP agora é usado por padrão em todas as GPUs que o suportam. Pode ser desabilitado configurando o parâmetro do módulo kernel NVreg_EnableGpuFirmware=0.
+- Adicionado suporte para o protocolo linux-drm-syncobj-v1 para sincronização explícita Wayland no EGL.
+- Removido suporte para Base Mosaic no GeForce, que anteriormente estava disponível apenas em placas de GPU selecionadas com algumas placas-mãe, e limitado a cinco dispositivos de exibição.
+- Corrigido um bug que causava as mensagens "Failed to apply atomic modeset" e "Flip event timeout" serem impressas no log do sistema quando um cliente DRM como ddcutil perde permissões "master" enquanto um console framebuffer está sendo inicializado.
+- Corrigido um bug, quando nvidia-drm é carregado com o parâmetro de módulo fbdev=1 em alguns kernels, que causava cores incorretas serem exibidas.
+- Mudada a versão mínima do kernel Linux necessária de 3.10 para 4.15.
+- Adicionado suporte para o modo de apresentação imediata ao Vulkan Wayland WSI. Este modo de apresentação instrui os compositores a não esperar por um período de blanking vertical para atualizar o conteúdo da superfície do aplicativo, o que pode resultar em tearing.
+- Habilitado suporte HDMI 10 bits por componente por padrão; desabilite carregando nvidia-modeset com hdmi_deepcolor=0.
+- Corrigido uma regressão que levou a erros Xid ao carregar o driver NVIDIA em alguns sistemas notebook com GPUs da série RTX 4xxx.
+- Corrigido um bug que causava falha na compilação do driver ao usar diretórios de origem e saída do kernel separados no Linux v6.6 e posteriores.
+- Adicionado um prompt interativo ao nvidia-installer para permitir a seleção entre os módulos de kernel proprietários e abertos, em sistemas onde ambos os tipos de módulo de kernel são suportados.
+- Corrigido um bug que permitia incorretamente nvidia-smi -r redefinir a GPU primária ao usar os módulos de kernel abertos.
+- Corrigido um bug que fazia vkGetPhysicalDeviceSurfaceSupportKHR relatar incorretamente suporte para superfícies Wayland quando nvidia-drm não está carregado com modeset=1.
+- Corrigido um bug que poderia causar o bloqueio da tela ao suspender em um kernel com CONFIG_FRAMEBUFFER_CONSOLE_DEFERRED_TAKEOVER habilitado com nvidia-drm carregado com modeset=1 e fbdev=1.
+- Adicionado suporte para usar EGL em vez de GLX como ICD OpenGL para NvFBC.
+- Corrigido um bug que poderia levar a uma paralisação do sistema e mensagens "Idling display engine timed out" ao alternar VT em uma tela HDMI Fixed Rate Link (FRL).
+
+Essas melhorias e correções demonstram o compromisso contínuo da NVIDIA em fornecer suporte robusto e confiável para usuários de Linux, especialmente aqueles que utilizam Wayland.
