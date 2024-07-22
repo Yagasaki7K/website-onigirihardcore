@@ -11,15 +11,15 @@
     "commit": "bun yagasaki && bun run vercel && read -p 'Descriptions Commit: ' message && git add . && echo -n \"$message - \" && node getTime.js | xargs -I {} git commit -m \"$message - {}\" && git push"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@million/lint": "^1.0.0-rc.76",
-    "@mui/material": "^5.16.0",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@million/lint": "^1.0.0-rc.81",
+    "@mui/material": "^5.16.4",
     "@vercel/analytics": "^1.3.1",
     "babel-loader": "^9.1.3",
-    "dayjs": "^1.11.11",
+    "dayjs": "^1.11.12",
     "dotenv": "^16.4.5",
-    "framer-motion": "^11.2.13",
+    "framer-motion": "^11.3.8",
     "gray-matter": "^4.0.3",
     "keen-slider": "^6.8.6",
     "marked": "^12.0.2",
@@ -30,11 +30,11 @@
     "react-dom": "18.2.0",
     "redis": "^4.6.15",
     "sonner": "^1.5.0",
-    "styled-components": "^6.1.11"
+    "styled-components": "^6.1.12"
   },
   "devDependencies": {
-    "eslint": "^9.6.0",
+    "eslint": "^9.7.0",
     "eslint-config-next": "14.2.3",
-    "eslint-plugin-react": "^7.34.3"
+    "eslint-plugin-react": "^7.35.0"
   }
 }
