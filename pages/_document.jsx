@@ -50,7 +50,7 @@ export default class MyDocument extends Document {
                                 width: 460,
                                 height: 460,
                                 alt: 'Onigiri Hardcore | Portal de Notícias e Entretenimento',
-                                type: 'image/jpeg' || 'image/png',
+                                type: 'image/jpeg',
                             }
                         ],
                         siteName: 'Onigiri Hardcore',

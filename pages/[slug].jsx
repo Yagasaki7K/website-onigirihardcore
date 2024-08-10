@@ -142,7 +142,17 @@ const Post = ({ frontmatter, slug, content }) => {
 
                     <div className="image__content"><div dangerouslySetInnerHTML={({ __html: htmlContent || '' })} /></div>
 
-                    <p className="keepUpdate">Mantenha-se atualizado sobre todas as novidades do <a href="/">Onigiri Hardcore</a> e siga-nos também no <a href="https://twitter.com/OHNewsOficial" target='_blank' rel="noreferrer">Twitter</a> para não perder nenhum destaque da semana!</p>
+                    <div className="touch">
+                        <div className="leftContent">
+                            <h2>Fique atualizado!</h2>
+                            <p>Mantenha-se atualizado sobre todas as novidades do <strong>Onigiri Hardcore</strong> e siga-nos também no Twitter para não perder nenhum destaque da semana!</p>
+                        </div>
+                        <div className="rightContent">
+                            <span>
+                                <a href="https://twitter.com/OHNewsOficial" target="_blank"><i className="uil uil-twitter" /> Siga-nos!</a>
+                            </span>
+                        </div>
+                    </div>
 
                     {frontmatter.ytid ?
                         <iframe width="550" height="480" src={'https://www.youtube.com/embed/' + frontmatter.ytid} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : null}

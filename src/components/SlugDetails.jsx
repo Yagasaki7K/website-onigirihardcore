@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 const SlugDetails = styled.div`
     background: var(--background);
-    font-family: Inter, Poppins, sans-serif;
-    font-size: 1.1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.18rem;
     color: var(--font);
 
     img {
@@ -186,6 +186,67 @@ const SlugDetails = styled.div`
 
                 :hover {
                     text-decoration: underline;
+                }
+            }
+        }
+
+        .touch {
+            display: flex;
+            padding: 2rem 2rem 1rem 2rem;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                padding: 3rem 2rem;
+                text-align: center;
+            }
+
+            background: var(--background-alt);
+            border-radius: 15px;
+            margin: 2rem;
+            align-items: center;
+            justify-content: center;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
+
+            .leftContent {
+                width: 60%;
+
+                h2 {
+                    margin-top: 0rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                    color: var(--font);
+                    margin-top: 1rem;
+                }
+            }
+
+            .rightContent {
+                margin-left: 2rem;
+
+                @media (max-width: 768px) {
+                    margin-left: 0rem;
+                }
+
+                span {
+                    font-size: 1.3rem;
+                    background: var(--background);
+                    color: var(--white);
+                    border-radius: 25px;
+                    padding: 1rem 2rem;
+                    border: none;
+
+                    a {
+                        color: var(--white);
+                        text-decoration: none;
+                    }
+
+                    &:hover {
+                        filter: brightness(1.1);
+                    }
                 }
             }
         }
