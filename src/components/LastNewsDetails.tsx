@@ -17,7 +17,6 @@ const LastNewsDetails = styled.div`
             margin-top: 20px;
             background: var(--background);
             outline: none;
-            font-family: 'Poppins', sans-serif;
             color: var(--font);
             cursor: text;
             margin-bottom: 2rem;
@@ -35,7 +34,7 @@ const LastNewsDetails = styled.div`
                 width: 10rem;
                 background: var(--blue);
                 color: var(--white);
-                padding: 5px 10px;
+                padding: 5px 15px;
                 margin-bottom: -2px;
                 font-weight: bold;
             }

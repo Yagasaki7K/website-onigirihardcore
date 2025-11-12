@@ -51,6 +51,15 @@ const Slide = ({ posts }) => {
         ]
     )
 
+    const categoryLabels: Record<string, JSX.Element> = {
+      Movies: <span className="movies">Filmes & Séries</span>,
+      Games: <span className="games">Video Games</span>,
+      Technologies: <span className="tecnologies">Ciência & Tecnologia</span>,
+      Animes: <span className="animes">Animes & HQs</span>,
+      Development: <span className="development">4Devs</span>,
+    };
+
+
     return (
         <SlideDetails>
             {loading ? (
@@ -66,7 +75,9 @@ const Slide = ({ posts }) => {
                                 <div className="slide-tag">
                                     <span className="latest">HOT NEWS 🔥</span>
 
-                                    <span className="tag">{post.frontmatter.categories === 'Movies' ? <span className="movies">Filmes & Séries</span> : null || post.frontmatter.categories === 'Games' ? <span className="games">Video Games</span> : null || post.frontmatter.categories === 'Technologies' ? <span className="tecnologies">Ciência & Tecnologia</span> : null || post.frontmatter.categories === 'Animes' ? <span className="animes">Animes & HQs</span> : null || post.frontmatter.categories === 'Development' ? <span className="development">4Devs</span> : null}</span>
+                                    <span className="tag">
+                                      {categoryLabels[post.frontmatter.categories] || null}
+                                    </span>
 
                                     <span className="date">{formatDate(post.frontmatter.date)}</span>
                                     <span> - </span>

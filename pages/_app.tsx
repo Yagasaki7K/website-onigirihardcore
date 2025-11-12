@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import '../styles/globals.css'
 import { Toaster } from 'sonner'
 import { Analytics } from '@vercel/analytics/react';

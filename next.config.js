@@ -1,12 +1,10 @@
-module.exports = {
-    experimental: {
-        turbo: {
-            rules: {
-                '*.svg': {
-                    loaders: ['@svgr/webpack'],
-                    as: '*.js',
-                },
-            },
-        },
-    },
-}
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+
+  compiler: {
+    styledComponents: true,
+  },
+};
+
+module.exports = nextConfig;

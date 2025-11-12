@@ -16,6 +16,7 @@ import LastNewsDetails from '../src/components/LastNewsDetails'
 
 import 'keen-slider/keen-slider.min.css'
 import Slide from '../src/components/Slide'
+import Cookies from '../src/components/Cookies';
 
 export async function getStaticProps() {
     // Get files from the posts dir
@@ -87,7 +88,7 @@ export default function Home({ postData }) {
                             width: 460,
                             height: 460,
                             alt: 'Onigiri Hardcore | Portal de Notícias e Entretenimento',
-                            type: 'image/jpeg' || 'image/png',
+                            type: 'image/png',
                         }
                     ],
                     siteName: 'Onigiri Hardcore',
@@ -263,7 +264,19 @@ export default function Home({ postData }) {
                                             <h1>{post.frontmatter.title}</h1>
 
                                             <div className="categories">
-                                                {post.frontmatter.categories === 'Movies' ? <span className="movies">Filmes & Séries</span> : null || post.frontmatter.categories === 'Games' ? <span className="games">Video Games</span> : null || post.frontmatter.categories === 'Technologies' ? <span className="tecnologies">Ciência & Tecnologia</span> : null || post.frontmatter.categories === 'Animes' ? <span className="animes">Animes & HQs</span> : null || post.frontmatter.categories === 'Development' ? <span className="development">4Devs</span> : null}
+                                                {(() => {
+                                                  const categoryMap = {
+                                                    Movies:       { class: "movies",       label: "Filmes & Séries" },
+                                                    Games:        { class: "games",        label: "Video Games" },
+                                                    Technologies: { class: "tecnologies",  label: "Ciência & Tecnologia" },
+                                                    Animes:       { class: "animes",       label: "Animes & HQs" },
+                                                    Development:  { class: "development",  label: "4Devs" },
+                                                  };
+
+                                                  const cat = categoryMap[post.frontmatter.categories];
+                                                  return cat ? <span className={cat.class}>{cat.label}</span> : null;
+                                                })()}
+
                                                 <i className="uil uil-clock-nine">&nbsp;{formatDate(post.frontmatter.date)}</i>
                                             </div>
                                             <p>{post.frontmatter.description}</p>
@@ -276,6 +289,7 @@ export default function Home({ postData }) {
                 </LastNewsDetails>
             </ContentDetails>
             <Footer />
+            <Cookies/>
         </>
     )
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 :root {
     --background: #fafafa;
@@ -7,7 +7,7 @@
     --orange: #ef9f76;
     --yellow: #eed49f;
     --purple: #ca9ee6;
-    --blue: #187aec;
+    --blue: #0496dd;
     --blue-alt: #6281af;
     --red: #e68284;
     --pink: #ff6ca4;
@@ -15,19 +15,21 @@
     --gray: #ccc;
     --gray-alt: #aaa;
     --font: #232634;
-    }
+    --black: #000;
+    --gradient-f1: linear-gradient(45deg, #dda6cd, #ffffff, #76f5fa);
+}
 
-    @media (prefers-color-scheme: dark) {
-    :root {
-        --background: #232634;
-        --background-alt: #303446;
-        --font: #f8f8f2;
-        --font-alt: #ccc;
-        --gray: rgba(255,255,255,0.3);
-        --border: #3d3f52;
-        --font-black: #282a36;
-        }
+@media (prefers-color-scheme: dark) {
+:root {
+    --background: #232634;
+    --background-alt: #303446;
+    --font: #f8f8f2;
+    --font-alt: #ccc;
+    --gray: rgba(255,255,255,0.3);
+    --border: #3d3f52;
+    --font-black: #282a36;
     }
+}
 
 html,
 body {
@@ -35,7 +37,6 @@ body {
     margin: 0;
     background: var(--background);
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
     color: #d3cfc9;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -50,6 +51,7 @@ a {
 
 * {
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body::-webkit-scrollbar {

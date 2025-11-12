@@ -44,7 +44,6 @@ const LoginDetails = styled.div`
                 border: none;
                 padding: 0.7rem;
                 font-size: 1rem;
-                font-family: 'Poppins', sans-serif;
                 text-transform: uppercase;
                 cursor: pointer;
 

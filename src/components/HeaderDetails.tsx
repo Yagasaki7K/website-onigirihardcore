@@ -38,24 +38,21 @@ export const HeaderDetails = styled.div`
             list-style: none;
             padding: 0;
             margin: 0;
-            color: var(--white);
 
             @media (max-width: 1366px) {
                 margin-left: 3rem;
             }
-
-            background: var(--blue);
 
             #item-menu {
                 display: flex;
                 gap: 30px;
 
                 li {
-                    border-bottom: 3px solid transparent;
+                    border-bottom: 1px solid transparent;
                 }
 
                 li:hover {
-                    border-bottom: 3px solid var(--white);
+                    border-bottom: 1px solid var(--white);
                 }
             }
 
@@ -91,7 +88,7 @@ export const HeaderDetails = styled.div`
 
             li {
                 display: flex;
-                padding: 0.7rem 1rem;
+                padding: 0.2rem 1rem;
 
                 @media (max-width: 855px) {
                     padding: 0.7rem 0;
@@ -103,9 +100,8 @@ export const HeaderDetails = styled.div`
                 font-weight: 400;
                 cursor: pointer;
                 text-transform: uppercase;
-                font-family: 'Poppins', sans-serif;
 
-                Link {
+                a {
                     color: var(--white);
                     text-decoration: none;
                 }
@@ -207,4 +203,3 @@ export const HeaderMobile = styled.div`
         }
     }
 `
-

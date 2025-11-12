@@ -11,7 +11,6 @@ const DashboardDetails = styled.div`
         padding: 0 20px;
         margin-bottom: 1rem;
         background: var(--background);
-        font-family: 'Poppins', sans-serif;
 
         h1 {
             color: var(--white);
@@ -34,7 +33,6 @@ const DashboardDetails = styled.div`
                     padding: 0.5rem;
                     border-radius: 5px;
                     margin-top: 10px;
-                    font-family: 'Poppins', sans-serif;
                 }
 
                 textarea {
