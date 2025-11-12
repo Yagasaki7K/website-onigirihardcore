@@ -90,6 +90,7 @@ const SlugDetails = styled.div`
 
         p {
             margin-bottom: 1.8rem;
+            line-height: 1.5rem;
         }
 
         .keepUpdate {

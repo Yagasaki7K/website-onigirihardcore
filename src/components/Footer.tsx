@@ -5,6 +5,7 @@ const FooterDetails = styled.div`
     .footer {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         padding: 2rem 10vw;
         background: var(--background);
         border-top: 1px solid #374151;
@@ -19,12 +20,35 @@ const FooterDetails = styled.div`
             min-width: 180px;
             max-width: 300px;
 
-            img {
-                margin-top: 4rem;
+            .image {
+                margin-top: 3rem;
                 width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    max-width: 320px; /* ajustável conforme o layout */
+                    height: auto;
+                    object-fit: contain; /* mantém proporção horizontal */
+                    display: block;
+                    filter: brightness(0.95);
+                }
+
+                @media (max-width: 1024px) {
+                    max-width: 260px;
+                    margin-top: 2.5rem;
+                }
 
                 @media (max-width: 768px) {
                     margin-top: 2rem;
+                    max-width: 220px;
+                }
+
+                @media (max-width: 480px) {
+                    margin-top: 1.5rem;
+                    max-width: 180px;
                 }
             }
 
@@ -194,57 +218,59 @@ const FooterDetails = styled.div`
 `;
 
 const Footer = () => {
-	return (
-		<FooterDetails>
-			<div className="footer">
-				<div className="content">
-  				<Link href="/">
-  					<img src="/logotipo.png"/>
-  				</Link>
-				</div>
+    return (
+        <FooterDetails>
+            <div className="footer">
+                <div className="content">
+                    <div className="image">
+                        <Link href="/">
+                            <img src="/logotipo.png" />
+                        </Link>
+                    </div>
+                </div>
 
-				<div className="content">
-					<h1>Nossa Organização</h1>
-					<Link href="https://kalify.vercel.app" target="_blank">
-						<li>Kalify Inc</li>
-					</Link>
-					<Link href="https://yagasaki.vercel.app" target="_blank">
-						<li>Anderson Marlon</li>
-					</Link>
-				</div>
+                <div className="content">
+                    <h1>Nossa Organização</h1>
+                    <Link href="https://kalify.vercel.app" target="_blank">
+                        <li>Kalify Inc</li>
+                    </Link>
+                    <Link href="https://yagasaki.vercel.app" target="_blank">
+                        <li>Anderson Marlon</li>
+                    </Link>
+                </div>
 
-				<div className="content">
-					<h1>Mapa do Site</h1>
-					<Link href="/">
-						<li>Inicio</li>
-					</Link>
+                <div className="content">
+                    <h1>Mapa do Site</h1>
+                    <Link href="/">
+                        <li>Inicio</li>
+                    </Link>
 
-					<Link href="/noticias">
-						<li>Notícias</li>
-					</Link>
-					<Link href="https://github.com/Yagasaki7K/website-onigirihardcore/raw/main/onigirihardcore.apk" target="_blank" rel="noreferrer">
-						<li>Download</li>
-					</Link>
-				</div>
+                    <Link href="/noticias">
+                        <li>Notícias</li>
+                    </Link>
+                    <Link href="https://github.com/Yagasaki7K/website-onigirihardcore/raw/main/onigirihardcore.apk" target="_blank" rel="noreferrer">
+                        <li>Download</li>
+                    </Link>
+                </div>
 
-				<div className="content">
-					<h1>Contatos</h1>
-					<li>Telefone: (19) 99801-8174</li>
-					<li>Atendimento: Seg a Sex - 08h às 18h</li>
-					<li>Av. Dr. Heitor Penteado, s/n° - Portão 7 - Parque Taquaral</li>
-				</div>
-			</div>
-			<div className="copyright">
-				<p>
-					© 2015 - {new Date().getFullYear()} Onigiri Hardcore - Todos os direitos reservados. Desenvolvido pela{" "}
-					<Link href="https://kalify.vercel.app" target="_blank">
-					  Kalify Inc
-					</Link>
-					.
-				</p>
-			</div>
-		</FooterDetails>
-	);
+                <div className="content">
+                    <h1>Contatos</h1>
+                    <li>Telefone: (19) 99801-8174</li>
+                    <li>Atendimento: Seg a Sex - 08h às 18h</li>
+                    <li>Av. Dr. Heitor Penteado, s/n° - Portão 7 - Parque Taquaral</li>
+                </div>
+            </div>
+            <div className="copyright">
+                <p>
+                    © 2015 - {new Date().getFullYear()} Onigiri Hardcore - Todos os direitos reservados. Desenvolvido pela{" "}
+                    <Link href="https://kalify.vercel.app" target="_blank">
+                        Kalify Inc
+                    </Link>
+                    .
+                </p>
+            </div>
+        </FooterDetails>
+    );
 };
 
 export default Footer;

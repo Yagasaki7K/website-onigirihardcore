@@ -10,7 +10,7 @@ const CookieDetails = styled.div`
     transform: translateX(-50%);
     width: 62rem;
     height: 190px;
-    background: var(--black);
+    background: var(--background);
     color: var(--white);
     display: flex;
     flex-direction: column;
@@ -46,7 +46,7 @@ const CookieDetails = styled.div`
         margin-top: 1rem;
 
         a {
-            color: var(--red);
+            color: var(--blue);
             text-decoration: underline;
 
             &:hover {
@@ -104,7 +104,7 @@ const CookieDetails = styled.div`
             }
 
             &:hover {
-                color: var(--red);
+                color: var(--blue);
                 transform: scale(1.05);
             }
         }
@@ -137,11 +137,11 @@ const Cookies = () => {
 				<div className="header">
 					<img src="/cookie.png" alt="cookie" />
 					<div className="title">
-						<h1>A Campinas Fighters usa cookies para tornar sua experiência ainda melhor!</h1>
+						<h1>O Onigiri Hardcore usa cookies para tornar sua experiência ainda melhor!</h1>
 						<p>
-							Usamos cookies para oferecer a melhor experiência possível ao usuário. Ao usar os serviços da <strong>Engide</strong>, você aceita o uso de cookies de acordo com
+							Usamos cookies para oferecer a melhor experiência possível ao usuário. Ao usar os serviços da <strong>Leaf Software</strong>, você aceita o uso de cookies de acordo com
 							suas seleções. Para mais informações, consulte nossa{" "}
-							<Link href="https://engide.com.br/legal" target="_blank">
+							<Link href="https://leafsoftware.vercel.app/legal" target="_blank">
 								Políticas de Privacidade
 							</Link>
 							.
