@@ -6,29 +6,46 @@ import { useState, useEffect, useRef } from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
 
+const getInitialWidth = () => (typeof window !== "undefined" ? window.innerWidth : 1024);
+
 const Header = () => {
-    const [width, setWidth] = useState<number>(window.innerWidth);
+    const [width, setWidth] = useState<number>(getInitialWidth);
     const [open, setOpen] = useState(false);
-    const drawnerRef = useRef(null);
+    const drawnerRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        if (typeof window === "undefined") return;
+        if (typeof window === "undefined") {
+            return;
+        }
+
         setWidth(window.innerWidth);
+
         const handleResize = () => {
             setWidth(window.innerWidth);
         };
 
-        function handleClickOutside(event) {
-            if (drawnerRef.current && !drawnerRef.current.contains(event.target)) {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                drawnerRef.current &&
+                event.target instanceof Node &&
+                !drawnerRef.current.contains(event.target)
+            ) {
                 setOpen(false);
             }
-        }
+        };
 
-        document.addEventListener("click", handleClickOutside);
         window.addEventListener("resize", handleResize);
+
+        if (typeof document !== "undefined") {
+            document.addEventListener("click", handleClickOutside);
+        }
 
         return () => {
             window.removeEventListener("resize", handleResize);
+
+            if (typeof document !== "undefined") {
+                document.removeEventListener("click", handleClickOutside);
+            }
         };
     }, []);
 
@@ -48,7 +65,7 @@ const Header = () => {
 
     return (
         <>
-            {width && width <= 600 ? (
+            {width <= 600 ? (
                 <HeaderMobile ref={drawnerRef}>
                     {/*<MenuOutlined className={open ? `menu active` : `menu`} onClick={() => setOpen(!open)} />*/}
                     <div className="logo-drawner">

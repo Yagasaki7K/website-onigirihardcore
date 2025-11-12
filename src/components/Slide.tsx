@@ -51,7 +51,7 @@ const Slide = ({ posts }) => {
         ]
     )
 
-    const categoryLabels: Record<string, JSX.Element> = {
+    const categoryLabels: Record<string, React.ReactNode> = {
       Movies: <span className="movies">Filmes & Séries</span>,
       Games: <span className="games">Video Games</span>,
       Technologies: <span className="tecnologies">Ciência & Tecnologia</span>,
