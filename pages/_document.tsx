@@ -72,7 +72,6 @@ export default class MyDocument extends Document {
                     <link rel="manifest" href="/manifest.json" />
                     <meta property="og:locale" content="pt_BR" />
 
-                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
                     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
                 </Head>
                 <body>

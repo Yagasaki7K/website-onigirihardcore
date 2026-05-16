@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 import fs from "fs";
 import path from "path";
@@ -173,7 +174,7 @@ const Post = ({ frontmatter, slug, content }) => {
                     <title>{frontmatter.title + " | Onigiri Hardcore"}</title>
                 </Head>
 
-                {frontmatter.image && <img src={frontmatter.image} alt={frontmatter.title} width={1920} height={1080} />}
+                {frontmatter.image && <Image src={frontmatter.image} alt={frontmatter.title} width={1920} height={1080} priority sizes="100vw" />}
 
                 <section key={frontmatter.id}>
                     <p className="block__content">
