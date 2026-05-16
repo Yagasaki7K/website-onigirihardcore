@@ -17,6 +17,11 @@ const SlugDetails = styled.div`
         }
     }
 
+    > span {
+        width: 100% !important;
+        display: block;
+    }
+
     blockquote {
         margin: 1rem;
 

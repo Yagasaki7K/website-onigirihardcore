@@ -65,6 +65,10 @@ const CategoriesDetails = styled.div`
             gap: 20px;
             text-decoration: none;
 
+            > span {
+                width: 100% !important;
+            }
+
             h1 {
                 width: 100%;
                 color: var(--blue);
@@ -130,6 +134,12 @@ const CategoriesDetails = styled.div`
                 img {
                     width: 4.063rem;
                     height: 4.063rem;
+                }
+
+                a > span {
+                    width: 4.063rem !important;
+                    height: 4.063rem !important;
+                    flex-shrink: 0;
                 }
 
                 .post-side {
