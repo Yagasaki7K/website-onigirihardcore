@@ -8,7 +8,7 @@ export function middleware(request: NextRequest) {
   if (pathname.startsWith('/_next/static') || pathname.startsWith('/images') || pathname.match(/\.(?:jpg|jpeg|png|webp|avif|svg|css|js)$/)) {
     response.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
   } else {
-    response.headers.set('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=86400');
+    response.headers.set('Cache-Control', 'public, max-age=0, must-revalidate');
   }
 
   return response;
