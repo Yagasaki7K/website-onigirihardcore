@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { NextSeo } from 'next-seo'
+import Image from 'next/image'
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter'
@@ -114,7 +115,7 @@ export default function Home({ postData }) {
                         {
                             firstAnime && firstAnime.map(post => (
                                 <a className='categories-content' href={post.slug} key={post.slug}>
-                                    <img src={post.frontmatter.image} alt={post.frontmatter.title} width={500} height={500} loading='lazy' />
+                                    <Image src={post.frontmatter.image} alt={post.frontmatter.title} width={500} height={500} sizes="(max-width: 768px) 100vw, 500px" />
                                     <h1>{post.frontmatter.title.length > 35 ? post.frontmatter.title.slice(0, 55) + "..." : post.frontmatter.title}</h1>
 
                                     <span>
@@ -131,7 +132,7 @@ export default function Home({ postData }) {
                                 lastAnime && lastAnime.map(post => (
                                     <div className="post" key={post.slug}>
                                         <a href={post.slug}>
-                                            <img src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} loading='lazy' />
+                                            <Image src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} sizes="150px" />
 
                                             <div className="post-side">
                                                 <h3>{post.frontmatter.title}</h3>
@@ -153,7 +154,7 @@ export default function Home({ postData }) {
                         {
                             firstGames && firstGames.map(post => (
                                 <a className='categories-content' href={post.slug} key={post.slug}>
-                                    <img src={post.frontmatter.image} alt={post.frontmatter.title} width={500} height={500} loading='lazy' />
+                                    <Image src={post.frontmatter.image} alt={post.frontmatter.title} width={500} height={500} sizes="(max-width: 768px) 100vw, 500px" />
                                     <h1>{post.frontmatter.title.length > 35 ? post.frontmatter.title.slice(0, 55) + "..." : post.frontmatter.title}</h1>
 
                                     <span>
@@ -169,7 +170,7 @@ export default function Home({ postData }) {
                                 lastGames && lastGames.map(post => (
                                     <div className="post" key={post.slug}>
                                         <a href={post.slug} >
-                                            <img src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} loading='lazy' />
+                                            <Image src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} sizes="150px" />
 
                                             <div className="post-side">
                                                 <h3>{post.frontmatter.title}</h3>
@@ -191,7 +192,7 @@ export default function Home({ postData }) {
                         {
                             firstMovies && firstMovies.map(post => (
                                 <a className='categories-content' href={post.slug} key={post.slug}>
-                                    <img src={post.frontmatter.image} alt={post.frontmatter.title} width={500} height={500} loading='lazy' />
+                                    <Image src={post.frontmatter.image} alt={post.frontmatter.title} width={500} height={500} sizes="(max-width: 768px) 100vw, 500px" />
                                     <h1>{post.frontmatter.title.length > 35 ? post.frontmatter.title.slice(0, 55) + "..." : post.frontmatter.title}</h1>
 
                                     <span>
@@ -208,7 +209,7 @@ export default function Home({ postData }) {
                                 lastMovies && lastMovies.map(post => (
                                     <div className="post" key={post.slug}>
                                         <a href={post.slug}>
-                                            <img src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} loading='lazy' />
+                                            <Image src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} sizes="150px" />
 
                                             <div className="post-side">
                                                 <h3>{post.frontmatter.title}</h3>
@@ -233,7 +234,7 @@ export default function Home({ postData }) {
                             {
                                 technologies.slice(0, 12).map((post) => (
                                     <a href={post.slug} key={post.slug}>
-                                        <img src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} loading='lazy' />
+                                        <Image src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} sizes="150px" />
 
                                         <div className="title">
                                             <h1>{post.frontmatter.title}</h1>
@@ -256,7 +257,7 @@ export default function Home({ postData }) {
                                 <div className="content" key={post.slug}>
                                     <div className="leftContent">
                                         <a href={post.slug}>
-                                            <img src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} loading='lazy' />
+                                            <Image src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} sizes="150px" />
                                         </a>
                                     </div>
                                     <div className="rightContent">

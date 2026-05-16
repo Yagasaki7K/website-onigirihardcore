@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
 import LastNewsDetails from "../src/components/LastNewsDetails";
@@ -104,7 +105,7 @@ const Noticias = ({ postData }) => {
                                 <div className="content" key={index}>
                                     <div className="leftContent">
                                         <a href={post.slug}>
-                                            <img src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} loading="lazy" />
+                                            <Image src={post.frontmatter.image} alt={post.frontmatter.title} width={150} height={150} sizes="150px" />
                                         </a>
                                     </div>
                                     <div className="rightContent">
