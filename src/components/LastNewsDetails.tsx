@@ -77,6 +77,22 @@ const LastNewsDetails = styled.div`
                         height: 100px;
                     }
                 }
+
+                a > span {
+                    width: 290px !important;
+                    height: 150px !important;
+                    display: block;
+
+                    @media (max-width: 835px) {
+                        width: 200px !important;
+                        height: 100px !important;
+                    }
+
+                    @media (max-width: 470px){
+                        width: 150px !important;
+                        height: 100px !important;
+                    }
+                }
             }
 
             .rightContent {

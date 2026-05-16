@@ -35,6 +35,12 @@ const SlideDetails = styled.div`
         .keen-slider__slide {
             width: 100%;
 
+            > a > span {
+                width: 100% !important;
+                height: clamp(24rem, 60vw, 40rem) !important;
+                display: block;
+            }
+
             .slider-description {
                 position: absolute;
                 top: 45%;

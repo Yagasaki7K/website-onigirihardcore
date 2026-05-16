@@ -15,6 +15,14 @@ export const HeaderDetails = styled.div`
                 width: 30rem;
             }
         }
+
+        a > span {
+            width: 40rem !important;
+
+            @media (max-width: 1024px) {
+                width: 30rem !important;
+            }
+        }
     }
 
     .navigation {
@@ -133,6 +141,11 @@ export const HeaderMobile = styled.div`
 
         img {
             height: 55px;
+        }
+
+        > span {
+            height: 55px !important;
+            width: auto !important;
         }
     }
 

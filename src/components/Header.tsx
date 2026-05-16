@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { HeaderDetails, HeaderMobile } from "./HeaderDetails";
 
@@ -66,7 +65,7 @@ const Header = () => {
                 <HeaderMobile ref={drawnerRef}>
                     {/*<MenuOutlined className={open ? `menu active` : `menu`} onClick={() => setOpen(!open)} />*/}
                     <div className="logo-drawner">
-                        {uwu ? <Image src="/uwu.png" className="logotipo" alt="logo" width={180} height={52} priority sizes="(max-width: 600px) 140px, 180px" /> : <Image src="/logotipo.png" className="logotipo" alt="logo" width={180} height={52} priority sizes="(max-width: 600px) 140px, 180px" />}
+                        {uwu ? <img src="/uwu.png" className="logotipo" alt="logo" /> : <img src="/logotipo.png" className="logotipo" alt="logo" />}
                     </div>
                     <AnimatePresence>
                         {open && (
@@ -97,7 +96,7 @@ const Header = () => {
                 <HeaderDetails>
                     <div className="header">
                         <Link href="/">
-                            {uwu ? <Image src="/uwu.png" className="uwu" alt="logo" width={180} height={52} priority sizes="(max-width: 900px) 140px, 180px" /> : <Image src="/logotipo.png" className="logotipo" alt="logo" width={180} height={52} priority sizes="(max-width: 900px) 140px, 180px" />}
+                            {uwu ? <img src="/uwu.png" className="uwu" alt="logo" /> : <img src="/logotipo.png" className="logotipo" alt="logo" />}
                         </Link>
                     </div>
 
