@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 
 import "keen-slider/keen-slider.min.css";
 import SlideDetails from "./SlideDetails";
@@ -68,7 +67,7 @@ const Slide = ({ posts }) => {
                         postsData.slice(0, 5).map((post) => (
                             <div className="keen-slider__slide" key={post}>
                                 <a href={post.slug}>
-                                    <Image src={post.frontmatter.image} alt={post.frontmatter.title} width={1920} height={1080} priority={postsData.indexOf(post) === 0} sizes="100vw" />
+                                    <img src={post.frontmatter.image} alt={post.frontmatter.title} width={1920} height={1080} loading="lazy" />
                                 </a>
                                 <div className="slider-description">
                                     <div className="slide-tag">
