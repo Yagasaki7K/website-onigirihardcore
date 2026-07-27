@@ -21,7 +21,7 @@
         "gray-matter": "^4.0.3",
         "keen-slider": "^6.8.6",
         "marked": "^12.0.2",
-        "next": "^16.2.11",
+        "next": "^16.2.12",
         "next-seo": "^6.8.0",
         "react": "^19.2.8",
         "react-dom": "^19.2.8",
@@ -33,7 +33,7 @@
         "@types/react": "^19.2.17",
         "@types/react-dom": "^19.2.3",
         "eslint": "^9.39.5",
-        "eslint-config-next": "^16.2.11",
+        "eslint-config-next": "^16.2.12",
         "eslint-plugin-react": "^7.37.5",
         "typescript": "^5.9.3"
     }
